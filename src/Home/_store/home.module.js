@@ -1,5 +1,5 @@
 
-import { dashboardService } from '../_services/dashboard.service';
+import { homeService } from '@/Home/_services/home.service';
 
 const state = () =>({
   isLoaded: false,
@@ -19,7 +19,7 @@ const actions = {
   setNavigation( { commit, state, rootState }, payload ){
     commit('SET_ERRORS', []);
 
-    dashboardService.getNavigation( (result) => {
+    homeService.getNavigation( (result) => {
       if(result.errors){
         commit('SET_ERRORS', result.errors);
       } else {
@@ -42,7 +42,7 @@ const mutations = {
 
 };
 
-export const dashboard = {
+export const home = {
   namespaced: true,
   state,
   getters,

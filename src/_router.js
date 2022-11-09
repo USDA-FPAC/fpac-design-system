@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import { dashboardRoutes } from '@/Dashboard/_routes/dashboard.routes.js';
+import { homeRoutes } from '@/Home/_routes/home.routes.js';
 import { contentRoutes } from '@/Content/_routes/content.routes.js';
 import { searchRoutes } from '@/Search/_routes/search.routes.js';
 
 
 const routes = [
-  ...dashboardRoutes,
+  ...homeRoutes,
   ...contentRoutes,
   ...searchRoutes,
   { 
