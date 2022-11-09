@@ -1,0 +1,36 @@
+{
+  "name": "fpac-design-system",
+  "version": "3.0.0",
+  "author": "USDA FPAC - Farm Production and Conservation, ISSDOB/FBCSS",
+  "contributors": [
+    "Casey Hill <bignamehere@gmail.com> (https://github.com/bignamehere)",
+    "Jamie Thompson <jamieraethompson@gmail.com> (https://github.com/whatnextjamie)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/usda-fpac/fpac-design-system.git"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "fds-style": "^3.0.0",
+    "uuid": "^8.3.2",
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.11",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.1.0",
+    "@vue/compiler-sfc": "^3.0.5",
+    "fs": "0.0.1-security",
+    "gh-pages": "^3.2.3",
+    "path": "^0.12.7",
+    "rollup-plugin-copy": "^3.4.0",
+    "sass": "^1.53.0",
+    "vite": "^3.1.0"
+  }
+}

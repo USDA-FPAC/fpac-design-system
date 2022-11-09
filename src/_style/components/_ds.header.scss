@@ -1,0 +1,128 @@
+.ds-header {
+
+  & {
+    background-color: $color-fds-primary;
+    color: $color-fds-white;
+  }
+
+  &__title {
+
+    font-size: $font-size-5;
+    line-height: $line-height-flat;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: ($site-max-width + 36px);
+    padding-right: $size-default;
+    padding-left: $size-default;
+    font-weight: $font-light;
+    padding-top: ($size-base * 17);
+
+    @include breakpoint(M) {
+      @include font-size(6);
+      line-height: $line-height-flat;
+    }
+
+    @include breakpoint(L) {
+      font-size: 4.6rem;
+    }
+
+  }
+
+  &__bd {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: ($site-max-width + 36px);
+    padding: $size-default;
+
+    @include breakpoint(L) {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+  }
+
+  &__nav {
+
+    margin-bottom: $size-default;
+
+    @include breakpoint(L) {
+      margin-bottom: 0;
+    }
+
+  }
+
+  &__options {
+
+    & {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include breakpoint(L) {
+        justify-content: flex-end;
+      }
+    }
+
+    &-item {
+
+      display: inline-block;
+
+      &--start {
+        margin-right: ($size-medium - $size-base);
+      }
+
+      &--github {
+        white-space: nowrap;
+        @include breakpoint(L, down) {
+          @include font-size(2);
+        }
+      }
+
+    }
+
+  }
+
+  &__link {
+
+    display: inline-block;
+    color: $color-fds-white;
+    text-decoration: none;
+
+    &:hover {
+      // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
+      box-shadow:
+        0 -1px 0 0 $color-fds-primary inset,
+        0 -2px 0 0 $color-fds-primary inset,
+        0 -3px 0 0 $color-fds-primary inset,
+        0 -4px 0 0 $color-fds-primary inset,
+        0 -5px 0 0 $color-fds-primary inset,
+        0 -6px 0 0 $color-fds-primary inset,
+        0 -7px 0 0 $color-fds-white inset
+      ;
+      text-decoration: none;
+    }
+
+    &:visited,
+    &:active,
+    &:hover:visited,
+    &:hover {
+      color: $color-fds-white;
+    }
+
+    &--github {
+
+      &:hover {
+        box-shadow: none;
+        text-decoration: underline;
+      }
+
+    }
+  }
+
+  &__version {
+    white-space: nowrap;
+    color: $color-fds-primary-200;
+    font-size: 66%;
+  }
+
+}

@@ -1,0 +1,58 @@
+
+// .ds-jump-wrapper {}
+
+.ds-jump {
+
+  @include breakpoint(L) {
+    margin-top: $size-large;
+  }
+
+  // scss-lint:disable SelectorFormat
+  .ds-jump--stuck & {
+    @include breakpoint(L) {
+      margin-top: 0;
+    }
+  }
+
+  &__list {
+    @include reset-ul();
+  }
+
+  &__item {
+
+    @include reset-li();
+
+    @include breakpoint(L) {
+      margin-bottom: $size-base;
+      padding-left: $size-default;
+      border-left: $size-base solid transparent;
+      transition: border .115s ease-in-out;
+    }
+
+    &--active {
+      @include breakpoint(L) {
+        font-weight: $font-bold;
+        border-left-color: $color-fds-secondary;
+      }
+    }
+
+  }
+
+  &__link {
+
+    display: block;
+    color: $color-fds-link;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:hover,
+    &:visited {
+      color: $color-fds-link;
+    }
+
+  }
+
+}

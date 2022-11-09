@@ -1,0 +1,50 @@
+.ds-nav-local {
+
+  &__list {
+
+    @include reset-ul();
+    margin-top: $size-small;
+    margin-bottom: $size-medium;
+
+    @include breakpoint(L) {
+      border-top: 1px solid $color-fds-tertiary-200;
+    }
+
+  }
+
+  &__list-item {
+
+    @include reset-li();
+
+    &--active {
+      // box-shadow: 2px 0 0 0 $color-fds-primary inset;
+      font-weight: $font-bold;
+    }
+
+  }
+
+  &__link {
+
+    display: block;
+    text-decoration: none;
+
+    @include breakpoint(L) {
+      color: $color-base;
+      border-bottom: 1px solid $color-fds-tertiary-200;
+      padding: $size-small 0;
+    }
+
+    &:hover,
+    &:visited {
+
+      color: $color-fds-link;
+
+      @include breakpoint(L) {
+        color: $color-base;
+      }
+
+    }
+
+  }
+
+}

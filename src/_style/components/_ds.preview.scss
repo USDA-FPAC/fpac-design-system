@@ -1,0 +1,133 @@
+
+@mixin x-ray() {
+  * {
+    background-color: rgba(255,0,0,.08);
+    outline: 1px solid rgba(0,0,0,.15);
+    outline-offset: -1px;
+    color: black !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    &:before { background-color: rgba(000,000,250,.2); outline: 1px solid rgba(0,0,0,.2); }
+    &:after  { background-color: rgba(000,000,250,.2); outline: 1px solid rgba(0,0,0,.2); }
+  }
+  * *                 { background-color: rgba(000,255,000,.08); }
+  * * *               { background-color: rgba(000,000,255,.08); }
+  * * * *             { background-color: rgba(255,000,255,.08); }
+  * * * * *           { background-color: rgba(000,255,255,.08); }
+  * * * * * *         { background-color: rgba(255,255,000,.08); }
+  * * * * * * *       { background-color: rgba(255,000,000,.08); }
+  * * * * * * * *     { background-color: rgba(000,255,000,.08); }
+  * * * * * * * * *   { background-color: rgba(000,000,255,.08); }
+}
+
+.ds-preview {
+
+  $component-bgc: transparent;
+  $component-bw: $size-base;
+
+  & {
+
+    margin: $size-default 0;
+    border-radius: $size-base;
+
+    @include breakpoint(M) {
+      border: $component-bw solid $color-fds-tertiary-100;
+      padding: $size-medium;
+      margin-left: 0;
+      margin-right: 0;
+      border-width: $component-bw;
+    }
+
+  }
+
+  &--overflow-example {
+    overflow: auto;
+    height: 50vh;
+  }
+
+  &--bare {
+
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+
+    @include breakpoint(L) {
+      html body.x-ray .ds-article & {
+        box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
+      }
+    }
+
+  }
+
+  .highlighter-rouge + & {
+    @include breakpoint(M) {
+      margin-top: -$size-large;
+    }
+  }
+
+  + .highlighter-rouge {
+    @include breakpoint(M) {
+      margin-top: -$size-default;
+    }
+  }
+
+  + .highlighter-rouge {
+
+    display: none;
+
+    pre {
+      max-height: 224px;
+      overflow: auto;
+    }
+
+  }
+
+  html body.x-ray & {
+    @include checkerboard();
+    border-color: $color-fds-site-bg;
+    background-color: $color-fds-site-bg;
+    @include breakpoint(M) {
+      box-shadow: 0 0 0 24px $color-fds-site-bg inset;
+    }
+    @include x-ray();
+  }
+
+  .docs__utilities__demo {
+    margin: 0;
+    .OUTLINE {
+      outline: 0;
+      background-color: shade($color-fds-aqua, 65%);
+    }
+  }
+
+}
+
+
+
+html body.x-ray {
+  .fds-modal,
+  .fds-growl-container,
+  .fds-date-calendar {
+    @include x-ray();
+  }
+  .fds-growl-container {
+    @include checkerboard();
+    background-color: rgba(255,255,255,.6);
+  }
+  .fds-modal {
+    background-color: rgba(255,255,255,.6);
+  }
+}
+
+// scss-lint:disable QualifyingElement
+.ds-show-da-code div.highlighter-rouge {
+  display: block;
+}
+
+// scss-lint:disable SelectorFormat
+.highlighter-rouge + .docs__utilities__demo {
+  @include breakpoint(M) {
+    margin-top: -$size-large;
+  }
+}
+

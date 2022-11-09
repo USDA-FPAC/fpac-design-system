@@ -1,0 +1,112 @@
+.ds-quick-find {
+  display: none; // Hide if browser doesn't support (e.g. <=IE11)
+}
+@supports (grid-area: auto) {
+  $closeButtonWidth: ($size-base * 12);
+  .ds-quick-find {
+    & {
+      display: block;
+      position: relative;
+      z-index: 2;
+      margin-top: $size-medium;
+      margin-bottom: $size-medium;
+      @include breakpoint(L) {
+        margin-bottom: $size-large;
+        width: 44rem;
+      }
+    }
+    &:focus-within {
+      z-index: 99999;
+    }
+    &__input {
+      width: 100%;
+      padding-right: $closeButtonWidth + $size-base;
+    }
+    &__field {
+      position: relative;
+    }
+    &__clear {
+      @include reset-button();
+      .ds-quick-find__input:placeholder-shown + & {
+        display: none;
+      }
+      width: $closeButtonWidth;
+      border-left: 1px solid $form-outline-color;
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      bottom: 1px;
+      text-align: center;
+      background-color: $color-fds-tertiary-100;
+      background-image: url("#{$image-path}/material-design-icons/ic_close_24px.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      outline-offset: -3px;
+    }
+    &__output {
+      @include reset-ul();
+      box-shadow: 0 0 $size-default rgba($color: $color-fds-tertiary, $alpha: .2);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      border: 1px solid $form-outline-color;
+      background-color: white;
+      z-index: 2;
+      overflow: auto;
+      max-height: 45vh;
+      &:empty {
+        display: none;
+      }
+    }
+    &__output-item  {
+      & {
+        @include reset-li();
+        border-bottom: 1px solid $box-border-color;
+      }
+      &--section {
+        @include font-size(1);
+        font-weight: $font-bold;
+        text-transform: uppercase;
+        display: block;
+        padding: math.div($size-small, 2) $size-default;
+        background-color: $color-fds-tertiary-200;
+        color: $color-fds-tertiary;
+      }
+    }
+    &__output-link {
+      &,
+      &:visited {
+        display: flex;
+        align-items: baseline;
+        padding: $size-small $size-default;
+        text-decoration: none;
+        color: $color-fds-base;
+      }
+
+      .ds-quick-find__output-item[aria-selected="true"] &,
+      &:hover,
+      &:focus {
+        background-color: $color-fds-tertiary-100;
+      }
+
+      .ds-quick-find__output-item[aria-selected="true"] & {
+        @include fds-focus();
+        outline-offset: -3px;
+      }
+
+      &:focus {
+        outline-offset: -3px;
+      }
+
+    }
+    &__text {
+      margin-right: $size-small;
+    }
+    &__keyword {
+      margin-left: auto;
+      @include font-size(1);
+      color: $color-fds-tertiary-300;
+    }
+  }
+}

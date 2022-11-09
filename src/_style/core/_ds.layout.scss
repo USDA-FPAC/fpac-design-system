@@ -1,0 +1,206 @@
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+}
+
+// scss-lint:disable EmptyRule
+.ds-home {}
+
+.ds-body {
+
+  margin-left: auto;
+  margin-right: auto;
+  max-width: ($site-max-width + 36px);
+  padding: $size-default;
+
+  @include breakpoint(L) {
+    margin-top: $size-medium;
+  }
+
+}
+
+.ds-footer {
+
+  @include font-size(2);
+  background-color: $color-fds-tertiary-100;
+
+  &__bd {
+    margin-top: $size-medium;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: ($site-max-width + 36px);
+    padding: $size-default $size-default $size-large;
+  }
+
+}
+
+.ds-overview {
+  // margin-top: 0;
+}
+
+.ds-article {
+
+  position: relative;
+
+  > ul:not([class]),
+  > ol:not([class]),
+  > p:not([class]) {
+    @include breakpoint(L) {
+      max-width: $text-max-width;
+      max-width: 80ch;
+    }
+  }
+
+  > blockquote {
+
+    @include breakpoint(L) {
+      @include font-size(4);
+      margin-bottom: $size-medium;
+    }
+
+    + blockquote {
+      @include breakpoint(L) {
+        margin-top: -$size-default;
+      }
+    }
+
+  }
+
+
+}
+
+.ds-page-title {
+
+  @include breakpoint(L) {
+    border-bottom: 1px solid $color-fds-tertiary-200;
+    display: flex;
+    align-items: baseline;
+    position: sticky;
+    top: 0;
+    background-color: $color-fds-site-bg;
+    z-index: 1002;
+    padding-bottom: $size-default;
+    box-shadow: 0 0 0 0 rgba($color: $color-fds-tertiary, $alpha: 0);
+    transition: .23s all ease-in-out;
+  }
+
+  &--stuck {
+    @include breakpoint(L) {
+      padding-top: $size-default;
+      box-shadow: 0 8px 3px -7px rgba($color: $color-fds-tertiary, $alpha: .15);
+    }
+  }
+
+  &--full-width {}
+
+  &__hd {
+    @include breakpoint(L) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__hd-text {
+    margin: 0;
+    @include breakpoint(L) {
+      margin-right: $size-default;
+    }
+  }
+
+  &__ft {
+    display: flex;
+    align-items: center;
+    margin-top: $size-small;
+    margin-bottom: $size-small;
+    @include breakpoint(L) {
+      margin-bottom: 0;
+      margin-top: 0;
+      padding-left: $size-default;
+      margin-left: auto;
+      margin-right: calc(20% + #{$fds-grid-gutter});
+      .ds-page-title--full-width & {
+        margin-right: 0;
+      }
+    }
+  }
+  &__ft-item {
+    & + & {
+      margin-left: $size-default;
+    }
+  }
+
+}
+
+.ds-l-page {
+
+  @include clearfix;
+
+  &__body {
+
+    @include breakpoint(L) {
+
+      float: left;
+      width: 80%;
+      padding-right: $fds-grid-gutter;
+
+    }
+
+    &--full-width {
+      float: none;
+      width: auto;
+      padding-right: 0;
+    }
+
+  }
+
+  &__adjacent {
+
+    @include breakpoint(L) {
+
+      float: right;
+      width: 20%;
+      position: sticky;
+      top: ($size-base * 18);
+
+    }
+
+  }
+
+}
+
+.ds-l-guide {
+
+  @include clearfix;
+
+  &__body {
+
+    @include breakpoint(L) {
+
+      float: right;
+      width: 80%;
+      padding-left: $fds-grid-gutter;
+
+    }
+
+  }
+
+  &__adjacent {
+
+    @include breakpoint(L) {
+
+      float: left;
+      width: 20%;
+      position: sticky;
+      top: $size-default;
+
+    }
+
+  }
+
+}

@@ -1,0 +1,20 @@
+// scss-lint:disable QualifyingElement
+h2[id] {
+  .ds-article & {
+
+    margin-top: $size-medium;
+    border-bottom: 2px solid $color-fds-tertiary-300;
+
+    &:before {
+      @include breakpoint(L) {
+        $fudge-amount: ($size-base * 23);
+        content: '';
+        display: block;
+        height: $fudge-amount;
+        margin: (-$fudge-amount) 0 0;
+        pointer-events: none;
+      }
+    }
+
+  }
+}

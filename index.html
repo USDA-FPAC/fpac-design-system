@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DRQVVZYYPV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DRQVVZYYPV');
+    </script>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FPAC Design System</title>
+    <script type="text/javascript">
+      const redirect = (r) => {
+        if (r.search[1] === '/' ) {
+          let decoded = r.search.slice(1).split('&').map( (s) => { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState( null, null, r.pathname.slice(0, -1) + decoded + r.hash );
+        }
+      };
+      redirect(window.location);
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/_main.js"></script>
+  </body>
+</html>

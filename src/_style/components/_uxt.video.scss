@@ -1,0 +1,107 @@
+.uxt-video {
+  background-color: #DBDAD9;
+  border: 4px solid #DBDAD9;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+
+  &__md {
+    //width: 80%;
+  }
+
+  & iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-related {
+
+    margin-top: 0;
+    padding-top: 0;
+    margin-left: 0;
+
+    @include breakpoint(s) {
+      margin-left: 0 ;
+    }
+
+    @include breakpoint(m) {
+      margin-left: $size-medium;
+    }
+
+    &__header {
+      @include font-size(4);
+      font-weight: $font-bold;
+    }
+  
+    &__item {
+      width: 100%;
+      display: block;
+
+      margin-bottom: $size-medium;
+
+      &-link {
+        text-decoration: none;
+
+        &:hover {
+          border: math.div($size-base, 2) solid #FF0000;
+          border-top-width: $size-small;
+          border-radius: $size-base;
+        }
+
+      }
+
+      &-text {
+        @include font-size(4);
+        display: block;
+      }
+    
+      &-media {
+        display: block;
+        width: 100%;
+      }
+
+      @include breakpoint(S) {
+        &-text {
+          @include font-size(4);
+          display: block;
+          font-weight: 400;
+        }
+      
+        &-media {
+          display: block;
+          width: 100%;
+        }
+      }
+    
+      @include breakpoint(M) {
+        &__text {
+          @include font-size(3);
+          display: block;
+          font-weight: $font-bold;
+        }
+      
+        &-media {
+          width: 75%;
+        }
+      }
+    
+      @include breakpoint(L) {
+        &__text {
+          @include font-size(3);
+          display: block;
+          font-weight: $font-bold;
+        }
+      
+        &-media {
+          width: 80%;
+        }
+      }
+  
+    }
+  }
+
+}

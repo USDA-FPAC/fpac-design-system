@@ -1,0 +1,248 @@
+{
+  "main": [
+    {
+      "uid": "home-id",
+      "label": "Home",
+      "path": "/",
+      "hasChild": "false",
+      "columnClass": ""    
+    },
+    {
+      "uid": "visual-style-id",
+      "label": "Visual Style",
+      "path": "",
+      "hasChild": "true",
+      "multiColumn": "false",
+      "columnClass": "fds-nav-global__link--has-sub-menu",
+      "hasHeaders": "false",
+      "children": [
+        {
+          "uid": "visual-style-color-id",
+          "label": "Color",
+          "path": "/video/color",
+          "hasChild": "false"
+        },
+        {
+          "uid": "visual-style-typography-id",
+          "label": "Typography",
+          "path": "/video/typography",
+          "hasChild": "false"
+        },
+        {
+          "uid": "visual-style-size-spacing-id",
+          "label": "Size & Spacing",
+          "path": "/video/size-spacing",
+          "hasChild": "false"
+        },
+        {
+          "uid": "visual-style-general-id",
+          "label": "General Visual Style",
+          "path": "/video/general",
+          "hasChild": "false"
+        }
+      ]
+    },
+    {
+      "uid": "ui-components-id",
+      "label": "UI Components",
+      "path": "",
+      "hasChild": "true",
+      "multiColumn": "true",
+      "columnClass": "fds-nav-global__list-item--multi-column",
+      "hasHeaders": "true",
+      "children": [
+        {
+          "uid": "general-group-id",
+          "header": "General Components",
+          "group": [
+            {
+              "uid": "general-header-footer-id",
+              "label": "Header & Footer",
+              "path": "/video/header-footer"
+            },
+            {
+              "uid": "general-breadcrumbs-links-id",
+              "label": "Breadcrumbs & Links",
+              "path": "/video/breadcrumbs"
+            },
+            {
+              "uid": "general-content-tabs-id",
+              "label": "Content Tabs",
+              "path": "/video/content-tabs"
+            },
+            {
+              "uid": "general-pagination-id",
+              "label": "Pagination",
+              "path": "/video/pagination"
+            },
+            {
+              "uid": "general-tables-id",
+              "label": "Tables",
+              "path": "/video/tables"
+            },
+            {
+              "uid": "general-lists-timeline-id",
+              "label": "Lists & Timeline",
+              "path": "/video/list-timeline"
+            }
+          ]        
+        },
+        {
+          "uid": "form-elements-group-id",
+          "header": "Form Elements",
+          "group": [
+            {
+              "uid": "form-elements-buttons-id",
+              "label": "Buttons & Button Group",
+              "path": "/video/buttons"
+            },
+            {
+              "uid": "form-elements-checkbox-radio-id",
+              "label": "Checkbox, Radio, & Switch",
+              "path": "/video/checkbox-radio-switch"
+            },
+            {
+              "uid": "form-elements-date-picker-id",
+              "label": "Date Picker",
+              "path": "/video/date-picker"
+            },
+            {
+              "uid": "form-elements-form-fields-id",
+              "label": "Form Fields",
+              "path": "/video/form-fields"
+            },
+            {
+              "uid": "form-elements-select-id",
+              "label": "Select & Select Multi",
+              "path": "/video/select"
+            },
+            {
+              "uid": "form-elements-slider-spinbox-inputs-id",
+              "label": "Slider, Spinbox, & Inputs",
+              "path": "/video/slider-spinbox-text-inputs"
+            }
+          ]        
+        },
+        {
+          "uid": "feedback-group-id",
+          "header": "Feedback",
+          "group": [
+            {
+              "uid": "feedback-badges-id",
+              "label": "Badges & Labels",
+              "path": "/video/badges-labels"
+            },
+            {
+              "uid": "feedback-growl-id",
+              "label": "Growl, Alerts, & Modal",
+              "path": "/video/growl-alerts-modal"
+            },
+            {
+              "uid": "feedback-progress-splash-id",
+              "label": "Progress & Splash",
+              "path": "/video/progress-splash"
+            }
+          ]        
+        },
+        {
+          "uid": "layout-group-id",
+          "header": "Layout",
+          "group": [
+            {
+              "uid": "layout-box-divider-id",
+              "label": "Box & Divider",
+              "path": "/video/box-divider"
+            },
+            {
+              "uid": "layout-grid-section-id",
+              "label": "Grid System & Section",
+              "path": "/video/grid-section"
+            },
+            {
+              "uid": "layout-level-media-object-id",
+              "label": "Level & Media Object",
+              "path": "/video/level-media"
+            }
+          ]        
+        }  
+      ]
+    },
+    {
+      "uid": "ux-patterns-id",
+      "label": "UX Patterns",
+      "path": "",
+      "hasChild": "true",
+      "multiColumn": "false",
+      "columnClass": "fds-nav-global__link--has-sub-menu",
+      "hasHeaders": "false",
+      "children": [
+        {
+          "uid": "ux-patterns-table-action-bar-id",
+          "label": "Table & Action Bar",
+          "path": "/video/table-action-bar",
+          "hasChild": "false"
+        },
+        {
+          "uid": "ux-patterns-stepped-process-id",
+          "label": "Stepped Process",
+          "path": "/video/stepped-process",
+          "hasChild": "false"
+        },
+        {
+          "uid": "ux-patterns-page-title-area-id",
+          "label": "Page Title Area",
+          "path": "/video/page-title-area",
+          "hasChild": "false"
+        },
+        {
+          "uid": "ux-patterns-destroy-prompt-id",
+          "label": "Destroy Prompt",
+          "path": "/video/destroy-prompt",
+          "hasChild": "false"
+        }
+      ]
+    },
+    {
+      "uid": "general-id",
+      "label": "General Topics",
+      "path": "#",
+      "hasChild": "true",
+      "multiColumn": "false",
+      "columnClass": "fds-nav-global__link--has-sub-menu",
+      "hasHeaders": "false",
+      "children": [
+        {
+          "uid": "margins-padding-id",
+          "label": "Margins & Padding",
+          "path": "/video/margins-padding",
+          "hasChild": "false"
+        },
+        {
+          "uid": "proto-id",
+          "label": "Proto - High-fidelity Toolkit",
+          "path": "/video/proto",
+          "hasChild": "false"
+        },
+        {
+          "uid": "prototype-kit-id",
+          "label": "Prototype Kit Installation",
+          "path": "/video/prototype-kit-install",
+          "hasChild": "false"
+        }
+      ]
+    }
+  ],
+  "side": [
+    {
+      "uid": "help-id",
+      "label": "Help",
+      "path": "/help",
+      "hasChild": "false",
+      "columnClass": "",
+      "icon": {
+        "class": "fds-icon fds-icon--size-1",
+        "path": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"
+      }
+    }
+  ]
+}

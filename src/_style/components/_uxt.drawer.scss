@@ -1,0 +1,25 @@
+.uxt-drawer {
+
+  margin-bottom: $size-large;
+  
+  &__front {
+    cursor: pointer;
+  }
+
+  &__container-bg {
+    
+    display: none;
+    padding: 8rem;
+    border: 1px solid #E6E5E5;
+    
+    &--show {
+      display: inherit;
+    }
+
+    &--hide {
+      display: none;
+    }
+
+  }
+
+}

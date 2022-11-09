@@ -1,0 +1,45 @@
+// scss-lint:disable QualifyingElement
+pre.highlight {
+  position: relative;
+}
+
+.ds-clipboard {
+
+  pre.highlight & {
+    position: absolute;
+    right: $size-small;
+    top: $size-small;
+  }
+
+  // scss-lint:disable EmptyRule
+  &__btn {
+    text-decoration: none;
+  }
+
+  &__success {
+    font-size: $font-size-1;
+    font-family: $font-base;
+    font-weight: $font-bold;
+    position: absolute;
+    right: calc(100% + #{$size-small});
+    top: $size-base - .1rem;
+    color: $color-fds-base;
+    animation: clipboardConfirm 2.3s ease-in-out forwards;
+  }
+
+}
+
+@keyframes clipboardConfirm {
+  0% {
+    opacity: 0;
+    transform: translateY(105%);
+  }
+  10%, 80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+}

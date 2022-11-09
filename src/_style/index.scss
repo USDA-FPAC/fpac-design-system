@@ -1,0 +1,32 @@
+@use 'sass:math' as math; 
+// need to find a fix for how to get SCSS variables and methods from fds-Style working! Ugh.
+
+@import './defaults.scss';
+
+@import 'core/ds.layout';
+@import 'core/ds.layout.home';
+@import 'elements/ds.typography';
+
+@import 'components/ds.preview';
+@import 'components/ds.usage';
+@import 'components/ds.related-card';
+@import 'components/ds.anatomy';
+@import 'components/ds.clipboard';
+@import 'components/ds.disclaimer';
+@import 'components/ds.header';
+@import 'components/ds.subcat-list';
+@import 'components/ds.nav';
+@import 'components/ds.nav-local';
+@import 'components/ds.jump';
+@import 'components/ds.sitemap';
+@import 'components/ds.demos';
+@import 'components/ds.quick-find';
+@import 'components/uxt.drawer';
+@import 'components/uxt.video';
+
+@import 'other/ds.general';
+@import 'other/ds.shame';
+@import 'other/syntax-highlighting';
+
+
+@import './fds-popover.scss';

@@ -1,0 +1,96 @@
+
+.ds-btn {
+
+  $button-start        : $color-fds-primary-900;
+  $button-start-text   : $button-text;
+  $button-start-hover  : shade($button-start, 25%);
+  $button-start-active : shade($button-start, 25%);
+
+  &--start {
+
+    background-color: $button-start;
+    color: $button-start-text;
+
+    &:visited {
+      color: $button-start-text;
+    }
+
+    &:hover:not([disabled]),
+    &:focus:not([disabled]),
+    &:active:not([disabled]) {
+      color: $button-start-text;
+      background-color: $button-start-active;
+    }
+
+    &.is-active {
+
+      $getting-started-active-color: $color-fds-site-bg;
+
+      background-color: $getting-started-active-color;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      color: $color-fds-base;
+      position: relative;
+      pointer-events: none;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        height: ($size-default + .1rem); // magic number
+        background-color: $getting-started-active-color;
+      }
+
+      &:focus:after,
+      &:hover:after {
+        background-color: $button-start-hover;
+      }
+
+    }
+
+  }
+
+}
+
+.ds-screen {
+  border: 1px solid $color-fds-tertiary-200;
+  box-shadow: 0 0 $size-base transparentize($color-fds-tertiary-200, .1);
+}
+
+.sr-only {
+  @include sr-only;
+}
+
+
+// This isn't broken in fds-style, but is with Ruby-based Sass, which strips out the :not() rule
+.fds-table__sort:hover:not(.fds-table__sort--descending, .fds-table__sort--ascending):after {
+  background-image: url('#{$image-path}/chevron-up.png');
+  background-image: url('#{$image-path}/chevron-up.svg');
+  opacity: .4;
+}
+
+// This isn't broken in fds-style, but for is with Ruby-based Sass
+// scss-lint:disable QualifyingElement
+span.fds-stepped-tabs__label,
+div.fds-stepped-tabs__label {
+  cursor: initial;
+}
+
+.ds-code-toggle {
+
+  padding-right: $size-default;
+  padding-left: $size-default;
+
+  label {
+    margin-right: 0;
+    font-weight: $font-bold;
+  }
+
+}
+
+html:hover body::before {
+  // scss-lint:disable ImportantRule
+  display: none !important; // hide breakpoint bar
+}

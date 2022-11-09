@@ -1,0 +1,66 @@
+.ds-related-card {
+
+  & {
+
+    @include breakpoint(S) {
+      @include fds-grid-row();
+    }
+
+  }
+
+  &__type {
+    @include font-size(1);
+    text-transform: uppercase;
+  }
+
+  &__item {
+
+    & {
+      display: block;
+      text-decoration: none;
+      margin-bottom: $size-medium;
+
+      @include breakpoint(S) {
+        @include fds-grid-column();
+        @include fds-grid-column-width(6);
+      }
+
+      @include breakpoint(M) {
+        @include fds-grid-column-width(4);
+      }
+
+    }
+
+    &:link,
+    &:visited {
+      color: $color-fds-base !important;
+    }
+
+    &:focus {
+      outline: 0 !important;
+    }
+
+  }
+
+  &__title {
+
+    @include font-size(4);
+    line-height: $line-height-medium;
+    color: $color-fds-link;
+    font-weight: $font-bold;
+    display: flex;
+    align-items: center;
+    gap: $size-base;
+
+    .ds-related-card__item:focus-visible & {
+      outline: 3px solid $form-focus-color;
+      outline-offset: 3px;
+    }
+
+    .ds-related-card__item:hover & {
+      text-decoration: underline;
+    }
+
+  }
+
+}

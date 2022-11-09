@@ -1,0 +1,54 @@
+.ds-usage {
+  & {
+    margin: $size-medium 0;
+    @include breakpoint(M) {
+      display: flex;
+    }
+  }
+
+  &__hd {
+    margin: 0 0 $size-default;
+  }
+
+  &__bd {
+    > ul {
+      margin: 0;
+      > li {
+        margin: 0 0 $size-default;
+      }
+      > li:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__item {
+
+    & {
+      border-top: $size-base solid $box-border-color;
+      background-color: $box-bgcolor-default;
+      padding: $box-padding;
+      flex: 1;
+      margin-bottom: $size-default;
+    }
+
+    &--do {
+      border-top-color: $color-fds-primary;
+      background-color: $color-fds-primary-100;
+    }
+
+    &--dont {
+      border-top-color: $color-fds-red;
+      background-color: $color-fds-red-100;
+      @include breakpoint(M) {
+        margin-left: $size-medium;
+      }
+    }
+
+    @include breakpoint(M) {
+      margin-bottom: 0;
+    }
+
+  }
+
+}
