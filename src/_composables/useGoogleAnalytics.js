@@ -90,15 +90,20 @@ export function useGoogleAnalytics() {
   }
 
   const sendToGA = (typ, cat='', lab='') => {
-    if(onProduction){
+    if( checkOnProd() ){
       let eventObject = {};
       if(cat!='') eventObject['event_category'] = cat;
       if(lab!='') eventObject['event_label'] = lab;
       gtag('event', typ, eventObject);
+      console.log('PROD GA TRACKING: ' + typ + " | " + cat + " | " + lab)
       //gtag('event', typ, { 'event_category': cat, 'event_label': lab });
     } else {
-      console.log('GA TRACKING: ' + typ + " | " + cat + " | " + lab)
+      console.log('DEV GA TRACKING: ' + typ + " | " + cat + " | " + lab)
     }
+  }
+
+  const checkOnProd = () => {
+    return ((window.location.href.indexOf('localhost:') > -1) || (window.location.href.indexOf('127.0.0.1:') > -1)) ? false : true;
   }
   
   const init = (gaId) => {

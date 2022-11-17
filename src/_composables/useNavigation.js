@@ -14,7 +14,7 @@ export function useNavigation() {
       if(_target=='_blank') window.open(_path, _target);
       else window.location.href = _path;
     } else {
-      sendToGA('page_location', trackerName);
+      sendToGA('Page Path', trackerName, _path);
       router.push(_path)
     }
   }
