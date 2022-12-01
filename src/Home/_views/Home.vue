@@ -1,6 +1,6 @@
 <template>
   <div>
-    <baseHeader></baseHeader>
+    <baseHeader USE_SEARCH="false"></baseHeader>
 
     <main id="main-content" tabindex="-1">
       <div class="fds-section">
@@ -147,7 +147,7 @@ export default {
     })
 
     onMounted(()=>{
-      store.dispatch("videos/setVideos");
+      //store.dispatch("videos/setVideos");
     });
 
     return {

@@ -23,14 +23,14 @@
       :NAV_DATA="navigationData"
       EXTRA_CLASSES="fds-nav-global__list-item--multi-column"
       @emitSearch="submitSearch"
-      USE_SEARCH="true"
+      :USE_SEARCH="USE_SEARCH"
     ></globalNav>
     
   </header>
 </template>
 
 <script>
-import { onMounted, ref, computed } from 'vue';
+import { onMounted, ref, computed, watch } from 'vue';
 
 import { navigationService } from '@/Shared/_services/navigation.service';
 import { useStore } from 'vuex';
@@ -47,6 +47,9 @@ export default {
     tophat,
     headerApp,
     globalNav
+  },
+  props: {
+    USE_SEARCH: String
   },
   setup(props, {emit}){
 
