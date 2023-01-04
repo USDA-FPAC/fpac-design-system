@@ -56,6 +56,57 @@
                 </p> -->
                 <!-- HAS components -->
 
+                <div class="ds-code-example">
+                  <pre>
+                    <code class="ds-code-example__code language-html">
+                      <table class="fds-table">
+                        <caption>
+                          <h2>[Table caption as an &lt;h2&gt;]</h2>
+                        </caption>
+                        <thead>
+                          <tr>
+                            <th scope="col" aria-sort="ascending"><button class="fds-table__sort fds-table__sort--ascending" type="button">Commodity</button></th>
+                            <th scope="col" class="fds-text-align--right"><button class="fds-table__sort" type="button">Loan Rate</button></th>
+                            <th scope="col" class="fds-text-align--right"><button class="fds-table__sort" type="button">30-Day Period PCP</button></th>
+                            <th scope="col" class="fds-text-align--right"><button class="fds-table__sort" type="button">Effective LDP Rate ($)</button></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Barley $/Bushel</td>
+                            <td class="fds-text-align--right">1.75</td>
+                            <td class="fds-text-align--right">3.30</td>
+                            <td class="fds-text-align--right">0.00</td>
+                          </tr>
+                          <tr>
+                            <td>Canola $/Cwt.</td>
+                            <td class="fds-text-align--right">8.94</td>
+                            <td class="fds-text-align--right">15.99</td>
+                            <td class="fds-text-align--right">0.00</td>
+                          </tr>
+                          <tr>
+                            <td>Flaxseed $/Cwt.</td>
+                            <td class="fds-text-align--right">10.13</td>
+                            <td class="fds-text-align--right">15.90</td>
+                            <td class="fds-text-align--right">0.00</td>
+                          </tr>
+                          <tr>
+                            <td>Oats $/Bushel</td>
+                            <td class="fds-text-align--right">1.43</td>
+                            <td class="fds-text-align--right">2.97</td>
+                            <td class="fds-text-align--right">0.00</td>
+                          </tr>
+                          <tr>
+                            <td>Wheat - Soft Red Winter $/Bushel</td>
+                            <td class="fds-text-align--right">2.42</td>
+                            <td class="fds-text-align--right">4.49</td>
+                            <td class="fds-text-align--right">0.00</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </code>
+                  </pre>
+                </div>
 
                 <most-recent-videos></most-recent-videos>
 
@@ -78,11 +129,13 @@
 import { ref, defineAsyncComponent, onMounted, computed, watch } from "vue";
 import { useStore } from "vuex";
 import { useNavigation } from "@/_composables/useNavigation";
+import { useSyntax } from "@/_composables/useSyntax";
 
 import { v4 as uuidv4 } from "uuid";
 
 import baseHeader from "@/_partials/BaseHeader.vue";
 import baseFooter from "@/_partials/BaseFooter.vue";
+//import syntaxHighlight from "@/_partials/SyntaxHighlight.vue";
 import popularVideos from "@/_partials/PopularVideos.vue";
 import mostRecentVideos from "@/_partials/MostRecentVideos.vue";
 
@@ -90,14 +143,16 @@ export default {
   components: {
     baseHeader,
     baseFooter,
+    //syntaxHighlight,
     popularVideos,
-    mostRecentVideos
+    mostRecentVideos,
   },
 
   setup(props) {
     const baseUrl = ref(import.meta.env.BASE_URL);
     const store = useStore();
     const { goto } = useNavigation();
+    const { createExample } = useSyntax();
 
     const showTranscript = ref(false);
 
@@ -146,8 +201,16 @@ export default {
       initVideo(_value);
     })
 
+    const escapeHTMl = () => {
+      document.querySelectorAll("code.escape-html").forEach(el => {
+        el.textContent = el.innerHTML;
+      })
+      hljs.highlightAll();
+    }
+
     onMounted(()=>{
       //store.dispatch("videos/setVideos");
+      createExample();
     });
 
     return {

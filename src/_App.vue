@@ -15,6 +15,7 @@
 import { useRoute } from 'vue-router';
 import { watch } from 'vue'
 import AlertSystem from "@/_partials/AlertSystem.vue";
+
 export default {
   name: "app",
   components: {

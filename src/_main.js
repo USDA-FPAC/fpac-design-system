@@ -1,6 +1,12 @@
 import { createApp } from 'vue';
 import App from '@/_App.vue'
+
+//import VueHighlightJS from 'vue3-highlightjs'
+//import 'highlight.js/styles/solarized-light.css'
+
 const app = createApp(App);
+
+//app.use(hljs)
 
 import { store } from '@/_store.js';
 app.use(store);

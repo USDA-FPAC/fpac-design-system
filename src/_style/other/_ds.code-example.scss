@@ -1,0 +1,20 @@
+
+.ds-code-example {
+  margin-bottom: 2em;
+
+  &__pre {
+    position: relative;
+    max-height: 250px;
+    overflow: auto;
+  }
+
+  &__code {
+    width: 100%;
+  }
+
+  &__copy {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+  }
+}
