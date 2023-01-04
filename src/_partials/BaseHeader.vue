@@ -26,7 +26,6 @@
       :USE_SEARCH="USE_SEARCH"
     ></globalNav>
 
-    <appIcon name="fds-dashboard"></appIcon>
   </header>
 </template>
 
@@ -37,19 +36,16 @@ import { navigationService } from '@/Shared/_services/navigation.service';
 import { useStore } from 'vuex';
 import { useNavigation } from "@/_composables/useNavigation";
 
-
 import tophat from '@/_components/tophat/tophat.vue';
 import headerApp from '@/_components/header-app/header-app.vue';
 import globalNav from '@/_components/global-nav/global-nav.vue';
-import appIcon from '@/_components/app-icon/app-icon.vue';
 //import modal from '@/_components/Modal.vue';
 
 export default {
   components: {
     tophat,
     headerApp,
-    globalNav,
-    appIcon
+    globalNav
   },
   props: {
     USE_SEARCH: String
