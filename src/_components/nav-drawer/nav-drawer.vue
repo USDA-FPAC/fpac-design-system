@@ -1,20 +1,80 @@
 <template>
   <div class="fds-nav-drawer">
-
     <div v-if="subMenuActive">
       <button @click="backToMain()">Back to Main</button>
     </div>
 
-    <div class="fds-nav-drawer__wrapper">
+    <div class="fds-nav-drawer__wrapper fds-p--s">
       <div
           :class="[mainMenuActive ? 'fds-translateX' : 'fds-translateX--left']"
           class="fds-nav-drawer__main"
       >
-        <button id="foundation-btn" @click="navigateTo('foundation-btn', '/foundation')" class="fds-nav-global__link--has-sub-menu" type="button" aria-expanded="false" aria-controls="foundation">
+
+<!--        Originally built using nav-drawer-link component, but toggleMenu() doesn't work here to get submenu?-->
+        <nav>
+          <ul
+              aria-label="Main Navigation"
+              aria-hidden="false"
+              id="main-navigation"
+              class="fds-list--unstyled"
+          >
+            <li>
+              <nav-drawer-link
+                  to="/"
+                  icon="fds-dashboard"
+              >
+                Home
+              </nav-drawer-link>
+            </li>
+            <li>
+              <nav-drawer-link
+                to="/foundation"
+                icon="fds-book"
+                id="foundation-btn"
+                class="fds-nav-global__link--has-sub-menu"
+                aria-expanded="false"
+                aria-controls="foundation"
+                @click="toggleMenu('foundation-btn')"
+              >
+                Foundation
+              </nav-drawer-link>
+            </li>
+            <li>
+              <nav-drawer-link
+                  to="/components"
+                  icon="fds-workspaces"
+                  id="components-btn"
+                  class="fds-nav-global__link--has-sub-menu"
+                  aria-expanded="false"
+                  aria-controls="components"
+                  @click="toggleMenu('components-btn')"
+              >
+                Components
+              </nav-drawer-link>
+            </li>
+          </ul>
+        </nav>
+
+<!--        Using buttons works but no active link class?-->
+        <button
+            @click="navigateTo('foundation-btn', '/foundation')"
+            id="foundation-btn"
+            class="fds-btn--plain fds-nav-global__link--has-sub-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="foundation"
+        >
           <span class="" id="foundation-sub">Foundation</span>
         </button>
 
-        <button id="components-btn" @click="navigateTo('components-btn', '/components')" class="fds-nav-global__link--has-sub-menu" type="button" aria-expanded="false" aria-controls="components">
+        <button
+            @click="navigateTo('components-btn', '/components')"
+            id="components-btn"
+            class="fds-btn--plain fds-nav-global__link--has-sub-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="components"
+        >
           <span class="" id="components-sub">Components</span>
         </button>
       </div>
@@ -47,8 +107,62 @@
       </div>
     </div>
   </div>
-
 </template>
+
+<script>
+import { useMenuSystem } from "@/_composables/useMenuSystem";
+import { useNavigation } from "@/_composables/useNavigation";
+import { ref } from "vue";
+import appIcon from "@/_components/app-icon/app-icon.vue";
+import navDrawerLink from "@/_components/nav-drawer/nav-drawer-link.vue";
+
+export default {
+  components: { appIcon, navDrawerLink },
+
+  setup() {
+    const { openMenu, closeMenu, loopItems } = useMenuSystem();
+    const { goto } = useNavigation();
+    const mainMenuActive = ref(true);
+    const subMenuActive = ref(false);
+
+    function toggleMenu(_id) {
+      let theItem = document.getElementById(_id);
+      let theMenu = theItem.nextSibling;
+
+      let expanded = theItem.getAttribute('aria-expanded');
+      loopItems('closeAllMenus');
+
+      if (expanded ==="true") closeMenu( theItem, theMenu );
+      else openMenu( theItem, theMenu );
+    }
+
+    function navigateTo (_id, _path) {
+      toggleMenu(_id)
+      goto(_path);
+
+      this.mainMenuActive = !this.mainMenuActive;
+      this.subMenuActive = !this.subMenuActive;
+    }
+
+    function backToMain () {
+      loopItems('closeAllMenus');
+
+      this.mainMenuActive = !this.mainMenuActive;
+      this.subMenuActive = !this.subMenuActive;
+    }
+
+    return {
+      toggleMenu,
+      backToMain,
+      openMenu,
+      goto,
+      navigateTo,
+      mainMenuActive,
+      subMenuActive
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 //Need to figure out how to get these variables from fds-style
@@ -114,69 +228,3 @@ $color-white: #ffffff !default;
   }
 }
 </style>
-
-<script>
-import {useMenuSystem} from "@/_composables/useMenuSystem";
-import {useNavigation} from "@/_composables/useNavigation";
-import {ref} from "vue";
-
-export default {
-  setup() {
-
-    const {
-      openMenu,
-      closeMenu,
-      loopItems,
-    } = useMenuSystem();
-
-    const { goto } = useNavigation();
-
-    const mainMenuActive = ref(true);
-    const subMenuActive = ref(false);
-
-    let baseUrl = import.meta.env.BASE_URL.substring(0, import.meta.env.BASE_URL.length - 1)
-    const basePath = ref( baseUrl );
-
-
-    function toggleMenu(_id) {
-      let theItem = document.getElementById(_id);
-      let theMenu = theItem.nextSibling;
-
-      let expanded = theItem.getAttribute('aria-expanded');
-      loopItems('closeAllMenus');
-
-      if (expanded ==="true") closeMenu( theItem, theMenu );
-      else openMenu( theItem, theMenu );
-
-    }
-
-    function navigateTo (_id, _path) {
-      toggleMenu(_id)
-      goto(_path);
-
-      this.mainMenuActive = !this.mainMenuActive;
-      this.subMenuActive = !this.subMenuActive;
-    }
-
-    function backToMain () {
-      loopItems('closeAllMenus');
-      this.mainMenuActive = !this.mainMenuActive;
-      this.subMenuActive = !this.subMenuActive;
-    }
-
-    return {
-      toggleMenu,
-      backToMain,
-      openMenu,
-      goto,
-      navigateTo,
-      basePath,
-      baseUrl,
-      mainMenuActive,
-      subMenuActive
-    }
-  },
-
-  methods: {}
-}
-</script>
