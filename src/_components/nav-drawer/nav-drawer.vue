@@ -1,8 +1,31 @@
 <template>
   <div class="fds-nav-drawer">
-    <div v-if="subMenuActive">
-      <button @click="backToMain()">Back to Main</button>
+    <div class="fds-nav-drawer__menu-toggle">
+      <app-button
+          variant="plain"
+          icon="fds-menu-open"
+          class="fds-p--s fds-bg:hover--primary-100"
+          @click=""
+      >
+      </app-button>
     </div>
+
+    <div
+        v-if="!subMenuActive"
+        class="fds-text-size--4 fds-p-l--s fds-p-r--s fds-p-t--m fds-p-b--m"
+    >
+      FPAC Design System
+    </div>
+
+    <app-button
+        v-if="subMenuActive"
+        variant="plain"
+        icon="fds-arrow-back"
+        label="Back to Main"
+        class="fds-p-l--s fds-p-r--s fds-p-t--m fds-p-b--m fds-bg:hover--primary-100"
+        @click="backToMain()"
+        >
+    </app-button>
 
     <div class="fds-nav-drawer__wrapper fds-p--s">
       <div
@@ -114,10 +137,11 @@ import { useMenuSystem } from "@/_composables/useMenuSystem";
 import { useNavigation } from "@/_composables/useNavigation";
 import { ref } from "vue";
 import appIcon from "@/_components/app-icon/app-icon.vue";
+import appButton from "@/_components/app-button/app-button.vue";
 import navDrawerLink from "@/_components/nav-drawer/nav-drawer-link.vue";
 
 export default {
-  components: { appIcon, navDrawerLink },
+  components: { appIcon, appButton, navDrawerLink },
 
   setup() {
     const { openMenu, closeMenu, loopItems } = useMenuSystem();
