@@ -51,11 +51,19 @@
 </template>
 
 <style lang="scss" scoped>
-//@use "@/assets/styles/variables/_fds.variables.scss" as fds;
+//Need to figure out how to get these variables from fds-style
+
+@function tint($color, $percent) {
+  @return mix(#fff, $color, $percent);
+}
+$color-gray-warm-dark: #494440 !default;
+$color-fds-tertiary: $color-gray-warm-dark;
+$color-fds-tertiary-200: tint($color-fds-tertiary, 80%);
+$color-white: #ffffff !default;
 
 .fds-nav-drawer {
-  //background-color: fds.$color-white;
-  //border-right: 1px solid fds.$color-fds-tertiary-200;
+  background-color: $color-white;
+  border-right: 1px solid $color-fds-tertiary-200;
   height: 100vh;
   width: 25rem;
   position: absolute;
