@@ -43,7 +43,7 @@
                 to="/"
                 icon="fds-dashboard"
                 label="Home"
-                class="active"
+                class="fds-nav-drawer__label--active"
                 @click.prevent="goto('/')"
             >
             </nav-drawer-link>
@@ -185,9 +185,9 @@ export default {
       const navItems = navDrawer.getElementsByClassName("fds-nav-drawer__item");
       for (let i = 0; i < navItems.length; i++) {
         navItems[i].addEventListener("click", function() {
-          const current = document.getElementsByClassName("active");
-          current[0].className = current[0].className.replace(" active", "");
-          this.className += " active";
+          const current = document.getElementsByClassName("fds-nav-drawer__label--active");
+          current[0].className = current[0].className.replace(" fds-nav-drawer__label--active", "");
+          this.className += " fds-nav-drawer__label--active";
         });
       }
     });
@@ -222,7 +222,7 @@ $color-white: #ffffff !default;
   border-right: 1px solid $color-fds-tertiary-200;
   height: 100vh;
   width: 25rem;
-  position: absolute;
+  position: fixed;
   z-index: 4;
   top: 0;
   //left: -25rem;
@@ -252,6 +252,10 @@ $color-white: #ffffff !default;
 
   &--open {
     left: 0;
+  }
+
+  @media screen and (min-width: 864px) {
+    left: 8rem;
   }
 }
 

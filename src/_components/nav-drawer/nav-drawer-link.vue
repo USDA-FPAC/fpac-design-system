@@ -37,8 +37,6 @@ export default {
       appIcon
     }
   }
-
-
 }
 </script>
 
@@ -84,7 +82,7 @@ $color-fds-primary: shade($color-green, 25%);
       transform: scaleX(1);
     }
 
-    .active &::before {
+    &--active &::before {
       transform: none;
     }
   }
