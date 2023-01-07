@@ -1,18 +1,18 @@
 <template>
-  <router-link class="fds-link--underline-none" v-bind="$props">
+  <a class="fds-nav-drawer__item fds-link--underline-none" v-bind="$props">
     <div
-        class="fds-nav-drawer__link fds-p-b--m"
+        class="fds-nav-drawer__link"
         :class="{ 'fds-level': icon, 'fds-p-l--xs': !icon }"
     >
-      <div class="fds-nav-drawer__icon">
+      <div class="fds-nav-drawer__icon fds-level">
         <app-icon v-if="icon" :name="icon"> </app-icon>
       </div>
       <div class="fds-nav-drawer__label">
-        <slot></slot>
+        {{ label }}
         <div class="fds-nav-drawer__underline"></div>
       </div>
     </div>
-  </router-link>
+  </a>
 </template>
 
 <script>
@@ -21,11 +21,13 @@ import appIcon from "@/_components/app-icon/app-icon.vue";
 
 export default {
   components: {
-    appIcon
+    appIcon,
+    RouterLink
   },
 
   props: {
     icon: String,
+    label: String,
     ...RouterLink.props,
   },
 
@@ -55,6 +57,7 @@ $color-fds-primary: shade($color-green, 25%);
 .fds-nav-drawer {
   &__link {
     color: $color-fds-tertiary-900;
+    cursor: pointer;
   }
 
   &__label {
@@ -81,7 +84,7 @@ $color-fds-primary: shade($color-green, 25%);
       transform: scaleX(1);
     }
 
-    .router-link-active &::before {
+    .active &::before {
       transform: none;
     }
   }

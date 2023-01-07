@@ -1,5 +1,5 @@
 <template>
-  <div class="fds-nav-drawer">
+  <div id="fds-nav-drawer" class="fds-nav-drawer">
     <div class="fds-nav-drawer__menu-toggle">
       <app-button
           variant="plain"
@@ -9,121 +9,122 @@
       >
       </app-button>
     </div>
+    <div class="fds-nav-drawer__header">
+      <div
+          v-if="!subMenuActive"
+          class="fds-text-size--4 fds-p-l--s fds-p-r--s fds-p-t--m fds-p-b--m"
+      >
+        FPAC Design System
+      </div>
 
-    <div
-        v-if="!subMenuActive"
-        class="fds-text-size--4 fds-p-l--s fds-p-r--s fds-p-t--m fds-p-b--m"
-    >
-      FPAC Design System
+      <app-button
+          v-if="subMenuActive"
+          variant="plain"
+          icon="fds-arrow-back"
+          label="Back to Main"
+          class="fds-p-l--s fds-p-r--s fds-p-t--m fds-p-b--m fds-bg:hover--primary-100"
+          @click="backToMain()"
+      >
+      </app-button>
     </div>
-
-    <app-button
-        v-if="subMenuActive"
-        variant="plain"
-        icon="fds-arrow-back"
-        label="Back to Main"
-        class="fds-p-l--s fds-p-r--s fds-p-t--m fds-p-b--m fds-bg:hover--primary-100"
-        @click="backToMain()"
-        >
-    </app-button>
-
-    <div class="fds-nav-drawer__wrapper fds-p--s">
+    <div class="fds-nav-drawer__content fds-p--s">
       <div
           :class="[mainMenuActive ? 'fds-translateX' : 'fds-translateX--left']"
-          class="fds-nav-drawer__main"
+          class="fds-nav-drawer__main-container"
       >
-
-<!--        Originally built using nav-drawer-link component, but toggleMenu() doesn't work here to get submenu?-->
-        <nav>
-          <ul
-              aria-label="Main Navigation"
-              aria-hidden="false"
-              id="main-navigation"
-              class="fds-list--unstyled"
-          >
-            <li>
-              <nav-drawer-link
-                  to="/"
-                  icon="fds-dashboard"
-              >
-                Home
-              </nav-drawer-link>
-            </li>
-            <li>
-              <nav-drawer-link
-                to="/foundation"
-                icon="fds-book"
-                id="foundation-btn"
+        <ul
+            aria-label="Primary Navigation"
+            id="primary-navigation"
+            class="fds-list--unstyled"
+        >
+          <li>
+            <nav-drawer-link
+                :href="basePath"
+                to="/"
+                icon="fds-dashboard"
+                label="Home"
+                class="active"
+                @click.prevent="goto('/')"
+            >
+            </nav-drawer-link>
+          </li>
+          <li>
+            <nav-drawer-link
+              :href="basePath + '/foundation'"
+              to="/foundation"
+              icon="fds-book"
+              label="Foundation"
+              id="foundation"
+              class="fds-nav-global__link--has-sub-menu"
+              aria-expanded="false"
+              aria-controls="foundation-sub-menu"
+              @click.prevent="navigateTo('foundation', '/foundation')"
+            >
+            </nav-drawer-link>
+          </li>
+          <li>
+            <nav-drawer-link
+                :href="basePath + '/components'"
+                to="/components"
+                icon="fds-workspaces"
+                label="Components"
+                id="components"
                 class="fds-nav-global__link--has-sub-menu"
                 aria-expanded="false"
-                aria-controls="foundation"
-                @click="toggleMenu('foundation-btn')"
-              >
-                Foundation
-              </nav-drawer-link>
-            </li>
-            <li>
-              <nav-drawer-link
-                  to="/components"
-                  icon="fds-workspaces"
-                  id="components-btn"
-                  class="fds-nav-global__link--has-sub-menu"
-                  aria-expanded="false"
-                  aria-controls="components"
-                  @click="toggleMenu('components-btn')"
-              >
-                Components
-              </nav-drawer-link>
-            </li>
-          </ul>
-        </nav>
-
-<!--        Using buttons works but no active link class?-->
-        <button
-            @click="navigateTo('foundation-btn', '/foundation')"
-            id="foundation-btn"
-            class="fds-btn--plain fds-nav-global__link--has-sub-menu"
-            type="button"
-            aria-expanded="false"
-            aria-controls="foundation"
-        >
-          <span class="" id="foundation-sub">Foundation</span>
-        </button>
-
-        <button
-            @click="navigateTo('components-btn', '/components')"
-            id="components-btn"
-            class="fds-btn--plain fds-nav-global__link--has-sub-menu"
-            type="button"
-            aria-expanded="false"
-            aria-controls="components"
-        >
-          <span class="" id="components-sub">Components</span>
-        </button>
+                aria-controls="components-sub-menu"
+                @click.prevent="navigateTo('components', '/components')"
+            >
+            </nav-drawer-link>
+          </li>
+        </ul>
       </div>
 
       <div
           :class="[subMenuActive ? 'fds-translateX' : 'fds-translateX--right']"
-          class="fds-nav-drawer__sub"
+          class="fds-nav-drawer__sub-container"
       >
-        <div class="sub-menu" id="foundation" aria-hidden="true">
-          <ul class="" aria-labelledby="foundation-sub">
-            <li class="">
-              <a href="" @click.prevent="goto('/foundation/color')" class="">Color</a>
+        <div class="fds-nav-drawer__sub-menu" id="foundation-sub-menu" aria-hidden="true">
+          <ul class="fds-list--unstyled" aria-labelledby="foundation">
+            <li>
+              <nav-drawer-link
+                  :href="basePath + '/foundation/color'"
+                  to="/foundation/color"
+                  label="Color"
+                  @click.prevent="goto('/foundation/color')"
+              >
+              </nav-drawer-link>
             </li>
-            <li class="">
-              <a href="" @click.prevent="goto('/foundation/typography')" class="">Typography</a>
+            <li>
+              <nav-drawer-link
+                  :href="basePath + '/foundation/typography'"
+                  to="/foundation/typography"
+                  label="Typography"
+                  @click.prevent="goto('/foundation/typography')"
+              >
+              </nav-drawer-link>
             </li>
           </ul>
         </div>
 
-        <div class="sub-menu" id="components" aria-hidden="true">
-          <ul class="" aria-labelledby="components-sub">
-            <li class="">
-              <a href="" @click.prevent="goto('/components/buttons')" class="">Buttons</a>
+        <div class="fds-nav-drawer__sub-menu" id="components-sub-menu" aria-hidden="true">
+          <ul class="fds-list--unstyled" aria-labelledby="components">
+            <li>
+              <nav-drawer-link
+                  :href="basePath + '/components/buttons'"
+                  to="/components/buttons"
+                  label="Buttons"
+                  @click.prevent="goto('/components/buttons')"
+              >
+              </nav-drawer-link>
             </li>
-            <li class="">
-              <a href="" @click.prevent="goto('/components/checkbox')" class="">Checkbox</a>
+            <li>
+              <nav-drawer-link
+                  :href="basePath + '/components/checkbox'"
+                  to="/components/checkbox"
+                  label="Checkbox"
+                  @click.prevent="goto('/components/checkbox')"
+              >
+              </nav-drawer-link>
             </li>
           </ul>
         </div>
@@ -135,7 +136,7 @@
 <script>
 import { useMenuSystem } from "@/_composables/useMenuSystem";
 import { useNavigation } from "@/_composables/useNavigation";
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import appIcon from "@/_components/app-icon/app-icon.vue";
 import appButton from "@/_components/app-button/app-button.vue";
 import navDrawerLink from "@/_components/nav-drawer/nav-drawer-link.vue";
@@ -146,8 +147,12 @@ export default {
   setup() {
     const { openMenu, closeMenu, loopItems } = useMenuSystem();
     const { goto } = useNavigation();
+
     const mainMenuActive = ref(true);
     const subMenuActive = ref(false);
+
+    let baseUrl = import.meta.env.BASE_URL.substring(0, import.meta.env.BASE_URL.length - 1)
+    const basePath = ref( baseUrl );
 
     function toggleMenu(_id) {
       let theItem = document.getElementById(_id);
@@ -160,7 +165,7 @@ export default {
       else openMenu( theItem, theMenu );
     }
 
-    function navigateTo (_id, _path) {
+    function navigateTo(_id, _path) {
       toggleMenu(_id)
       goto(_path);
 
@@ -168,12 +173,24 @@ export default {
       this.subMenuActive = !this.subMenuActive;
     }
 
-    function backToMain () {
+    function backToMain() {
       loopItems('closeAllMenus');
 
       this.mainMenuActive = !this.mainMenuActive;
       this.subMenuActive = !this.subMenuActive;
     }
+
+    onMounted(() => {
+      const navDrawer = document.getElementById("fds-nav-drawer");
+      const navItems = navDrawer.getElementsByClassName("fds-nav-drawer__item");
+      for (let i = 0; i < navItems.length; i++) {
+        navItems[i].addEventListener("click", function() {
+          const current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+    });
 
     return {
       toggleMenu,
@@ -181,6 +198,7 @@ export default {
       openMenu,
       goto,
       navigateTo,
+      basePath,
       mainMenuActive,
       subMenuActive
     }
@@ -211,30 +229,30 @@ $color-white: #ffffff !default;
   left: 0;
   transition: 0.3s;
 
-  &__wrapper {
+  &__content {
     display: flex;
     position: relative;
     overflow-x: hidden;
     height: 100%;
   }
 
-  &__main,
-  &__sub {
+  &__main-container,
+  &__sub-container {
     width: 100%;
     position: absolute;
+  }
+
+  &__sub-menu[aria-hidden=true] {
+    display: none;
+  }
+
+  &__sub-menu[aria-hidden=false] {
+    display: block;
   }
 
   &--open {
     left: 0;
   }
-}
-
-.sub-menu[aria-hidden=true] {
-  display: none;
-}
-
-.sub-menu[aria-hidden=false] {
-  display: block;
 }
 
 .fds-translateX {

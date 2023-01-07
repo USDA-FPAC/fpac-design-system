@@ -2,7 +2,9 @@
   <div>
     <div class="fds-whiteout" tabindex="-1" id="fds-whiteout" aria-hidden="true"></div>
     <alert-system></alert-system>
-    <navDrawer></navDrawer>
+    <nav>
+      <navDrawer></navDrawer>
+    </nav>
     <router-view v-slot="{ Component }">
       <!-- <keep-alive>
         <component :is="Component" :key="$route.fullPath"></component>
