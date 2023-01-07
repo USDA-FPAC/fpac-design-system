@@ -4,6 +4,7 @@
         variant="plain"
         icon="fds-menu"
         class="fds-p--s fds-bg:hover--primary-100"
+        @click="toggleNavDrawer()"
     >
     </app-button>
   </div>
@@ -15,6 +16,14 @@ import appButton from "@/_components/app-button/app-button.vue";
 export default {
   components: {
     appButton
+  },
+  methods: {
+    toggleNavDrawer() {
+      const navDrawer = document.getElementById("fds-nav-drawer");
+      const mainContent = document.getElementById("app-layout__main");
+      navDrawer.classList.toggle("fds-nav-drawer--open");
+      mainContent.classList.toggle("app-layout__main--pushed");
+    }
   }
 }
 </script>

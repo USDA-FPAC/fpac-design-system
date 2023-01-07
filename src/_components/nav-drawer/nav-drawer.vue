@@ -1,11 +1,11 @@
 <template>
   <div id="fds-nav-drawer" class="fds-nav-drawer">
-    <div class="fds-nav-drawer__menu-toggle">
+    <div class="fds-nav-drawer__toggle">
       <app-button
           variant="plain"
           icon="fds-menu-open"
           class="fds-p--s fds-bg:hover--primary-100"
-          @click=""
+          @click="toggleNavDrawer()"
       >
       </app-button>
     </div>
@@ -202,6 +202,14 @@ export default {
       mainMenuActive,
       subMenuActive
     }
+  },
+  methods: {
+    toggleNavDrawer() {
+      const navDrawer = document.getElementById("fds-nav-drawer");
+      const mainContent = document.getElementById("app-layout__main");
+      navDrawer.classList.toggle("fds-nav-drawer--open");
+      mainContent.classList.toggle("app-layout__main--pushed");
+    }
   }
 }
 </script>
@@ -225,8 +233,7 @@ $color-white: #ffffff !default;
   position: fixed;
   z-index: 4;
   top: 0;
-  //left: -25rem;
-  left: 0;
+  left: -25rem;
   transition: 0.3s;
 
   &__content {
@@ -255,7 +262,9 @@ $color-white: #ffffff !default;
   }
 
   @media screen and (min-width: 864px) {
-    left: 8rem;
+    &--open {
+      left: 8rem;
+    }
   }
 }
 

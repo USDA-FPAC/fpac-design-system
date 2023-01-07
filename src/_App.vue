@@ -2,24 +2,20 @@
   <div class="fds-whiteout" tabindex="-1" id="fds-whiteout" aria-hidden="true"></div>
   <alert-system></alert-system>
   <div class="app-layout">
-    <nav>
+    <nav class="app-layout__nav">
       <nav-bar></nav-bar>
       <nav-rail></nav-rail>
       <nav-drawer></nav-drawer>
     </nav>
-    <div>
+    <div id="app-layout__main" class="app-layout__main">
       <base-header></base-header>
       <main id="main-content">
-        <div class="fds-section">
-          <div class="fds-section__bd">
-            <router-view v-slot="{ Component }">
-              <!-- <keep-alive>
-                <component :is="Component" :key="$route.fullPath"></component>
-              </keep-alive> -->
-              <component :is="Component"></component>
-            </router-view>
-          </div>
-        </div>
+        <router-view v-slot="{ Component }">
+          <!-- <keep-alive>
+            <component :is="Component" :key="$route.fullPath"></component>
+          </keep-alive> -->
+          <component :is="Component"></component>
+        </router-view>
       </main>
       <base-footer></base-footer>
     </div>
@@ -59,9 +55,13 @@ export default {
 @import '@/_style/index.scss';
 
 @media screen and (min-width: 864px) {
-  .app-layout {
-    display: grid;
-    grid-template-columns: 33rem 1fr;
+  .app-layout__main {
+    margin-left: 0;
+    transition: margin-left 0.3s;
+
+    &--pushed {
+      margin-left: 33rem;
+    }
   }
 }
 </style>

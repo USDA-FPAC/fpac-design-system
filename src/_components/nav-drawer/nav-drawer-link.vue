@@ -56,6 +56,7 @@ $color-fds-primary: shade($color-green, 25%);
   &__link {
     color: $color-fds-tertiary-900;
     cursor: pointer;
+    transition: 0.3s;
   }
 
   &__label {
