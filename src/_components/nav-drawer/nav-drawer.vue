@@ -1,6 +1,6 @@
 <template>
   <div id="fds-nav-drawer" class="fds-nav-drawer">
-    <div class="fds-nav-drawer__toggle">
+    <div class="fds-nav-drawer__toggle fds-text-align--right@l">
       <app-button
           variant="plain"
           icon="fds-menu-open"
@@ -9,10 +9,10 @@
       >
       </app-button>
     </div>
-    <div class="fds-nav-drawer__header">
+    <div class="fds-nav-drawer__header fds-hide@l">
       <div
           v-if="!subMenuActive"
-          class="fds-text-size--4 fds-p-l--s fds-p-r--s fds-p-t--m fds-p-b--m"
+          class="fds-text-size--4 fds-p-l--s fds-p-r--s"
       >
         FPAC Design System
       </div>
@@ -22,7 +22,7 @@
           variant="plain"
           icon="fds-arrow-back"
           label="Back to Main"
-          class="fds-p-l--s fds-p-r--s fds-p-t--m fds-p-b--m fds-bg:hover--primary-100"
+          class="fds-p-l--s fds-p-r--s fds-bg:hover--primary-100"
           @click="backToMain()"
       >
       </app-button>
@@ -30,7 +30,7 @@
     <div class="fds-nav-drawer__content fds-p--s">
       <div
           :class="[mainMenuActive ? 'fds-translateX' : 'fds-translateX--left']"
-          class="fds-nav-drawer__main-container"
+          class="fds-nav-drawer__main-container fds-hide@l"
       >
         <ul
             aria-label="Primary Navigation"
@@ -236,6 +236,12 @@ $color-white: #ffffff !default;
   left: -25rem;
   transition: 0.3s;
 
+  &__header {
+    height: 7.5rem;
+    display: flex;
+    align-items: center;
+  }
+
   &__content {
     display: flex;
     position: relative;
@@ -262,24 +268,30 @@ $color-white: #ffffff !default;
   }
 
   @media screen and (min-width: 864px) {
+    &__sub-container {
+      position: static;
+    }
+
     &--open {
       left: 8rem;
     }
   }
 }
 
-.fds-translateX {
-  transform: translateX(0);
-  transition: transform 0.3s;
-
-  &--left {
-    transform: translateX(-100%);
+@media screen and (max-width: 864px) {
+  .fds-translateX {
+    transform: translateX(0);
     transition: transform 0.3s;
-  }
 
-  &--right {
-    transform: translateX(100%);
-    transition: transform 0.3s;
+    &--left {
+      transform: translateX(-100%);
+      transition: transform 0.3s;
+    }
+
+    &--right {
+      transform: translateX(100%);
+      transition: transform 0.3s;
+    }
   }
 }
 </style>

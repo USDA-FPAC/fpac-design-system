@@ -1,7 +1,7 @@
 <template>
   <a class="fds-nav-drawer__item fds-link--underline-none" v-bind="$props">
     <div
-        class="fds-nav-drawer__link"
+        class="fds-nav-drawer__link fds-p-b--xxs fds-m-b--s"
         :class="{ 'fds-level': icon, 'fds-p-l--xs': !icon }"
     >
       <div class="fds-nav-drawer__icon fds-level">
@@ -56,7 +56,6 @@ $color-fds-primary: shade($color-green, 25%);
   &__link {
     color: $color-fds-tertiary-900;
     cursor: pointer;
-    transition: 0.3s;
   }
 
   &__label {
