@@ -1,5 +1,5 @@
 <template>
-  <a class="fds-nav-drawer__item fds-link--underline-none" v-bind="$props">
+  <a class="fds-nav-drawer__item fds-link--underline-none">
     <div
         class="fds-nav-drawer__link fds-p-b--xxs fds-m-b--s"
         :class="{ 'fds-level': icon, 'fds-p-l--xs': !icon }"
@@ -16,25 +16,21 @@
 </template>
 
 <script>
-import { RouterLink } from "vue-router";
 import appIcon from "@/_components/app-icon/app-icon.vue";
 
 export default {
   components: {
-    appIcon,
-    RouterLink
+    appIcon
   },
 
   props: {
     icon: String,
-    label: String,
-    ...RouterLink.props,
+    label: String
   },
 
   setup(props) {
     return {
-      ...props,
-      appIcon
+      ...props
     }
   }
 }

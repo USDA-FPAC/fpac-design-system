@@ -1,6 +1,6 @@
 <template>
   <div id="fds-nav-drawer" class="fds-nav-drawer">
-    <div class="fds-nav-drawer__toggle fds-text-align--right@l">
+    <div class="fds-nav-drawer__toggle fds-hide@l">
       <app-button
           variant="plain"
           icon="fds-menu-open"
@@ -193,9 +193,11 @@ export default {
     });
 
     return {
+      openMenu,
+      closeMenu,
+      loopItems,
       toggleMenu,
       backToMain,
-      openMenu,
       goto,
       navigateTo,
       basePath,
@@ -206,9 +208,7 @@ export default {
   methods: {
     toggleNavDrawer() {
       const navDrawer = document.getElementById("fds-nav-drawer");
-      const mainContent = document.getElementById("app-layout__main");
       navDrawer.classList.toggle("fds-nav-drawer--open");
-      mainContent.classList.toggle("app-layout__main--pushed");
     }
   }
 }
@@ -273,7 +273,7 @@ $color-white: #ffffff !default;
     }
 
     &--open {
-      left: 8rem;
+      left: 9rem;
     }
   }
 }

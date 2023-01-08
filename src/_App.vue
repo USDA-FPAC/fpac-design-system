@@ -60,7 +60,7 @@ export default {
     transition: margin-left 0.3s;
 
     &--pushed {
-      margin-left: 33rem;
+      margin-left: 34rem;
     }
   }
 }

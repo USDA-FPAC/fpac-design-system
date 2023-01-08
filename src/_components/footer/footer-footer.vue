@@ -45,7 +45,7 @@
                   <a href="" @click.prevent="goto('https://www.interaction-design.org/literature','_blank')">Interaction Design Foundation</a>
                 </li>
                 <li class="fds-footer__list-item">
-                  <a href="" @click.prevent="goto('https://www.nngroup.com/articles/','_blank')">Nielsen Norma Group</a>
+                  <a href="" @click.prevent="goto('https://www.nngroup.com/articles/','_blank')">Nielsen Norman Group</a>
                 </li>
                 <li class="fds-footer__list-item">
                   <a href="" @click.prevent="goto('https://uxmag.com/topics/government-and-public-services','_blank')">UX Magazine</a>
