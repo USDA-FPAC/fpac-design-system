@@ -76,6 +76,48 @@
             >
             </nav-drawer-link>
           </li>
+          <li>
+            <nav-drawer-link
+                :href="basePath + '/patterns'"
+                to="/patterns"
+                icon="fds-view_comfy_alt"
+                label="Patterns"
+                id="patterns"
+                class="fds-nav-global__link--has-sub-menu"
+                aria-expanded="false"
+                aria-controls="patterns-sub-menu"
+                @click.prevent="navigateTo('patterns', '/patterns')"
+            >
+            </nav-drawer-link>
+          </li>
+          <li>
+            <nav-drawer-link
+                :href="basePath + '/utilities'"
+                to="/utilities"
+                icon="fds-route"
+                label="Utilities"
+                id="utilities"
+                class="fds-nav-global__link--has-sub-menu"
+                aria-expanded="false"
+                aria-controls="utilities-sub-menu"
+                @click.prevent="navigateTo('utilities', '/utilities')"
+            >
+            </nav-drawer-link>
+          </li>
+          <li>
+            <nav-drawer-link
+                :href="basePath + '/guides'"
+                to="/guides"
+                icon="fds-signpost"
+                label="Guides"
+                id="guides"
+                class="fds-nav-global__link--has-sub-menu"
+                aria-expanded="false"
+                aria-controls="guides-sub-menu"
+                @click.prevent="navigateTo('guides', '/guides')"
+            >
+            </nav-drawer-link>
+          </li>
         </ul>
       </div>
 
@@ -103,6 +145,42 @@
               >
               </nav-drawer-link>
             </li>
+            <li>
+              <nav-drawer-link
+                  :href="basePath + '/foundation/spacing'"
+                  to="/foundation/spacing"
+                  label="Spacing"
+                  @click.prevent="goto('/foundation/spacing')"
+              >
+              </nav-drawer-link>
+            </li>
+            <li>
+              <nav-drawer-link
+                  :href="basePath + '/foundation/shadows'"
+                  to="/foundation/shadows"
+                  label="Shadows"
+                  @click.prevent="goto('/foundation/shadows')"
+              >
+              </nav-drawer-link>
+            </li>
+            <li>
+              <nav-drawer-link
+                  :href="basePath + '/foundation/icons'"
+                  to="/foundation/icons"
+                  label="Icons"
+                  @click.prevent="goto('/foundation/icons')"
+              >
+              </nav-drawer-link>
+            </li>
+            <li>
+              <nav-drawer-link
+                  :href="basePath + '/foundation/logo'"
+                  to="/foundation/logo"
+                  label="Logo"
+                  @click.prevent="goto('/foundation/logo')"
+              >
+              </nav-drawer-link>
+            </li>
           </ul>
         </div>
 
@@ -126,6 +204,18 @@
               >
               </nav-drawer-link>
             </li>
+          </ul>
+        </div>
+        <div class="fds-nav-drawer__sub-menu" id="patterns-sub-menu" aria-hidden="true">
+          <ul class="fds-list--unstyled" aria-labelledby="patterns">
+          </ul>
+        </div>
+        <div class="fds-nav-drawer__sub-menu" id="utilities-sub-menu" aria-hidden="true">
+          <ul class="fds-list--unstyled" aria-labelledby="utilities">
+          </ul>
+        </div>
+        <div class="fds-nav-drawer__sub-menu" id="guides-sub-menu" aria-hidden="true">
+          <ul class="fds-list--unstyled" aria-labelledby="guides">
           </ul>
         </div>
       </div>

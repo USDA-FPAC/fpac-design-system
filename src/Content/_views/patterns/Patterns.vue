@@ -1,7 +1,7 @@
 <template>
   <div class="fds-section">
     <div class="fds-section__bd">
-      <p class="fds-text-align--right">This is the Components overview page</p>
+      <p class="fds-text-align--right">This is the Patterns overview page</p>
     </div>
   </div>
   <!--    Temporary content added to show scrolling-->

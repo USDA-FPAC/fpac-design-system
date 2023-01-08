@@ -18,6 +18,22 @@ export const contentRoutes = [
     component: () => import('@/Content/_views/foundation/Typography.vue')
   },
   {
+    path: '/foundation/spacing',
+    component: () => import('@/Content/_views/foundation/Spacing.vue')
+  },
+  {
+    path: '/foundation/shadows',
+    component: () => import('@/Content/_views/foundation/Shadows.vue')
+  },
+  {
+    path: '/foundation/icons',
+    component: () => import('@/Content/_views/foundation/Icons.vue')
+  },
+  {
+    path: '/foundation/logo',
+    component: () => import('@/Content/_views/foundation/Logo.vue')
+  },
+  {
     path: '/components',
     component: () => import('@/Content/_views/components/Components.vue')
   },
@@ -28,5 +44,17 @@ export const contentRoutes = [
   {
     path: '/components/checkbox',
     component: () => import('@/Content/_views/components/Checkbox.vue')
+  },
+  {
+    path: '/patterns',
+    component: () => import('@/Content/_views/patterns/Patterns.vue')
+  },
+  {
+    path: '/utilities',
+    component: () => import('@/Content/_views/utilities/Utilities.vue')
+  },
+  {
+    path: '/guides',
+    component: () => import('@/Content/_views/guides/Guides.vue')
   }
 ]

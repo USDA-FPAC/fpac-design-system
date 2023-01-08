@@ -3,18 +3,18 @@
 <!--    <baseHeader USE_SEARCH="false"></baseHeader>-->
 
 <!--    <main id="main-content" tabindex="-1">-->
-      <div class="fds-section">
-        <div class="fds-section__bd">
-          <div class="fds-m-t--s fds-m-b--m">
-            <div class="fds-level@m fds-level--justify-between">
-              <h1 class="sr-only">Home</h1>
-              <p class="fds-text--lead fds-m-t--m">
-                <strong><abbr title="Farm Production and Conservation">FPAC</abbr></strong>'s Open Source <strong>design resource</strong>, <strong>documentation</strong>, and <strong>guidelines</strong> - setting the bar for cohesive user experiences across USDA Farm Production and Conservation.
-              </p>
-            </div>
+    <div class="fds-section">
+      <div class="fds-section__bd">
+        <div class="fds-m-t--s fds-m-b--m">
+          <div class="fds-level@m fds-level--justify-between">
+            <h1 class="sr-only">Home</h1>
+            <p class="fds-text--lead fds-m-t--m">
+              <strong><abbr title="Farm Production and Conservation">FPAC</abbr></strong>'s Open Source <strong>design resource</strong>, <strong>documentation</strong>, and <strong>guidelines</strong> - setting the bar for cohesive user experiences across USDA Farm Production and Conservation.
+            </p>
           </div>
         </div>
       </div>
+    </div>
 
 <!--    Temporary content added to show scrolling-->
     <div class="fds-section">
