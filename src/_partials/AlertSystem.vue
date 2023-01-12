@@ -24,10 +24,10 @@
   </div>
 </template>
 <script>
-import { ref, onMounted, watch, computed } from 'vue';
+import { defineAsyncComponent, ref, watch, computed } from 'vue';
 import { useStore } from 'vuex';
 import { useGrowlControls } from '@/_composables/useGrowlControls';
-import growl from '@/_components/growl/growl.vue';
+const growl = defineAsyncComponent(() => import("@/_components/growl/growl.vue"));
 
 
 export default {

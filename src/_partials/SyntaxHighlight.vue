@@ -1,36 +1,27 @@
 <template>
-  <div>
-    <div class="ds-preview">
-      <slot name="syntaxContainer"></slot>
-    </div>
-    <pre>
-      <code class="escape-html language-html">
-        <slot name="syntaxContainer"></slot>
-      </code>
-    </pre>
-    
-  </div>
+  <span class="sr-only"></span>
 </template>
 
 <script>
+import { useSyntax } from "@/_composables/useSyntax";
 import { onMounted } from "vue";
-
-
 
 export default {
 
   setup(props) {
 
-    const escapeHTMl = () => {
+    const { createSyntax } = useSyntax();
+
+    /* const escapeHTMl = () => {
       document.querySelectorAll("code.escape-html").forEach(el => {
         el.textContent = el.innerHTML;
       })
       hljs.highlightAll();
-    }
-
+    } */
 
     onMounted(()=>{
-      escapeHTMl();
+      //escapeHTMl();
+      createSyntax();
     });
 
     return {

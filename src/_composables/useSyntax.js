@@ -3,11 +3,10 @@ import { v4 as uuidv4 } from "uuid";
 
 import hljs from 'highlight.js';
 import 'highlight.js/styles/vs2015.css';
-//import 'highlight.js/styles/atom-one-dark.css';
 
 export function useSyntax() {
   
-  const createExample = () => {
+  const createSyntax = () => {
 
     document.querySelectorAll("div.ds-code-example").forEach(el => {
       let codeId = uuidv4();
@@ -48,9 +47,8 @@ export function useSyntax() {
 
     })
 
-    // Run Hightlight.js for all
-    hljs.configure({languages:['html','javascript','xml']})
-    hljs.highlightAll();
+    // Run Hightlight.js for all PRE tags on page
+    highlightAll();
   }
 
   const createCopyButton = (_el) => {
@@ -73,7 +71,14 @@ export function useSyntax() {
     navigator.clipboard.writeText(code);
   }
 
+  const highlightAll = () => {
+    // Run Hightlight.js for all PRE tags on page
+    hljs.configure({languages:['html','javascript','xml']});
+    hljs.highlightAll();
+  }
+
   return {
-    createExample,
+    createSyntax,
+    highlightAll
   }
 }

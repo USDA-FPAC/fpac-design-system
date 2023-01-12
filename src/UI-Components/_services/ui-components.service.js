@@ -1,5 +1,5 @@
 
-export const homeService = {
+export const uiComponentsService = {
 
   doNothing: (callback) => {
     callback()

@@ -3,10 +3,9 @@
     <div class="fds-whiteout" tabindex="-1" id="fds-whiteout" aria-hidden="true"></div>
     <alert-system></alert-system>
     <router-view v-slot="{ Component }">
-      <!-- <keep-alive>
-        <component :is="Component" :key="$route.fullPath"></component>
-      </keep-alive> -->
-      <component :is="Component"></component>
+      <KeepAlive>
+        <component :is="Component"></component>
+      </KeepAlive>
     </router-view>
   </div>
 </template>

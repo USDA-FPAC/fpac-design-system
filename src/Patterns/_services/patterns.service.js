@@ -1,5 +1,5 @@
 
-export const homeService = {
+export const patternsService = {
 
   doNothing: (callback) => {
     callback()

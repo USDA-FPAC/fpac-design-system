@@ -86,14 +86,15 @@
 </template>
 
 <script>
-import { ref, onMounted, computed, watch } from "vue";
+import { defineAsyncComponent, ref, onMounted, computed, watch } from "vue";
 import { useStore } from "vuex";
 import { useRoute } from 'vue-router';
 import { useNavigation } from "@/_composables/useNavigation";
 
-import baseHeader from "@/_partials/BaseHeader.vue";
-import baseFooter from "@/_partials/BaseFooter.vue";
-import popularVideos from "@/_partials/PopularVideos.vue";
+
+const baseHeader = defineAsyncComponent(() => import("@/_partials/BaseHeader.vue"));
+const baseFooter = defineAsyncComponent(() => import("@/_partials/BaseFooter.vue"));
+const popularVideos = defineAsyncComponent(() => import("@/_partials/PopularVideos.vue"));
 
 export default {
   components: {

@@ -5,7 +5,7 @@
       APP_ABBR_NAME="FDS">
     </footerFooter>
     <footerScreenId
-      SCREEN_ID="FDS-2022">
+      SCREEN_ID="FDS-2023">
     </footerScreenId>
     
     <hiddenItems></hiddenItems>
@@ -14,22 +14,22 @@
 </template>
 
 <script>
-import { inject, onMounted, ref, computed } from 'vue';
-
-import footerTopper from '@/_components/footer/footer-topper.vue';
-import footerFooter from '@/_components/footer/footer-footer.vue';
-import footerScreenId from '@/_components/footer/footer-screen-id.vue';
-import hiddenItems from '@/_components/hidden/hidden-items.vue';
+import { defineAsyncComponent } from "vue";
+const footerTopper = defineAsyncComponent(() => import("@/_components/footer/footer-topper.vue"));
+const footerFooter = defineAsyncComponent(() => import("@/_components/footer/footer-footer.vue"));
+const footerScreenId = defineAsyncComponent(() => import("@/_components/footer/footer-screen-id.vue"));
+const hiddenItems = defineAsyncComponent(() => import("@/_components/hidden/hidden-items.vue"));
 
 export default {
-  setup(){
-
-  },
+  
   components: {
     footerTopper,
     footerFooter,
     footerScreenId,
     hiddenItems
+  },
+  setup(){
+
   }
 }
 </script>

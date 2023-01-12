@@ -1,8 +1,9 @@
 import { createApp } from 'vue';
 import App from '@/_App.vue'
 
-//import VueHighlightJS from 'vue3-highlightjs'
-//import 'highlight.js/styles/solarized-light.css'
+/* import hljs from 'highlight.js';
+import 'highlight.js/styles/vs2015.css';
+hljs.configure({languages:['html','javascript','xml']}); */
 
 const app = createApp(App);
 

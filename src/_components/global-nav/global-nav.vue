@@ -79,7 +79,8 @@
                 </div>
               </div>
             </div>
-            <div v-else="item.hasChild=='false'">
+            <!-- <div v-else="item.hasChild=='false'"> -->
+            <div v-else>
 
               <a :href="basePath + item.path" @click.prevent="goto(item.path)" class="fds-nav-global__link">
                 <span class="fds-nav-global__text">{{item.label}}</span>
@@ -148,7 +149,7 @@
 </template>
 
 <script>
-import { ref, reactive, computed, onMounted, watch, onBeforeUnmount } from 'vue';
+import { ref, computed, onMounted, watch, onBeforeUnmount } from 'vue';
 import { useMenuSystem } from '@/_composables/useMenuSystem';
 import { useNavigation } from "@/_composables/useNavigation";
 import { v4 as uuidv4 } from 'uuid';
@@ -186,10 +187,6 @@ export default {
       return { main, side }
     };
 
-    watch(navigationData, (val) => {
-      navData.value = replaceUID( val );
-    })
-
     function toggleMenu(_id) {
       let theItem = document.getElementById(_id);
       let theMenu = theItem.nextSibling;
@@ -222,6 +219,9 @@ export default {
       goto(_path);
     }
     
+    watch(navigationData, (val) => {
+      navData.value = replaceUID( val );
+    })
 
     onMounted(() => {
       window.addEventListener('keydown', listenForKeys);
