@@ -26,11 +26,11 @@
 import { useRoute } from 'vue-router';
 import { watch } from 'vue'
 import AlertSystem from "@/_partials/AlertSystem.vue";
-import navRail from "@/_components/nav-rail/nav-rail.vue";
-import navDrawer from "@/_components/nav-drawer/nav-drawer.vue";
+import navRail from "@/_components/navigation/large-screen/nav-rail/nav-rail.vue";
+import navDrawer from "@/_components/navigation/small-screen/nav-drawer/nav-drawer.vue";
 import baseHeader from "@/_partials/BaseHeader.vue";
 import baseFooter from "@/_partials/BaseFooter.vue";
-import navBar from "@/_components/nav-bar/nav-bar.vue";
+import navBar from "@/_components/navigation/small-screen/nav-bar/nav-bar.vue";
 
 export default {
   name: "app",

@@ -1,5 +1,5 @@
 <template>
-  <a class="fds-nav-rail__item fds-link--underline-none">
+  <RouterLink class="fds-nav-rail__item fds-link--underline-none" to="">
     <div class="fds-nav-rail__link fds-p-b--m">
       <div class="fds-nav-rail__icon-container">
         <div class="fds-nav-rail__background"></div>
@@ -15,7 +15,7 @@
         {{ label }}
       </div>
     </div>
-  </a>
+  </RouterLink>
 </template>
 
 <script>
@@ -31,7 +31,7 @@ export default {
   },
   setup(props) {
     return {
-      ...props
+      ...props,
     }
   }
 }
@@ -97,10 +97,10 @@ $size-base: 0.4rem;
     }
   }
 
-  [aria-expanded=true] {
-    .fds-nav-rail__background {
-      background-color: $color-fds-primary-200;
-    }
-  }
+  //[aria-expanded=true] {
+  //  .fds-nav-rail__background {
+  //    background-color: $color-fds-primary-200;
+  //  }
+  //}
 }
 </style>

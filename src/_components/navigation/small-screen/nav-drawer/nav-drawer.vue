@@ -22,7 +22,7 @@
           variant="plain"
           icon="fds-arrow-back"
           label="Back to Main"
-          class="fds-p-l--s fds-p-r--s fds-bg:hover--primary-100"
+          class="fds-p-l--s fds-p-r--s"
           @click="backToMain()"
       >
       </app-button>
@@ -34,7 +34,7 @@
       >
         <ul
             aria-label="Primary Navigation"
-            id="primary-navigation"
+            id="nav-drawer-navigation"
             class="fds-list--unstyled"
         >
           <li>
@@ -229,7 +229,7 @@ import { useNavigation } from "@/_composables/useNavigation";
 import { onMounted, ref } from "vue";
 import appIcon from "@/_components/app-icon/app-icon.vue";
 import appButton from "@/_components/app-button/app-button.vue";
-import navDrawerLink from "@/_components/nav-drawer/nav-drawer-link.vue";
+import navDrawerLink from "@/_components/navigation/small-screen/nav-drawer/nav-drawer-link.vue";
 
 export default {
   components: { appIcon, appButton, navDrawerLink },
