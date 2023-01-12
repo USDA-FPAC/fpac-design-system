@@ -27,19 +27,24 @@
     <!-- Hotjar Tracking Code for my site -->
     <script>
       (function(h,o,t,j,a,r){
+        if(!window.location.href.includes('localhost')){
           h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
           h._hjSettings={hjid:3272382,hjsv:6};
           a=o.getElementsByTagName('head')[0];
           r=o.createElement('script');r.async=1;
           r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
           a.appendChild(r);
+        }
       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
-    <script type="module" crossorigin src="/fpac-design-system/assets/index.93e444f7.js"></script>
-    <link rel="stylesheet" href="/fpac-design-system/assets/index.04c3706d.css">
+    <script type="module" crossorigin src="/fpac-design-system/assets/index.180c715c.js"></script>
+    <link rel="stylesheet" href="/fpac-design-system/assets/index.1926ffd3.css">
   </head>
   <body>
+    <a class="skipnav" href="#primary-navigation">Skip to primary navigation</a>
+    <a class="skipnav" href="#main-content">Skip to main content</a>
     <div id="app"></div>
     
   </body>
+  
 </html>
