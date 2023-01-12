@@ -1,21 +1,14 @@
 <template>
   <ul
-      id="components-sub"
+      id="utilities-sub"
       class="fds-nav-rail-drawer__sub fds-list--unstyled"
-      aria-label="Components Sub Navigation"
+      aria-label="Utilities Sub Navigation"
       aria-hidden="false"
   >
     <li>
       <nav-rail-drawer-link
-        to="/components/buttons"
-        label="Buttons"
-      >
-      </nav-rail-drawer-link>
-    </li>
-    <li>
-      <nav-rail-drawer-link
-        to="/components/checkbox"
-        label="Checkbox"
+        to=""
+        label="utilities menu item"
       >
       </nav-rail-drawer-link>
     </li>

@@ -17,7 +17,6 @@
         to="/foundation"
         icon="fds-book"
         label="Foundation"
-        id=""
         :class="{'router-link-active': subIsActive('/foundation')}"
         :aria-expanded="!!subIsActive('/foundation')"
         aria-controls="foundation-sub"
@@ -30,10 +29,9 @@
         to="/components"
         icon="fds-workspaces"
         label="Components"
-        id=""
         :class="{'router-link-active': subIsActive('/components')}"
         :aria-expanded="!!subIsActive('/components')"
-        aria-controls=""
+        aria-controls="components-sub"
         @click="setSub('components')"
       >
       </nav-rail-link>
@@ -43,11 +41,10 @@
         to="/patterns"
         icon="fds-view_comfy_alt"
         label="Patterns"
-        id=""
         :class="{'router-link-active': subIsActive('/patterns')}"
         :aria-expanded="!!subIsActive('/patterns')"
-        aria-controls=""
-        @click="setSub('')"
+        aria-controls="patterns-sub"
+        @click="setSub('patterns')"
       >
       </nav-rail-link>
     </li>
@@ -56,11 +53,10 @@
         to="utilities"
         icon="fds-route"
         label="Utilities"
-        id=""
         :class="{'router-link-active': subIsActive('/utilities')}"
         :aria-expanded="!!subIsActive('/utilities')"
-        aria-controls=""
-        @click="setSub('')"
+        aria-controls="utilities-sub"
+        @click="setSub('utilities')"
       >
       </nav-rail-link>
     </li>
@@ -69,11 +65,10 @@
         to="guides"
         icon="fds-signpost"
         label="Guides"
-        id=""
         :class="{'router-link-active': subIsActive('/guides')}"
         :aria-expanded="!!subIsActive('/guides')"
-        aria-controls=""
-        @click="setSub('')"
+        aria-controls="guides0sub"
+        @click="setSub('guides')"
       >
       </nav-rail-link>
     </li>

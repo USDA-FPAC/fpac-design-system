@@ -2,48 +2,48 @@
   <ul
       id="foundation-sub"
       class="fds-nav-rail-drawer__sub fds-list--unstyled"
+      aria-label="Foundation Sub Navigation"
       aria-hidden="false"
-      aria-labelledby=""
   >
     <li>
       <nav-rail-drawer-link
-          to="/foundation/color"
-          label="Color"
+        to="/foundation/color"
+        label="Color"
       >
       </nav-rail-drawer-link>
     </li>
     <li>
       <nav-rail-drawer-link
-          to="/foundation/typography"
-          label="Typography"
+        to="/foundation/typography"
+        label="Typography"
       >
       </nav-rail-drawer-link>
     </li>
     <li>
       <nav-rail-drawer-link
-          to="/foundation/spacing"
-          label="Spacing"
+        to="/foundation/spacing"
+        label="Spacing"
       >
       </nav-rail-drawer-link>
     </li>
     <li>
       <nav-rail-drawer-link
-          to="/foundation/shadows"
-          label="Shadows"
+        to="/foundation/shadows"
+        label="Shadows"
       >
       </nav-rail-drawer-link>
     </li>
     <li>
       <nav-rail-drawer-link
-          to="/foundation/icons"
-          label="Icons"
+        to="/foundation/icons"
+        label="Icons"
       >
       </nav-rail-drawer-link>
     </li>
     <li>
       <nav-rail-drawer-link
-          to="/foundation/logo"
-          label="Logo"
+        to="/foundation/logo"
+        label="Logo"
       >
       </nav-rail-drawer-link>
     </li>
