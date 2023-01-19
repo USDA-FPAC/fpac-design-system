@@ -20,7 +20,11 @@
     display: flex;
     align-items: center;
     padding: 0 fds.$size-default;
-    font-size: 2rem;
+
+    h3 {
+      font-weight: fds.$font-normal;
+      margin: 0;
+    }
   }
 
   &__content {
@@ -83,12 +87,17 @@
 }
 
 .ds-nav-bar {
-  background-color: fds.$color-white;
-  border-bottom: 1px solid fds.$color-fds-tertiary-200;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
+  height: fds.$size-extra-large;
+
+  &__bd {
+    background-color: fds.$color-white;
+    border-bottom: 1px solid fds.$color-fds-tertiary-200;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 3;
+  }
 }
 
 .ds-btn--icon {

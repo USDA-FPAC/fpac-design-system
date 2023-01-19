@@ -1,1 +1,107 @@
 @use "../core/_fds.variables.scss" as fds;
+
+.ds-nav-rail {
+  background-color: fds.$color-white;
+  border-right: 1px solid fds.$color-fds-tertiary-200;
+  height: 100%;
+  width: 9rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  padding-top: 3rem;
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  a {
+    color: fds.$color-fds-tertiary-900;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &__item {
+    display: block;
+    color: fds.$color-fds-tertiary-900;
+    text-align: center;
+    padding-bottom: fds.$size-medium;
+
+    &:hover {
+      .ds-nav-rail__background {
+        background-color: fds.$color-fds-primary-200;
+      }
+    }
+
+    &--active {
+      .ds-nav-rail__background {
+        background-color: fds.$color-fds-primary-100;
+      }
+    }
+  }
+
+  &__icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: (fds.$size-base + fds.$size-large);
+    width: (fds.$size-base + fds.$size-large);
+    margin: auto;
+  }
+
+  &__background {
+    height: (fds.$size-base + fds.$size-large);
+    width: (fds.$size-base + fds.$size-large);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  &__label {
+    display: block;
+    font-size: fds.$small-font-size;
+    margin-top: -(fds.$size-base);
+  }
+}
+
+.ds-nav-rail-drawer {
+  background-color: fds.$color-white;
+  border-right: 1px solid fds.$color-fds-tertiary-200;
+  height: 100vh;
+  width: 25rem;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: -25rem;
+  transition: 0.3s;
+  padding: fds.$size-default;
+
+  &--open {
+    left: 9rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  a {
+    color: fds.$color-fds-tertiary-900;
+    text-decoration: none;
+    cursor: pointer;
+    padding: fds.$size-default fds.$size-small;
+  }
+
+  &__item {
+    display: block;
+
+    &:hover {
+      background-color: fds.$color-fds-primary-200;
+    }
+
+    &--active {
+      background-color: fds.$color-fds-primary-100;
+    }
+  }
+}
