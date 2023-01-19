@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $parent-columns: $grid-columns !default;
 $fg-column: $column;
 $fg-gutter: $gutter;

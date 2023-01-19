@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .ds-quick-find {
   display: none; // Hide if browser doesn't support (e.g. <=IE11)
 }
