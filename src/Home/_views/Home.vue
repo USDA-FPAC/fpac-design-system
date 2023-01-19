@@ -2,6 +2,9 @@
   <div>
     <baseHeader USE_SEARCH="false"></baseHeader>
 
+    <nav-drawer></nav-drawer>
+    <nav-rail></nav-rail>
+
     <main id="main-content" tabindex="-1">
       <div class="fds-section">
         <div class="fds-section__bd">
@@ -78,6 +81,8 @@
 import { defineAsyncComponent, ref, onMounted, computed, watch } from "vue";
 import { useStore } from "vuex";
 import { useNavigation } from "@/_composables/useNavigation";
+import NavDrawer from "@/_partials/navigation/NavDrawer.vue";
+import NavRail from "@/_partials/navigation/NavRail.vue";
 //import { v4 as uuidv4 } from "uuid";
 
 const baseHeader = defineAsyncComponent(() => import("@/_partials/BaseHeader.vue"));
@@ -87,6 +92,8 @@ const mostRecentVideos = defineAsyncComponent(() => import("@/_partials/MostRece
 
 export default {
   components: {
+    NavRail,
+    NavDrawer,
     baseHeader,
     baseFooter,
     popularVideos,

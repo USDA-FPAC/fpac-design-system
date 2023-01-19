@@ -16,7 +16,9 @@
 @import 'components/ds.header';
 @import 'components/ds.subcat-list';
 @import 'components/ds.nav';
+@import 'components/ds.nav-drawer.scss';
 @import 'components/ds.nav-local';
+@import 'components/ds.nav-rail.scss';
 @import 'components/ds.jump';
 @import 'components/ds.sitemap';
 @import 'components/ds.demos';
@@ -27,7 +29,6 @@
 @import 'other/ds.general';
 @import 'other/ds.shame';
 @import 'other/ds.code-example';
-@import 'other/navigation.scss';
 //@import 'other/syntax-highlighting';
 
 

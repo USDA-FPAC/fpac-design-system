@@ -1,0 +1,104 @@
+@use "../core/_fds.variables.scss" as fds;
+
+.ds-nav-drawer {
+  background-color: fds.$color-white;
+  border-right: 1px solid fds.$color-fds-tertiary-200;
+  height: 100vh;
+  width: 25rem;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: -25rem;
+  transition: 0.3s;
+
+  &--open {
+    left: 0;
+  }
+
+  &__header {
+    height: 7.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 fds.$size-default;
+    font-size: 2rem;
+  }
+
+  &__content {
+    display: flex;
+    position: relative;
+    overflow-x: hidden;
+    height: 100%;
+    padding: fds.$size-default;
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    a {
+      color: fds.$color-fds-tertiary-900;
+      text-decoration: none;
+      cursor: pointer;
+      padding: fds.$size-default fds.$size-small;
+    }
+  }
+
+  &__main-menu,
+  &__sub-menu {
+    width: 22.5rem;
+    position: absolute;
+  }
+
+  &--translate-none {
+    transform: translateX(0);
+    transition: transform 0.3s;
+  }
+
+  &--translate-left {
+    transform: translateX(-110%);
+    transition: transform 0.3s;
+  }
+
+  &--translate-right {
+    transform: translateX(110%);
+    transition: transform 0.3s;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background-color: fds.$color-fds-primary-200;
+    }
+
+    &--active {
+      background-color: fds.$color-fds-primary-100;
+    }
+  }
+
+  &__label {
+    padding-left: fds.$size-default;
+  }
+}
+
+.ds-nav-bar {
+  background-color: fds.$color-white;
+  border-bottom: 1px solid fds.$color-fds-tertiary-200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.ds-btn--icon {
+  padding: fds.$size-default;
+
+  &:hover:not([disabled]) {
+    background-color: fds.$color-fds-primary-100;
+  }
+}
+
+.ds-btn--back {
+  padding: fds.$size-default 0;
+}
