@@ -1,5 +1,5 @@
 
-import { navigationService } from '@/Shared/_services/navigation.service';
+import { uiComponentsService } from '@/UI-Components/_services/ui-components.service';
 
 const state = () =>({
   isLoaded: false,
@@ -10,20 +10,19 @@ const state = () =>({
 
 const getters = {
   isLoaded: state => state.isLoaded,
-  getErrors: state => state.errors,
-  getNavigation: state => state.data  
+  getErrors: state => state.errors
 };
 
 const actions = {
 
-  setNavigation( { commit, state, rootState }, payload ){
+  doAction( { commit, state, rootState }, payload ){
     commit('SET_ERRORS', []);
 
-    navigationService.getNavigation( (result) => {
+    uiComponentsService.doNothing( (result) => {
       if(result.errors){
         commit('SET_ERRORS', result.errors);
       } else {
-        commit('SET_NAV', result.data );
+        commit('DO_MUTATION', result.data );
       }
     });
   }
@@ -35,14 +34,14 @@ const mutations = {
     state.errors = payload;
   },
 
-  SET_NAV( state, navigation ){
-    state.data = navigation;
+  DO_MUTATION( state, payload ){
+    state.data = payload;
     state.isLoaded = true;
   },
 
 };
 
-export const navigation = {
+export const uiComponents = {
   namespaced: true,
   state,
   getters,

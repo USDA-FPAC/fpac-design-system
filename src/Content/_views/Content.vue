@@ -108,8 +108,8 @@ import { useGrowlControls } from '@/_composables/useGrowlControls';
 
 import { v4 as uuidv4 } from "uuid";
 
-import baseHeader from "@/_partials/BaseHeader.vue";
-import baseFooter from "@/_partials/BaseFooter.vue";
+const baseHeader = defineAsyncComponent(() => import("@/_partials/BaseHeader.vue"));
+const baseFooter = defineAsyncComponent(() => import("@/_partials/BaseFooter.vue"));
 
 export default {
   components: {
