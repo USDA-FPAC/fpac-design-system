@@ -6,7 +6,6 @@
     <li>
       <nav-rail-link
         to="/"
-        icon="fds-dashboard"
         label="Home"
         @click="setSub('home')"
       >
@@ -15,7 +14,6 @@
     <li>
       <nav-rail-link
         to="/foundation"
-        icon="fds-book"
         label="Foundation"
         :class="{'router-link-active': subIsActive('/foundation')}"
         :aria-expanded="!!subIsActive('/foundation')"
@@ -27,7 +25,6 @@
     <li>
       <nav-rail-link
         to="/components"
-        icon="fds-workspaces"
         label="Components"
         :class="{'router-link-active': subIsActive('/components')}"
         :aria-expanded="!!subIsActive('/components')"
@@ -39,7 +36,6 @@
     <li>
       <nav-rail-link
         to="/patterns"
-        icon="fds-view_comfy_alt"
         label="Patterns"
         :class="{'router-link-active': subIsActive('/patterns')}"
         :aria-expanded="!!subIsActive('/patterns')"
@@ -51,7 +47,6 @@
     <li>
       <nav-rail-link
         to="utilities"
-        icon="fds-route"
         label="Utilities"
         :class="{'router-link-active': subIsActive('/utilities')}"
         :aria-expanded="!!subIsActive('/utilities')"
@@ -63,7 +58,6 @@
     <li>
       <nav-rail-link
         to="guides"
-        icon="fds-signpost"
         label="Guides"
         :class="{'router-link-active': subIsActive('/guides')}"
         :aria-expanded="!!subIsActive('/guides')"

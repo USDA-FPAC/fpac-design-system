@@ -3,7 +3,6 @@
     <div class="fds-nav-drawer__toggle fds-hide@l">
       <app-button
           variant="plain"
-          icon="fds-menu-open"
           class="fds-p--s fds-bg:hover--primary-100"
           @click="toggleNavDrawer()"
       >
@@ -20,7 +19,6 @@
       <app-button
           v-if="subMenuActive"
           variant="plain"
-          icon="fds-arrow-back"
           label="Back to Main"
           class="fds-p-l--s fds-p-r--s"
           @click="backToMain()"
@@ -41,7 +39,6 @@
             <nav-drawer-link
                 :href="basePath"
                 to="/"
-                icon="fds-dashboard"
                 label="Home"
                 class="fds-nav-drawer__label--active"
                 @click.prevent="goto('/')"
@@ -52,7 +49,6 @@
             <nav-drawer-link
               :href="basePath + '/foundation'"
               to="/foundation"
-              icon="fds-book"
               label="Foundation"
               id="foundation"
               class="fds-nav-global__link--has-sub-menu"
@@ -66,7 +62,6 @@
             <nav-drawer-link
                 :href="basePath + '/components'"
                 to="/components"
-                icon="fds-workspaces"
                 label="Components"
                 id="components"
                 class="fds-nav-global__link--has-sub-menu"
@@ -80,7 +75,6 @@
             <nav-drawer-link
                 :href="basePath + '/patterns'"
                 to="/patterns"
-                icon="fds-view_comfy_alt"
                 label="Patterns"
                 id="patterns"
                 class="fds-nav-global__link--has-sub-menu"
@@ -94,7 +88,6 @@
             <nav-drawer-link
                 :href="basePath + '/utilities'"
                 to="/utilities"
-                icon="fds-route"
                 label="Utilities"
                 id="utilities"
                 class="fds-nav-global__link--has-sub-menu"
@@ -108,7 +101,6 @@
             <nav-drawer-link
                 :href="basePath + '/guides'"
                 to="/guides"
-                icon="fds-signpost"
                 label="Guides"
                 id="guides"
                 class="fds-nav-global__link--has-sub-menu"
@@ -227,12 +219,11 @@
 import { useMenuSystem } from "@/_composables/useMenuSystem";
 import { useNavigation } from "@/_composables/useNavigation";
 import { onMounted, ref } from "vue";
-import appIcon from "@/_components/app-icon/app-icon.vue";
 import appButton from "@/_components/app-button/app-button.vue";
 import navDrawerLink from "@/_components/navigation/small-screen/nav-drawer/nav-drawer-link.vue";
 
 export default {
-  components: { appIcon, appButton, navDrawerLink },
+  components: { appButton, navDrawerLink },
 
   setup() {
     const { openMenu, closeMenu, loopItems } = useMenuSystem();

@@ -3,13 +3,9 @@
     <div class="fds-nav-rail__link fds-p-b--m">
       <div class="fds-nav-rail__icon-container">
         <div class="fds-nav-rail__background"></div>
-        <app-icon
-            v-if="icon"
-            :name="icon"
-            size="2"
-            class="fds-nav-rail__icon fds-m-t--xxs"
-        >
-        </app-icon>
+        <svg class="fds-icon fds-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" />
+        </svg>
       </div>
       <div class="fds-nav-rail__label fds-text-size--1">
         {{ label }}
@@ -19,14 +15,9 @@
 </template>
 
 <script>
-import appIcon from "@/_components/app-icon/app-icon.vue";
 
 export default {
-  components: {
-    appIcon
-  },
   props: {
-    icon: String,
     label: String
   },
   setup(props) {

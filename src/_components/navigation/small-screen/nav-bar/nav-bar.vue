@@ -2,7 +2,6 @@
   <div class="fds-nav-bar fds-hide@l">
     <app-button
         variant="plain"
-        icon="fds-menu"
         class="fds-p--s fds-bg:hover--primary-100"
         @click="toggleNavDrawer()"
     >
