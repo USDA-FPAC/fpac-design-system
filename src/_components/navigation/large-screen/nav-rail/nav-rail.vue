@@ -21,7 +21,6 @@
 
 <script>
 import { ref } from "vue";
-import AppButton from "@/_components/app-button/app-button.vue";
 import NavRailLink from "@/_components/navigation/large-screen/nav-rail/nav-rail-link.vue";
 import NavRailMain from "@/_components/navigation/large-screen/nav-rail/nav-rail-main.vue";
 import ComponentsSub from "@/_components/navigation/large-screen/sub-menus/components-sub.vue";
@@ -38,7 +37,6 @@ export default {
     FoundationSub,
     ComponentsSub,
     NavRailMain,
-    AppButton,
     NavRailLink
   },
   setup() {
