@@ -8,11 +8,17 @@ import { searchRoutes } from '@/Search/_routes/search.routes.js';
 
 
 const routes = [
-  ...homeRoutes,
-  ...uiComponentsRoutes,
-  ...patternsRoutes,
-  ...contentRoutes,
-  ...searchRoutes,
+  {
+    path: '',
+    component: () => import('@/Shared/_layouts/Main.vue'),
+    children: [
+      ...homeRoutes,
+      ...uiComponentsRoutes,
+      ...patternsRoutes,
+      ...contentRoutes,
+      ...searchRoutes,
+    ]
+  },
   { 
     path: '/:pathMatch(.*)*',
     name: 'not-found',

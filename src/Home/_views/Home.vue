@@ -1,11 +1,7 @@
 <template>
-  <div class="ds-nav-rail-layout">
-    <div class="ds-nav-rail-layout__nav ds-nav-rail-drawer--open">
-      <nav-rail></nav-rail>
-      <nav-drawer></nav-drawer>
-    </div>
-    <div class="ds-nav-rail-layout__body ds-nav-rail-drawer--open">
+    <div>
       <baseHeader USE_SEARCH="false"></baseHeader>
+
       <main id="main-content" tabindex="-1">
         <div class="fds-section">
           <div class="fds-section__bd">
@@ -74,7 +70,6 @@
         </div>
       </main>
       <baseFooter></baseFooter>
-    </div>
   </div>
 </template>
 
@@ -82,8 +77,6 @@
 import { defineAsyncComponent, ref, onMounted, computed, watch } from "vue";
 import { useStore } from "vuex";
 import { useNavigation } from "@/_composables/useNavigation";
-import NavDrawer from "@/_partials/navigation/NavDrawer.vue";
-import NavRail from "@/_partials/navigation/NavRail.vue";
 //import { v4 as uuidv4 } from "uuid";
 
 const baseHeader = defineAsyncComponent(() => import("@/_partials/BaseHeader.vue"));
@@ -93,8 +86,6 @@ const mostRecentVideos = defineAsyncComponent(() => import("@/_partials/MostRece
 
 export default {
   components: {
-    NavRail,
-    NavDrawer,
     baseHeader,
     baseFooter,
     popularVideos,
