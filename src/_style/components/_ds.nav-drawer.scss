@@ -1,1 +1,23 @@
 @use "../core/_fds.variables.scss" as fds;
+
+.ds-nav-bar {
+  height: fds.$size-extra-large;
+
+  &__bd {
+    background-color: fds.$color-white;
+    border-bottom: 1px solid fds.$color-fds-tertiary-200;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 3;
+  }
+}
+
+.ds-btn--icon {
+  padding: fds.$size-default;
+
+  &:hover:not([disabled]) {
+    background-color: fds.$color-fds-primary-100;
+  }
+}

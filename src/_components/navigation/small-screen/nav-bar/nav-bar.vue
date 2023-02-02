@@ -21,16 +21,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-@use "../../../../_style/core/_fds.variables.scss" as fds;
-
-.ds-nav-bar {
-  background-color: fds.$color-white;
-  border-bottom: 1px solid fds.$color-fds-tertiary-200;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-}
-</style>
