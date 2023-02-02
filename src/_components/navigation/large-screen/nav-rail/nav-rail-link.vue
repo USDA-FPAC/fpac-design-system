@@ -29,34 +29,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-//Need to figure out how to get these variables from fds-style
-
-@function shade($color, $percent) {
-  @return mix(#000, $color, $percent);
-}
-
-@function tint($color, $percent) {
-  @return mix(#fff, $color, $percent);
-}
-
-$color-gray-warm-dark: #494440;
-$color-fds-tertiary: $color-gray-warm-dark;
-$color-fds-tertiary-900: shade($color-fds-tertiary, 35%);
-$color-green: #2e8540;
-$color-fds-primary: shade($color-green, 25%);
-$color-fds-primary-100: tint($color-fds-primary, 85%);
-$color-fds-primary-200: tint($color-fds-primary, 65%);
-$size-base: 0.4rem;
-
+@use "../../../../_style/core/_fds.variables.scss" as fds;
 
 .fds-nav-rail {
   &__link {
-    color: $color-fds-tertiary-900;
+    color: fds.$color-fds-tertiary-900;
     text-align: center;
 
     &:hover {
       .fds-nav-rail__background {
-        background-color: $color-fds-primary-100;
+        background-color: fds.$color-fds-primary-100;
       }
     }
   }
@@ -79,19 +61,13 @@ $size-base: 0.4rem;
   }
 
   &__label {
-    margin-top: -($size-base);
+    margin-top: -(fds.$size-base);
   }
 
   .router-link-active {
     .fds-nav-rail__background {
-      background-color: $color-fds-primary-200;
+      background-color: fds.$color-fds-primary-200;
     }
   }
-
-  //[aria-expanded=true] {
-  //  .fds-nav-rail__background {
-  //    background-color: $color-fds-primary-200;
-  //  }
-  //}
 }
 </style>

@@ -72,19 +72,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-//Need to figure out how to get these variables from fds-style
-
-@function tint($color, $percent) {
-  @return mix(#fff, $color, $percent);
-}
-$color-gray-warm-dark: #494440 !default;
-$color-fds-tertiary: $color-gray-warm-dark;
-$color-fds-tertiary-200: tint($color-fds-tertiary, 80%);
-$color-white: #ffffff !default;
+@use "../../../../_style/core/_fds.variables.scss" as fds;
 
 .fds-nav-rail {
-  background-color: $color-white;
-  border-right: 1px solid $color-fds-tertiary-200;
+  background-color: fds.$color-white;
+  border-right: 1px solid fds.$color-fds-tertiary-200;
   height: 100%;
   width: 9rem;
   position: fixed;
@@ -95,8 +87,8 @@ $color-white: #ffffff !default;
 }
 
 .fds-nav-rail-drawer {
-  background-color: $color-white;
-  border-right: 1px solid $color-fds-tertiary-200;
+  background-color: fds.$color-white;
+  border-right: 1px solid fds.$color-fds-tertiary-200;
   height: 100vh;
   width: 25rem;
   position: fixed;
