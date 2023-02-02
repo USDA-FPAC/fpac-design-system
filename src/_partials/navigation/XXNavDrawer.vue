@@ -7,8 +7,8 @@
     </button>
 
     <div class="ds-nav-drawer__header">
-      <h3 v-if="!isDrawerOpen">FPAC Design System</h3>
-      <button v-if="isDrawerOpen" type="button" class="fds-btn fds-btn--plain ds-btn--back" title="Back to Main Menu" aria-label="Back to Main Menu">
+      <h3 v-if="!isSubActive">FPAC Design System</h3>
+      <button v-if="isSubActive" type="button" class="fds-btn fds-btn--plain ds-btn--back" title="Back to Main Menu" aria-label="Back to Main Menu">
         <svg class="fds-icon fds-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
           <path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z"/>
         </svg>
@@ -73,7 +73,7 @@
           </li>
         </ul>
       </div>
-      <div :class="'ds-nav-drawer__sub-menu' + [isDrawerOpen ? ' ds-nav-drawer--translate-none' : ' ds-nav-drawer--translate-right']" aria-hidden="true">
+      <div :class="'ds-nav-drawer__sub-menu' + [isSubActive ? ' ds-nav-drawer--translate-none' : ' ds-nav-drawer--translate-right']" aria-hidden="true">
         <ul aria-label="Sub Navigation" aria-labelledby="">
           <li>
             <a href="" class="ds-nav-drawer__item ds-nav-drawer__item--active">
@@ -101,19 +101,24 @@ import { ref, computed, watch } from "vue";
 
 export default {
   props: {
-    IS_MENU_OPEN: Boolean
+    IS_MENU_OPEN: Boolean,
+    CURR_MENU: Object
   },
   setup(props) {
 
     const isMenuOpen = computed( ()=> props.IS_MENU_OPEN );
-    const isDrawerOpen = ref(false)
 
-    watch(isMenuOpen, (isOpen)=>{
-      isDrawerOpen.value = isOpen;
+    const isMainActive = ref(null);
+    const isSubActive = ref(null);
+
+    watch([isMainMenuOpen, isSubMenuOpen], (mainVal, subVal)=>{
+      isMainActive.value = mainVal;
+      isSubActive.value = subVal
     })
 
     return {
-      isDrawerOpen
+      isMainActive,
+      isSubActive
     }
   }
 }

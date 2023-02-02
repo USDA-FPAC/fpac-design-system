@@ -2,10 +2,10 @@
   <div class="ds-layout--main">
     <div class="ds-nav-rail-layout">
       <div :class="'ds-nav-rail-layout__nav ' + isMenuOpen ? 'ds-nav-rail-drawer--open' : ''">
-        <nav-rail :IS_MENU_OPEN="isMenuOpen" :CURR_MENU="currentMenu"></nav-rail>
-        <nav-drawer :IS_MENU_OPEN="isMenuOpen" :CURR_MENU="currentMenu"></nav-drawer>
+        <nav-rail :IS_MENU_OPEN="isMenuOpen"></nav-rail>
+        <nav-drawer :IS_MENU_OPEN="isMenuOpen"></nav-drawer>
       </div>
-      <div :class="'ds-nav-rail-layout__body  ' + isMenuOpen ? 'ds-nav-rail-drawer--open' : ''">
+      <div :class="'ds-nav-rail-layout__body ' + isMenuOpen ? 'ds-nav-rail-drawer--open' : ''">
 
         <router-view></router-view>
       
