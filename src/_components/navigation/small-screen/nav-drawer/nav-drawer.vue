@@ -1,20 +1,13 @@
 <template>
-  <div id="fds-nav-drawer" class="fds-nav-drawer">
-    <div class="fds-nav-drawer__toggle fds-hide@l">
-      <button type="button" class="fds-btn fds-btn--plain ds-btn--icon" title="Close Menu" aria-label="Close Menu">
-        <svg class="fds-icon fds-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M3 18H16V16H3V18ZM3 13H13V11H3V13ZM3 6V8H16V6H3ZM21 15.59L17.42 12L21 8.41L19.59 7L14.59 12L19.59 17L21 15.59Z" />
-        </svg>
-      </button>
-    </div>
-    <div class="fds-nav-drawer__header fds-hide@l">
-      <div
-          v-if="!subMenuActive"
-          class="fds-text-size--4 fds-p-l--s fds-p-r--s"
-      >
-        FPAC Design System
-      </div>
+  <div class="ds-nav-drawer fds-hide@l">
+    <button type="button" class="fds-btn fds-btn--plain ds-btn--icon" title="Close Menu" aria-label="Close Menu">
+      <svg class="fds-icon fds-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M3 18H16V16H3V18ZM3 13H13V11H3V13ZM3 6V8H16V6H3ZM21 15.59L17.42 12L21 8.41L19.59 7L14.59 12L19.59 17L21 15.59Z" />
+      </svg>
+    </button>
 
+    <div class="ds-nav-drawer__header">
+      <h3 v-if="!subMenuActive" class="fds-text-size--4 fds-p-l--s fds-p-r--s">FPAC Design System</h3>
       <button v-if="subMenuActive" type="button" class="fds-btn fds-btn--plain ds-btn--back" title="Back to Main Menu" aria-label="Back to Main Menu">
         <svg class="fds-icon fds-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
           <path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z"/>
@@ -22,22 +15,15 @@
         <span>Back to Main</span>
       </button>
     </div>
-    <div class="fds-nav-drawer__content fds-p--s">
-      <div
-          :class="[mainMenuActive ? 'fds-translateX' : 'fds-translateX--left']"
-          class="fds-nav-drawer__main-container fds-hide@l"
-      >
-        <ul
-            aria-label="Primary Navigation"
-            id="nav-drawer-navigation"
-            class="fds-list--unstyled"
-        >
+
+    <div class="ds-nav-drawer__content fds-p--s">
+      <div :class="'ds-nav-drawer__main-menu' + [mainMenuActive ? ' ds-nav-drawer--translate-none' : ' ds-nav-drawer--translate-left']" aria-hidden="false">
+        <ul aria-label="Primary Navigation" class="fds-list--unstyled">
           <li>
             <nav-drawer-link
                 :href="basePath"
                 to="/"
                 label="Home"
-                class="fds-nav-drawer__label--active"
                 @click.prevent="goto('/')"
             >
             </nav-drawer-link>
@@ -48,7 +34,6 @@
               to="/foundation"
               label="Foundation"
               id="foundation"
-              class="fds-nav-global__link--has-sub-menu"
               aria-expanded="false"
               aria-controls="foundation-sub-menu"
               @click.prevent="navigateTo('foundation', '/foundation')"
@@ -61,7 +46,6 @@
                 to="/components"
                 label="Components"
                 id="components"
-                class="fds-nav-global__link--has-sub-menu"
                 aria-expanded="false"
                 aria-controls="components-sub-menu"
                 @click.prevent="navigateTo('components', '/components')"
@@ -74,7 +58,6 @@
                 to="/patterns"
                 label="Patterns"
                 id="patterns"
-                class="fds-nav-global__link--has-sub-menu"
                 aria-expanded="false"
                 aria-controls="patterns-sub-menu"
                 @click.prevent="navigateTo('patterns', '/patterns')"
@@ -87,7 +70,6 @@
                 to="/utilities"
                 label="Utilities"
                 id="utilities"
-                class="fds-nav-global__link--has-sub-menu"
                 aria-expanded="false"
                 aria-controls="utilities-sub-menu"
                 @click.prevent="navigateTo('utilities', '/utilities')"
@@ -100,7 +82,6 @@
                 to="/guides"
                 label="Guides"
                 id="guides"
-                class="fds-nav-global__link--has-sub-menu"
                 aria-expanded="false"
                 aria-controls="guides-sub-menu"
                 @click.prevent="navigateTo('guides', '/guides')"
@@ -110,103 +91,91 @@
         </ul>
       </div>
 
-      <div
-          :class="[subMenuActive ? 'fds-translateX' : 'fds-translateX--right']"
-          class="fds-nav-drawer__sub-container"
-      >
-        <div class="fds-nav-drawer__sub-menu" id="foundation-sub-menu" aria-hidden="true">
-          <ul class="fds-list--unstyled" aria-labelledby="foundation">
-            <li>
-              <nav-drawer-link
-                  :href="basePath + '/foundation/color'"
-                  to="/foundation/color"
-                  label="Color"
-                  @click.prevent="goto('/foundation/color')"
-              >
-              </nav-drawer-link>
-            </li>
-            <li>
-              <nav-drawer-link
-                  :href="basePath + '/foundation/typography'"
-                  to="/foundation/typography"
-                  label="Typography"
-                  @click.prevent="goto('/foundation/typography')"
-              >
-              </nav-drawer-link>
-            </li>
-            <li>
-              <nav-drawer-link
-                  :href="basePath + '/foundation/spacing'"
-                  to="/foundation/spacing"
-                  label="Spacing"
-                  @click.prevent="goto('/foundation/spacing')"
-              >
-              </nav-drawer-link>
-            </li>
-            <li>
-              <nav-drawer-link
-                  :href="basePath + '/foundation/shadows'"
-                  to="/foundation/shadows"
-                  label="Shadows"
-                  @click.prevent="goto('/foundation/shadows')"
-              >
-              </nav-drawer-link>
-            </li>
-            <li>
-              <nav-drawer-link
-                  :href="basePath + '/foundation/icons'"
-                  to="/foundation/icons"
-                  label="Icons"
-                  @click.prevent="goto('/foundation/icons')"
-              >
-              </nav-drawer-link>
-            </li>
-            <li>
-              <nav-drawer-link
-                  :href="basePath + '/foundation/logo'"
-                  to="/foundation/logo"
-                  label="Logo"
-                  @click.prevent="goto('/foundation/logo')"
-              >
-              </nav-drawer-link>
-            </li>
-          </ul>
-        </div>
+      <div :class="'ds-nav-drawer__sub-menu' + [subMenuActive ? ' ds-nav-drawer--translate-none' : ' ds-nav-drawer--translate-right']" aria-hidden="true">
+        <ul class="fds-list--unstyled" aria-labelledby="foundation">
+          <li>
+            <nav-drawer-link
+                :href="basePath + '/foundation/color'"
+                to="/foundation/color"
+                label="Color"
+                @click.prevent="goto('/foundation/color')"
+            >
+            </nav-drawer-link>
+          </li>
+          <li>
+            <nav-drawer-link
+                :href="basePath + '/foundation/typography'"
+                to="/foundation/typography"
+                label="Typography"
+                @click.prevent="goto('/foundation/typography')"
+            >
+            </nav-drawer-link>
+          </li>
+          <li>
+            <nav-drawer-link
+                :href="basePath + '/foundation/spacing'"
+                to="/foundation/spacing"
+                label="Spacing"
+                @click.prevent="goto('/foundation/spacing')"
+            >
+            </nav-drawer-link>
+          </li>
+          <li>
+            <nav-drawer-link
+                :href="basePath + '/foundation/shadows'"
+                to="/foundation/shadows"
+                label="Shadows"
+                @click.prevent="goto('/foundation/shadows')"
+            >
+            </nav-drawer-link>
+          </li>
+          <li>
+            <nav-drawer-link
+                :href="basePath + '/foundation/icons'"
+                to="/foundation/icons"
+                label="Icons"
+                @click.prevent="goto('/foundation/icons')"
+            >
+            </nav-drawer-link>
+          </li>
+          <li>
+            <nav-drawer-link
+                :href="basePath + '/foundation/logo'"
+                to="/foundation/logo"
+                label="Logo"
+                @click.prevent="goto('/foundation/logo')"
+            >
+            </nav-drawer-link>
+          </li>
+        </ul>
 
-        <div class="fds-nav-drawer__sub-menu" id="components-sub-menu" aria-hidden="true">
-          <ul class="fds-list--unstyled" aria-labelledby="components">
-            <li>
-              <nav-drawer-link
-                  :href="basePath + '/components/buttons'"
-                  to="/components/buttons"
-                  label="Buttons"
-                  @click.prevent="goto('/components/buttons')"
-              >
-              </nav-drawer-link>
-            </li>
-            <li>
-              <nav-drawer-link
-                  :href="basePath + '/components/checkbox'"
-                  to="/components/checkbox"
-                  label="Checkbox"
-                  @click.prevent="goto('/components/checkbox')"
-              >
-              </nav-drawer-link>
-            </li>
-          </ul>
-        </div>
-        <div class="fds-nav-drawer__sub-menu" id="patterns-sub-menu" aria-hidden="true">
-          <ul class="fds-list--unstyled" aria-labelledby="patterns">
-          </ul>
-        </div>
-        <div class="fds-nav-drawer__sub-menu" id="utilities-sub-menu" aria-hidden="true">
-          <ul class="fds-list--unstyled" aria-labelledby="utilities">
-          </ul>
-        </div>
-        <div class="fds-nav-drawer__sub-menu" id="guides-sub-menu" aria-hidden="true">
-          <ul class="fds-list--unstyled" aria-labelledby="guides">
-          </ul>
-        </div>
+        <ul class="fds-list--unstyled" aria-labelledby="components">
+          <li>
+            <nav-drawer-link
+                :href="basePath + '/components/buttons'"
+                to="/components/buttons"
+                label="Buttons"
+                @click.prevent="goto('/components/buttons')"
+            >
+            </nav-drawer-link>
+          </li>
+          <li>
+            <nav-drawer-link
+                :href="basePath + '/components/checkbox'"
+                to="/components/checkbox"
+                label="Checkbox"
+                @click.prevent="goto('/components/checkbox')"
+            >
+            </nav-drawer-link>
+          </li>
+        </ul>
+
+        <ul class="fds-list--unstyled" aria-labelledby="patterns"></ul>
+
+        <ul class="fds-list--unstyled" aria-labelledby="utilities"></ul>
+
+        <ul class="fds-list--unstyled" aria-labelledby="guides"></ul>
+
       </div>
     </div>
   </div>
