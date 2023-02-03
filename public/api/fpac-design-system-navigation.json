@@ -1,0 +1,276 @@
+{
+  "main": [
+    {
+      "uid": "home-id",
+      "label": "Home",
+      "path": "/home",
+      "icon": {
+        "class": "fds-icon fds-icon--size-2",
+        "path": "M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+      },
+      "hasChild": "false" 
+    },
+    {
+      "uid": "foundation-id",
+      "label": "Foundation",
+      "path": "/foundation",
+      "icon": {
+        "class": "fds-icon fds-icon--size-2",
+        "path": "M18 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V4C20 2.9 19.1 2 18 2ZM9 4H11V9L10 8.25L9 9V4ZM18 20H6V4H7V13L10 10.75L13 13V4H18V20Z"
+      },
+      "hasChild": "true",
+      "hasHeaders": "false",
+      "children": [
+        {
+          "uid": "foundation-color-id",
+          "label": "Color",
+          "path": "/foundation/color",
+          "hasChild": "false"
+        },
+        {
+          "uid": "foundation-typography-id",
+          "label": "Typography",
+          "path": "/foundation/typography",
+          "hasChild": "false"
+        },
+        {
+          "uid": "foundation-size-spacing-id",
+          "label": "Size & Spacing",
+          "path": "/foundation/size-spacing",
+          "hasChild": "false"
+        },
+        {
+          "uid": "foundation-general-id",
+          "label": "General Visual Style",
+          "path": "/foundation/general",
+          "hasChild": "false"
+        }
+      ]
+    },
+    {
+      "uid": "components-id",
+      "label": "Components",
+      "path": "/components",
+      "icon": {
+        "class": "fds-icon fds-icon--size-2",
+        "path": "M6 15C7.1 15 8 15.9 8 17C8 18.1 7.1 19 6 19C4.9 19 4 18.1 4 17C4 15.9 4.9 15 6 15ZM6 13C3.8 13 2 14.8 2 17C2 19.2 3.8 21 6 21C8.2 21 10 19.2 10 17C10 14.8 8.2 13 6 13ZM12 5C13.1 5 14 5.9 14 7C14 8.1 13.1 9 12 9C10.9 9 10 8.1 10 7C10 5.9 10.9 5 12 5ZM12 3C9.8 3 8 4.8 8 7C8 9.2 9.8 11 12 11C14.2 11 16 9.2 16 7C16 4.8 14.2 3 12 3ZM18 15C19.1 15 20 15.9 20 17C20 18.1 19.1 19 18 19C16.9 19 16 18.1 16 17C16 15.9 16.9 15 18 15ZM18 13C15.8 13 14 14.8 14 17C14 19.2 15.8 21 18 21C20.2 21 22 19.2 22 17C22 14.8 20.2 13 18 13Z"
+      },
+      "hasChild": "true",
+      "hasHeaders": "true",
+      "children": [
+        {
+          "uid": "general-id",
+          "header": "General",
+          "group": [
+            {
+              "uid": "general-icons-id",
+              "label": "Icons",
+              "path": "/components/icons"
+            },
+            {
+              "uid": "general-app-header-id",
+              "label": "Header",
+              "path": "/components/header"
+            },
+            {
+              "uid": "general-global-nav-id",
+              "label": "Global Nav",
+              "path": "/components/global-nav"
+            },
+            {
+              "uid": "general-top-hat-id",
+              "label": "Top Hat",
+              "path": "/components/top-hat"
+            },
+            {
+              "uid": "general-footer-id",
+              "label": "Footer",
+              "path": "/components/footer"
+            },
+            {
+              "uid": "general-topper-id",
+              "label": "Topper",
+              "path": "/components/topper"
+            },
+            {
+              "uid": "general-screenid-id",
+              "label": "Screen ID",
+              "path": "/components/screenid"
+            }
+          ]        
+        },
+        {
+          "uid": "form-elements-id",
+          "header": "Form Elements",
+          "group": [
+            {
+              "uid": "form-elements-buttons-id",
+              "label": "Buttons",
+              "path": "/components/buttons"
+            },
+            {
+              "uid": "form-elements-button-group-id",
+              "label": "Button Group",
+              "path": "/components/button-group"
+            },
+            {
+              "uid": "form-elements-checkbox-id",
+              "label": "Checkbox",
+              "path": "/components/checkbox"
+            },
+            {
+              "uid": "form-elements-date-picker-id",
+              "label": "Date Picker",
+              "path": "/components/date-picker"
+            },
+            {
+              "uid": "form-elements-form-fields-id",
+              "label": "Form Fields",
+              "path": "/components/form-fields"
+            },
+            {
+              "uid": "form-elements-radio-id",
+              "label": "Radio",
+              "path": "/components/radio"
+            },
+            {
+              "uid": "form-elements-search-id",
+              "label": "Search",
+              "path": "/components/search"
+            },
+            {
+              "uid": "form-elements-select-id",
+              "label": "Select",
+              "path": "/components/select"
+            },
+            {
+              "uid": "form-elements-select-multi-id",
+              "label": "Select Multi",
+              "path": "/components/select-multi"
+            },
+            {
+              "uid": "form-elements-slider-id",
+              "label": "Radio",
+              "path": "/components/slider"
+            },
+            {
+              "uid": "form-elements-spinbox-id",
+              "label": "Spinbox",
+              "path": "/components/spinbox"
+            },
+            {
+              "uid": "form-elements-stepped-control-id",
+              "label": "Stepped Control",
+              "path": "/components/stepped-control"
+            },
+            {
+              "uid": "form-elements-switch-id",
+              "label": "Switch",
+              "path": "/components/switch"
+            },
+            {
+              "uid": "form-elements-text-input-id",
+              "label": "Text Input",
+              "path": "/components/text-input"
+            },
+            {
+              "uid": "form-elements-textarea-id",
+              "label": "Textarea",
+              "path": "/components/textarea"
+            }
+          ]        
+        }
+      ]
+    },
+    {
+      "uid": "patterns-id",
+      "label": "Patterns",
+      "path": "/patterns",
+      "icon": {
+        "class": "fds-icon fds-icon--size-2",
+        "path": "M3 19h6v-7H3v7zm7 0h12v-7H10v7zM3 5v6h19V5H3z"
+      },
+      "hasChild": "true",
+      "children": [
+        {
+          "uid": "patterns-table-action-bar-id",
+          "label": "Table & Action Bar",
+          "path": "/patterns/table-action-bar",
+          "hasChild": "false"
+        },
+        {
+          "uid": "patterns-stepped-process-id",
+          "label": "Stepped Process",
+          "path": "/patterns/stepped-process",
+          "hasChild": "false"
+        },
+        {
+          "uid": "patterns-page-title-area-id",
+          "label": "Page Title Area",
+          "path": "/patterns/page-title-area",
+          "hasChild": "false"
+        },
+        {
+          "uid": "patterns-destroy-prompt-id",
+          "label": "Destroy Prompt",
+          "path": "/patterns/destroy-prompt",
+          "hasChild": "false"
+        }
+      ]
+    },
+    {
+      "uid": "utilities-id",
+      "label": "Utilities",
+      "path": "/utilities",
+      "icon": {
+        "class": "fds-icon fds-icon--size-2",
+        "path": "M19 15.18V7C19 4.79 17.21 3 15 3C12.79 3 11 4.79 11 7V17C11 18.1 10.1 19 9 19C7.9 19 7 18.1 7 17V8.82C8.16 8.4 9 7.3 9 6C9 4.34 7.66 3 6 3C4.34 3 3 4.34 3 6C3 7.3 3.84 8.4 5 8.82V17C5 19.21 6.79 21 9 21C11.21 21 13 19.21 13 17V7C13 5.9 13.9 5 15 5C16.1 5 17 5.9 17 7V15.18C15.84 15.59 15 16.69 15 18C15 19.66 16.34 21 18 21C19.66 21 21 19.66 21 18C21 16.7 20.16 15.6 19 15.18ZM6 7C5.45 7 5 6.55 5 6C5 5.45 5.45 5 6 5C6.55 5 7 5.45 7 6C7 6.55 6.55 7 6 7ZM18 19C17.45 19 17 18.55 17 18C17 17.45 17.45 17 18 17C18.55 17 19 17.45 19 18C19 18.55 18.55 19 18 19Z"
+      },
+      "hasChild": "false"
+    },
+    {
+      "uid": "guides-id",
+      "label": "Guides",
+      "path": "/guides",
+      "icon": {
+        "class": "fds-icon fds-icon--size-2",
+        "path": "M13 10H18L21 7L18 4H13V2H11V4H4V10H11V12H6L3 15L6 18H11V22H13V18H20V12H13V10ZM6 6H17.17L18.17 7L17.17 8H6V6ZM18 16H6.83L5.83 15L6.83 14H18V16Z"
+      },
+      "hasChild": "true",
+      "hasHeaders": "false",
+      "children": [
+        {
+          "uid": "a11y-id",
+          "label": "Accessibility",
+          "path": "/guides/accessibility",
+          "hasChild": "false"
+        },
+        {
+          "uid": "content-id",
+          "label": "Content",
+          "path": "/guides/content",
+          "hasChild": "false"
+        },
+        {
+          "uid": "front-end-id",
+          "label": "Front End",
+          "path": "/guides/front-end",
+          "hasChild": "false"
+        }
+      ]
+    }
+  ],
+  "side": [
+    {
+      "uid": "help-id",
+      "label": "Help",
+      "path": "/help",
+      "hasChild": "false",
+      "columnClass": "",
+      "icon": {
+        "class": "fds-icon fds-icon--size-1",
+        "path": "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"
+      }
+    }
+  ]
+}

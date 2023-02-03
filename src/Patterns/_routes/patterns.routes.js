@@ -1,7 +1,7 @@
 
 export const patternsRoutes = [
   { 
-    path: '/ux-patterns/',
+    path: '/patterns/',
     component: () => import('@/Patterns/_views/Patterns.vue')
   },
 ]

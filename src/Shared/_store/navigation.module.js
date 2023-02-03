@@ -4,14 +4,16 @@ import { navigationService } from '@/Shared/_services/navigation.service';
 const state = () =>({
   isLoaded: false,
   errors: [],
-  data: []
+  data: [],
+  isMenuOpen: false
 });
   
 
 const getters = {
   isLoaded: state => state.isLoaded,
   getErrors: state => state.errors,
-  getNavigation: state => state.data  
+  getNavigation: state => state.data,
+  getIsMenuOpen: state => state.isMenuOpen
 };
 
 const actions = {
@@ -26,6 +28,11 @@ const actions = {
         commit('SET_NAV', result.data );
       }
     });
+  },
+
+  setMenuStatus({ commit, state, rootState }, payload ){
+    console.log('payload',payload)
+    commit('SET_MENU_STATUS', payload);
   }
 
 };
@@ -39,6 +46,10 @@ const mutations = {
     state.data = navigation;
     state.isLoaded = true;
   },
+
+  SET_MENU_STATUS( state, payload){
+    state.isMenuOpen = payload
+  }
 
 };
 
