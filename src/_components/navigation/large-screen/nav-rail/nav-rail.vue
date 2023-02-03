@@ -60,20 +60,4 @@ export default {
   z-index: 5;
   padding-top: 3rem;
 }
-
-.fds-nav-rail-drawer {
-  background-color: fds.$color-white;
-  border-right: 1px solid fds.$color-fds-tertiary-200;
-  height: 100vh;
-  width: 25rem;
-  position: fixed;
-  z-index: 4;
-  top: 0;
-  left: -25rem;
-  transition: 0.3s;
-
-  &--open {
-    left: 9rem;
-  }
-}
 </style>
