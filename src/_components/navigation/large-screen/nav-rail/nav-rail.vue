@@ -10,41 +10,16 @@
     >
     </nav-rail-main>
   </div>
-  <div class="fds-nav-rail-drawer" ref="sub">
-    <foundation-sub v-if="loadedSubMenu === 'foundation'"></foundation-sub>
-    <components-sub v-if="loadedSubMenu === 'components'"></components-sub>
-    <patterns-sub v-if="loadedSubMenu === 'patterns'"></patterns-sub>
-    <utilities-sub v-if="loadedSubMenu === 'utilities'"></utilities-sub>
-    <guides-sub v-if="loadedSubMenu === 'guides'"></guides-sub>
-  </div>
 </template>
 
 <script>
-import { ref } from "vue";
 import NavRailLink from "@/_components/navigation/large-screen/nav-rail/nav-rail-link.vue";
 import NavRailMain from "@/_components/navigation/large-screen/nav-rail/nav-rail-main.vue";
-import ComponentsSub from "@/_components/navigation/large-screen/sub-menus/components-sub.vue";
-import FoundationSub from "@/_components/navigation/large-screen/sub-menus/foundation-sub.vue";
-import PatternsSub from "@/_components/navigation/large-screen/sub-menus/patterns-sub.vue";
-import UtilitiesSub from "@/_components/navigation/large-screen/sub-menus/utilities-sub.vue";
-import GuidesSub from "@/_components/navigation/large-screen/sub-menus/guides-sub.vue";
 
 export default {
   components: {
-    GuidesSub,
-    UtilitiesSub,
-    PatternsSub,
-    FoundationSub,
-    ComponentsSub,
     NavRailMain,
     NavRailLink
-  },
-  setup() {
-    const loadedSubMenu = ref('');
-
-    return {
-      loadedSubMenu
-    }
   },
   methods: {
     openDrawer() {
