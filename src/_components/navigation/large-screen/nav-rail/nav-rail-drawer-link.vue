@@ -1,10 +1,9 @@
 <template>
-  <RouterLink class="fds-link--underline-none" to="">
-    <div class="fds-nav-rail-drawer__link fds-m--m fds-p-b--xxs fds-m-b--s">
+  <a class="fds-link--underline-none">
+    <span class="fds-nav-rail-drawer__link fds-m--m fds-p-b--xxs fds-m-b--s">
       {{ label }}
-      <div class="fds-nav-rail-drawer__underline"></div>
-    </div>
-  </RouterLink>
+    </span>
+  </a>
 </template>
 
 <script>
