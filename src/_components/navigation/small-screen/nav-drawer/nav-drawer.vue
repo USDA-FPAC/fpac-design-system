@@ -7,7 +7,7 @@
     </button>
 
     <div class="ds-nav-drawer__header">
-      <h3 v-if="!subMenuActive" class="fds-text-size--4 fds-p-l--s fds-p-r--s">FPAC Design System</h3>
+      <h3 v-if="!subMenuActive">FPAC Design System</h3>
       <button v-if="subMenuActive" type="button" class="fds-btn fds-btn--plain ds-btn--back" title="Back to Main Menu" aria-label="Back to Main Menu">
         <svg class="fds-icon fds-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
           <path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z"/>
@@ -16,9 +16,9 @@
       </button>
     </div>
 
-    <div class="ds-nav-drawer__content fds-p--s">
+    <div class="ds-nav-drawer__content">
       <div :class="'ds-nav-drawer__main-menu' + [mainMenuActive ? ' ds-nav-drawer--translate-none' : ' ds-nav-drawer--translate-left']" aria-hidden="false">
-        <ul aria-label="Primary Navigation" class="fds-list--unstyled">
+        <ul aria-label="Primary Navigation">
           <li>
             <nav-drawer-link
                 :href="basePath"
@@ -92,7 +92,7 @@
       </div>
 
       <div :class="'ds-nav-drawer__sub-menu' + [subMenuActive ? ' ds-nav-drawer--translate-none' : ' ds-nav-drawer--translate-right']" aria-hidden="true">
-        <ul class="fds-list--unstyled" aria-labelledby="foundation">
+        <ul aria-labelledby="foundation">
           <li>
             <nav-drawer-link
                 :href="basePath + '/foundation/color'"
@@ -149,7 +149,7 @@
           </li>
         </ul>
 
-        <ul class="fds-list--unstyled" aria-labelledby="components">
+        <ul aria-labelledby="components">
           <li>
             <nav-drawer-link
                 :href="basePath + '/components/buttons'"
@@ -170,11 +170,11 @@
           </li>
         </ul>
 
-        <ul class="fds-list--unstyled" aria-labelledby="patterns"></ul>
+        <ul aria-labelledby="patterns"></ul>
 
-        <ul class="fds-list--unstyled" aria-labelledby="utilities"></ul>
+        <ul aria-labelledby="utilities"></ul>
 
-        <ul class="fds-list--unstyled" aria-labelledby="guides"></ul>
+        <ul aria-labelledby="guides"></ul>
 
       </div>
     </div>
