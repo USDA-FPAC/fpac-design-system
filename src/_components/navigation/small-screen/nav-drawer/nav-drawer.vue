@@ -250,13 +250,6 @@ export default {
       this.subMenuActive = !this.subMenuActive;
     }
 
-    function backToMain() {
-      loopItems('closeAllMenus');
-
-      this.mainMenuActive = !this.mainMenuActive;
-      this.subMenuActive = !this.subMenuActive;
-    }
-
     onMounted(() => {
       const navDrawer = document.getElementById("fds-nav-drawer");
       const navItems = navDrawer.getElementsByClassName("fds-nav-drawer__item");
@@ -274,7 +267,6 @@ export default {
       closeMenu,
       loopItems,
       toggleMenu,
-      backToMain,
       goto,
       navigateTo,
       basePath,
@@ -282,12 +274,6 @@ export default {
       subMenuActive
     }
   },
-  methods: {
-    toggleNavDrawer() {
-      const navDrawer = document.getElementById("fds-nav-drawer");
-      navDrawer.classList.toggle("fds-nav-drawer--open");
-    }
-  }
 }
 </script>
 
