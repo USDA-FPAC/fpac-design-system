@@ -1,4 +1,88 @@
 <template>
+<!--  Start NavRail (temporary - will be combined with NavDrawer)-->
+  <div class="ds-nav-rail fds-show@l">
+    <ul aria-label="Main Navigation">
+      <li>
+        <a class="ds-nav-rail__item">
+        <span class="ds-nav-rail__link">
+          <span class="ds-nav-rail__icon-container">
+            <span class="ds-nav-rail__background"></span>
+            <svg class="fds-icon fds-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" />
+            </svg>
+          </span>
+          <span class="ds-nav-rail__label">label</span>
+        </span>
+        </a>
+      </li>
+      <li>
+        <a class="ds-nav-rail__item">
+        <span class="ds-nav-rail__link">
+          <span class="ds-nav-rail__icon-container">
+            <span class="ds-nav-rail__background"></span>
+            <svg class="fds-icon fds-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" />
+            </svg>
+          </span>
+          <span class="ds-nav-rail__label">label</span>
+        </span>
+        </a>
+      </li>
+      <li>
+        <a class="ds-nav-rail__item">
+        <span class="ds-nav-rail__link">
+          <span class="ds-nav-rail__icon-container">
+            <span class="ds-nav-rail__background"></span>
+            <svg class="fds-icon fds-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" />
+            </svg>
+          </span>
+          <span class="ds-nav-rail__label">label</span>
+        </span>
+        </a>
+      </li>
+      <li>
+        <a class="ds-nav-rail__item">
+        <span class="ds-nav-rail__link">
+          <span class="ds-nav-rail__icon-container">
+            <span class="ds-nav-rail__background"></span>
+            <svg class="fds-icon fds-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" />
+            </svg>
+          </span>
+          <span class="ds-nav-rail__label">label</span>
+        </span>
+        </a>
+      </li>
+      <li>
+        <a class="ds-nav-rail__item">
+        <span class="ds-nav-rail__link">
+          <span class="ds-nav-rail__icon-container">
+            <span class="ds-nav-rail__background"></span>
+            <svg class="fds-icon fds-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" />
+            </svg>
+          </span>
+          <span class="ds-nav-rail__label">label</span>
+        </span>
+        </a>
+      </li>
+      <li>
+        <a class="ds-nav-rail__item">
+        <span class="ds-nav-rail__link">
+          <span class="ds-nav-rail__icon-container">
+            <span class="ds-nav-rail__background"></span>
+            <svg class="fds-icon fds-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" />
+            </svg>
+          </span>
+          <span class="ds-nav-rail__label">label</span>
+        </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+<!--  Start NavDrawer (temporary - will be combined with NavRail)-->
   <div class="ds-nav-drawer">
     <button type="button" class="fds-btn fds-btn--plain ds-btn--icon fds-hide@l" title="Close Menu" aria-label="Close Menu">
       <svg class="fds-icon fds-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
