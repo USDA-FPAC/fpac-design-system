@@ -13,13 +13,11 @@
 </template>
 
 <script>
-import NavRailLink from "@/_components/navigation/large-screen/nav-rail/nav-rail-link.vue";
 import NavRailMain from "@/_components/navigation/large-screen/nav-rail/nav-rail-main.vue";
 
 export default {
   components: {
-    NavRailMain,
-    NavRailLink
+    NavRailMain
   },
   methods: {
     openDrawer() {
