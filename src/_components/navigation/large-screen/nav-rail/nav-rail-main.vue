@@ -1,8 +1,5 @@
 <template>
-  <ul
-      class="fds-list--unstyled"
-      aria-label="Main Navigation"
-  >
+  <ul aria-label="Main Navigation">
     <li>
       <nav-rail-link
         to="/"
