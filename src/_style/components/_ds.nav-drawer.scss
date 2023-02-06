@@ -113,7 +113,7 @@
 }
 
 //Review below
-.fds-nav-rail {
+.ds-nav-rail {
   background-color: fds.$color-white;
   border-right: 1px solid fds.$color-fds-tertiary-200;
   height: 100%;
@@ -129,7 +129,7 @@
     text-align: center;
 
     &:hover {
-      .fds-nav-rail__background {
+      .ds-nav-rail__background {
         background-color: fds.$color-fds-primary-100;
       }
     }
@@ -157,7 +157,7 @@
   }
 
   .router-link-active {
-    .fds-nav-rail__background {
+    .ds-nav-rail__background {
       background-color: fds.$color-fds-primary-200;
     }
   }

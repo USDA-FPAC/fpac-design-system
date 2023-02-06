@@ -1,5 +1,5 @@
 <template>
-  <div class="fds-nav-rail fds-show@l">
+  <div class="ds-nav-rail fds-show@l">
     <nav-rail-main
       @home="resetSub('')"
       @foundation="viewSub('foundation')"
