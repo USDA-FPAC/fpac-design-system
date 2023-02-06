@@ -45,19 +45,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-@use "../../../../_style/core/_fds.variables.scss" as fds;
-
-.fds-nav-rail {
-  background-color: fds.$color-white;
-  border-right: 1px solid fds.$color-fds-tertiary-200;
-  height: 100%;
-  width: 9rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  padding-top: 3rem;
-}
-</style>
