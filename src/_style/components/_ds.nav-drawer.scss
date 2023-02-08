@@ -1,6 +1,5 @@
 @use "../core/_fds.variables.scss" as fds;
 
-//NavDrawer
 .ds-nav-drawer {
   background-color: fds.$color-white;
   border-right: 1px solid fds.$color-fds-tertiary-200;
@@ -15,78 +14,37 @@
   &--open {
     left: 0;
   }
+}
 
-  &__header {
-    height: 7.5rem;
+//NavDrawer Layout
+@include breakpoint(L) {
+  .ds-nav-drawer-layout {
     display: flex;
-    align-items: center;
-    padding: 0 fds.$size-default;
 
-    h3 {
-      font-weight: fds.$font-normal;
-      margin: 0;
-    }
-  }
+    &__nav {
+      width: 9rem;
+      height: 100vh;
 
-  &__content {
-    display: flex;
-    position: relative;
-    overflow-x: hidden;
-    height: 100%;
-    padding: fds.$size-default;
-
-    ul {
-      list-style-type: none;
-      padding-left: 0;
+      &.ds-submenu--open {
+        width: 34rem;
+      }
     }
 
-    a {
-      color: fds.$color-fds-tertiary-900;
-      text-decoration: none;
-      cursor: pointer;
-      padding: fds.$size-default fds.$size-small;
+    &__bd {
+      //calc() used for calculations with incompatible units
+      // Calculations are part of with Dart Sass (same syntax as CSS)
+      //https://sass-lang.com/documentation/values/calculations
+      width: calc(100vw - 9rem);
+
+
+      &.ds-submenu--open {
+        width: calc(100vw - 34rem);
+      }
     }
-  }
-
-  &__main-menu,
-  &__sub-menu {
-    width: 22.5rem;
-    position: absolute;
-  }
-
-  &--translate-none {
-    transform: translateX(0);
-    transition: transform 0.3s;
-  }
-
-  &--translate-left {
-    transform: translateX(-110%);
-    transition: transform 0.3s;
-  }
-
-  &--translate-right {
-    transform: translateX(110%);
-    transition: transform 0.3s;
-  }
-
-  &__item {
-    display: flex;
-    align-items: center;
-
-    &:hover {
-      background-color: fds.$color-fds-primary-200;
-    }
-
-    &--active {
-      background-color: fds.$color-fds-primary-100;
-    }
-  }
-
-  &__label {
-    padding-left: fds.$size-default;
   }
 }
 
+//NavBar
 .ds-nav-bar {
   height: fds.$size-extra-large;
 
@@ -111,111 +69,4 @@
 
 .ds-btn--back {
   padding: fds.$size-default 0;
-}
-
-//NavRail
-.ds-nav-rail {
-  background-color: fds.$color-white;
-  border-right: 1px solid fds.$color-fds-tertiary-200;
-  height: 100%;
-  width: 9rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  padding-top: 3rem;
-
-  ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-
-  a {
-    color: fds.$color-fds-tertiary-900;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  &__item {
-    display: block;
-    color: fds.$color-fds-tertiary-900;
-    text-align: center;
-    padding-bottom: fds.$size-medium;
-
-    &:hover {
-      .ds-nav-rail__background {
-        background-color: fds.$color-fds-primary-200;
-      }
-    }
-
-    &--active {
-      .ds-nav-rail__background {
-        background-color: fds.$color-fds-primary-100;
-      }
-    }
-  }
-
-  &__icon-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: (fds.$size-base + fds.$size-large);
-    width: (fds.$size-base + fds.$size-large);
-    margin: auto;
-  }
-
-  &__background {
-    height: (fds.$size-base + fds.$size-large);
-    width: (fds.$size-base + fds.$size-large);
-    position: absolute;
-    border-radius: 50%;
-    z-index: -1;
-  }
-
-  &__label {
-    display: block;
-    font-size: fds.$small-font-size;
-    margin-top: -(fds.$size-base);
-  }
-}
-
-.ds-nav-rail-drawer {
-  background-color: fds.$color-white;
-  border-right: 1px solid fds.$color-fds-tertiary-200;
-  height: 100vh;
-  width: 25rem;
-  position: fixed;
-  z-index: 4;
-  top: 0;
-  left: -25rem;
-  transition: 0.3s;
-  padding: fds.$size-default;
-
-  &--open {
-    left: 9rem;
-  }
-
-  ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-
-  a {
-    color: fds.$color-fds-tertiary-900;
-    text-decoration: none;
-    cursor: pointer;
-    padding: fds.$size-default fds.$size-small;
-  }
-
-  &__item {
-    display: block;
-
-    &:hover {
-      background-color: fds.$color-fds-primary-200;
-    }
-
-    &--active {
-      background-color: fds.$color-fds-primary-100;
-    }
-  }
 }
