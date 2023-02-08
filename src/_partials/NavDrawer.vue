@@ -7,7 +7,7 @@
     </button>
 
     <div class="ds-nav-drawer__header fds-hide@l">
-      <h3 v-if="!subMenuActive">FPAC Design System</h3>
+      <h3 v-if="mainMenuActive">FPAC Design System</h3>
       <button v-if="subMenuActive" type="button" class="fds-btn fds-btn--plain ds-btn--back" title="Back to Main Menu" aria-label="Back to Main Menu" @click="backToMain()">
         <svg class="fds-icon fds-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
           <path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z"/>
@@ -31,7 +31,7 @@
             </a>
           </li>
           <li>
-            <a href="" class="ds-nav-drawer__item">
+            <a class="ds-nav-drawer__item">
               <svg class="fds-icon fds-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path d="M18 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V4C20 2.9 19.1 2 18 2ZM9 4H11V9L10 8.25L9 9V4ZM18 20H6V4H7V13L10 10.75L13 13V4H18V20Z" />
               </svg>
@@ -43,12 +43,12 @@
       <div :class="'ds-nav-drawer__sub-menu' + [subMenuActive ? ' ds-nav-drawer--translate-none ds-nav-drawer__sub-menu--active' : ' ds-nav-drawer--translate-right']" aria-hidden="true">
         <ul aria-label="Sub Navigation" aria-labelledby="">
           <li>
-            <a href="" class="ds-nav-drawer__item ds-nav-drawer__item--active">
+            <a class="ds-nav-drawer__item ds-nav-drawer__item--active">
               <span>Sub Menu Item</span>
             </a>
           </li>
           <li>
-            <a href="" class="ds-nav-drawer__item">
+            <a class="ds-nav-drawer__item">
               <span>Sub Menu Item</span>
             </a>
           </li>

@@ -1,25 +1,20 @@
 @use "../core/_fds.variables.scss" as fds;
 
 $nav-drawer-width: 25rem;
-$main-menu-width: 9rem;
-$sub-menu-width: 31.5rem;
-
-@include breakpoint(L) {
-  $nav-drawer-width: 25rem;
-  $main-menu-width: 9rem;
-  $sub-menu-width: 31.5rem;
-}
+$menu-width: 22.5rem;
+$main-menu-width-large-screen: 9rem;
+$layout-nav-large-screen: ($main-menu-width-large-screen + $menu-width);
 
 //NavDrawer
 .ds-nav-drawer {
   background-color: fds.$color-white;
   border-right: 1px solid fds.$color-fds-tertiary-200;
   height: 100vh;
-  width: 25rem;
+  width: $nav-drawer-width;
   position: fixed;
   z-index: 4;
   top: 0;
-  left: -25rem;
+  left: -($nav-drawer-width);
   transition: 0.3s;
 
   &--open {
@@ -60,23 +55,21 @@ $sub-menu-width: 31.5rem;
 
   &__main-menu,
   &__sub-menu {
-    width: 22.5rem;
+    width: $menu-width;
     position: absolute;
+    transition: 0.3s;
   }
 
   &--translate-none {
     transform: translateX(0);
-    transition: transform 0.3s;
   }
 
   &--translate-left {
     transform: translateX(-110%);
-    transition: transform 0.3s;
   }
 
   &--translate-right {
     transform: translateX(110%);
-    transition: transform 0.3s;
   }
 
   &__item {
@@ -114,19 +107,17 @@ $sub-menu-width: 31.5rem;
     }
 
     &__main-menu {
-      width: 9rem;
+      width: $main-menu-width-large-screen;
       left: 0;
       z-index: 3;
     }
 
     &__sub-menu {
-      width: 22.5rem;
-      left: -22.5rem;
+      left: -($menu-width);
       z-index: 2;
-      transition: left 0.3s;
 
       &--active {
-        left: 9rem;
+        left: $main-menu-width-large-screen;
       }
     }
 
@@ -163,11 +154,11 @@ $sub-menu-width: 31.5rem;
     display: flex;
 
     &__nav {
-      width: 9rem;
-      transition: width 0.3s;
+      width: $main-menu-width-large-screen;
+      transition: 0.3s;
 
       &.ds-sub-menu--open {
-        width: 31.5rem;
+        width: $layout-nav-large-screen;
       }
     }
 
@@ -175,12 +166,12 @@ $sub-menu-width: 31.5rem;
       //calc() used for calculations with incompatible units
       // Calculations are part of with Dart Sass (same syntax as CSS)
       //https://sass-lang.com/documentation/values/calculations
-      width: calc(100vw - 9rem);
-      transition: width 0.3s;
+      width: calc(100vw - $main-menu-width-large-screen);
+      transition: 0.3s;
 
 
       &.ds-sub-menu--open {
-        width: calc(100vw - 31.5rem);
+        width: calc(100vw - $layout-nav-large-screen);
       }
     }
   }
