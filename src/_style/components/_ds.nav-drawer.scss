@@ -1,5 +1,16 @@
 @use "../core/_fds.variables.scss" as fds;
 
+$nav-drawer-width: 25rem;
+$main-menu-width: 9rem;
+$sub-menu-width: 31.5rem;
+
+@include breakpoint(L) {
+  $nav-drawer-width: 25rem;
+  $main-menu-width: 9rem;
+  $sub-menu-width: 31.5rem;
+}
+
+//NavDrawer
 .ds-nav-drawer {
   background-color: fds.$color-white;
   border-right: 1px solid fds.$color-fds-tertiary-200;
@@ -14,6 +25,136 @@
   &--open {
     left: 0;
   }
+
+  &__header {
+    height: 7.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 fds.$size-default;
+
+    h3 {
+      font-weight: fds.$font-normal;
+      margin: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    position: relative;
+    overflow-x: hidden;
+    height: 100%;
+    padding: fds.$size-default;
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    a {
+      color: fds.$color-fds-tertiary-900;
+      text-decoration: none;
+      cursor: pointer;
+      padding: fds.$size-default fds.$size-small;
+    }
+  }
+
+  &__main-menu,
+  &__sub-menu {
+    width: 22.5rem;
+    position: absolute;
+  }
+
+  &--translate-none {
+    transform: translateX(0);
+    transition: transform 0.3s;
+  }
+
+  &--translate-left {
+    transform: translateX(-110%);
+    transition: transform 0.3s;
+  }
+
+  &--translate-right {
+    transform: translateX(110%);
+    transition: transform 0.3s;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background-color: fds.$color-fds-primary-200;
+    }
+
+    &--active {
+      background-color: fds.$color-fds-primary-100;
+    }
+  }
+
+  &__label {
+    padding-left: fds.$size-default;
+  }
+
+  @include breakpoint(L) {
+    background-color: fds.$color-white;
+    border-right: fds.$border-none;
+    width: auto;
+    left: 0;
+
+    &__content {
+      position: static;
+    }
+
+    &__main-menu,
+    &__sub-menu {
+      background-color: fds.$color-white;
+      height: 100%;
+      top: 0;
+    }
+
+    &__main-menu {
+      width: 9rem;
+      left: 0;
+      z-index: 3;
+    }
+
+    &__sub-menu {
+      width: 22.5rem;
+      left: -22.5rem;
+      z-index: 2;
+      transition: left 0.3s;
+
+      &--active {
+        left: 9rem;
+      }
+    }
+
+    &--translate-none {
+      transform: translateX(0);
+    }
+
+    &--translate-left {
+      transform: translateX(0);
+    }
+
+    &--translate-right {
+      transform: translateX(0%);
+    }
+  }
+}
+
+//Add above
+.ds-btn--icon {
+  padding: fds.$size-default;
+
+  &:hover:not([disabled]) {
+    background-color: fds.$color-fds-primary-100;
+  }
+}
+
+.ds-btn--back {
+  padding: fds.$size-default 0;
 }
 
 //NavDrawer Layout
@@ -23,10 +164,10 @@
 
     &__nav {
       width: 9rem;
-      height: 100vh;
+      transition: width 0.3s;
 
-      &.ds-submenu--open {
-        width: 34rem;
+      &.ds-sub-menu--open {
+        width: 31.5rem;
       }
     }
 
@@ -35,10 +176,11 @@
       // Calculations are part of with Dart Sass (same syntax as CSS)
       //https://sass-lang.com/documentation/values/calculations
       width: calc(100vw - 9rem);
+      transition: width 0.3s;
 
 
-      &.ds-submenu--open {
-        width: calc(100vw - 34rem);
+      &.ds-sub-menu--open {
+        width: calc(100vw - 31.5rem);
       }
     }
   }
@@ -57,16 +199,4 @@
     width: 100vw;
     z-index: 3;
   }
-}
-
-.ds-btn--icon {
-  padding: fds.$size-default;
-
-  &:hover:not([disabled]) {
-    background-color: fds.$color-fds-primary-100;
-  }
-}
-
-.ds-btn--back {
-  padding: fds.$size-default 0;
 }

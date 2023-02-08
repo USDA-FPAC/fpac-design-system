@@ -1,9 +1,9 @@
 <template>
   <div class="ds-nav-drawer-layout">
-    <div class="ds-nav-drawer-layout__nav ds-submenu--open">
+    <div class="ds-nav-drawer-layout__nav" id="layout-nav">
       <nav-drawer></nav-drawer>
     </div>
-    <div class="ds-nav-drawer-layout__bd ds-submenu--open">
+    <div class="ds-nav-drawer-layout__bd" id="layout-bd">
       <baseHeader USE_SEARCH="false"></baseHeader>
       <main id="main-content" tabindex="-1">
         <div class="fds-section">
