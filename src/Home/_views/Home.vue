@@ -1,9 +1,9 @@
 <template>
   <div class="ds-nav-drawer-layout">
-    <div class="ds-nav-drawer-layout__nav" id="layout-nav">
+    <div class="ds-nav-drawer-layout__nav" id="temporary-id-1">
       <nav-drawer></nav-drawer>
     </div>
-    <div class="ds-nav-drawer-layout__bd" id="layout-bd">
+    <div class="ds-nav-drawer-layout__bd" id="temporary-id-2">
       <baseHeader USE_SEARCH="false"></baseHeader>
       <main id="main-content" tabindex="-1">
         <div class="fds-section">

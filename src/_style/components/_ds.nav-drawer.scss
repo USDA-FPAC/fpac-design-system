@@ -1,9 +1,9 @@
 @use "../core/_fds.variables.scss" as fds;
 
 $nav-drawer-width: 25rem;
-$menu-width: 22.5rem;
-$main-menu-width-large-screen: 9rem;
-$layout-nav-large-screen: ($main-menu-width-large-screen + $menu-width);
+$main-menu-width: 9rem;
+$sub-menu-width: 22.5rem;
+$nav-layout: ($main-menu-width + $sub-menu-width);
 
 //NavDrawer
 .ds-nav-drawer {
@@ -34,47 +34,46 @@ $layout-nav-large-screen: ($main-menu-width-large-screen + $menu-width);
   }
 
   &__content {
-    display: flex;
-    position: relative;
-    overflow-x: hidden;
-    height: 100%;
     padding: fds.$size-default;
 
     ul {
       list-style-type: none;
       padding-left: 0;
+      margin: 0;
     }
 
     a {
       color: fds.$color-fds-tertiary-900;
       text-decoration: none;
       cursor: pointer;
-      padding: fds.$size-default fds.$size-small;
+      padding: (fds.$size-default - fds.$size-base);
     }
   }
 
-  &__main-menu,
-  &__sub-menu {
-    width: $menu-width;
-    position: absolute;
-    transition: 0.3s;
+  &__list {
+    position: relative;
   }
 
-  &--translate-none {
-    transform: translateX(0);
-  }
-
-  &--translate-left {
-    transform: translateX(-110%);
-  }
-
-  &--translate-right {
-    transform: translateX(110%);
+  &__item,
+  &__sub-menu-item {
+    display: flex;
+    align-items: center;
   }
 
   &__item {
-    display: flex;
-    align-items: center;
+    visibility: visible;
+    opacity: 100%;
+    transition: 0.5s;
+
+    &--hidden {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &__link,
+  &__sub-menu-link {
+    width: 100%;
 
     &:hover {
       background-color: fds.$color-fds-primary-200;
@@ -89,63 +88,113 @@ $layout-nav-large-screen: ($main-menu-width-large-screen + $menu-width);
     padding-left: fds.$size-default;
   }
 
-  @include breakpoint(L) {
+  &__sub-menu {
     background-color: fds.$color-white;
-    border-right: fds.$border-none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+
+    &--open {
+      visibility: visible;
+      opacity: 100%;
+    }
+  }
+
+  .ds-btn--icon {
+    padding: fds.$size-default;
+
+    &:hover:not([disabled]) {
+      background-color: fds.$color-fds-primary-100;
+    }
+  }
+
+  .ds-btn--back {
+    padding: fds.$size-default 0;
+  }
+
+  @include breakpoint(L) {
     width: auto;
     left: 0;
 
     &__content {
-      position: static;
+      padding: 0;
     }
 
-    &__main-menu,
-    &__sub-menu {
-      background-color: fds.$color-white;
-      height: 100%;
-      top: 0;
+    &__list {
+      width: $main-menu-width;
+      height: 100vh;
     }
 
-    &__main-menu {
-      width: $main-menu-width-large-screen;
-      left: 0;
-      z-index: 3;
+    &__list-item {
+      text-align: center;
     }
 
-    &__sub-menu {
-      left: -($menu-width);
-      z-index: 2;
-
-      &--active {
-        left: $main-menu-width-large-screen;
+    &__item {
+      &--hidden {
+        visibility: unset;
+        opacity: 100%;
       }
     }
 
-    &--translate-none {
-      transform: translateX(0);
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: (fds.$size-base + fds.$size-large);
+      width: (fds.$size-base + fds.$size-large);
+      margin: auto;
     }
 
-    &--translate-left {
-      transform: translateX(0);
+    &__icon-background {
+      height: (fds.$size-base + fds.$size-large);
+      width: (fds.$size-base + fds.$size-large);
+      position: absolute;
+      border-radius: 50%;
+      z-index: -1;
     }
 
-    &--translate-right {
-      transform: translateX(0%);
+    &__link {
+      &:hover {
+        background-color: transparent;
+
+        .ds-nav-drawer__icon-background {
+          background-color: fds.$color-fds-primary-200;
+        }
+      }
+
+      &--active {
+        background-color: transparent;
+
+        .ds-nav-drawer__icon-background {
+          background-color: fds.$color-fds-primary-100;
+        }
+      }
+    }
+
+    &__label {
+      display: block;
+      font-size: fds.$small-font-size;
+      padding-left: 0;
+      margin-top: -(fds.$size-base);
+    }
+
+    &__sub-menu {
+      height: 100%;
+      width: $sub-menu-width;
+      left: $main-menu-width;
+      padding: fds.$size-default;
+      border-left: 1px solid fds.$color-fds-tertiary-200;
+      border-right: 1px solid fds.$color-fds-tertiary-200;
+      transition: 0.2s;
+    }
+
+    &__sub-menu-link {
+      text-align: left;
     }
   }
-}
-
-//Add above
-.ds-btn--icon {
-  padding: fds.$size-default;
-
-  &:hover:not([disabled]) {
-    background-color: fds.$color-fds-primary-100;
-  }
-}
-
-.ds-btn--back {
-  padding: fds.$size-default 0;
 }
 
 //NavDrawer Layout
@@ -154,11 +203,11 @@ $layout-nav-large-screen: ($main-menu-width-large-screen + $menu-width);
     display: flex;
 
     &__nav {
-      width: $main-menu-width-large-screen;
+      width: $main-menu-width;
       transition: 0.3s;
 
-      &.ds-sub-menu--open {
-        width: $layout-nav-large-screen;
+      &.ds-nav-drawer-layout--pushed {
+        width: $nav-layout;
       }
     }
 
@@ -166,12 +215,12 @@ $layout-nav-large-screen: ($main-menu-width-large-screen + $menu-width);
       //calc() used for calculations with incompatible units
       // Calculations are part of with Dart Sass (same syntax as CSS)
       //https://sass-lang.com/documentation/values/calculations
-      width: calc(100vw - $main-menu-width-large-screen);
+      width: calc(100vw - $main-menu-width);
       transition: 0.3s;
 
 
-      &.ds-sub-menu--open {
-        width: calc(100vw - $layout-nav-large-screen);
+      &.ds-nav-drawer-layout--pushed {
+        width: calc(100vw - $nav-layout);
       }
     }
   }
