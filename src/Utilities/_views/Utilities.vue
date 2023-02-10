@@ -30,8 +30,6 @@
             <!-- <p class="fds-text--lead fds-m-t--m">
               <strong><abbr title="Farm Production and Conservation">FPAC</abbr></strong>'s Open Source <strong>design resource</strong>, <strong>documentation</strong>, and <strong>guidelines</strong> - setting the bar for cohesive user experiences across USDA Farm Production and Conservation.
             </p> -->
-            <!-- HAS components -->
-
 
           </article>
 
