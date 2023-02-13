@@ -62,7 +62,7 @@ $nav-layout: ($main-menu-width + $sub-menu-width);
 
   &__item {
     visibility: visible;
-    opacity: 100%;
+    opacity: 1;
     transition: 0.5s;
 
     &--hidden {
@@ -99,7 +99,7 @@ $nav-layout: ($main-menu-width + $sub-menu-width);
 
     &--open {
       visibility: visible;
-      opacity: 100%;
+      opacity: 1;
     }
   }
 
@@ -135,7 +135,7 @@ $nav-layout: ($main-menu-width + $sub-menu-width);
     &__item {
       &--hidden {
         visibility: unset;
-        opacity: 100%;
+        opacity: 1;
       }
     }
 
@@ -236,6 +236,7 @@ $nav-layout: ($main-menu-width + $sub-menu-width);
     position: fixed;
     top: 0;
     left: 0;
+    height: fds.$size-extra-large;
     width: 100vw;
     z-index: 3;
   }
