@@ -1,6 +1,6 @@
 <template>
   <nav>
-   <div :class="navDrawerOpen ? 'ds-nav-drawer ds-nav-drawer--open' : 'ds-nav-drawer'">
+   <div class="ds-nav-drawer" :class="{'ds-nav-drawer--open': navDrawerOpen}">
       <div class="ds-nav-drawer__bd">
         <button type="button" class="fds-btn fds-btn--plain ds-btn--icon fds-hide@l" title="Close Menu" aria-label="Close Menu">
           <svg class="fds-icon fds-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -9,7 +9,7 @@
         </button>
         <div class="ds-nav-drawer__header fds-hide@l">
           <h3 v-if="!subMenuOpen">FPAC Design System</h3>
-          <button v-if="subMenuOpen" type="button" class="fds-btn fds-btn--plain ds-btn--back" title="Back to Main Menu" aria-label="Back to Main Menu" @click="backToMain()">
+          <button v-if="subMenuOpen" type="button" class="fds-btn fds-btn--plain ds-btn--back" title="Back to Main Menu" aria-label="Back to Main Menu">
             <svg class="fds-icon fds-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z"/>
             </svg>
@@ -19,7 +19,7 @@
         <div class="ds-nav-drawer__content">
           <ul class="ds-nav-drawer__list" aria-label="Primary Navigation">
             <li class="ds-nav-drawer__list-item">
-              <div class="ds-nav-drawer__item" :class="subMenuOpen ? 'ds-nav-drawer__item--hidden' : 'ds-nav-drawer__item'">
+              <div class="ds-nav-drawer__item" :class="{'ds-nav-drawer__item--hidden': subMenuOpen}">
                 <a class="ds-nav-drawer__link ds-nav-drawer__link--active">
                   <span class="ds-nav-drawer__icon">
                     <span class="ds-nav-drawer__icon-background"></span>
@@ -32,7 +32,7 @@
               </div>
             </li>
             <li class="ds-nav-drawer__list-item">
-              <div class="ds-nav-drawer__item" :class="subMenuOpen ? 'ds-nav-drawer__item--hidden' : 'ds-nav-drawer__item'" @click="openSub()">
+              <div class="ds-nav-drawer__item" :class="{'ds-nav-drawer__item--hidden': subMenuOpen}">
                 <a class="ds-nav-drawer__link ds-nav-drawer__link--has-sub-menu" aria-expanded="false" aria-controls="">
                   <span class="ds-nav-drawer__icon">
                     <span class="ds-nav-drawer__icon-background"></span>
@@ -43,7 +43,7 @@
                   <span class="ds-nav-drawer__label">Foundation</span>
                 </a>
               </div>
-              <div :class="subMenuOpen ? 'ds-nav-drawer__sub-menu ds-nav-drawer__sub-menu--open' : 'ds-nav-drawer__sub-menu'" id="" aria-hidden="true">
+              <div class="ds-nav-drawer__sub-menu" :class="{'ds-nav-drawer__sub-menu--open': subMenuOpen}" aria-hidden="true">
                 <div class="ds-nav-drawer__sub-menu-bd">
                   <ul class="ds-nav-drawer__sub-menu-list" aria-labelledby="">
                     <li class="ds-nav-drawer__sub-menu-item">
@@ -61,7 +61,7 @@
               </div>
             </li>
             <li class="ds-nav-drawer__list-item">
-              <div class="ds-nav-drawer__item" :class="subMenuOpen ? 'ds-nav-drawer__item--hidden' : 'ds-nav-drawer__item'">
+              <div class="ds-nav-drawer__item" :class="{'ds-nav-drawer__item--hidden': subMenuOpen}">
                 <a class="ds-nav-drawer__link ds-nav-drawer__link--has-sub-menu" aria-expanded="false" aria-controls="">
                   <span class="ds-nav-drawer__icon">
                     <span class="ds-nav-drawer__icon-background"></span>
@@ -72,7 +72,7 @@
                   <span class="ds-nav-drawer__label">Components</span>
                 </a>
               </div>
-              <div :class="subMenuOpen ? 'ds-nav-drawer__sub-menu ds-nav-drawer__sub-menu--open' : 'ds-nav-drawer__sub-menu'" id="" aria-hidden="true">
+              <div class="ds-nav-drawer__sub-menu" :class="{'ds-nav-drawer__sub-menu--open': subMenuOpen}" aria-hidden="true">
                 <div class="ds-nav-drawer__sub-menu-bd">
                   <ul class="ds-nav-drawer__sub-menu-list" aria-labelledby="">
                     <li class="ds-nav-drawer__sub-menu-item">
@@ -90,7 +90,7 @@
               </div>
             </li>
             <li class="ds-nav-drawer__list-item">
-              <div class="ds-nav-drawer__item" :class="subMenuOpen ? 'ds-nav-drawer__item--hidden' : 'ds-nav-drawer__item'">
+              <div class="ds-nav-drawer__item" :class="{'ds-nav-drawer__item--hidden': subMenuOpen}">
                 <a class="ds-nav-drawer__link ds-nav-drawer__link--has-sub-menu" aria-expanded="false" aria-controls="">
                   <span class="ds-nav-drawer__icon">
                     <span class="ds-nav-drawer__icon-background"></span>
@@ -105,7 +105,7 @@
                   <span class="ds-nav-drawer__label">Patterns</span>
                 </a>
               </div>
-              <div :class="subMenuOpen ? 'ds-nav-drawer__sub-menu ds-nav-drawer__sub-menu--open' : 'ds-nav-drawer__sub-menu'" id="" aria-hidden="true">
+              <div class="ds-nav-drawer__sub-menu" :class="{'ds-nav-drawer__sub-menu--open': subMenuOpen}" aria-hidden="true">
                 <div class="ds-nav-drawer__sub-menu-bd">
                   <ul class="ds-nav-drawer__sub-menu-list" aria-labelledby="">
                     <li class="ds-nav-drawer__sub-menu-item">
@@ -123,7 +123,7 @@
               </div>
             </li>
             <li class="ds-nav-drawer__list-item">
-              <div class="ds-nav-drawer__item" :class="subMenuOpen ? 'ds-nav-drawer__item--hidden' : 'ds-nav-drawer__item'">
+              <div class="ds-nav-drawer__item" :class="{'ds-nav-drawer__item--hidden': subMenuOpen}">
                 <a class="ds-nav-drawer__link ds-nav-drawer__link--has-sub-menu" aria-expanded="false" aria-controls="">
                   <span class="ds-nav-drawer__icon">
                     <span class="ds-nav-drawer__icon-background"></span>
@@ -134,7 +134,7 @@
                   <span class="ds-nav-drawer__label">Utilities</span>
                 </a>
               </div>
-              <div :class="subMenuOpen ? 'ds-nav-drawer__sub-menu ds-nav-drawer__sub-menu--open' : 'ds-nav-drawer__sub-menu'" id="" aria-hidden="true">
+              <div class="ds-nav-drawer__sub-menu" :class="{'ds-nav-drawer__sub-menu--open': subMenuOpen}" aria-hidden="true">
                 <div class="ds-nav-drawer__sub-menu-bd">
                   <ul class="ds-nav-drawer__sub-menu-list" aria-labelledby="">
                     <li class="ds-nav-drawer__sub-menu-item">
@@ -152,7 +152,7 @@
               </div>
             </li>
             <li class="ds-nav-drawer__list-item">
-              <div class="ds-nav-drawer__item" :class="subMenuOpen ? 'ds-nav-drawer__item--hidden' : 'ds-nav-drawer__item'">
+              <div class="ds-nav-drawer__item" :class="{'ds-nav-drawer__item--hidden': subMenuOpen}">
                 <a class="ds-nav-drawer__link ds-nav-drawer__link--has-sub-menu" aria-expanded="false" aria-controls="">
                   <span class="ds-nav-drawer__icon">
                     <span class="ds-nav-drawer__icon-background"></span>
@@ -163,7 +163,7 @@
                   <span class="ds-nav-drawer__label">Guides</span>
                 </a>
               </div>
-              <div :class="subMenuOpen ? 'ds-nav-drawer__sub-menu ds-nav-drawer__sub-menu--open' : 'ds-nav-drawer__sub-menu'" id="" aria-hidden="true">
+              <div class="ds-nav-drawer__sub-menu" :class="{'ds-nav-drawer__sub-menu--open': subMenuOpen}" aria-hidden="true">
                 <div class="ds-nav-drawer__sub-menu-bd">
                   <ul class="ds-nav-drawer__sub-menu-list" aria-labelledby="">
                     <li class="ds-nav-drawer__sub-menu-item">
@@ -198,17 +198,6 @@ export default {
     return {
       navDrawerOpen,
       subMenuOpen
-    }
-  },
-  methods: {
-    openSub() {
-      this.subMenuOpen =! this.subMenuOpen;
-      document.getElementById('temporary-id-1').classList.toggle('ds-nav-drawer-layout--pushed');
-      document.getElementById('temporary-id-2').classList.toggle('ds-nav-drawer-layout--pushed');
-    },
-
-    backToMain() {
-      this.subMenuOpen = false;
     }
   }
 }

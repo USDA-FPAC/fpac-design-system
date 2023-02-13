@@ -1,9 +1,9 @@
 <template>
   <div class="ds-nav-drawer-layout">
-    <div class="ds-nav-drawer-layout__nav" id="temporary-id-1">
+    <div class="ds-nav-drawer-layout__nav"> <!--Add 'ds-nav-drawer-layout--pushed' class when nav drawer is open-->
       <nav-drawer></nav-drawer>
     </div>
-    <div class="ds-nav-drawer-layout__bd" id="temporary-id-2">
+    <div class="ds-nav-drawer-layout__bd"> <!--Add 'ds-nav-drawer-layout--pushed' class when nav drawer is open-->
       <baseHeader USE_SEARCH="false"></baseHeader>
       <main id="main-content" tabindex="-1">
         <div class="fds-section">
