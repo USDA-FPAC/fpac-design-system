@@ -1,14 +1,20 @@
 @use "../core/_fds.variables.scss" as fds;
 
+$nav-drawer-width: 25rem;
+$main-menu-width: 9rem;
+$sub-menu-width: 22.5rem;
+$nav-layout: ($main-menu-width + $sub-menu-width);
+
+//NavDrawer
 .ds-nav-drawer {
   background-color: fds.$color-white;
   border-right: 1px solid fds.$color-fds-tertiary-200;
   height: 100vh;
-  width: 25rem;
+  width: $nav-drawer-width;
   position: fixed;
   z-index: 4;
   top: 0;
-  left: -25rem;
+  left: -($nav-drawer-width);
   transition: 0.3s;
 
   &--open {
@@ -28,49 +34,46 @@
   }
 
   &__content {
-    display: flex;
-    position: relative;
-    overflow-x: hidden;
-    height: 100%;
     padding: fds.$size-default;
 
     ul {
       list-style-type: none;
       padding-left: 0;
+      margin: 0;
     }
 
     a {
       color: fds.$color-fds-tertiary-900;
       text-decoration: none;
       cursor: pointer;
-      padding: fds.$size-default fds.$size-small;
+      padding: (fds.$size-default - fds.$size-base);
     }
   }
 
-  &__main-menu,
-  &__sub-menu {
-    width: 22.5rem;
-    position: absolute;
+  &__list {
+    position: relative;
   }
 
-  &--translate-none {
-    transform: translateX(0);
-    transition: transform 0.3s;
-  }
-
-  &--translate-left {
-    transform: translateX(-110%);
-    transition: transform 0.3s;
-  }
-
-  &--translate-right {
-    transform: translateX(110%);
-    transition: transform 0.3s;
+  &__item,
+  &__sub-menu-item {
+    display: flex;
+    align-items: center;
   }
 
   &__item {
-    display: flex;
-    align-items: center;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+
+    &--hidden {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &__link,
+  &__sub-menu-link {
+    width: 100%;
 
     &:hover {
       background-color: fds.$color-fds-primary-200;
@@ -84,8 +87,146 @@
   &__label {
     padding-left: fds.$size-default;
   }
+
+  &__sub-menu {
+    background-color: fds.$color-white;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+
+    &--open {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .ds-btn--icon {
+    padding: fds.$size-default;
+
+    &:hover:not([disabled]) {
+      background-color: fds.$color-fds-primary-100;
+    }
+  }
+
+  .ds-btn--back {
+    padding: fds.$size-default 0;
+  }
+
+  @include breakpoint(L) {
+    width: auto;
+    left: 0;
+
+    &__content {
+      padding: 0;
+    }
+
+    &__list {
+      width: $main-menu-width;
+      height: 100vh;
+    }
+
+    &__list-item {
+      text-align: center;
+    }
+
+    &__item {
+      &--hidden {
+        visibility: unset;
+        opacity: 1;
+      }
+    }
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: (fds.$size-base + fds.$size-large);
+      width: (fds.$size-base + fds.$size-large);
+      margin: auto;
+    }
+
+    &__icon-background {
+      height: (fds.$size-base + fds.$size-large);
+      width: (fds.$size-base + fds.$size-large);
+      position: absolute;
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    &__link {
+      &:hover {
+        background-color: transparent;
+
+        .ds-nav-drawer__icon-background {
+          background-color: fds.$color-fds-primary-200;
+        }
+      }
+
+      &--active {
+        background-color: transparent;
+
+        .ds-nav-drawer__icon-background {
+          background-color: fds.$color-fds-primary-100;
+        }
+      }
+    }
+
+    &__label {
+      display: block;
+      font-size: fds.$small-font-size;
+      padding-left: 0;
+      margin-top: -(fds.$size-base);
+    }
+
+    &__sub-menu {
+      height: 100%;
+      width: $sub-menu-width;
+      left: $main-menu-width;
+      padding: fds.$size-default;
+      border-left: 1px solid fds.$color-fds-tertiary-200;
+      border-right: 1px solid fds.$color-fds-tertiary-200;
+      transition: 0.2s;
+    }
+
+    &__sub-menu-link {
+      text-align: left;
+    }
+  }
 }
 
+//NavDrawer Layout
+@include breakpoint(L) {
+  .ds-nav-drawer-layout {
+    display: flex;
+
+    &__nav {
+      width: $main-menu-width;
+      transition: 0.3s;
+
+      &.ds-nav-drawer-layout--pushed {
+        width: $nav-layout;
+      }
+    }
+
+    &__bd {
+      //calc() used for calculations with incompatible units
+      // Calculations are part of with Dart Sass (same syntax as CSS)
+      //https://sass-lang.com/documentation/values/calculations
+      width: calc(100vw - $main-menu-width);
+      transition: 0.3s;
+
+
+      &.ds-nav-drawer-layout--pushed {
+        width: calc(100vw - $nav-layout);
+      }
+    }
+  }
+}
+
+//NavBar
 .ds-nav-bar {
   height: fds.$size-extra-large;
 
@@ -95,19 +236,8 @@
     position: fixed;
     top: 0;
     left: 0;
+    height: fds.$size-extra-large;
     width: 100vw;
     z-index: 3;
   }
-}
-
-.ds-btn--icon {
-  padding: fds.$size-default;
-
-  &:hover:not([disabled]) {
-    background-color: fds.$color-fds-primary-100;
-  }
-}
-
-.ds-btn--back {
-  padding: fds.$size-default 0;
 }
