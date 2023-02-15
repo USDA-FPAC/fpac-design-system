@@ -34,22 +34,22 @@
           </a>
 
           <!-- Has Children & Has Headers -->
-          <div v-if="item.hasChild=='true' && item.hasHeaders=='true'" :key="item.uid" :class="'ds-nav-rail-drawer fds-show@l ' + (isMenuOpen && isCurrentMenu(item.uid) ? 'ds-nav-rail-drawer--open' : '')" aria-hidden="true">
+          <!-- <div v-if="item.hasChild=='true' && item.hasHeaders=='true'" :key="item.uid" :class="'ds-nav-rail-drawer fds-show@l ' + (isMenuOpen && isCurrentMenu(item.uid) ? 'ds-nav-rail-drawer--open' : '')" aria-hidden="true">
             <div v-for="child in item.children" :key="child.uid">
               <h3>{{ child.header }}</h3>
               <ul aria-label="Sub Navigation" aria-labelledby="">
                 <li v-for="gp in child.group" :key="gp.uid">
-                  <!-- <a href="" class="ds-nav-rail-drawer__item ds-nav-rail-drawer__item--active"></a> -->
+
                   <a :href="BASE_PATH + gp.path" @click.prevent="navigateTo(gp.path)" class="ds-nav-rail-drawer__item">
                     <span>{{ gp.label }}</span>
                   </a>
                 </li>
               </ul>
             </div>
-          </div>
+          </div> -->
 
           <!-- Has Children -->
-          <div v-else-if="item.hasChild=='true' && item.hasHeaders!='true'" :key="item.uid + new Date()" :class="'ds-nav-rail-drawer fds-show@l ' + (isMenuOpen && isCurrentMenu(item.uid) ? 'ds-nav-rail-drawer--open' : '')" aria-hidden="true">
+          <!-- <div v-else-if="item.hasChild=='true' && item.hasHeaders!='true'" :key="item.uid + new Date()" :class="'ds-nav-rail-drawer fds-show@l ' + (isMenuOpen && isCurrentMenu(item.uid) ? 'ds-nav-rail-drawer--open' : '')" aria-hidden="true">
             <div v-for="child in item.children" :key="child.uid">
               <ul aria-label="Sub Navigation" aria-labelledby="">
                 <li>
@@ -59,7 +59,7 @@
                 </li>
               </ul>
             </div>
-          </div>
+          </div> -->
 
         </li>
         
@@ -91,8 +91,10 @@ export default {
     const selectedMenu = ref(null);
 
     const setMenu = (_obj) => {
-      if(_obj.hasChild == 'true') selectMenu(_obj.uid)
-      else navigateTo(_obj.path);
+      /* if(_obj.hasChild == 'true') selectMenu(_obj.uid)
+      else navigateTo(_obj.path); */
+
+      navigateTo(_obj.path);
     }
 
     const navigateTo = (_path) => { 
