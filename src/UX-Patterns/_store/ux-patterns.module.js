@@ -1,5 +1,5 @@
 
-import { patternsService } from '@/Patterns/_services/patterns.service';
+import { uxPatternsService } from '@/UX-Patterns/_services/ux-patterns.service';
 
 const state = () =>({
   isLoaded: false,
@@ -18,7 +18,7 @@ const actions = {
   doAction( { commit, state, rootState }, payload ){
     commit('SET_ERRORS', []);
 
-    patternsService.doNothing( (result) => {
+    uxPatternsService.doNothing( (result) => {
       if(result.errors){
         commit('SET_ERRORS', result.errors);
       } else {
@@ -41,7 +41,7 @@ const mutations = {
 
 };
 
-export const patterns = {
+export const uxPatterns = {
   namespaced: true,
   state,
   getters,

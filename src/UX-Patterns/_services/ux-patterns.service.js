@@ -1,7 +1,9 @@
 
-export const foundationService = {
+export const uxPatternsService = {
 
   doNothing: (callback) => {
     callback()
   }
 }
+
+

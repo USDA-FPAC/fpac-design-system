@@ -53,10 +53,10 @@ export default {
 
     const selectMenu = (_id) => {
       store.dispatch("navigation/setSelectedMenu", _id);
-      setMenuOpen(true);
     };
 
     const setMenuOpen = (_val) => {
+      console.log('setMenuOpen =>',_val)
       store.dispatch("navigation/setMenuOpen", _val);
     }
 

@@ -1,9 +1,7 @@
 
-export const patternsService = {
+export const visualStyleService = {
 
   doNothing: (callback) => {
     callback()
   }
 }
-
-
