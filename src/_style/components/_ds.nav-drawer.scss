@@ -1,9 +1,9 @@
 @use "../core/_fds.variables.scss" as fds;
 
 $nav-drawer-width: (fds.$size-base * 62); //25rem;
-$main-menu-width: (fds.$size-base * 22); //9rem;
+$main-menu-width: (fds.$size-base * 23); //9rem;
 $sub-menu-width: (fds.$size-base * 55); //22.5rem;
-$nav-layout: ($main-menu-width + $sub-menu-width);
+$nav-layout: calc($main-menu-width + $sub-menu-width);
 
 //NavDrawer
 .ds-nav-drawer {
@@ -221,10 +221,9 @@ $nav-layout: ($main-menu-width + $sub-menu-width);
       //calc() used for calculations with incompatible units
       // Calculations are part of with Dart Sass (same syntax as CSS)
       //https://sass-lang.com/documentation/values/calculations
-      width: calc(100vw - $main-menu-width + $size-extra-large);
+      width: calc(100vw - $main-menu-width);
       transition: 0.3s;
-
-
+      
       &.ds-nav-drawer-layout--open {
         width: calc(100vw - $nav-layout);
       }
