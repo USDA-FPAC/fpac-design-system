@@ -16,7 +16,7 @@
       <div class="fds-section">
         <div class="fds-section__bd">
           <div class="fds-box fds-box--bg-1 fds-m-t--l">
-            <img :src="'/img/404/' + currentRandomImage['img']" />
+            <img :src="baseUrl +'/img/404/' + currentRandomImage['img']" />
             <p class="fds-ellipsis fds-text-size--0">
               Photo Credit: <a :href="currentRandomImage['creditUrl']" @click.prevent="goto(currentRandomImage['creditUrl'], '_blank')">
                 {{ currentRandomImage['creditSite'] }}
