@@ -1,13 +1,7 @@
 import { createApp } from 'vue';
 import App from '@/_App.vue'
 
-/* import hljs from 'highlight.js';
-import 'highlight.js/styles/vs2015.css';
-hljs.configure({languages:['html','javascript','xml']}); */
-
 const app = createApp(App);
-
-//app.use(hljs)
 
 import { store } from '@/_store.js';
 app.use(store);

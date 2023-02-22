@@ -21,7 +21,7 @@
 import { defineAsyncComponent, ref, onMounted, computed, watch } from "vue";
 import { useStore } from "vuex";
 
-const NavDrawer = defineAsyncComponent(() => import("@/_partials/navigation/NavDrawer.vue"));
+const NavDrawer = defineAsyncComponent(() => import("@/_partials/NavDrawer.vue"));
 
 export default {
   components: {
