@@ -8,13 +8,13 @@
               <h3 class="fds-footer__cat-header">FPAC UX Resources</h3>
               <ul class="fds-footer__list">
                 <li class="fds-footer__list-item">
-                  <a href="" @click.prevent="goto('https://usda-fsa.github.io/training/','_blank')">FPAC Design System</a>
+                  <a :href="baseUrl + 'home'" @click.prevent="goto('/home')" >FPAC Design System</a>
                 </li>
                 <li class="fds-footer__list-item">
-                  <a href="" @click.prevent="goto('https://github.com/USDA-FSA/fds-design-system','_blank')">Design System Codebase</a>
+                  <a href="https://github.com/USDA-FPAC/fds-style" @click.prevent="goto('https://github.com/USDA-FPAC/fds-style','_blank')">Design System Codebase</a>
                 </li>
                 <li class="fds-footer__list-item">
-                  <a href="" @click.prevent="goto('https://www.figma.com/community/file/994660481391659106','_blank')">Figma Design System</a>
+                  <a href="https://www.figma.com/community/file/994660481391659106" @click.prevent="goto('https://www.figma.com/community/file/994660481391659106','_blank')">Figma Community File</a>
                 </li>
               </ul>
             </div>
@@ -23,13 +23,13 @@
               <h3 class="fds-footer__cat-header">Government Sites</h3>
               <ul class="fds-footer__list">
                 <li class="fds-footer__list-item">
-                  <a href="" @click.prevent="goto('https://designsystem.digital.gov/','_blank')">USWDS - Digital.gov</a>
+                  <a href="https://designsystem.digital.gov" @click.prevent="goto('https://designsystem.digital.gov','_blank')">USWDS - Digital.gov</a>
                 </li>
                 <li class="fds-footer__list-item">
-                  <a href="" @click.prevent="goto('https://www.section508.gov/','_blank')">Section 508</a>
+                  <a href="https://www.section508.gov" @click.prevent="goto('https://www.section508.gov','_blank')">Section 508</a>
                 </li>
                 <li class="fds-footer__list-item">
-                  <a href="" @click.prevent="goto('https://www.usds.gov/','_blank')">U.S. Digital Service</a>
+                  <a href="https://www.usds.gov" @click.prevent="goto('https://www.usds.gov','_blank')">U.S. Digital Service</a>
                 </li>
                 
               </ul>
@@ -39,16 +39,16 @@
               <h3 class="fds-footer__cat-header">Industry Resources</h3>
               <ul class="fds-footer__list">
                 <li class="fds-footer__list-item">
-                  <a href="" @click.prevent="goto('https://lawsofux.com/','_blank')">Laws of UX</a>
+                  <a href="https://www.interaction-design.org/literature" @click.prevent="goto('https://www.interaction-design.org/literature','_blank')">Interaction Design Foundation</a>
                 </li>
                 <li class="fds-footer__list-item">
-                  <a href="" @click.prevent="goto('https://www.interaction-design.org/literature','_blank')">Interaction Design Foundation</a>
+                  <a href="https://www.nngroup.com/articles" @click.prevent="goto('https://www.nngroup.com/articles','_blank')">Nielsen Norman Group</a>
                 </li>
                 <li class="fds-footer__list-item">
-                  <a href="" @click.prevent="goto('https://www.nngroup.com/articles/','_blank')">Nielsen Norman Group</a>
+                  <a href="https://lawsofux.com" @click.prevent="goto('https://lawsofux.com','_blank')">Laws of UX</a>
                 </li>
                 <li class="fds-footer__list-item">
-                  <a href="" @click.prevent="goto('https://uxmag.com/topics/government-and-public-services','_blank')">UX Magazine</a>
+                  <a href="https://uxmag.com/topics/government-and-public-services" @click.prevent="goto('https://uxmag.com/topics/government-and-public-services','_blank')">UX Magazine</a>
                 </li>
               </ul>
             </div>
@@ -61,10 +61,10 @@
               <a class="fds-btn fds-footer__btn" href="mailto:sm.fpac.bc.uxconsultants@usda.gov?subject=UX Training site question" target="_blank" role="button">Contact Us</a>
             </li>
             <li class="fds-footer__list-item fds-footer__secondary-list-item">
-              <a href="" @click.prevent="goto('https://www.fpacbc.usda.gov/','_blank')">FPAC Business Center</a>
+              <a href="https://www.fpacbc.usda.gov" @click.prevent="goto('https://www.fpacbc.usda.gov','_blank')">FPAC Business Center</a>
             </li>
             <li class="fds-footer__list-item fds-footer__secondary-list-item">
-              <a href="" @click.prevent="goto('https://www.usda.gov','_blank')">USDA Website</a>
+              <a href="https://www.usda.gov" @click.prevent="goto('https://www.usda.gov','_blank')">USDA Website</a>
             </li>
           </ul>
         </div>
@@ -74,6 +74,7 @@
 </template>
 
 <script>
+import { ref } from 'vue';
 import { useNavigation } from "@/_composables/useNavigation";
 
 export default {
@@ -81,8 +82,10 @@ export default {
     APP_ABBR_NAME: String
   },
   setup(props){
+    const baseUrl = ref(import.meta.env.BASE_URL);
     const { goto } = useNavigation();
     return {
+      baseUrl,
       goto
     }
   }

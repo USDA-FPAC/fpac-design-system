@@ -19,51 +19,42 @@
         <div class="fds-section">
           <div class="fds-section__bd">
 
-            <div class="ds-l-page">
-
-              <!-- Adjacent - START -->
-              <div class="ds-l-page__adjacent">
-
-                <!-- Jump Menu - START -->
-                <div id="jump-target">
-                  <div class="ds-jump">
-                    <ul class="ds-jump__list">
-
-                      <li class="ds-jump__item ds-jump__item--active">
-                        <a class="ds-jump__link" href="#main-content">Overview</a>
-                      </li>
-                      <li class="ds-jump__item">
-                        <a class="ds-jump__link" href="#most-recent">Most Recent Videos</a>
-                      </li>
-                      <li class="ds-jump__item">
-                        <a class="ds-jump__link" href="#popular-videos">Popular Videos</a>
-                      </li>
-
-                    </ul>
-                  </div>
-                </div>
-                <!-- Jump Menu - END -->
-
+            <div class="fds-grid ds-home-features">
+              <div class="fds-grid__1 fds-grid__1/2@s fds-grid__1/3@m ds-home-features__item">
+                <a class="ds-home-features__link" :href="baseUrl + 'visual-style'" @click.prevent="goto('/visual-style')">
+                  <span class="ds-home-features__title">Visual Style</span>
+                  <img class="ds-home-features__img" src="/img/home/homepage_illustrations_visual_style_guide_2x.png" alt="">
+                  <p class="ds-home-features__blurb">508-compliant colors and typography designed to establish a cohesive experience.</p>
+                </a>
               </div>
-              <!-- Adjacent - END -->
-
-              <!-- Page Body - START -->
-              <div class="ds-l-page__body">
-                <article class="ds-article">
-                  <h2 class="sr-only">Overview</h2>
-                  <!-- <p class="fds-text--lead fds-m-t--m">
-                    <strong><abbr title="Farm Production and Conservation">FPAC</abbr></strong>'s Open Source <strong>design resource</strong>, <strong>documentation</strong>, and <strong>guidelines</strong> - setting the bar for cohesive user experiences across USDA Farm Production and Conservation.
-                  </p> -->
-                  <!-- HAS components -->
-
-
-                  <most-recent-videos></most-recent-videos>
-
-                  <popular-videos></popular-videos>
-
-                </article>
+              <div class="fds-grid__1 fds-grid__1/2@s fds-grid__1/3@m ds-home-features__item">
+                <a class="ds-home-features__link" :href="baseUrl + 'components'" @click.prevent="goto('/components')">
+                  <span class="ds-home-features__title">UI Components</span>
+                  <img class="ds-home-features__img" src="/img/home/homepage_illustrations_ui_components_2x.png" alt="">
+                  <p class="ds-home-features__blurb">Common web interactions with reusable and downloadable HTML/CSS.</p>
+                </a>
               </div>
-              <!-- Page Body - END -->
+              <div class="fds-grid__1 fds-grid__1/2@s fds-grid__1/3@m ds-home-features__item">
+                <a class="ds-home-features__link" :href="baseUrl + 'ux-patterns'" @click.prevent="goto('/ux-patterns')">
+                  <span class="ds-home-features__title">UX Patterns</span>
+                  <img class="ds-home-features__img" src="/img/home/homepage_illustrations_patterns_2x.png" alt="">
+                  <p class="ds-home-features__blurb">Repeatable combinations of Design System components for recurring design solutions.</p>
+                </a>
+              </div>
+              <div class="fds-grid__1 fds-grid__1/2@s fds-grid__1/3@m ds-home-features__item">
+                <a class="ds-home-features__link" :href="baseUrl + 'utilities'" @click.prevent="goto('/utilities')">
+                  <span class="ds-home-features__title">Utilities</span>
+                  <img class="ds-home-features__img" src="/img/home/homepage_illustrations_ui_utilities_2x.png" alt="">
+                  <p class="ds-home-features__blurb">Make targeted style alterations with these helper classes.</p>
+                </a>
+              </div>
+              <div class="fds-grid__1 fds-grid__1/2@s fds-grid__1/3@m ds-home-features__item">
+                <a class="ds-home-features__link" :href="baseUrl + 'guides'" @click.prevent="goto('/guides')">
+                  <span class="ds-home-features__title">Guides</span>
+                  <img class="ds-home-features__img" src="/img/home/homepage_illustrations_designer_2x.png" alt="">
+                  <p class="ds-home-features__blurb">Guidelines covering topics such as Accessibility and Content.</p>
+                </a>
+              </div>
             </div>
 
           </div>
@@ -78,19 +69,14 @@ import { defineAsyncComponent, ref, onMounted, computed, watch } from "vue";
 import { useStore } from "vuex";
 import { useNavigation } from "@/_composables/useNavigation";
 //import { v4 as uuidv4 } from "uuid";
-const navDrawer = defineAsyncComponent(() => import("@/_partials/NavDrawer.vue"));
+
 const baseHeader = defineAsyncComponent(() => import("@/_partials/BaseHeader.vue"));
 const baseFooter = defineAsyncComponent(() => import("@/_partials/BaseFooter.vue"));
-const popularVideos = defineAsyncComponent(() => import("@/_partials/PopularVideos.vue"));
-const mostRecentVideos = defineAsyncComponent(() => import("@/_partials/MostRecentVideos.vue"));
 
 export default {
   components: {
-    navDrawer,
     baseHeader,
-    baseFooter,
-    popularVideos,
-    mostRecentVideos,
+    baseFooter
   },
 
   setup(props) {
@@ -98,64 +84,14 @@ export default {
     const store = useStore();
     const { goto } = useNavigation();
 
-    const showTranscript = ref(false);
-
-    const videoId = ref('RGurnlgbuQ4');
-    const transcriptContainerId = ref('RGurnlgbuQ4-container');
-    const videoDescription = ref('');
-
-    const videosData = computed(() => {
-      let data = store.getters["videos/getVideos"];
-      if(data) return data.videos;
-      else return null;
-    });
-
-    const toggleTranscriptDrawer = () => {
-      let el = document.getElementById(videoId.value+'-container');
-      let elParent = el.parentElement;
-
-      if(showTranscript.value){
-        
-        elParent.classList.add('uxt-drawer__container-bg--hide');
-        elParent.classList.remove('uxt-drawer__container-bg--show');
-        showTranscript.value = false;
-      } else {
-        elParent.classList.add('uxt-drawer__container-bg--show');
-        elParent.classList.remove('uxt-drawer__container-bg--hide');
-        showTranscript.value = true;
-      }
-    }
-
-    const initVideo = (_arr) => {
-      let videoObj = _arr.filter((o)=>{ return o.uid == videoId.value});
-      setDescription(videoObj);
-      setTranscript(videoObj);
-    }
-
-    const setDescription = (_vid) => {
-      videoDescription.value = _vid[0].desc;
-    }
-
-    const setTranscript = (_vid) => {
-      let el = document.getElementById(videoId.value+'-container');
-      if(el) el.innerHTML = _vid[0].transcript;
-    }
-
-    watch(videosData, (_value)=>{
-      initVideo(_value);
-    })
 
     onMounted(()=>{
       //store.dispatch("videos/setVideos");
     });
 
     return {
-      goto,
-      videoId,
-      videosData,
-      videoDescription,
-      showTranscript,
-      toggleTranscriptDrawer
+      baseUrl,
+      goto
     };
   }
 };

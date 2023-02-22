@@ -5,7 +5,7 @@
       APP_ABBR_NAME="FDS">
     </footerFooter>
     <footerScreenId
-      SCREEN_ID="FDS-2023">
+      :SCREEN_ID="'FPAC Design System - '+currentYear">
     </footerScreenId>
     
     <hiddenItems></hiddenItems>
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { defineAsyncComponent } from "vue";
+import { defineAsyncComponent, ref } from "vue";
 const footerTopper = defineAsyncComponent(() => import("@/_components/footer/footer-topper.vue"));
 const footerFooter = defineAsyncComponent(() => import("@/_components/footer/footer-footer.vue"));
 const footerScreenId = defineAsyncComponent(() => import("@/_components/footer/footer-screen-id.vue"));
@@ -29,7 +29,10 @@ export default {
     hiddenItems
   },
   setup(){
-
+    const currentYear = ref( new Date().getFullYear() );
+    return {
+      currentYear
+    }
   }
 }
 </script>
