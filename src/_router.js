@@ -19,13 +19,13 @@ const routes = [
       ...uxPatternsRoutes,
       ...utilitiesRoutes,
       ...searchRoutes,
+      { 
+        path: '/:pathMatch(.*)*',
+        name: 'not-found',
+        component: () => import('@/Shared/_views/NotFound.vue')
+      }
     ]
-  },
-  { 
-    path: '/:pathMatch(.*)*',
-    name: 'not-found',
-    component: () => import('@/Shared/_views/NotFound.vue')
-  }
+  }  
 ];
 
 export const router = createRouter({
