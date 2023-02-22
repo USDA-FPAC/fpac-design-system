@@ -5,8 +5,14 @@
       <div class="ds-nav-bar__bd">
         
         <div class="ds-nav-bar__btn">
-          <button @click="openMenu(true)" type="button" class="fds-btn fds-btn--plain fds-p--xs fds-radius--full fds-bg--white fds-color--tertiary fds-link:hover--primary fds-bg:hover--primary-100" title="Open Menu" aria-label="Open Menu">
-            <svg class="fds-icon fds-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <button @click="openMenu(true)"
+            type="button"
+            class="fds-btn fds-btn--plain fds-p--xs fds-radius--full fds-bg--white fds-color--tertiary fds-link:hover--primary fds-bg:hover--primary-100"
+            title="Open Menu"
+            aria-label="Open Menu"
+            aria-controls="primary-navigation"
+            :aria-expanded="isMenuOpen ? 'true' : 'false'">
+            <svg class="fds-icon fds-icon--size-2" :aria-hidden="isMenuOpen ? 'false' : 'true'" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path d="M3 18H21V16H3V18ZM3 13H21V11H3V13ZM3 6V8H21V6H3Z" />
             </svg>
           </button>
@@ -19,19 +25,22 @@
       <div class="ds-nav-drawer__bd">
         
         <div class="ds-nav-drawer__btn">
-          <button @click="openMenu(false)" type="button" class="fds-btn fds-btn--plain fds-p--xs fds-radius--full fds-bg--white fds-color--tertiary fds-link:hover--primary fds-bg:hover--primary-100 fds-hide@l" title="Close Menu" aria-label="Close Menu">
-            <svg class="fds-icon fds-icon--size-2" aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <button @click="openMenu(false)"
+            type="button"
+            class="fds-btn fds-btn--plain fds-p--xs fds-radius--full fds-bg--white fds-color--tertiary fds-link:hover--primary fds-bg:hover--primary-100 fds-hide@l"
+            title="Close Menu"
+            aria-label="Close Menu"
+            aria-controls="primary-navigation"
+            :aria-expanded="isMenuOpen ? 'true' : 'false'">
+            <svg class="fds-icon fds-icon--size-2" :aria-hidden="isMenuOpen ? 'false' : 'true'" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path d="M3 18H16V16H3V18ZM3 13H13V11H3V13ZM3 6V8H16V6H3ZM21 15.59L17.42 12L21 8.41L19.59 7L14.59 12L19.59 17L21 15.59Z" />
             </svg>
           </button>
         </div>
 
-        <!-- <div class="ds-nav-drawer__header fds-hide@l">
-          <h3 v-if="isMenuOpen">FPAC Design System</h3>
-        </div> -->
 
         <div class="ds-nav-drawer__content">
-          <ul class="ds-nav-drawer__list" aria-label="Primary Navigation">
+          <ul class="ds-nav-drawer__list" id="primary-navigation" :aria-hidden="isMenuOpen ? 'false' : 'true'" aria-label="Primary Navigation">
 
             <li v-for="item in NAV_DATA.main" :key="item.uid" :data-control-id="item.uid" class="ds-nav-drawer__list-item">
               <div :class="'ds-nav-drawer__item' + (isMenuOpen ? '' : ' ds-nav-drawer__item--hidden')">
@@ -42,7 +51,7 @@
                     <span class="ds-nav-drawer__icon-background"></span>
                     <svg v-for="icon in [item.icon]" :key="icon.path"
                         :class="icon.class"
-                        aria-hidden="true"
+                        :aria-hidden="isMenuOpen ? 'false' : 'true'"
                         focusable="false"
                         role="img"
                         xmlns="http://www.w3.org/2000/svg"
@@ -70,6 +79,7 @@
 <script>
 import { ref, computed, watch } from "vue";
 import { useNavigation } from "@/_composables/useNavigation";
+import { v4 as uuidv4 } from "uuid";
 
 export default {
   props: {
