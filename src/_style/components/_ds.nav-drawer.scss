@@ -1,9 +1,9 @@
 @use "../core/_fds.variables.scss" as fds;
 
-$nav-drawer-width: 25rem;
-$main-menu-width: 9rem;
-$sub-menu-width: 22.5rem;
-$nav-layout: ($main-menu-width + $sub-menu-width);
+$nav-drawer-width: (fds.$size-base * 62); //25rem;
+$main-menu-width: (fds.$size-base * 23); //9rem;
+$sub-menu-width: (fds.$size-base * 55); //22.5rem;
+$nav-layout: calc($main-menu-width + $sub-menu-width);
 
 //NavDrawer
 .ds-nav-drawer {
@@ -17,12 +17,17 @@ $nav-layout: ($main-menu-width + $sub-menu-width);
   left: -($nav-drawer-width);
   transition: 0.3s;
 
+  &__btn {
+    padding-top: fds.$size-base;
+    padding-left: fds.$size-base;
+  }
+
   &--open {
     left: 0;
   }
 
   &__header {
-    height: 7.5rem;
+    height: ($size-base * 19);; //7.5rem;
     display: flex;
     align-items: center;
     padding: 0 fds.$size-default;
@@ -35,6 +40,7 @@ $nav-layout: ($main-menu-width + $sub-menu-width);
 
   &__content {
     padding: fds.$size-default;
+    padding-left: fds.$size-base;
 
     ul {
       list-style-type: none;
@@ -206,7 +212,7 @@ $nav-layout: ($main-menu-width + $sub-menu-width);
       width: $main-menu-width;
       transition: 0.3s;
 
-      &.ds-nav-drawer-layout--pushed {
+      &.ds-nav-drawer-layout--open {
         width: $nav-layout;
       }
     }
@@ -217,9 +223,8 @@ $nav-layout: ($main-menu-width + $sub-menu-width);
       //https://sass-lang.com/documentation/values/calculations
       width: calc(100vw - $main-menu-width);
       transition: 0.3s;
-
-
-      &.ds-nav-drawer-layout--pushed {
+      
+      &.ds-nav-drawer-layout--open {
         width: calc(100vw - $nav-layout);
       }
     }
@@ -239,5 +244,10 @@ $nav-layout: ($main-menu-width + $sub-menu-width);
     height: fds.$size-extra-large;
     width: 100vw;
     z-index: 3;
+  }
+
+  &__btn {
+    padding-top: fds.$size-base;
+    padding-left: fds.$size-base;
   }
 }

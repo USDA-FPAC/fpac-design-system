@@ -204,3 +204,31 @@ main {
   }
 
 }
+
+//Start new layout to accommodate NavRail
+@include breakpoint(L) {
+  .ds-nav-rail-layout {
+    display: flex;
+
+    &__nav {
+      width: 9rem;
+      height: 100vh;
+
+      &.ds-nav-rail-drawer--open {
+        width: 34rem;
+      }
+    }
+
+    &__body {
+      //calc() used for calculations with incompatible units
+      // Calculations are part of with Dart Sass (same syntax as CSS)
+      //https://sass-lang.com/documentation/values/calculations
+      width: calc(100vw - 9rem);
+
+
+      &.ds-nav-rail-drawer--open {
+        width: calc(100vw - 34rem);
+      }
+    }
+  }
+}

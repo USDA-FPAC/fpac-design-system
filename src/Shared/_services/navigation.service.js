@@ -1,5 +1,5 @@
 
-const URL = '/api/fpac-design-system-nav.json';
+const URL = '/api/fpac-design-system-navigation.json';
 const HEADERS = new Headers();
 HEADERS.append(
   "Authorization",

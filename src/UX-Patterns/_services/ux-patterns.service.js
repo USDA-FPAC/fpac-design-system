@@ -1,5 +1,5 @@
 
-export const patternsService = {
+export const uxPatternsService = {
 
   doNothing: (callback) => {
     callback()
