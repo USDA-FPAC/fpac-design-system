@@ -1,5 +1,5 @@
 
-import { foundationService } from '@/Foundation/_services/foundation.service';
+import { visualStyleService } from '@/Visual-Style/_services/visual-style.service';
 
 const state = () =>({
   isLoaded: false,
@@ -18,7 +18,7 @@ const actions = {
   doAction( { commit, state, rootState }, payload ){
     commit('SET_ERRORS', []);
 
-    foundationService.doNothing( (result) => {
+    visualStyleService.doNothing( (result) => {
       if(result.errors){
         commit('SET_ERRORS', result.errors);
       } else {
@@ -41,7 +41,7 @@ const mutations = {
 
 };
 
-export const foundation = {
+export const visualStyle = {
   namespaced: true,
   state,
   getters,

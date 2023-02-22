@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import { homeRoutes } from '@/Home/_routes/home.routes.js';
-import { foundationRoutes } from '@/Foundation/_routes/foundation.routes.js';
+import { visualStyleRoutes } from '@/Visual-Style/_routes/visual-style.routes.js';
 import { uiComponentsRoutes } from '@/UI-Components/_routes/ui-components.routes.js';
-import { patternsRoutes } from '@/Patterns/_routes/patterns.routes.js';
+import { uxPatternsRoutes } from '@/UX-Patterns/_routes/ux-patterns.routes.js';
 import { utilitiesRoutes } from '@/Utilities/_routes/utilities.routes.js';
 import { searchRoutes } from '@/Search/_routes/search.routes.js';
 
@@ -14,9 +14,9 @@ const routes = [
     component: () => import('@/_layouts/Main.vue'),
     children: [
       ...homeRoutes,
-      ...foundationRoutes,
+      ...visualStyleRoutes,
       ...uiComponentsRoutes,
-      ...patternsRoutes,
+      ...uxPatternsRoutes,
       ...utilitiesRoutes,
       ...searchRoutes,
     ]

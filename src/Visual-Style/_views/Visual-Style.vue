@@ -8,8 +8,7 @@
         <div class="fds-section__bd">
           <div class="fds-m-t--s fds-m-b--m">
             <div class="fds-level@m fds-level--justify-between">
-              <!-- <h1 class="sr-only">Foundation</h1> -->
-              <h1>Foundation</h1>
+              <h1 class="sr-only">Visual Style</h1>
               <p class="fds-text--lead fds-m-t--m">
                 A single common visual language flexibly applied to a broad range of FPAC digital platforms and products.
               </p>
