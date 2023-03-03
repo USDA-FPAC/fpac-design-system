@@ -10,7 +10,7 @@
             <div class="fds-level@m fds-level--justify-between">
               <h1 class="sr-only">Visual Style</h1>
               <p class="fds-text--lead fds-m-t--m">
-                A single common visual language flexibly applied to a broad range of FPAC digital platforms and products.
+                The foundation of the FPAC Design System that creates a single common visual language applied to a broad range of digital platforms and products.
               </p>
             </div>
           </div>
