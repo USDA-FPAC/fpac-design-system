@@ -1,9 +1,8 @@
-@use "../core/_fds.variables.scss" as fds;
 
 .ds-disclaimer {
 
   &__bd {
-    max-width: calc(fds.$site-max-width + (fds.$size-medium));
+    max-width: calc($site-max-width + ($size-medium));
   }
 
 }

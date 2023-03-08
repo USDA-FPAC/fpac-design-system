@@ -1,28 +1,27 @@
-@use "../core/_fds.variables.scss" as fds;
 
 .ds-header {
 
   & {
-    background-color: fds.$color-fds-primary;
-    color: fds.$color-fds-white;
+    background-color: $color-fds-primary;
+    color: $color-fds-white;
   }
 
   &__title {
 
-    font-size: fds.$font-size-5;
-    line-height: fds.$line-height-flat;
+    font-size: $font-size-5;
+    line-height: $line-height-flat;
     margin-left: auto;
     margin-right: auto;
-    max-width: (fds.$site-max-width + 36px);
-    padding-right: fds.$size-default;
-    padding-left: fds.$size-default;
-    font-weight: fds.$font-light;
-    padding-top: (fds.$size-base * 17);
-    padding-bottom: fds.$size-medium;
+    max-width: ($site-max-width + 36px);
+    padding-right: $size-default;
+    padding-left: $size-default;
+    font-weight: $font-light;
+    padding-top: ($size-base * 17);
+    padding-bottom: $size-medium;
 
     @include breakpoint(M) {
       @include font-size(6);
-      line-height: fds.$line-height-flat;
+      line-height: $line-height-flat;
     }
 
     @include breakpoint(L) {
@@ -34,8 +33,8 @@
   &__bd {
     margin-left: auto;
     margin-right: auto;
-    max-width: (fds.$site-max-width + 36px);
-    padding: fds.$size-default;
+    max-width: ($site-max-width + 36px);
+    padding: $size-default;
 
     @include breakpoint(L) {
       display: flex;
@@ -47,7 +46,7 @@
 
   &__nav {
 
-    margin-bottom: fds.$size-default;
+    margin-bottom: $size-default;
 
     @include breakpoint(L) {
       margin-bottom: 0;
@@ -71,7 +70,7 @@
       display: inline-block;
 
       &--start {
-        margin-right: (fds.$size-medium - fds.$size-base);
+        margin-right: ($size-medium - $size-base);
       }
 
       &--github {
@@ -88,30 +87,30 @@
   &__link {
 
     display: inline-block;
-    color: fds.$color-fds-white;
+    color: $color-fds-white;
     text-decoration: none;
 
     &:hover {
       // scss-lint:disable TrailingSemicolon SpaceAfterPropertyColon
       text-decoration: none;
 
-      box-shadow: 0 -1px 0 0 fds.$color-fds-white inset;
+      box-shadow: 0 -1px 0 0 $color-fds-white inset;
 
       @include breakpoint(L) {
         box-shadow:
-          0 -1px 0 0 fds.$color-fds-primary inset,
-          0 -2px 0 0 fds.$color-fds-primary inset,
-          0 -3px 0 0 fds.$color-fds-primary inset,
-          0 -4px 0 0 fds.$color-fds-white inset
+          0 -1px 0 0 $color-fds-primary inset,
+          0 -2px 0 0 $color-fds-primary inset,
+          0 -3px 0 0 $color-fds-primary inset,
+          0 -4px 0 0 $color-fds-white inset
         ;
        /*  box-shadow:
-          0 -1px 0 0 fds.$color-fds-primary inset,
-          0 -2px 0 0 fds.$color-fds-primary inset,
-          0 -3px 0 0 fds.$color-fds-primary inset,
-          0 -4px 0 0 fds.$color-fds-primary inset,
-          0 -5px 0 0 fds.$color-fds-primary inset,
-          0 -6px 0 0 fds.$color-fds-primary inset,
-          0 -7px 0 0 fds.$color-fds-white inset
+          0 -1px 0 0 $color-fds-primary inset,
+          0 -2px 0 0 $color-fds-primary inset,
+          0 -3px 0 0 $color-fds-primary inset,
+          0 -4px 0 0 $color-fds-primary inset,
+          0 -5px 0 0 $color-fds-primary inset,
+          0 -6px 0 0 $color-fds-primary inset,
+          0 -7px 0 0 $color-fds-white inset
         ; */
       }
     }
@@ -120,7 +119,7 @@
     &:active,
     &:hover:visited,
     &:hover {
-      color: fds.$color-fds-white;
+      color: $color-fds-white;
     }
 
     &--github {
@@ -135,7 +134,7 @@
 
   &__version {
     white-space: nowrap;
-    color: fds.$color-fds-primary-200;
+    color: $color-fds-primary-200;
     font-size: 66%;
   }
 

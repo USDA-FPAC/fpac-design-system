@@ -1,14 +1,13 @@
-@use "../core/_fds.variables.scss" as fds;
 
-$nav-drawer-width: (fds.$size-base * 62); //25rem;
-$main-menu-width: (fds.$size-base * 23); //9rem;
-$sub-menu-width: (fds.$size-base * 55); //22.5rem;
+$nav-drawer-width: ($size-base * 62); //25rem;
+$main-menu-width: ($size-base * 23); //9rem;
+$sub-menu-width: ($size-base * 55); //22.5rem;
 $nav-layout: calc($main-menu-width + $sub-menu-width);
 
 //NavDrawer
 .ds-nav-drawer {
-  background-color: fds.$color-white;
-  border-right: 1px solid fds.$color-fds-tertiary-200;
+  background-color: $color-white;
+  border-right: 1px solid $color-fds-tertiary-200;
   height: 100vh;
   width: $nav-drawer-width;
   position: fixed;
@@ -18,8 +17,8 @@ $nav-layout: calc($main-menu-width + $sub-menu-width);
   transition: 0.3s;
 
   &__btn {
-    padding-top: fds.$size-base;
-    padding-left: fds.$size-base;
+    padding-top: $size-base;
+    padding-left: $size-base;
   }
 
   &--open {
@@ -30,17 +29,17 @@ $nav-layout: calc($main-menu-width + $sub-menu-width);
     height: ($size-base * 19);; //7.5rem;
     display: flex;
     align-items: center;
-    padding: 0 fds.$size-default;
+    padding: 0 $size-default;
 
     h3 {
-      font-weight: fds.$font-normal;
+      font-weight: $font-normal;
       margin: 0;
     }
   }
 
   &__content {
-    padding: fds.$size-default;
-    padding-left: fds.$size-base;
+    padding: $size-default;
+    padding-left: $size-base;
 
     ul {
       list-style-type: none;
@@ -49,10 +48,10 @@ $nav-layout: calc($main-menu-width + $sub-menu-width);
     }
 
     a {
-      color: fds.$color-fds-tertiary-900;
+      color: $color-fds-tertiary-900;
       text-decoration: none;
       cursor: pointer;
-      padding: (fds.$size-default - fds.$size-base);
+      padding: ($size-default - $size-base);
     }
   }
 
@@ -82,20 +81,20 @@ $nav-layout: calc($main-menu-width + $sub-menu-width);
     width: 100%;
 
     &:hover {
-      background-color: fds.$color-fds-primary-200;
+      background-color: $color-fds-primary-200;
     }
 
     &--active {
-      background-color: fds.$color-fds-primary-100;
+      background-color: $color-fds-primary-100;
     }
   }
 
   &__label {
-    padding-left: fds.$size-default;
+    padding-left: $size-default;
   }
 
   &__sub-menu {
-    background-color: fds.$color-white;
+    background-color: $color-white;
     position: absolute;
     top: 0;
     width: 100%;
@@ -110,15 +109,15 @@ $nav-layout: calc($main-menu-width + $sub-menu-width);
   }
 
   .ds-btn--icon {
-    padding: fds.$size-default;
+    padding: $size-default;
 
     &:hover:not([disabled]) {
-      background-color: fds.$color-fds-primary-100;
+      background-color: $color-fds-primary-100;
     }
   }
 
   .ds-btn--back {
-    padding: fds.$size-default 0;
+    padding: $size-default 0;
   }
 
   @include breakpoint(L) {
@@ -149,14 +148,14 @@ $nav-layout: calc($main-menu-width + $sub-menu-width);
       display: flex;
       align-items: center;
       justify-content: center;
-      height: (fds.$size-base + fds.$size-large);
-      width: (fds.$size-base + fds.$size-large);
+      height: ($size-base + $size-large);
+      width: ($size-base + $size-large);
       margin: auto;
     }
 
     &__icon-background {
-      height: (fds.$size-base + fds.$size-large);
-      width: (fds.$size-base + fds.$size-large);
+      height: ($size-base + $size-large);
+      width: ($size-base + $size-large);
       position: absolute;
       border-radius: 50%;
       z-index: -1;
@@ -167,7 +166,7 @@ $nav-layout: calc($main-menu-width + $sub-menu-width);
         background-color: transparent;
 
         .ds-nav-drawer__icon-background {
-          background-color: fds.$color-fds-primary-200;
+          background-color: $color-fds-primary-200;
         }
       }
 
@@ -175,25 +174,25 @@ $nav-layout: calc($main-menu-width + $sub-menu-width);
         background-color: transparent;
 
         .ds-nav-drawer__icon-background {
-          background-color: fds.$color-fds-primary-100;
+          background-color: $color-fds-primary-100;
         }
       }
     }
 
     &__label {
       display: block;
-      font-size: fds.$small-font-size;
+      font-size: $small-font-size;
       padding-left: 0;
-      margin-top: -(fds.$size-base);
+      margin-top: -($size-base);
     }
 
     &__sub-menu {
       height: 100%;
       width: $sub-menu-width;
       left: $main-menu-width;
-      padding: fds.$size-default;
-      border-left: 1px solid fds.$color-fds-tertiary-200;
-      border-right: 1px solid fds.$color-fds-tertiary-200;
+      padding: $size-default;
+      border-left: 1px solid $color-fds-tertiary-200;
+      border-right: 1px solid $color-fds-tertiary-200;
       transition: 0.2s;
     }
 
@@ -233,21 +232,21 @@ $nav-layout: calc($main-menu-width + $sub-menu-width);
 
 //NavBar
 .ds-nav-bar {
-  height: fds.$size-extra-large;
+  height: $size-extra-large;
 
   &__bd {
-    background-color: fds.$color-white;
-    border-bottom: 1px solid fds.$color-fds-tertiary-200;
+    background-color: $color-white;
+    border-bottom: 1px solid $color-fds-tertiary-200;
     position: fixed;
     top: 0;
     left: 0;
-    height: fds.$size-extra-large;
+    height: $size-extra-large;
     width: 100vw;
     z-index: 3;
   }
 
   &__btn {
-    padding-top: fds.$size-base;
-    padding-left: fds.$size-base;
+    padding-top: $size-base;
+    padding-left: $size-base;
   }
 }
