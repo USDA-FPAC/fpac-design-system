@@ -1,0 +1,357 @@
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <!-- Set character encoding so that all characters within the UTF-8 space (such as emoji) render correctly. -->
+    <meta charset="utf-8">
+    
+    <!-- Force IE 8/9/10 to use its latest rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Base URL
+    ================================================== -->
+    <!-- Set the base URL for all relative URLs within the document
+    <base href="https://example.com/page.html"> -->
+
+    <!-- Page Title
+    ================================================== -->
+    <title>Home | FPAC DS</title>
+
+    <!-- Favicon
+    ================================================== -->
+    <!-- Light and dark mode favicons -->
+    <link rel="icon" href="/fpac/images/usda-logo/USDA favicon/usda-favicon-color.png" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/fpac/images/usda-logo/USDA favicon/usda-favicon-white.png" type="image/x-icon" media="(prefers-color-scheme: dark)">
+
+    <!-- CSS Links
+    ================================================== -->
+    <link rel="stylesheet" href="/dist/fpac-style/styles/fpac-design-system.css">
+    <link rel="stylesheet" href="/dist/fpac-website/styles/fpac-documentation-website.css">
+
+    <!-- USWDS INIT
+    ================================================== -->
+    <script src="/dist/uswds/js/uswds-init.min.js" type="module"></script>
+    <link rel="preload" href="/dist/uswds/js/uswds.min.js" as="script">
+    
+  </head>
+
+  <!-- BODY
+  ================================================== -->
+  <body>
+    <!-- Banner -->
+      <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+      <section class="usa-banner" aria-label="Official website of the United States government">
+        <div class="usa-accordion">
+          <header class="usa-banner__header">
+            <div class="usa-banner__inner">
+              <div class="grid-col-auto">
+                <img aria-hidden="true" class="usa-banner__header-flag" src="/dist/uswds/images/us_flag_small.png" alt=""/>
+              </div>
+              <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+                <p class="usa-banner__header-text">An official website of the United States government.</p>
+                <p class="usa-banner__header-action">Here's how you know</p>
+              </div>
+              <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-default">
+                <span class="usa-banner__button-text">Here's how you know</span>
+              </button>
+            </div>
+          </header>
+          <div class="usa-banner__content usa-accordion__content" id="gov-banner-default">
+            <div class="grid-row grid-gap-lg">
+              <div class="usa-banner__guidance tablet:grid-col-6">
+                <img class="usa-banner__icon usa-media-block__img" src="/dist/uswds/images/icon-dot-gov.svg" role="img" alt="" aria-hidden="true" />
+                <div class="usa-media-block__body">
+                  <p><strong>Official websites use .gov</strong> A <strong>.gov</strong> website belongs to an official government organization in the United States.</p>
+                </div>
+              </div>
+              <div class="usa-banner__guidance tablet:grid-col-6">
+                <img class="usa-banner__icon usa-media-block__img" src="/dist/uswds/images/icon-https.svg" role="img" alt="" aria-hidden="true" />
+                <div class="usa-media-block__body">
+                  <p>
+                    <strong>Secure .gov websites use HTTPS</strong><br />A
+                    <strong>lock</strong> (
+                    <span class="icon-lock">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 64" class="usa-banner__lock-image" role="img" aria-labelledby="banner-lock-description" focusable="false"><title id="banner-lock-title">Lock</title><desc id="banner-lock-description">Locked padlock icon</desc><path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"/></svg>
+                    </span>
+                    ) or <strong>https://</strong> means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Header -->
+      <header class="usa-header usa-header--basic">
+        <div class="usa-nav-container">
+          <div class="usa-navbar">
+
+            <!-- USDA Logo -->
+            <div class="usa-logo">
+              <div class="grid-container">
+                <div style="display: inline-flex; align-items: center;">
+                  <a href="/fpac-website/pages/home.html" title="USDA Logo"><img src="/dist/fpac-style/images/usda-logo/usda-logo/color/usda-logo-color.svg" style="width: 50px; min-width: 50px; margin-right: 8px;" alt="USDA Logo"/></a>
+                  <a href="/fpac-website/pages/home.html" title="Website title" style="white-space: nowrap;"><strong>FPAC Design System</strong></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button type="button" class="usa-menu-btn">Menu</button>
+          </div>
+
+          <!-- Primary Navigation -->
+          <nav aria-label="Primary navigation" class="usa-nav">
+
+            <!-- Mobile close button -->
+            <button type="button" class="usa-nav__close">
+                <img src="/dist/uswds/images/usa-icons\close.svg" role="img" alt="Close"/>
+            </button>
+
+            <!-- Primary Menu -->
+            <ul class="usa-nav__primary usa-accordion margin-right-4">  
+              <!-- Home -->
+              <li class="usa-nav__primary-item usa-nav__link">
+                <a href="/fpac-website/pages/home.html" class="font-sans-xs usa-nav-link usa-current"><span style="white-space: nowrap;">Home</span></a>
+              </li>
+              
+              <!-- Style Guide -->
+              <li class="usa-nav__primary-item usa-nav__link">
+                <a href="/fpac-website/pages/2-style-guide/style-guide.html" class="font-sans-xs usa-nav-link"><span style="white-space: nowrap;">Style Guide</span></a>
+              </li>
+              
+              <!-- Component Library -->
+              <li class="usa-nav__primary-item">
+                <button type="button" class="usa-accordion__button usa-nav__link font-sans-xs" aria-expanded="false" aria-controls="basic-nav-section-two"
+                  ><span class="font-sans-xs" style="white-space: nowrap;">Component Library</span>
+                </button>
+                <ul id="basic-nav-section-two" class="usa-nav__submenu font-sans-xs">
+                  <li class="usa-nav__submenu-item">
+                    <a href="/fpac-website/pages/3-component-library/component-library.html"><span>All sections</span></a>
+                  </li>
+                  <li class="usa-nav__submenu-item">
+                    <a href="/fpac-website/pages/3-component-library/component-library.html#components-2"><span class="margin-left-2">Components</span></a>
+                  </li>
+                  <li class="usa-nav__submenu-item">
+                    <a href="/fpac-website/pages/3-component-library/component-library.html#patterns-2"><span class="margin-left-2">Patterns</span></a>
+                  </li>
+                  <li class="usa-nav__submenu-item">
+                    <a href="/fpac-website/pages/3-component-library/component-library.html#templates-2"><span class="margin-left-2">Templates</span></a>
+                  </li>
+                </ul>
+              </li>
+              
+              <!-- Guidelines -->
+              <li class="usa-nav__primary-item usa-nav__link">
+                <a href="/fpac-website/pages/4-guidelines/guidelines.html" class="font-sans-xs usa-nav-link"><span style="white-space: nowrap;">Guidelines</span></a>
+              </li>
+            </ul>
+
+            <!-- Search bar -->
+            <section aria-label="Search component">
+              <form class="usa-search usa-search--small" role="search">
+                <label class="usa-sr-only" for="search-field">Search</label>
+                <input class="usa-input" id="search-field" type="search" name="search" />
+                <button class="usa-button" type="submit">
+                  <img src="/dist/uswds/images/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="Search" />
+                </button>
+              </form>
+            </section>
+
+          </nav>
+        </div>
+      </header>
+
+    <!-- Main Content -->
+      <main id="main-content">
+      
+        <!-- Hero Header -->
+        <section class="usa-hero" aria-label="Introduction">
+          
+          <!-- Note: hero image can be modified with the design token at: /src/styles/tokens/components.scss in the Hero section-->
+          <div class="grid-container">
+            <div class="usa-hero__callout">
+              <h1 class="usa-hero__heading--alt">
+                <span class="usa-hero__heading">FPAC Design System</span>
+              </h1>
+              <p>
+                FPAC's Open Source style guide, documentation, and guidelines - the foundation for cohesive user experiences across USDA Farm Production and Conservation.
+              </p>
+              <a class="usa-button" href="https://github.com/USDA-FPAC/fpac-design-system">View FPAC on GitHub
+                <img
+                  src="\fpac-website/images/home/Octicons-mark-github.svg"
+                  alt="Github logo"
+                  width="25"
+                  color="white"
+                ></a>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Custom Focus Outline Style for Cards -->
+        <style>
+          a:focus .usa-card__container {
+            outline: 4px solid #4D8157;
+            outline-offset: 4px;
+          }
+        </style>
+
+        <!-- Cards -->
+        <section class="grid-container grid-col-10 usa-prose usa-section">
+          <div class="grid-row grid-gap">
+            <ul class="usa-card-group">
+
+              <!-- Style Guide Card -->
+              <li class="usa-card usa-card--header-first tablet:grid-col-4">
+                <a style="text-decoration: none;" href="\fpac-website/pages/2-style-guide/style-guide.html">
+                  <div class="usa-card__container hover:border-primary">
+                    <div class="usa-card__header"><h4 class="usa-card__heading">Style Guide</h4></div>
+                    <div class="usa-card__media"><div class="usa-card__img"><img src="/fpac-website/images/home/cauliflower.png" alt="multicolored cauliflower"/></div></div>
+                    <div class="usa-card__body"><p>The FPAC Style Guide provides a set of visual standards for the design and development of FPAC websites.</p></div>
+                  </div>
+                </a>
+              </li>
+
+              <!-- Component Library Card -->
+              <li class="usa-card usa-card--header-first tablet:grid-col-4">
+                <a style="text-decoration: none;" href="\fpac-website/pages/3-component-library/component-library.html">
+                  <div class="usa-card__container hover:border-primary">
+                    <div class="usa-card__header"><h4 class="usa-card__heading">Component Library</h4></div>
+                    <div class="usa-card__media"><div class="usa-card__img"><img src="\fpac-website\images\home\produce.png" alt="A placeholder image"/></div></div>                
+                    <div class="usa-card__body"><p>The FPAC Component Library provides standard components for the design and development of FPAC websites.</p></div>
+                  </div>
+                </a>
+              </li>
+
+              <!-- Guidelines Card -->
+              <li class="usa-card usa-card--header-first tablet:grid-col-4">
+                <a style="text-decoration: none;" href="\fpac-website/pages/4-guidelines/guidelines.html">
+                  <div class="usa-card__container hover:border-primary">
+                    <div class="usa-card__header"><h4 class="usa-card__heading">Guidelines</h4></div>
+                    <div class="usa-card__media"><div class="usa-card__img"><img src="/fpac-website/images/home/riparian.png" alt="A placeholder image"/></div></div>                
+                    <div class="usa-card__body"><p>The FPAC Guidelines provide qualitative guidance to help you and your team build digital products that meet user needs and expectations.</p></div>
+                  </div>
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+        </section>
+      </main>
+    <!-- End Main Content -->
+    
+    <!-- Footer -->
+      <footer class="usa-footer">
+
+      <!-- Return to top link -->
+        <div class="grid-container usa-footer__return-to-top">
+          <a href="" style="color: #4D8157;" onclick="window.scrollTo({top: 0, left: 0, behavior: 'smooth'}); return false;">Return to top</a>
+        </div>
+
+      <!-- Footer content -->
+        <div class="usa-footer__primary-section">
+          <nav class="usa-footer__nav" aria-label="Footer navigation">
+            <ul class="grid-row grid-gap-2">
+              <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                <a class="usa-footer__primary-link usa-link--external" href="https://www.usda.gov/about-usda/general-information/mission-areas" target="_blank" rel="noopener">USDA Mission Areas</a>
+              </li>
+              <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                <a class="usa-footer__primary-link usa-link--external" href="https://www.fpacbc.usda.gov/" target="_blank" rel="noopener">FPAC BC</a>
+              </li>
+              <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                <a class="usa-footer__primary-link usa-link--external" href="https://www.fsa.usda.gov/" target="_blank" rel="noopener">FSA</a>
+              </li>
+              <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                <a class="usa-footer__primary-link usa-link--external" href="https://www.nrcs.usda.gov/" target="_blank" rel="noopener">NRCS</a>
+              </li>
+              <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                <a class="usa-footer__primary-link usa-link--external" href="https://www.rma.usda.gov/" target="_blank" rel="noopener">RMA</a>
+              </li>
+              <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                <a class="usa-footer__primary-link usa-link--external" href="https://www.farmers.gov/" target="_blank" rel="noopener">Farmers.gov</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+
+    <!-- Identifier -->
+      <div class="usa-identifier">
+        
+        <!-- USDA Logo -->
+        <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
+          <div class="usa-identifier__container">
+            <div class="usa-identifier__logos">
+              <a href="https://www.usda.gov/" class="usa-identifier__logo"
+                ><img
+                  class="usa-identifier__logo-img"
+                  src="\dist\fpac-style\images\usda-logo\usda-v2-lockup\white\usda-v2-white-lockup.svg"
+                  alt="USDA logo"
+                  role="img">
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Identifier Links -->
+        <nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links">
+          <div class="usa-identifier__container">
+            <ul class="usa-identifier__required-links-list">
+              <li class="usa-identifier__required-links-item">
+                <a href="https://www.usda.gov/about-usda/general-information/our-agency"
+                class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">About USDA</a>
+              </li>
+              <li class="usa-identifier__required-links-item">
+                <a href="https://www.usda.gov/accessibility-statement"
+                class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">Accessibility Statement</a>
+              </li>
+              <li class="usa-identifier__required-links-item">
+                <a href="https://www.usda.gov/ogc/office-information-affairs/foia-division"
+                class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">FOIA requests</a>
+              </li>
+              <li class="usa-identifier__required-links-item">
+                <a href="https://www.usda.gov/nofear"
+                class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">No FEAR Act data</a>
+              </li>
+              <li class="usa-identifier__required-links-item">
+                <a href="https://usdaoig.oversight.gov/"
+                class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">Office of the Inspector General</a>
+              </li>
+              <li class="usa-identifier__required-links-item">
+                <a href="https://www.usda.gov/about-usda/general-information/our-performance"
+                class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">Performance reports</a>
+              </li>
+              <li class="usa-identifier__required-links-item">
+                <a href="https://www.usda.gov/privacy-policy"
+                class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">Privacy policy</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Visit USA.gov -->
+        <section
+          class="usa-identifier__section usa-identifier__section--usagov"
+          aria-label="U.S. government information and services">
+          <div class="usa-identifier__container">
+            <div class="usa-identifier__usagov-description">
+              Looking for U.S. government information and services?
+            </div>
+            <a href="https://www.usa.gov/" class="usa-link--external" target="_blank" rel="noopener">Visit USA.gov</a>
+          </div>
+        </section>
+      </div>
+
+    <!-- End Footer -->
+  </body>
+
+  <!-- Scripts
+  ================================================== -->
+  <script src="/dist/uswds/js/uswds.min.js"></script>
+
+</html>

@@ -1,0 +1,8 @@
+/*
+ * This is where custom CSS styles specific to the fpac-design-system documentation website will reside.
+ */
+
+ /* Override the hero image styles */
+.usa-hero {
+  background-image: url("/dist/fpac-style/images/hero/farmersgov-1440x540-finlitmo-hero.jpg") !important;
+}

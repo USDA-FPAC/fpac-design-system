@@ -1,0 +1,767 @@
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <!-- Set character encoding so that all characters within the UTF-8 space (such as emoji) render correctly. -->
+    <meta charset="utf-8">
+    
+    <!-- Force IE 8/9/10 to use its latest rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Base URL
+    ================================================== -->
+    <!-- Set the base URL for all relative URLs within the document
+    <base href="https://example.com/page.html"> -->
+
+    <!-- Page Title
+    ================================================== -->
+    <title>Custom Configuration | FPAC DS</title>
+
+    <!-- Favicon
+    ================================================== -->
+    <!-- Light and dark mode favicons -->
+    <link rel="icon" href="/fpac/images/usda-logo/USDA favicon/usda-favicon-color.png" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/fpac/images/usda-logo/USDA favicon/usda-favicon-white.png" type="image/x-icon" media="(prefers-color-scheme: dark)">
+
+    <!-- CSS Links
+    ================================================== -->
+    <link rel="stylesheet" href="\fpac-design-system.css">
+
+    <!-- USWDS INIT
+    ================================================== -->
+    <script src="\dist/uswds/js/uswds-init.min.js" type="module"></script>
+    <link rel="preload" href="\dist/uswds/js/uswds.min.js" as="script">
+
+  </head>
+
+  <!-- BODY
+  ================================================== -->
+  <body>
+    <!-- Banner -->
+    <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+    <section class="usa-banner" aria-label="Official website of the United States government">
+      <div class="usa-accordion">
+        <header class="usa-banner__header">
+          <div class="usa-banner__inner">
+            <div class="grid-col-auto">
+              <img
+                aria-hidden="true"
+                class="usa-banner__header-flag"
+                src="\dist/uswds/images/us_flag_small.png"
+                alt=""
+              />
+            </div>
+            <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+              <p class="usa-banner__header-text">
+                An official website of the United States government.
+              </p>
+              <p class="usa-banner__header-action">Here's how you know</p>
+            </div>
+            <button
+              type="button"
+              class="usa-accordion__button usa-banner__button"
+              aria-expanded="false"
+              aria-controls="gov-banner-default"
+            >
+              <span class="usa-banner__button-text">Here's how you know</span>
+            </button>
+          </div>
+        </header>
+        <div class="usa-banner__content usa-accordion__content" id="gov-banner-default">
+          <div class="grid-row grid-gap-lg">
+            <div class="usa-banner__guidance tablet:grid-col-6">
+              <img
+                class="usa-banner__icon usa-media-block__img"
+                src="\dist/uswds/images/icon-dot-gov.svg"
+                role="img"
+                alt=""
+                aria-hidden="true"
+              />
+              <div class="usa-media-block__body">
+                <p>
+                  <strong>Official websites use .gov</strong><br />A
+                  <strong>.gov</strong> website belongs to an official government
+                  organization in the United States.
+                </p>
+              </div>
+            </div>
+            <div class="usa-banner__guidance tablet:grid-col-6">
+              <img
+                class="usa-banner__icon usa-media-block__img"
+                src="\dist/uswds/images/icon-https.svg"
+                role="img"
+                alt=""
+                aria-hidden="true"
+              />
+              <div class="usa-media-block__body">
+                <p>
+                  <strong>Secure .gov websites use HTTPS</strong><br />A
+                  <strong>lock</strong> (
+                  <span class="icon-lock">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="52"
+                      height="64"
+                      viewBox="0 0 52 64"
+                      class="usa-banner__lock-image"
+                      role="img"
+                      aria-labelledby="banner-lock-description"
+                      focusable="false"
+                    >
+                      <title id="banner-lock-title">Lock</title>
+                      <desc id="banner-lock-description">
+                        Locked padlock icon
+                      </desc>
+                      <path
+                        fill="#000000"
+                        fill-rule="evenodd"
+                        d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"
+                      />
+                    </svg>
+                  </span>
+                  ) or <strong>https://</strong> means you’ve safely connected to
+                  the .gov website. Share sensitive information only on official,
+                  secure websites.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <div class="usa-overlay"></div>
+
+    <header class="usa-header usa-header--basic">
+      <div class="usa-nav-container">
+        <div class="usa-navbar">
+          <div class="usa-logo">
+            <em class="usa-logo__text">
+              <img
+                class="usa-media-block__img"
+                src="\fpac/images/usda-logo/USDA logo/color/usda-logo-color.svg"
+                alt="USDA Logo"
+                width="50"
+                style="margin-right: -2px;"
+              />
+              <a href="/" title="Website title">FPAC Design System</a>
+            </em>
+          </div>
+          <button type="button" class="usa-menu-btn">Menu</button>
+        </div>
+
+          <!-- Primary Navigation -->
+          <nav aria-label="Primary navigation" class="usa-nav">
+
+            <!-- Mobile close button -->
+            <button type="button" class="usa-nav__close">
+                <img src="/dist/uswds/images/usa-icons\close.svg" role="img" alt="Close"/>
+            </button>
+
+            <!-- Primary Menu -->
+            <ul class="usa-nav__primary usa-accordion margin-right-4">  
+              <!-- Home -->
+              <li class="usa-nav__primary-item usa-nav__link">
+                <a href="/fpac-website/pages/home.html" class="font-sans-xs usa-nav-link"><span style="white-space: nowrap;">Home</span></a>
+              </li>
+              
+              <!-- Style Guide -->
+              <li class="usa-nav__primary-item usa-nav__link">
+                <a href="/fpac-website/pages/2-style-guide/style-guide.html" class="font-sans-xs usa-nav-link"><span style="white-space: nowrap;">Style Guide</span></a>
+              </li>
+              
+              <!-- Component Library -->
+              <li class="usa-nav__primary-item">
+                <button type="button" class="usa-accordion__button usa-nav__link font-sans-xs" aria-expanded="false" aria-controls="basic-nav-section-two"
+                  ><span class="font-sans-xs" style="white-space: nowrap;">Component Library</span>
+                </button>
+                <ul id="basic-nav-section-two" class="usa-nav__submenu font-sans-xs">
+                  <li class="usa-nav__submenu-item">
+                    <a href="/fpac-website/pages/3-component-library/component-library.html"><span>All sections</span></a>
+                  </li>
+                  <li class="usa-nav__submenu-item">
+                    <a href="/fpac-website/pages/3-component-library/component-library.html#components-2"><span class="margin-left-2">Components</span></a>
+                  </li>
+                  <li class="usa-nav__submenu-item">
+                    <a href="/fpac-website/pages/3-component-library/component-library.html#patterns-2"><span class="margin-left-2">Patterns</span></a>
+                  </li>
+                  <li class="usa-nav__submenu-item">
+                    <a href="/fpac-website/pages/3-component-library/component-library.html#templates-2"><span class="margin-left-2">Templates</span></a>
+                  </li>
+                </ul>
+              </li>
+              
+              <!-- Guidelines -->
+              <li class="usa-nav__primary-item usa-nav__link">
+                <a href="/fpac-website/pages/4-guidelines/guidelines.html" class="font-sans-xs usa-nav-link usa-current"><span style="white-space: nowrap;">Guidelines</span></a>
+              </li>
+            </ul>
+
+          <!-- Search bar -->
+          <section aria-label="Search component">
+            <form class="usa-search usa-search--small" role="search">
+              <label class="usa-sr-only" for="search-field">Search</label>
+              <input
+                class="usa-input"
+                id="search-field"
+                type="search"
+                name="search"
+              />
+              <button class="usa-button" type="submit">
+                <img
+                  src="\dist/uswds/images/usa-icons-bg/search--white.svg"
+                  class="usa-search__submit-icon"
+                  alt="Search"
+                />
+              </button>
+            </form>
+          </section>
+
+        </nav>
+      </div>
+    </header>
+
+    <!-- Body Container -->
+    <div class="usa-section">
+      <div class="grid-container ">
+        <div class="usa-in-page-nav-container">
+
+          <!-- In-page Navigation Menu-->
+          <aside
+            class="usa-in-page-nav margin-top-0"
+            data-heading-elements="h2 h3"
+            data-title-text="On this page"
+            data-title-heading-level="h4"
+            data-scroll-offset="48"
+            data-root-margin="48px 0px -90% 0px"
+            data-threshold="1"
+          ></aside>
+
+            <!-- Side Navigation Menu -->
+            <div class="usa-layout-docs__sidenav display-none desktop:display-block grid-col-2">
+              <nav aria-label="Secondary navigation">
+                <ul class="usa-sidenav">
+                  <li class="usa-sidenav__item"><a href="./guidelines.html" class="usa-current"><strong>Guidelines</strong></a></li>
+                  <li class="usa-sidenav__item">
+                    <a href="/fpac/pages/4-guidelines/about-fpac-design/about-fpac-design.html">About FPAC design</a>
+                    <a href="/fpac/pages/4-guidelines/accessibility/accessibility.html">Accessibility</a>
+                    <a href="/fpac/pages/4-guidelines/design-principles/design-principles.html">Design principles</a>
+                    <a href="/fpac/pages/4-guidelines/development-guidance/development-guidance.html">Development guidance</a>
+                    <a href="/fpac/pages/4-guidelines/getting-started/getting-started.html">Getting started</a>
+                    <a href="/fpac/pages/4-guidelines/process-maturity/process-maturity.html">Process maturity</a>
+                  </li>
+                  <li class="usa-sidenav__item">
+                    <a href="/fpac/pages/4-guidelines/custom-configuration/custom-configuration.html">Custom configuration</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+          <!-- Body Content -->
+          <main class="grid-container grid-col-fill usa-prose">
+
+            <!-- Intro -->
+
+            <h1 class="usa-page-title grid-col-fill">Advanced settings</h1>
+            <p class="usa-intro">USWDS Advanced settings variables tell the design system which parts to include.</p>
+            <p class="usa-intro">Note: The information on this page is here for your reference. In order to maintain consistency,
+              please consult with your Design System Manager before making application level customizations.</p>
+            
+            <br>
+            <hr>
+
+
+            <!-- Topic -->
+
+            <h2>Responsive Breakpoints</h2>
+              <p>Responsive breakpoints are the minimum widths at which your layout will change to accommodate different screen sizes.
+                These breakpoints are mobile-first, meaning that styles applied at a given breakpoint will also apply to all larger
+                breakpoints.</p>
+              <p>By default, FPAC includes nine responsive breakpoints, but not all of them are always available: card, card-lg,
+                mobile, mobile-lg, tablet, tablet-lg, desktop, desktop-lg, widescreen, and widescreen.</p>
+
+            <h3>Available breakpoints</h3>
+
+            <table class="usa-table usa-table--borderless" style="width:100%;">
+              <caption></caption>
+              <thead>
+                <tr>
+                  <th scope="col">Breakpoint name</th>
+                  <th class="text-center" style="text-align: center;">Width</th>
+                  <th class="text-center" style="text-align: center;">Availabile</th>
+                </tr>
+              </thead>
+              <tbody class="font-family-mono">
+                <tr>
+                  <td scope="row">card</td>
+                  <td class="text-center" style="text-align: center;">160px</td>
+                  <td class="text-center" style="text-align: center;"><span class="usa-tag bg-disabled">false</span></td>
+                </tr>
+                <tr>
+                  <td scope="row">card-lg</td>
+                  <td class="text-center" style="text-align: center;">240px</td>
+                  <td class="text-center" style="text-align: center;"><span class="usa-tag bg-disabled">false</span></td>
+                </tr>
+                <tr>
+                  <td scope="row">mobile</td>
+                  <td class="text-center" style="text-align: center;">320px</td>
+                  <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                </tr>
+                <tr>
+                  <td scope="row">mobile-lg</td>
+                  <td class="text-center" style="text-align: center;">480px</td>
+                  <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                </tr>
+                <tr>
+                  <td scope="row">tablet</td>
+                  <td class="text-center" style="text-align: center;">640px</td>
+                  <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                </tr>
+                <tr>
+                  <td scope="row">tablet-lg</td>
+                  <td class="text-center" style="text-align: center;">880px</td>
+                  <td class="text-center" style="text-align: center;"><span class="usa-tag bg-disabled">false</span></td>
+                </tr>
+                <tr>
+                  <td scope="row">desktop</td>
+                  <td class="text-center" style="text-align: center;">1024px</td>
+                  <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                </tr>
+                <tr>
+                  <td scope="row">desktop-lg</td>
+                  <td class="text-center" style="text-align: center;">1200px</td>
+                  <td class="text-center" style="text-align: center;"><span class="usa-tag bg-disabled">false</span></td>
+                </tr>
+                <tr>
+                  <td scope="row">widescreen</td>
+                  <td class="text-center" style="text-align: center;">1400px</td>
+                  <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>Custom breakpoints</h3>
+              <p>You can add custom breakpoints by adding a new <strong>key:value</strong> pair to the <strong>$theme-utility-breakpoints</strong> map variable in your 
+                  Utilities Configuration, where the <strong>key</strong> is the breakpoint prefix and the <strong>value</strong> is the minimum width of the breakpoint.</p>
+
+              <h2>Responsive Utilities</h2>
+              <p>You can apply different styles at different breakpoints using responsive modifier classes. For instance, create a
+                <code><strong>div</strong></code> and give it <code><strong>class="square-8 bg-primary border-2px desktop:border-05"</strong></code>. This will create a
+                square with a green background (the primary color) with a 2 pixel border below the <code>desktop</code> breakpoint width (1024px) and a 4 pixel border 
+                when the screen is at the <code>desktop</code> breakpoint or larger.</p>
+
+                <p>Reszie the width of your screen to see how the border changes on this square.</p>
+
+
+<pre><code class="language-html" data-lang="html">&lt;div class="square-8 bg-primary border-2px desktop:border-05"&gt;&lt;/div&gt;</code></pre>
+
+<pre><code class="font-mono-md">
+// Enable responsive variants for background color utilities
+  @use "uswds-core" with (
+    $background-color-settings: (
+      responsive: true
+    )
+  );
+</code></pre>
+
+              <h3>Output Availability</h3>
+
+
+
+
+              <p style="line-height: 1.5;">
+                  Add a responsive breakpoint prefix separated with a <strong>:</strong> to target a utility at a responsive breakpoint and higher,
+                  following a mobile-first methodology.
+              </p>
+              <p style="line-height: 1.5;">
+                  Set up which breakpoints are available to utilities by setting the <strong>$theme-utility-breakpoints</strong> variable in your 
+                  <a href="\fpac/pages/2-style-guide/advanced-settings/advanced-settings.html">Advanced Settings</a> configuration.
+              </p>
+              <p style="line-height: 1.5;">
+                  Set whether a utility family outputs with responsive variants by setting the value of
+                  <strong>$[utility_family]-settings.responsive</strong> in your
+                  <a href="\fpac/pages/2-style-guide/advanced-settings/advanced-settings.html">Advanced Settings</a> configuration. When
+                  modifying settings stored as a map, undefined map elements will keep their default values.
+              </p>
+              <p>
+                By default, all utilities have responsive variants enabled. This means that
+                you can apply different border styles at different breakpoints using the responsive
+                modifier classes (ex: <code>.tablet:border</code>, <code>.desktop:border</code>, etc.).
+                You can disable responsive variants for all border utilities by setting the
+                <code>$border-settings.responsive</code> variable to <code>false</code> in your custom Sass file.
+                You can also disable responsive variants for individual border utility types by setting
+                the corresponding <code>$border-*-settings.responsive</code> variable to <code>false</code>.
+              </p>
+
+              <table class="usa-table usa-table--borderless" style="width:100%;">
+                  <thead>
+                      <tr>
+                          <th style="width:50%;" scope="col">Utility variable</th>
+                          <th class="text-center" style="text-align: center;">Default</th>
+                      </tr>
+                  </thead>
+                  <tbody class="font-mono-2xs">
+                      <tr>
+                          <td scope="row">$border-settings.responsive</td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                      </tr>
+                      <tr>
+                          <td scope="row">$border-style-settings.responsive</td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                      </tr>
+                      <tr>
+                          <td scope="row">$border-width-settings.responsive</td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                      </tr>
+                      <tr>
+                          <td scope="row">$border-color-settings.responsive</td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                      </tr>
+                      <tr>
+                          <td scope="row">$border-radius-settings.responsive</td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                      </tr>
+                  </tbody>
+              </table>
+
+              <br>
+
+              <h3>State variants</h3>
+              <p style="line-height: 1.5;">
+                  Use a state prefix separated with a <strong>:</strong> to target a utility in a specific state.
+              </p>
+              <p style="line-height: 1.5;">
+                  Set whether a utility outputs a specific state variant by setting the value of the
+                  <strong>$[utility_family]-settings.[state]</strong> variable in your
+                  <a href="\fpac/pages/2-style-guide/advanced-settings/advanced-settings.html">Advanced Settings</a> configuration. When
+                  modifying settings stored as a map, undefined map elements will keep their default values.
+              </p>
+
+              <table class="usa-table usa-table--borderless" style="width:100%;">
+                  <caption></caption>
+                  <thead>
+                      <tr>
+                          <th style="width:40%;" scope="col">Utility variable</th>
+                          <th class="text-center" style="text-align: center;">active</th>
+                          <th class="text-center" style="text-align: center;">focus</th>
+                          <th class="text-center" style="text-align: center;">hover</th>
+                          <th class="text-center" style="text-align: center;">visited</th>
+                      </tr>
+                  </thead>
+                  <tbody class="font-mono-2xs">
+                      <tr>
+                          <td scope="row">$border-settings</td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-disabled">false</span></td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                      </tr>
+                      <tr>
+                          <td scope="row">$border-style-settings</td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                      </tr>
+                      <tr>
+                          <td scope="row">$border-width-settings</td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                      </tr>
+                      <tr>
+                          <td scope="row">$border-color-settings</td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                      </tr>
+                      <tr>
+                          <td scope="row">$border-radius-settings</td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                      </tr>
+                  </tbody>
+              </table>
+
+              <br>
+
+              <h3>Output control</h3>
+              <p>
+                You can control whether or not a utility family and its variants are included in the compiled CSS.
+                This is useful for excluding unused utilities to reduce the size of your compiled CSS file.
+              </p>
+              <p style="line-height: 1.5;">
+                  Control whether or not to output any utility family by setting the value of the <strong>$[utility_family]-settings.output</strong> variable in your
+                  <a href="\fpac/pages/2-style-guide/advanced-settings/advanced-settings.html">Advanced Settings</a> configuration.
+              </p>
+              <p style="line-height: 1.5;">
+                  A value of <span class="usa-tag bg-primary">true</span>will output the utility family and any variants. A value of <span class="usa-tag bg-disabled">false</span>
+                  prevents the output of the family and any variants. </p>
+              </p>
+              <table class="usa-table usa-table--borderless" style="width:100%;">
+                  <thead>
+                      <tr>
+                          <th style="width:50%;" scope="col">Utility variable</th>
+                          <th class="text-center" style="text-align: center;">Default</th>
+                      </tr>
+                  </thead>
+                  <tbody class="font-mono-2xs">
+                      <tr>
+                          <td scope="row">$border-settings.output</td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                      </tr>
+                      <tr>
+                          <td scope="row">$border-style-settings.output</td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                      </tr>
+                      <tr>
+                          <td scope="row">$border-width-settings.output</td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                      </tr>
+                      <tr>
+                          <td scope="row">$border-color-settings.output</td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                      </tr>
+                      <tr>
+                          <td scope="row">$border-radius-settings.output</td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
+                      </tr>
+                  </tbody>
+              </table>
+              <div style="height: 20px;"></div>
+              
+              <hr>
+              <h2>Custom values</h2>
+              <p style="line-height: 1.5;">
+                  By default, utilities output the standard values listed in the standard output table. Customize and refine any
+                  utility family's specific values by editing the <strong>$[utility_family]-manual-values</strong> and <strong>$[utility_family]-palettes</strong>
+                  variables in your <a href="\fpac/pages/2-style-guide/advanced-settings/advanced-settings.html">Advanced Settings</a> configuration.
+              </p>
+              <br>
+
+              <h3>Manual values</h3>
+              <p style="line-height: 1.5;">
+                  Specify manual values as unique <strong>key:value</strong> pairs using the <strong>$[utility_family]-manual-values</strong> map, where the <strong>key</strong> is the
+                  utility's value suffix, and the <strong>value</strong> is what the utility will output. </p>
+              </p>
+
+              <br>
+              <h3>Palettes</h3>
+              <p style="line-height: 1.5;">
+                  Palettes are predefined groups of values. Add palettes to the <strong>$[utility_family]-palettes</strong> list variable in your <a href="\fpac/pages/2-style-guide/advanced-settings/advanced-settings.html">Advanced Settings</a> configuration to add those values to the utility family.
+              </p>
+
+              <table class="usa-table usa-table--borderless" style="width:100%;">
+                  <thead>
+                      <tr>
+                          <th style="width:50%;">Default palette name</th>
+                          <th>Palette contents</th>
+                      </tr>
+                  </thead>
+                  <tbody class="font-mono-2xs">
+                      <tr>
+                          <td scope="row">'palette-border-default'</td>
+                          <td>border default tokens</td>
+                      </tr>
+                      <tr>
+                          <td scope="row">'palette-border-style-default'</td>
+                          <td>border-style default tokens</td>
+                      </tr>
+                      <tr>
+                          <td scope="row">'palette-border-width-default'</td>
+                          <td>border-width default tokens</td>
+                      </tr>
+                      <tr>
+                          <td scope="row">'palette-border-color-default'</td>
+                          <td>border-color default tokens</td>
+                      </tr>
+                      <tr>
+                          <td scope="row">'palette-border-radius-default'</td>
+                          <td>border-radius default tokens</td>
+                      </tr>
+                  </tbody>
+              </table>
+
+
+
+<hr>
+                <h2>Responsive variants</h2>              
+                <p class="utility-text">Add a responsive breakpoint prefix separated with a <code>:</code> to target a utility at a responsive breakpoint and higher, following a mobile-first methodology.</p>
+                
+                <div class="border-left-05 border-primary padding-left-105 margin-top-2 bg-white">
+                    <h4 class="margin-bottom-05">Example</h4>
+                    <p class="font-mono-sm"><span class="text-primary">.tablet:</span>padding-y-2</p>
+                    <h4 class="margin-top-2 margin-bottom-05">Output</h4>
+                <pre>
+@media screen and (min-width: 640px) {
+.tablet\:padding-y-2 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    }
+}
+                </pre>
+                </div>
+
+
+
+
+                <h3>State variants</h3>
+                <p></p>
+                <button class="usa-button" onclick="window.open('https://designsystem.digital.gov/utilities/border/#state-variants-2','_blank')" type="button">
+                    State variants
+                    <img src="C:\SoftwareDistribution\fpacdev\workspaces\FPAC design system\fpac-design-system\dist\uswds\images\usa-icons-bg\launch--white.svg" alt="(external site)" style="width:1em; height:1em; vertical-align:middle; margin-left:0.25em;">
+                </button>
+
+                <h3>Output control</h3>
+                <p></p>
+                <button class="usa-button" onclick="window.open('https://designsystem.digital.gov/utilities/border/#output-control-2','_blank')" type="button">
+                    Output control
+                    <img src="C:\SoftwareDistribution\fpacdev\workspaces\FPAC design system\fpac-design-system\dist\uswds\images\usa-icons-bg\launch--white.svg" alt="(external site)" style="width:1em; height:1em; vertical-align:middle; margin-left:0.25em;">
+                </button>
+
+                <h3>Custom values</h3>
+                <p></p>
+                <button class="usa-button" onclick="window.open('https://designsystem.digital.gov/utilities/border/#custom-values','_blank')" type="button">
+                    Custom values
+                    <img src="C:\SoftwareDistribution\fpacdev\workspaces\FPAC design system\fpac-design-system\dist\uswds\images\usa-icons-bg\launch--white.svg" alt="(external site)" style="width:1em; height:1em; vertical-align:middle; margin-left:0.25em;">
+                </button>
+
+                <h3>Manual values</h3>
+                <p></p>
+                <button class="usa-button" onclick="window.open('https://designsystem.digital.gov/utilities/border/#manual-values','_blank')" type="button">
+                    Manual values
+                    <img src="C:\SoftwareDistribution\fpacdev\workspaces\FPAC design system\fpac-design-system\dist\uswds\images\usa-icons-bg\launch--white.svg" alt="(external site)" style="width:1em; height:1em; vertical-align:middle; margin-left:0.25em;">
+                </button>
+
+                <h3>Palettes</h3>
+                <p></p>
+                <button class="usa-button" onclick="window.open('https://designsystem.digital.gov/utilities/border/#palettes','_blank')" type="button">
+                    Palettes
+                    <img src="C:\SoftwareDistribution\fpacdev\workspaces\FPAC design system\fpac-design-system\dist\uswds\images\usa-icons-bg\launch--white.svg" alt="(external site)" style="width:1em; height:1em; vertical-align:middle; margin-left:0.25em;">
+                </button>
+
+
+            </main>
+          </div>
+        </div>    
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="usa-footer">
+
+    <!-- Return to top link -->
+
+      <div class="grid-container usa-footer__return-to-top">
+        <a href="" style="color: #4D8157;" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">Return to top</a>
+      </div>
+
+    <!-- Footer content -->
+
+      <div class="usa-footer__primary-section">
+        <nav class="usa-footer__nav" aria-label="Footer navigation">
+          <ul class="grid-row grid-gap-2">
+            <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+              <a class="usa-footer__primary-link usa-link--external" href="https://www.usda.gov/about-usda/general-information/mission-areas" target="_blank" rel="noopener">USDA Mission Areas</a>
+            </li>
+            <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+              <a class="usa-footer__primary-link usa-link--external" href="https://www.fpacbc.usda.gov/" target="_blank" rel="noopener">FPAC BC</a>
+            </li>
+            <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+              <a class="usa-footer__primary-link usa-link--external" href="https://www.fsa.usda.gov/" target="_blank" rel="noopener">FSA</a>
+            </li>
+            <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+              <a class="usa-footer__primary-link usa-link--external" href="https://www.nrcs.usda.gov/" target="_blank" rel="noopener">NRCS</a>
+            </li>
+            <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+              <a class="usa-footer__primary-link usa-link--external" href="https://www.rma.usda.gov/" target="_blank" rel="noopener">RMA</a>
+            </li>
+            <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+              <a class="usa-footer__primary-link usa-link--external" href="https://www.farmers.gov/" target="_blank" rel="noopener">Farmers.gov</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- Identifier -->
+    <div class="usa-identifier">
+      
+      <!-- USDA Logo -->
+      <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
+        <div class="usa-identifier__container">
+          <div class="usa-identifier__logos">
+            <a href="https://www.usda.gov/" class="usa-identifier__logo"
+              ><img
+                class="usa-identifier__logo-img"
+                src="/dist/fpac-style/images/usda-logo/usda-v2-lockup/white/usda-v2-white-lockup.svg"
+                alt="USDA logo"
+                role="img">
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Identifier Links -->
+      <nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links">
+        <div class="usa-identifier__container">
+          <ul class="usa-identifier__required-links-list">
+            <li class="usa-identifier__required-links-item">
+              <a href="https://www.usda.gov/about-usda/general-information/our-agency"
+              class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">About USDA</a>
+            </li>
+            <li class="usa-identifier__required-links-item">
+              <a href="https://www.usda.gov/accessibility-statement"
+              class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">Accessibility Statement</a>
+            </li>
+            <li class="usa-identifier__required-links-item">
+              <a href="https://www.usda.gov/ogc/office-information-affairs/foia-division"
+              class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">FOIA requests</a>
+            </li>
+            <li class="usa-identifier__required-links-item">
+              <a href="https://www.usda.gov/nofear"
+              class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">No FEAR Act data</a>
+            </li>
+            <li class="usa-identifier__required-links-item">
+              <a href="https://usdaoig.oversight.gov/"
+              class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">Office of the Inspector General</a>
+            </li>
+            <li class="usa-identifier__required-links-item">
+              <a href="https://www.usda.gov/about-usda/general-information/our-performance"
+              class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">Performance reports</a>
+            </li>
+            <li class="usa-identifier__required-links-item">
+              <a href="https://www.usda.gov/privacy-policy"
+              class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">Privacy policy</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Visit USA.gov -->
+      <section
+        class="usa-identifier__section usa-identifier__section--usagov"
+        aria-label="U.S. government information and services">
+        <div class="usa-identifier__container">
+          <div class="usa-identifier__usagov-description">
+            Looking for U.S. government information and services?
+          </div>
+          <a href="https://www.usa.gov/" class="usa-link--external" target="_blank" rel="noopener">Visit USA.gov</a>
+        </div>
+      </section>
+    </div>
+  </body>
+
+<!-- USWDS.MIN.JS
+================================================== -->
+<script src="\dist/uswds/js/uswds.min.js"></script>
+
+</html>
