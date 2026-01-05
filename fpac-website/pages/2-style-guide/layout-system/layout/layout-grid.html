@@ -1,0 +1,1160 @@
+<html lang="en">
+  <!-- Head Start -->
+    <head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <!-- Set character encoding so that all characters within the UTF-8 space (such as emoji) render correctly. -->
+    <meta charset="utf-8">
+    
+    <!-- Force IE 8/9/10 to use its latest rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Base URL
+    ================================================== -->
+    <!-- Set the base URL for all relative URLs within the document
+    <base href="/fpac-website/"> -->
+
+    <!-- Page Title
+    ================================================== -->
+    <title>Layout grid | FPAC DS</title>
+
+    <!-- Favicon
+    ================================================== -->
+    <!-- Light and dark mode favicons -->
+    <link rel="icon" href="/fpac-website/images/usda-logo/usda-favicon/usda-favicon-color.png" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/fpac-website/images/usda-logo/usda-favicon/usda-favicon-white.png" type="image/x-icon" media="(prefers-color-scheme: dark)">
+
+    <!-- CSS Links
+    ================================================== -->
+    <link rel="stylesheet" href="/dist/fpac-design-system.css">
+    <link rel="stylesheet" href="/fpac-website/styles/fpac-documentation-website.css">
+    <link rel="stylesheet" href="/fpac-website/styles/fpac-code-copy-button.css">
+
+    <!-- USWDS INIT
+    ================================================== -->
+    <script src="/dist/uswds/js/uswds-init.min.js" type="module"></script>
+    <link rel="preload" href="/dist/uswds/js/uswds.min.js" as="script">
+    
+    </head>
+  <!-- Head End -->
+
+  <!-- Body Start
+  ================================================== -->
+    <body>
+
+      <!-- Skipnav -->
+        <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+      <!-- Banner Start -->
+        <section class="usa-banner" aria-label="Official website of the United States government">
+          <div class="usa-accordion">
+            <header class="usa-banner__header">
+              <div class="usa-banner__inner">
+                <div class="grid-col-auto">
+                  <img aria-hidden="true" class="usa-banner__header-flag" src="/dist/uswds/images/us_flag_small.png" alt=""/>
+                </div>
+                <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+                  <p class="usa-banner__header-text">An official website of the United States government.</p>
+                  <p class="usa-banner__header-action">Here's how you know</p>
+                </div>
+                <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-default">
+                  <span class="usa-banner__button-text">Here's how you know</span>
+                </button>
+              </div>
+            </header>
+            <div class="usa-banner__content usa-accordion__content" id="gov-banner-default">
+              <div class="grid-row grid-gap-lg">
+                <div class="usa-banner__guidance tablet:grid-col-6">
+                  <img class="usa-banner__icon usa-media-block__img" src="/dist/uswds/images/icon-dot-gov.svg" role="img" alt="" aria-hidden="true" />
+                  <div class="usa-media-block__body">
+                    <p><strong>Official websites use .gov</strong> A <strong>.gov</strong> website belongs to an official government organization in the United States.</p>
+                  </div>
+                </div>
+                <div class="usa-banner__guidance tablet:grid-col-6">
+                  <img class="usa-banner__icon usa-media-block__img" src="/dist/uswds/images/icon-https.svg" role="img" alt="" aria-hidden="true" />
+                  <div class="usa-media-block__body">
+                    <p>
+                      <strong>Secure .gov websites use HTTPS</strong><br />A <strong>lock</strong> (
+                        <span class="icon-lock">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 64" class="usa-banner__lock-image"
+                            role="img" aria-labelledby="banner-lock-description" focusable="false">
+                            <title id="banner-lock-title">Lock</title>
+                            <desc id="banner-lock-description">Locked padlock icon</desc>
+                            <path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z" />
+                          </svg>
+                        </span>
+                      ) or <strong>https://</strong> means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      <!-- Banner End -->
+
+      <!-- Header Start -->
+        <header class="usa-header usa-header--basic">
+          <div class="usa-nav-container">
+            
+            <div class="usa-navbar">
+
+            <!-- USDA Logo -->
+            <div class="usa-logo">
+              <div class="grid-container">
+                <div style="display: inline-flex; align-items: center;">
+                  <a href="/fpac-website/pages/home.html" title="USDA Logo"><img src="/fpac-website/images/usda-logo/usda-logo/color/usda-logo-color.svg" style="width: 50px; min-width: 50px; margin-right: 8px;" alt="USDA Logo"/></a>
+                  <a href="/fpac-website/pages/home.html" title="Website title" style="white-space: nowrap;"><strong>FPAC Design System</strong></a>
+                </div>
+              </div>
+            </div>
+
+              <!-- Mobile menu button -->
+              <button type="button" class="usa-menu-btn">Menu</button>
+            </div>
+
+            <!-- Primary Navigation Start -->
+              <nav aria-label="Primary navigation" class="usa-nav">
+
+                <!-- Mobile close button -->
+                  <button type="button" class="usa-nav__close">
+                    <img src="/dist/uswds/images/usa-icons/close.svg" role="img" alt="Close"/>
+                  </button>
+
+                <!-- Primary Menu Start -->
+                  <ul class="usa-nav__primary usa-accordion margin-right-4">
+                    
+                    <!-- Home -->
+                    <li class="usa-nav__primary-item usa-nav__link">
+                      <a href="/fpac-website/pages/home.html" class="font-sans-xs usa-nav-link">
+                      <span style="white-space: nowrap;">Home</span>
+                      </a>
+                    </li>
+
+                    <!-- Style Guide -->
+                    <li class="usa-nav__primary-item usa-nav__link">
+                      <a href="/fpac-website/pages/2-style-guide/style-guide.html" class="font-sans-xs usa-nav-link usa-current">
+                        <span style="white-space: nowrap;">Style Guide</span>
+                      </a>
+                    </li>
+
+                    <!-- Component Library -->
+                    <li class="usa-nav__primary-item">
+                      <button type="button" class="usa-accordion__button usa-nav__link font-sans-xs" aria-expanded="false" aria-controls="basic-nav-section-two">
+                        <span class="font-sans-xs" style="white-space: nowrap;">Component Library</span>
+                      </button>
+                      <ul id="basic-nav-section-two" class="usa-nav__submenu font-sans-xs">
+                        <li class="usa-nav__submenu-item">
+                          <a href="/fpac-website/pages/3-component-library/components/component-library.html">
+                            <span>Components</span>
+                          </a>
+                        </li>
+                        <li class="usa-nav__submenu-item">
+                          <a href="/fpac-website/pages/3-component-library/patterns/pattern-library.html">
+                            <span>Patterns</span>
+                          </a>
+                        </li>
+                        <li class="usa-nav__submenu-item">
+                          <a href="/fpac-website/pages/3-component-library/templates/template-library.html">
+                            <span>Templates</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <!-- Guidelines -->
+                    <li class="usa-nav__primary-item usa-nav__link">
+                      <a href="/fpac-website/pages/4-guidelines/guidelines.html" class="font-sans-xs usa-nav-link">
+                        <span style="white-space: nowrap;">Guidelines</span>
+                      </a>
+                    </li>
+                  </ul>
+                <!-- Primary Menu End -->
+
+                <!-- Search bar -->
+                <section aria-label="Search component">
+                  <form class="usa-search usa-search--small" role="search">
+                    <label class="usa-sr-only" for="search-field">Search</label>
+                    <input class="usa-input" id="search-field" type="search" name="search" />
+                    <button class="usa-button" type="submit">
+                      <img src="/dist/uswds/images/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="Search" />
+                    </button>
+                  </form>
+                </section>
+              </nav>
+            <!-- Primary Navigation End -->
+
+          </div>
+        </header>
+      <!-- Header End -->
+
+      <!-- Body Content Start -->
+        <div class="usa-section usa-prose grid-container">
+          <div class="grid-row grid-gap">
+            <div class="usa-in-page-nav-container">
+              
+              <!-- Side Navigation Menu Start -->            
+                <div class="usa-sidenav-container grid-col-2 display-none desktop:display-block">
+                  <nav aria-label="Secondary navigation">
+                    <ul class="usa-sidenav">
+
+                      <!-- Style Guide -->
+                      <li class="usa-sidenav__item"><a href="/fpac-website/pages/2-style-guide/style-guide.html"><strong>Style Guide</strong></a>
+                      
+                        <!-- Visual Style -->                   
+                        <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Visual style</strong></a>
+                          <ul class="usa-sidenav__sublist">
+                            <a href="/fpac-website/pages/2-style-guide/visual-style/color/background-color.html">Background color</a>
+                            <a href="/fpac-website/pages/2-style-guide/visual-style/border.html">Border</a>
+                            <a href="/fpac-website/pages/2-style-guide/visual-style/outline.html">Outline</a>
+                            <a href="/fpac-website/pages/2-style-guide/visual-style/opacity.html">Opacity</a>
+                            <a href="/fpac-website/pages/2-style-guide/visual-style/shadow.html">Shadow</a>
+                          </ul>
+                        </li>
+
+                        <!-- Layout -->
+                         
+                          <!-- Layout -->
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Layout</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/layout/layout-grid.html" class="usa-current">Layout grid</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/layout/flexbox.html">Flexbox</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/layout/display.html">Display</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/layout/order.html">Order</a>
+                            </ul>
+                          </li>
+
+                          <!-- Box sizing subgroup -->
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Box sizing</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/box-sizing/shape.html">Shape</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/box-sizing/height-width.html">Height + width</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/box-sizing/margin-padding.html">Margin + padding</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/box-sizing/overflow.html">Overflow</a>
+                            </ul>
+                          </li>
+
+                          <!-- Positioning subgroup -->
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Positioning</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/positioning/position.html">Position</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/positioning/pin.html">Pin</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/positioning/float.html">Float</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/positioning/z-index.html">Z-index</a>
+                            </ul>
+                          </li>
+
+                        <!-- Typography -->
+
+                          <!-- Font -->                         
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Font</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/typography/font/family.html">Family</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/font/size.html">Size</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/font/weight.html">Weight</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/font/italic.html">Italic</a>
+                            </ul>
+                          </li>
+
+                          <!-- Text -->
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Text</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/underline.html">Underline</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/strikethrough.html">Strikethrough</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/text-color.html">Text color</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/case.html">Text case</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/letterspacing.html">Letterspacing</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/vertical-alignment.html">Vertical alignment</a>
+                            </ul>
+                          </li>
+
+                          <!-- Paragraph -->  
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Paragraph</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/typography/paragraph/line-height.html">Line height</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/paragraph/line-length.html">Line length</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/paragraph/indentation.html">Indentation</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/paragraph/alignment.html">Alignment</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/paragraph/whitespace.html">Whitespace</a>
+                            </ul>
+                          </li>
+
+                          <!-- Advanced -->
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Advanced</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/typography/advanced/spacing-units.html">Spacing units</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/advanced/tabular-numerals.html">Tabular numerals</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/advanced/list-reset.html">List reset</a>
+                            </ul>
+                          </li>
+
+                        <!-- Images -->
+                        <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Images</strong></a>
+                          <ul class="usa-sidenav__sublist">
+                            <a href="/fpac-website/pages/2-style-guide/images/logos.html">Logos</a>
+                            <a href="/fpac-website/pages/2-style-guide/images/icons.html">Icons</a>
+                          </ul>
+                        </li>
+
+                        <!-- Utility Variants -->
+                        <li class="usa-sidenav__item">
+                          <a href="/fpac-website/pages/2-style-guide/utility-variants/utility-variants.html"><em>Utility variants</em></a>
+                        </li>
+                      
+                      </li>
+
+                    </ul>
+                  </nav>
+                </div>
+              <!-- Side Navigation Menu End -->
+
+              <!-- In-page Navigation Start -->
+                <aside
+                  class="usa-in-page-nav"
+                  data-heading-elements="h2 h3"
+                  data-title-text="On this page"
+                  data-title-heading-level="h4"
+                  data-scroll-offset="48"
+                  data-root-margin="48px 0px -70% 0px"
+                  data-threshold="1"
+                ></aside>
+
+                <script>
+                  // Add "Return to Top" button into the in-page nav aside after DOM loads
+                  window.addEventListener('DOMContentLoaded', function() {
+                    var btn = document.createElement('a');
+                      btn.href = "#";
+                      btn.style.display = "block";
+                      btn.style.color = "#236430";
+                      btn.style.margin = "-1rem 1rem 0 1.25rem";
+                      btn.style.padding = "0.5rem 0 0.5rem 0.75rem";
+                      btn.style.textDecoration = "none";
+                      btn.style.fontWeight = "00";
+                      btn.style.fontSize = "0.8rem";
+                      btn.style.transition = "background 0.2s";
+                      btn.textContent = "Return to top";
+                      btn.onmouseover = function() { this.style.background = "#f0f0f0"; };
+                      btn.onmouseout = function() { this.style.background = ""; };
+                      btn.onclick = function(e) { e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); };
+                    var aside = document.querySelector('aside');
+                    if (aside) aside.appendChild(btn);
+                  });
+                </script>
+              <!-- In-page Navigation End -->
+
+              <!-- Main Content Start -->
+                <main id="main-content" class="usa-prose grid-col-fill grid-container margin-x-4">
+                  <h1>Layout grid</h1>
+                  <p class="usa-intro">Create layout grids based on a 12-column system</p>
+                
+                  <br>
+                  <hr>
+                
+                  <!-- Topic -->
+
+                  <!-- How it works -->
+                  <h2 id="how-it-works">How it works</h2>
+                  <p>The grid system uses a series of containers, rows, and columns to lay out and align content. The following row and corresponding code are an example of an in-depth look at how the grid comes together.</p>
+                  <div class="">
+
+
+                  <div class="grid-container">
+                    <div class="grid-row">
+                      <div class="tablet:grid-col border-1px bg-secondary-lighter padding-2 text-center">tablet:grid-col</div>
+                      <div class="tablet:grid-col border-1px bg-secondary-lighter padding-2 text-center">tablet:grid-col</div>
+                      <div class="tablet:grid-col border-1px bg-secondary-lighter padding-2 text-center">tablet:grid-col</div>
+                    </div>
+                  </div>
+
+                  </div>
+
+                  <div class="usa-accordion usa-accordion--bordered margin-top-4">
+                    <button type="button" class="usa-accordion__button" aria-controls="code-sticky" aria-expanded="false">Code</button>
+                    <div id="code-sticky" class="usa-accordion__content">
+                  <div>
+
+                        <figure class=""><pre><code>&lt;div class="grid-container"&gt;
+  &lt;div class="grid-row"&gt;
+    &lt;div class="tablet:grid-col border-1px bg-secondary-lighter padding-2 text-center"&gt;tablet:grid-col&lt;/div&gt;
+    &lt;div class="tablet:grid-col border-1px bg-secondary-lighter padding-2 text-center"&gt;tablet:grid-col&lt;/div&gt;
+    &lt;div class="tablet:grid-col border-1px bg-secondary-lighter padding-2 text-center"&gt;tablet:grid-col&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></figure>
+
+                    </div>
+                  </div>
+                  </div>
+
+                  <p>This example code creates three equal-width columns on tablet, desktop, and widescreen devices by using our predefined grid classes. Those columns are centered in the page with the parent <code class="">grid-container</code> container.</p>
+
+                  <p>The following sections break the layout grid down and describe how it works.</p>
+
+                  <h3 id="containers-rows-and-columns">Containers, rows, and columns</h3>
+
+                  <ul class="usa-list">
+                    <li><strong>Containers:</strong> <code class="">grid-container</code> centers the container and gives it a maximum
+                      width of <code class="">desktop</code> (1024px). If you would like the grid to span the full width of the page, do
+                      not use <code class="">grid-container</code>.
+                      <ul>
+                        <li><code class="">grid-container</code> can also accept any breakpoint width, like <code
+                            class="">tablet-lg</code> or <code class="">widescreen</code>.
+
+                        <li>By default, <code class="">grid-container</code> has a <code class="">padding-x</code> of <a class="usa-link"
+                            href="/fpac-website/pages/2-style-guide/typography/Advanced/spacing-units.html" class="usa-link">2 units</a> at narrow widths, and a padding-x of <a
+                            class="usa-link" href="/fpac-website/pages/2-style-guide/typography/Advanced/spacing-units.html" class="token">4 units</a> at <code
+                            class="">desktop</code> and wider.
+                      </ul>
+                    </li>
+                    <li><strong>Rows:</strong> Columns must have a <code class="">grid-row</code> as a parent.</li>
+                    <li><strong>Columns:</strong> <code class="">grid-col-[1-12]</code> indicates the number of columns the item spans out
+                      of a possible 12 per row. So, if you want three equal-width columns across, use <code class="">grid-col-4</code> for
+                      each item.</li>
+                  </ul>
+                  
+                  <h3 id="additional-functionality">Additional functionality</h3>
+                  
+                    <ul class="usa-list"></ul>
+                    <li><strong>Equal-width columns:</strong> With flexbox, grid columns without a specified width will display as
+                      equal-width columns. For example, four instances of <code class="">grid-col</code> will display as one-quarter-width
+                      columns across all sizes. Refer to the <a class="usa-link" href="#auto-layout-columns" onclick="event.preventDefault(); var t=document.querySelector(this.getAttribute('href')); if(t) t.scrollIntoView({behavior:'smooth'}); return false;">auto-layout columns</a>
+                      section for more examples.</li>
+                    <li><strong>Gutters:</strong> Rows and columns don’t have any gutters by default, but gutters can be added by
+                      including <code class="">grid-gap-sm</code>, <code class="">grid-gap</code>, or <code class="">grid-gap-lg</code> at
+                      the row level. Refer to <a class="usa-link" href="#gutters" onclick="event.preventDefault(); var t=document.querySelector(this.getAttribute('href')); if(t) t.scrollIntoView({behavior:'smooth'}); return false;">gutters</a> for more info.</li>
+                    <li><strong>Media queries:</strong> Grid breakpoints are based on minimum-width media queries, meaning they apply to
+                      that specific width and all greater widths (e.g., <code class="">tablet:col-4</code> applies to tablet, desktop, and
+                      widescreen devices but not at <code class="">mobile-lg</code> or any width below the tablet breakpoint). Refer to <a
+                      class="usa-link" href="#responsive-variants" onclick="event.preventDefault(); var t=document.querySelector(this.getAttribute('href')); if(t) t.scrollIntoView({behavior:'smooth'}); return false;">responsive variants</a> for a full list.</li>
+                    </ul>
+
+                  <h2 id="auto-layout-columns">Auto layout columns</h2>
+                  <h3>Variable-width content</h3>
+                  <p><code>.grid-col-auto</code> items fit the natural width of their content.</p>
+                  <p><code>.grid-col</code> and <code>.grid-col-fill</code> items flex to fill the available space as illustrated in the following example row and code.</p>
+
+                  <div class="">
+
+
+                  <div class="grid-container">
+                    <div class="grid-row">
+                      <div class="grid-col-auto border-1px bg-secondary-lighter padding-2 text-center">.grid-col-auto</div>
+                      <div class="grid-col border-1px bg-secondary-lighter padding-2 text-center">.grid-col</div>
+                      <div class="grid-col-fill border-1px bg-secondary-lighter padding-2 text-center">.grid-col-fill</div>
+                      <div class="grid-col-auto border-1px bg-secondary-lighter padding-2 text-center">.grid-col-auto</div>
+                    </div>
+                  </div>
+
+                  </div>
+
+                  <div class="usa-accordion usa-accordion--bordered margin-top-4">
+                    <button type="button" class="usa-accordion__button" aria-controls="code-auto" aria-expanded="false">Code</button>
+                    <div id="code-auto" class="usa-accordion__content">
+                  <div>
+
+                        <figure class=""><pre><code>&lt;div class="grid-container"&gt;
+  &lt;div class="grid-row"&gt;
+    &lt;div class="grid-col-auto border-1px bg-secondary-lighter padding-2 text-center"&gt;.grid-col-auto&lt;/div&gt;
+    &lt;div class="grid-col border-1px bg-secondary-lighter padding-2 text-center"&gt;.grid-col&lt;/div&gt;
+    &lt;div class="grid-col-fill border-1px bg-secondary-lighter padding-2 text-center"&gt;.grid-col-fill&lt;/div&gt;
+    &lt;div class="grid-col-auto border-1px bg-secondary-lighter padding-2 text-center"&gt;.grid-col-auto&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></figure>
+
+                    </div>
+                  </div>
+                  </div>
+
+                  <h2 id="responsive-classes">Responsive classes</h2>
+                  <h3>Same at all breakpoints</h3>
+                  <p>For columns that should maintain the same proportion at any viewport width, use the <code>.grid-col</code> and <code>.grid-col-*</code> classes. Specify a numbered class when you need a column of a specific width; otherwise, use <code>.grid-col</code>.</p>
+                  <p><code>.grid-col-[1-12]</code> sets a fixed width of [n] grid columns in a 12-column grid.</p>
+
+                  <div class="grid-row margin-top-3 border-left border-secondary">
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">1</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">2</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">3</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">4</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">5</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">6</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">7</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">8</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">9</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">10</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">11</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">12</div>
+                    </div>
+                    
+                  </div>
+
+                  <div class="">
+
+
+                  <div class="grid-row">
+                    <div class="grid-col-1 border-1px bg-secondary-lighter padding-2 text-center">.grid-col-1</div>
+                    <div class="grid-col-2 border-1px bg-secondary-lighter padding-2 text-center">.grid-col-2</div>
+                    <div class="grid-col-3 border-1px bg-secondary-lighter padding-2 text-center">.grid-col-3</div>
+                    <div class="grid-col-4 border-1px bg-secondary-lighter padding-2 text-center">.grid-col-4</div>
+                    <div class="grid-col-2 border-1px bg-secondary-lighter padding-2 text-center">.grid-col-2</div>
+                  </div>
+
+                  <div class="grid-row">
+                    <div class="grid-col-8 border-1px bg-secondary-lighter padding-2 text-center">.grid-col-8</div>
+                    <div class="grid-col-2 border-1px bg-secondary-lighter padding-2 text-center">.grid-col-2</div>
+                    <div class="grid-col-2 border-1px bg-secondary-lighter padding-2 text-center">.grid-col-2</div>
+                  </div>
+
+                  </div>
+
+                  <div class="usa-accordion usa-accordion--bordered margin-top-4">
+                    <button type="button" class="usa-accordion__button" aria-controls="code-responsive" aria-expanded="false">Code</button>
+                    <div id="code-responsive" class="usa-accordion__content">
+                  <div>
+
+                        <figure class=""><pre><code>&lt;div class="grid-row"&gt;
+  &lt;div class="grid-col-1 border-1px bg-secondary-lighter padding-2 text-center"&gt;.grid-col-1&lt;/div&gt;
+  &lt;div class="grid-col-2 border-1px bg-secondary-lighter padding-2 text-center"&gt;.grid-col-2&lt;/div&gt;
+  &lt;div class="grid-col-3 border-1px bg-secondary-lighter padding-2 text-center"&gt;.grid-col-3&lt;/div&gt;
+  &lt;div class="grid-col-4 border-1px bg-secondary-lighter padding-2 text-center"&gt;.grid-col-4&lt;/div&gt;
+  &lt;div class="grid-col-2 border-1px bg-secondary-lighter padding-2 text-center"&gt;.grid-col-2&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="grid-row"&gt;
+  &lt;div class="grid-col-8 border-1px bg-secondary-lighter padding-2 text-center"&gt;.grid-col-8&lt;/div&gt;
+  &lt;div class="grid-col-2 border-1px bg-secondary-lighter padding-2 text-center"&gt;.grid-col-2&lt;/div&gt;
+  &lt;div class="grid-col-2 border-1px bg-secondary-lighter padding-2 text-center"&gt;.grid-col-2&lt;/div&gt;
+&lt;/div&gt;</code></pre></figure>
+
+                    </div>
+                  </div>
+                  </div>
+
+                  <h3>Stacked columns at narrow widths</h3>
+                  <p>Columns are full-width until the narrowest breakpoint specified in a <code>.grid-col</code> class. For instance, using a single set of <code>tablet:grid-col-*</code> classes, you can create a basic grid system that starts out stacked before displaying as columns at the tablet breakpoint (<code>tablet:</code>) as illustrated in the following rows and corresponding code.</p>
+
+                  <div class="">
+
+
+                  <div class="grid-row">
+                    <div class="tablet:grid-col border-1px bg-secondary-lighter padding-2 text-center">.tablet:grid-col</div>
+                    <div class="tablet:grid-col border-1px bg-secondary-lighter padding-2 text-center">.tablet:grid-col</div>
+                    <div class="tablet:grid-col border-1px bg-secondary-lighter padding-2 text-center">.tablet:grid-col</div>
+                  </div>
+
+                  <div class="grid-row">
+                    <div class="tablet:grid-col-4 border-1px bg-secondary-lighter padding-2 text-center">.tablet:grid-col-4</div>
+                    <div class="tablet:grid-col-8 border-1px bg-secondary-lighter padding-2 text-center">.tablet:grid-col-8</div>
+                  </div>
+
+                  </div>
+
+                  <div class="usa-accordion usa-accordion--bordered margin-top-4">
+                    <button type="button" class="usa-accordion__button" aria-controls="code-stacked" aria-expanded="false">Code</button>
+                    <div id="code-stacked" class="usa-accordion__content">
+                  <div>
+
+                        <figure class=""><pre><code>&lt;div class="grid-row"&gt;
+  &lt;div class="tablet:grid-col border-1px bg-secondary-lighter padding-2 text-center"&gt;.tablet:grid-col&lt;/div&gt;
+  &lt;div class="tablet:grid-col border-1px bg-secondary-lighter padding-2 text-center"&gt;.tablet:grid-col&lt;/div&gt;
+  &lt;div class="tablet:grid-col border-1px bg-secondary-lighter padding-2 text-center"&gt;.tablet:grid-col&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="grid-row"&gt;
+  &lt;div class="tablet:grid-col-4 border-1px bg-secondary-lighter padding-2 text-center"&gt;.tablet:grid-col-4&lt;/div&gt;
+  &lt;div class="tablet:grid-col-8 border-1px bg-secondary-lighter padding-2 text-center"&gt;.tablet:grid-col-8&lt;/div&gt;
+&lt;/div&gt;</code></pre></figure>
+
+                    </div>
+                  </div>
+                  </div>
+
+                  <h3>Mix and match</h3>
+                  <p>Don’t want your columns to simply stack in some breakpoints? Use a combination of different classes for each breakpoint as needed. See the following example rows and corresponding code for a better idea of how it all works.</p>
+                  <div class="">
+
+
+                  <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+                  <div class="grid-row">
+                    <div class="tablet:grid-col-8 border-1px bg-secondary-lighter padding-2 text-center">.tablet:grid-col-8</div>
+                    <div class="grid-col-6 tablet:grid-col-4 border-1px bg-secondary-lighter padding-2 text-center">.grid-col-6 .tablet:grid-col-4</div>
+                  </div>
+
+                  <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+                  <div class="grid-row">
+                    <div class="grid-col-6 tablet:grid-col-4 border-1px bg-secondary-lighter padding-2 text-center">.grid-col-6 .tablet:grid-col-4</div>
+                    <div class="grid-col-6 tablet:grid-col-4 border-1px bg-secondary-lighter padding-2 text-center">.grid-col-6 .tablet:grid-col-4</div>
+                    <div class="grid-col-6 tablet:grid-col-4 border-1px bg-secondary-lighter padding-2 text-center">.grid-col-6 .tablet:grid-col-4</div>
+                  </div>
+
+                  <!-- Columns are always 50% wide, on mobile and desktop -->
+                  <div class="grid-row">
+                    <div class="grid-col-6 border-1px bg-secondary-lighter padding-2 text-center">.grid-col-6</div>
+                    <div class="grid-col-6 border-1px bg-secondary-lighter padding-2 text-center">.grid-col-6</div>
+                  </div>
+
+                  </div>
+
+                  <div class="usa-accordion usa-accordion--bordered margin-top-4">
+                    <button type="button" class="usa-accordion__button" aria-controls="code-mix" aria-expanded="false">Code</button>
+                    <div id="code-mix" class="usa-accordion__content">
+                  <div>
+
+                        <figure class=""><pre><code>&lt;!-- Stack the columns on mobile by making one full-width and the other half-width --&gt;
+&lt;div class="grid-row"&gt;
+  &lt;div class="tablet:grid-col-8 border-1px bg-secondary-lighter padding-2 text-center"&gt;.tablet:grid-col-8&lt;/div&gt;
+  &lt;div class="grid-col-6 tablet:grid-col-4 border-1px bg-secondary-lighter padding-2 text-center"&gt;.grid-col-6 .tablet:grid-col-4&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop --&gt;
+&lt;div class="grid-row"&gt;
+  &lt;div class="grid-col-6 tablet:grid-col-4 border-1px bg-secondary-lighter padding-2 text-center"&gt;.grid-col-6 .tablet:grid-col-4&lt;/div&gt;
+  &lt;div class="grid-col-6 tablet:grid-col-4 border-1px bg-secondary-lighter padding-2 text-center"&gt;.grid-col-6 .tablet:grid-col-4&lt;/div&gt;
+  &lt;div class="grid-col-6 tablet:grid-col-4 border-1px bg-secondary-lighter padding-2 text-center"&gt;.grid-col-6 .tablet:grid-col-4&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Columns are always 50% wide, on mobile and desktop --&gt;
+&lt;div class="grid-row"&gt;
+  &lt;div class="grid-col-6 border-1px bg-secondary-lighter padding-2 text-center"&gt;.grid-col-6&lt;/div&gt;
+  &lt;div class="grid-col-6 border-1px bg-secondary-lighter padding-2 text-center"&gt;.grid-col-6&lt;/div&gt;
+&lt;/div&gt;</code></pre></figure>
+
+                    </div>
+                  </div>
+                  </div>
+
+                  <h2 id="offsetting-columns">Offsetting columns</h2>
+                  <p><code>.grid-offset-[1-12]</code> offsets an item by the specified number of grid columns as shown in the following example.</p>
+
+                  <div class="grid-row margin-top-3 border-left border-secondary">
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">1</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">2</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">3</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">4</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">5</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">6</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">7</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">8</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">9</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">10</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">11</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">12</div>
+                    </div>
+                    
+                  </div>
+
+                  <div class="">
+
+
+                  <div class="grid-row">
+                    <div class="grid-col-8 grid-offset-4 border-1px bg-secondary-lighter padding-2 text-center">.grid-col-8.grid-offset-4</div>
+                  </div>
+
+                  </div>
+
+                  <div class="usa-accordion usa-accordion--bordered margin-top-4">
+                    <button type="button" class="usa-accordion__button" aria-controls="code-offsets" aria-expanded="false">Code</button>
+                    <div id="code-offsets" class="usa-accordion__content">
+                  <div>
+
+                        <figure class=""><pre><code>&lt;div class="grid-row"&gt;
+  &lt;div class="grid-col-8 grid-offset-4 border-1px bg-secondary-lighter padding-2 text-center"&gt;.grid-col-8.grid-offset-4&lt;/div&gt;
+&lt;/div&gt;</code></pre></figure>
+
+                    </div>
+                  </div>
+                  </div>
+
+                  <h2 id="column-wrapping">Column wrapping</h2>
+                  <p>Items wrap when the sum of the grid columns is more than 12 as shown in the following example.</p>
+
+                  <div class="grid-row margin-top-3 border-left border-secondary">
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">1</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">2</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">3</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">4</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">5</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">6</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">7</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">8</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">9</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">10</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">11</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">12</div>
+                    </div>
+                    
+                  </div>
+
+                  <div class="">
+
+
+                  <div class="grid-row">
+                    <div class="grid-col-8 border-1px bg-secondary-lighter padding-2 text-center">.grid-col-8</div>
+                    <div class="grid-col-3 border-1px bg-secondary-lighter padding-2 text-center">.grid-col-3</div>
+                    <div class="grid-col-5 border-1px bg-secondary-lighter padding-2 text-center">.grid-col-5</div>
+                  </div>
+
+                  </div>
+
+                  <div class="usa-accordion usa-accordion--bordered margin-top-4">
+                    <button type="button" class="usa-accordion__button" aria-controls="code-wrapping" aria-expanded="false">Code</button>
+                    <div id="code-wrapping" class="usa-accordion__content">
+                  <div>
+
+                        <figure class=""><pre><code>&lt;div class="grid-row"&gt;
+  &lt;div class="grid-col-8 border-1px bg-secondary-lighter padding-2 text-center"&gt;.grid-col-8&lt;/div&gt;
+  &lt;div class="grid-col-3 border-1px bg-secondary-lighter padding-2 text-center"&gt;.grid-col-3&lt;/div&gt;
+  &lt;div class="grid-col-5 border-1px bg-secondary-lighter padding-2 text-center"&gt;.grid-col-5&lt;/div&gt;
+&lt;/div&gt;</code></pre></figure>
+
+                    </div>
+                  </div>
+                  </div>
+
+                  <h2 id="gutters">Gutters</h2>
+
+                  <h3 id="default-gutter">Default gutter</h3>
+                  <p>Add <code class="">grid-gap</code> to a grid row to add a gap (or gutter) between each column in the row. The default gap width is 2 units and 4 units at <code class="">desktop</code> and higher. Customize the width of the gap by adjusting the value of <code class="">$theme-column-gap</code> in project settings as shown in the following example.</p>
+
+                  <div class="grid-row margin-top-3 border-left border-secondary">
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">1</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">2</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">3</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">4</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">5</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">6</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">7</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">8</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">9</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">10</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">11</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">12</div>
+                    </div>
+                    
+                  </div>
+
+                  <div class=" margin-top-2">
+
+
+                  <div class="grid-row grid-gap">
+                    <div class="grid-col-4 border-1px bg-secondary-lighter padding-2 text-center">
+                      <div>.grid-col-4</div>
+                    </div>
+                    <div class="grid-col-4 border-1px bg-secondary-lighter padding-2 text-center">
+                      <div>.grid-col-4</div>
+                    </div>
+                    <div class="grid-col-4 border-1px bg-secondary-lighter padding-2 text-center">
+                      <div>.grid-col-4</div>
+                    </div>
+                  </div>
+
+                  </div>
+
+                  <div class="usa-accordion usa-accordion--bordered margin-top-4">
+                    <button type="button" class="usa-accordion__button" aria-controls="code-gutters" aria-expanded="false">Code</button>
+                    <div id="code-gutters" class="usa-accordion__content">
+
+
+                        <figure class=""><pre><code>&lt;div class="grid-row grid-gap"&gt;
+  &lt;div class="grid-col-4 border-1px bg-secondary-lighter padding-2 text-center"&gt;
+    &lt;div&gt;.grid-col-4&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="grid-col-4 border-1px bg-secondary-lighter padding-2 text-center"&gt;
+    &lt;div&gt;.grid-col-4&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="grid-col-4 border-1px bg-secondary-lighter padding-2 text-center"&gt;
+    &lt;div&gt;.grid-col-4&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></figure>
+
+
+                    </div>
+                  </div>
+
+                  <h3>Large gutter</h3>
+                  <p><code>grid-gap-lg</code> adds a larger gap (or gutter) between each column in a row than `grid-gap`. The default large-gap width is 32px (4 spacing units). Customize the width of the large gap by adjusting the value of <code>$theme-column-gap-lg</code> in project settings. There is also a <code>.grid-gap-sm</code> (2px) set with <code>$theme-column-gap-sm</code>. Also, you can add the following system values with <code>grid-gap</code>:</p>
+                  <div>
+                    <ul>
+                      <li><code class="">grid-gap-2px</code></li>
+                      <li><code class="">grid-gap-05</code></li>
+                      <li><code class="">grid-gap-1</code></li>
+                      <li><code class="">grid-gap-2</code></li>
+                      <li><code class="">grid-gap-3</code></li>
+                      <li><code class="">grid-gap-4</code></li>
+                      <li><code class="">grid-gap-5</code></li>
+                      <li><code class="">grid-gap-6</code></li>
+                    </ul>
+                  </div>
+
+                  <p>The following example row and code illustrate large gutters.</p>
+
+                  <div class="grid-row margin-top-3 border-left border-secondary">
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">1</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">2</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">3</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">4</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">5</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">6</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">7</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">8</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">9</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">10</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">11</div>
+                    </div>
+                    
+                    <div class="grid-col-1 border-right border-secondary">
+                      <div class="text-center padding-x-05">12</div>
+                    </div>
+                    
+                  </div>
+
+                  <div class="">
+
+
+                  <div class="grid-row grid-gap-lg">
+                    <div class="grid-col-4 border-1px bg-secondary-lighter padding-2 text-center">
+                      <div>.grid-col-4</div>
+                    </div>
+                    <div class="grid-col-4 border-1px bg-secondary-lighter padding-2 text-center">
+                      <div>.grid-col-4</div>
+                    </div>
+                    <div class="grid-col-4 border-1px bg-secondary-lighter padding-2 text-center">
+                      <div>.grid-col-4</div>
+                    </div>
+                  </div>
+
+                  </div>
+
+                  <div class="usa-accordion usa-accordion--bordered margin-top-4">
+                    <button type="button" class="usa-accordion__button" aria-controls="code-gutters-lg" aria-expanded="false">Code</button>
+                    <div id="code-gutters-lg" class="usa-accordion__content">
+
+
+                        <figure class=""><pre><code>&lt;div class="grid-row grid-gap-lg"&gt;
+  &lt;div class="grid-col-4 border-1px bg-secondary-lighter padding-2 text-center"&gt;
+    &lt;div&gt;.grid-col-4&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="grid-col-4 border-1px bg-secondary-lighter padding-2 text-center"&gt;
+    &lt;div&gt;.grid-col-4&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="grid-col-4 border-1px bg-secondary-lighter padding-2 text-center"&gt;
+    &lt;div&gt;.grid-col-4&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></figure>
+
+
+                    </div>
+                  </div>
+              
+                  <br>
+                  <hr>
+              
+                  <!-- Utility Variants -->
+                  <h2>Utility variants</h2>
+                  <p>
+                  </p>
+
+                  <!-- Responsive variants -->
+                  <h3>Responsive variants</h3>
+                  <p>
+                    More information about utility variants can be viewed on the <a class="usa-link"
+                      href="/fpac-website/pages/2-style-guide/utility-variants/utility-variants.html">utility variants</a> page.
+                    You can view which responsive breakpoints are available for the layout grid in the <a class="usa-link"
+                      href="/fpac-website/pages/2-style-guide/utility-variants/utility-variants.html#responsive-utilities">responsive
+                      utilities</a> section on that page.
+                  </p>
+
+                </main>
+              <!-- Main Content End -->
+
+            </div>
+          </div>
+        </div>
+      <!-- Body Content End -->
+      
+      <!-- Footer + Identifier Start -->
+        <footer class="usa-footer">
+
+        <!-- Return To Top link -->
+          <div class="grid-container usa-footer__return-to-top">
+            <a class="usa-link" href="" onclick="window.scrollTo({top: 0, left: 0, behavior: 'smooth'}); return false;">Return to top</a>
+          </div>
+
+        <!-- Footer Start -->
+          <div class="usa-footer__primary-section">
+            <nav class="usa-footer__nav" aria-label="Footer navigation">
+              <ul class="grid-row grid-gap-2">
+                <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link usa-link--external" href="https://www.usda.gov/about-usda/general-information/mission-areas" target="_blank" rel="noopener">USDA Mission Areas</a>
+                </li>
+                <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link usa-link--external" href="https://www.fpacbc.usda.gov/" target="_blank" rel="noopener">FPAC BC</a>
+                </li>
+                <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link usa-link--external" href="https://www.fsa.usda.gov/" target="_blank" rel="noopener">FSA</a>
+                </li>
+                <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link usa-link--external" href="https://www.nrcs.usda.gov/" target="_blank" rel="noopener">NRCS</a>
+                </li>
+                <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link usa-link--external" href="https://www.rma.usda.gov/" target="_blank" rel="noopener">RMA</a>
+                </li>
+                <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link usa-link--external" href="https://www.farmers.gov/" target="_blank" rel="noopener">Farmers.gov</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
+      <!-- Footer End-->
+
+      <!-- Identifier Start -->
+        <div class="usa-identifier">
+          
+        <!-- USDA Logo -->
+        <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
+          <div class="usa-identifier__container">
+            <div class="usa-identifier__logos">
+              <a href="https://www.usda.gov/" class="usa-identifier__logo"
+                ><img
+                  class="usa-identifier__logo-img"
+                  src="/fpac-website/images/usda-logo/usda-v2-lockup/white/usda-v2-white-lockup.svg"
+                  alt="USDA logo"
+                  role="img">
+              </a>
+            </div>
+          </div>
+        </section>
+
+          <!-- Identifier Links -->
+            <nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links">
+              <div class="usa-identifier__container">
+                <ul class="usa-identifier__required-links-list">
+                  <li class="usa-identifier__required-links-item">
+                    <a href="https://www.usda.gov/about-usda/general-information/our-agency"
+                    class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">About USDA</a>
+                  </li>
+                  <li class="usa-identifier__required-links-item">
+                    <a href="https://www.usda.gov/accessibility-statement"
+                    class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">Accessibility Statement</a>
+                  </li>
+                  <li class="usa-identifier__required-links-item">
+                    <a href="https://www.usda.gov/ogc/office-information-affairs/foia-division"
+                    class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">FOIA requests</a>
+                  </li>
+                  <li class="usa-identifier__required-links-item">
+                    <a href="https://www.usda.gov/nofear"
+                    class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">No FEAR Act data</a>
+                  </li>
+                  <li class="usa-identifier__required-links-item">
+                    <a href="https://usdaoig.oversight.gov/"
+                    class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">Office of the Inspector General</a>
+                  </li>
+                  <li class="usa-identifier__required-links-item">
+                    <a href="https://www.usda.gov/about-usda/general-information/our-performance"
+                    class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">Performance reports</a>
+                  </li>
+                  <li class="usa-identifier__required-links-item">
+                    <a href="https://www.usda.gov/privacy-policy"
+                    class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">Privacy policy</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+          <!-- Visit USA.gov -->
+            <section
+              class="usa-identifier__section usa-identifier__section--usagov"
+              aria-label="U.S. government information and services">
+              <div class="usa-identifier__container">
+                <div class="usa-identifier__usagov-description">
+                  Looking for U.S. government information and services?
+                </div>
+                <a href="https://www.usa.gov/" class="usa-link--external" target="_blank" rel="noopener">Visit USA.gov</a>
+              </div>
+            </section>
+        </div>
+      <!-- Identifier End -->
+
+    </body>
+  <!-- Body End -->
+
+
+  <!-- Scripts
+  ================================================== -->
+  <script src="/dist/uswds/js/uswds.min.js"></script>
+  <script src="/fpac-website/scripts/fpac-code-copy-button.js"></script>
+</html>

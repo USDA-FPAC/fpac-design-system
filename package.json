@@ -15,6 +15,8 @@
   },
   "devDependencies": {
     "express": "^5.1.0",
-    "nodemon": "^3.1.10"
+    "jsdom": "^27.2.0",
+    "nodemon": "^3.1.10",
+    "sass": "^1.90.0"
   }
 }

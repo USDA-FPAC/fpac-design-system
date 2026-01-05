@@ -12,30 +12,33 @@
       <!-- Set the viewport width to device width for mobile -->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <!-- Base URL
-      ================================================== -->
-      <!-- Set the base URL for all relative URLs within the document
-      <base href="https://example.com/page.html"> -->
+    <!-- Base URL
+    ================================================== -->
+    <!-- Set the base URL for all relative URLs within the document
+    <base href="/fpac-website/"> -->
 
-      <!-- Page Title
-      ================================================== -->
-      <title>Component | FPAC DS</title>
+    <!-- Page Title
+    ================================================== -->
+    <title>Component | FPAC DS</title>
 
-      <!-- Favicon
-      ================================================== -->
-      <!-- Light and dark mode favicons -->
-      <link rel="icon" href="/fpac/images/usda-logo/USDA favicon/usda-favicon-color.png" type="image/x-icon" media="(prefers-color-scheme: light)">
-      <link rel="icon" href="/fpac/images/usda-logo/USDA favicon/usda-favicon-white.png" type="image/x-icon" media="(prefers-color-scheme: dark)">
+    <!-- Favicon
+    ================================================== -->
+    <!-- Light and dark mode favicons -->
+    <link rel="icon" href="/fpac-website/images/usda-logo/usda-favicon/usda-favicon-color.png" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/fpac-website/images/usda-logo/usda-favicon/usda-favicon-white.png" type="image/x-icon" media="(prefers-color-scheme: dark)">
 
-      <!-- CSS Links
-      ================================================== -->
-      <link rel="stylesheet" href="/dist/fpac-style/styles/fpac-design-system.css">
-      <link rel="stylesheet" href="/dist/fpac-website/styles/fpac-documentation-website.css">
+    <!-- CSS Links
+    ================================================== -->
+    <link rel="stylesheet" href="/dist/fpac-design-system.css">
+    <link rel="stylesheet" href="/fpac-website/styles/fpac-documentation-website.css">
+    <link rel="stylesheet" href="/fpac-website/styles/fpac-code-copy-button.css">
 
-      <!-- USWDS INIT
-      ================================================== -->
-      <script src="/dist/uswds/js/uswds-init.min.js" type="module"></script>
-      <link rel="preload" href="/dist/uswds/js/uswds.min.js" as="script">
+    <!-- USWDS INIT
+    ================================================== -->
+    <script src="/dist/uswds/js/uswds-init.min.js" type="module"></script>
+    <link rel="preload" href="/dist/uswds/js/uswds.min.js" as="script">
+    
+  </head>
       
     </head>
   <!-- Head End -->
@@ -100,19 +103,16 @@
           <div class="usa-nav-container">
             
             <div class="usa-navbar">
-              <!-- USDA Logo -->
-              <div class="usa-logo">
+
+            <!-- USDA Logo -->
+            <div class="usa-logo">
               <div class="grid-container">
                 <div style="display: inline-flex; align-items: center;">
-                <a href="/fpac-website/pages/home.html" title="USDA Logo">
-                  <img src="/dist/fpac-style/images/usda-logo/usda-logo/color/usda-logo-color.svg" style="width: 50px; min-width: 50px; margin-right: 8px;" alt="USDA Logo"/>
-                </a>
-                <a href="/fpac-website/pages/home.html" title="Website title" style="white-space: nowrap;">
-                  <strong>FPAC Design System</strong>
-                </a>
+                  <a href="/fpac-website/pages/home.html" title="USDA Logo"><img src="/fpac-website/images/usda-logo/usda-logo/color/usda-logo-color.svg" style="width: 50px; min-width: 50px; margin-right: 8px;" alt="USDA Logo"/></a>
+                  <a href="/fpac-website/pages/home.html" title="Website title" style="white-space: nowrap;"><strong>FPAC Design System</strong></a>
                 </div>
               </div>
-              </div>
+            </div>
 
               <!-- Mobile menu button -->
               <button type="button" class="usa-menu-btn">Menu</button>
@@ -143,35 +143,23 @@
                       </a>
                     </li>
 
-                    <!-- Component Library -->
-                    <li class="usa-nav__primary-item">
-                      <button type="button" class="usa-accordion__button usa-nav__link font-sans-xs usa-current" aria-expanded="false" aria-controls="basic-nav-section-two">
-                        <span class="font-sans-xs" style="white-space: nowrap;">Component Library</span>
-                      </button>
-                      <ul id="basic-nav-section-two" class="usa-nav__submenu font-sans-xs">
-                        <li class="usa-nav__submenu-item">
-                          <a href="/fpac-website/pages/3-component-library/component-library.html">
-                            <span>All sections</span>
-                          </a>
-                        </li>
-                        <li class="usa-nav__submenu-item">
-                          <a href="/fpac-website/pages/3-component-library/component-library.html#components-2">
-                            <span class="margin-left-2">Components</span>
-                          </a>
-                        </li>
-                        <li class="usa-nav__submenu-item">
-                          <a href="/fpac-website/pages/3-component-library/component-library.html#patterns-2">
-                            <span class="margin-left-2">Patterns</span>
-                          </a>
-                        </li>
-                        <li class="usa-nav__submenu-item">
-                          <a href="/fpac-website/pages/3-component-library/component-library.html#templates-2">
-                            <span class="margin-left-2">Templates</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-
+              <!-- Component Library -->
+              <li class="usa-nav__primary-item">
+                <button type="button" class="usa-accordion__button usa-nav__link font-sans-xs" aria-expanded="false" aria-controls="basic-nav-section-two"
+                  ><span class="font-sans-xs" style="white-space: nowrap;">Component Library</span>
+                </button>
+                <ul id="basic-nav-section-two" class="usa-nav__submenu font-sans-xs">
+                  <li class="usa-nav__submenu-item">
+                    <a href="/fpac-website/pages/3-component-library/component-library.html#components-2"><span>Components</span></a>
+                  </li>
+                  <li class="usa-nav__submenu-item">
+                    <a href="/fpac-website/pages/3-component-library/component-library.html#patterns-2"><span>Patterns</span></a>
+                  </li>
+                  <li class="usa-nav__submenu-item">
+                    <a href="/fpac-website/pages/3-component-library/component-library.html#templates-2"><span>Templates</span></a>
+                  </li>
+                </ul>
+              </li>
                     <!-- Guidelines -->
                     <li class="usa-nav__primary-item usa-nav__link">
                       <a href="/fpac-website/pages/4-guidelines/guidelines.html" class="font-sans-xs usa-nav-link">
@@ -375,7 +363,7 @@
 
         <!-- Return To Top link -->
           <div class="grid-container usa-footer__return-to-top">
-            <a href="" style="color: #4D8157;" onclick="window.scrollTo({top: 0, left: 0, behavior: 'smooth'}); return false;">Return to top</a>
+            <a class="usa-link" href="" onclick="window.scrollTo({top: 0, left: 0, behavior: 'smooth'}); return false;">Return to top</a>
           </div>
 
         <!-- Footer Start -->
@@ -409,20 +397,20 @@
       <!-- Identifier Start -->
         <div class="usa-identifier">
           
-          <!-- USDA Logo -->
-            <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
-              <div class="usa-identifier__container">
-                <div class="usa-identifier__logos">
-                  <a href="https://www.usda.gov/" class="usa-identifier__logo"
-                    ><img
-                      class="usa-identifier__logo-img"
-                      src="\dist\fpac-style\images\usda-logo\usda-v2-lockup\white\usda-v2-white-lockup.svg"
-                      alt="USDA logo"
-                      role="img">
-                  </a>
-                </div>
-              </div>
-            </section>
+        <!-- USDA Logo -->
+        <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
+          <div class="usa-identifier__container">
+            <div class="usa-identifier__logos">
+              <a href="https://www.usda.gov/" class="usa-identifier__logo"
+                ><img
+                  class="usa-identifier__logo-img"
+                  src="/fpac-website/images/usda-logo/usda-v2-lockup/white/usda-v2-white-lockup.svg"
+                  alt="USDA logo"
+                  role="img">
+              </a>
+            </div>
+          </div>
+        </section>
 
           <!-- Identifier Links -->
             <nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links">

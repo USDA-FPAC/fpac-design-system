@@ -1,0 +1,38 @@
+Design system: tabular numbers
+
+Problem: Tabular numerals class would not change the fonts.
+	○ Spent a long time trying to fix the issue and it turned out to be with the font files themselves as nothing I was doing would fix the issue.
+	○ So, I downloaded the Source Sans 3 font from Google Fonts (new version of Source Sans Pro), (.ttf) (https://fonts.google.com/specimen/Source+Sans+3)
+	○ Used a web converter to create the .woff and .woff2 files (https://fontsource.org/tools/converter)
+	○ Then to make them direct drop-ins (to test functionality only) I renamed the files to "SourceSansPro" just to see if they would work. And they did!
+  ○ So, clearly the problem is with the font files themselves.
+	○ I also added custom CSS (see below) to fpac-style to make sure that we are using the modern font-variant-numeric and font-variant-proportional with appropriate fallbacks for old browsers.
+
+Options moving forward:
+	§ Tell USWDS about the font issue I found (or submit a fix on GitHub) - update font files and CSS to use font-variant- rather than font-feature-
+	§ Update fpac-style to use SourceSans3 with a custom font family.
+	§ Download Merriweather, Roboto Mono, and Public Sans fonts to fix them.
+	§ There is also something called "variable fonts", which came in the download from Google, but I'm not sure how to apply those yet. I was just seeing if this fixed the problem and it did, so that would be a yet further upgrade.
+
+Custom CSS:
+
+/* enforce proportional numerals */
+.text-proportional {
+  font-variant-numeric: proportional-nums;
+  font-feature-settings: "pnum" 1, "tnum" 0;
+  -webkit-font-feature-settings: "pnum" 1, "tnum" 0;
+}
+
+/* enforce proportional numerals */
+.text-no-tabular {
+  font-variant-numeric: proportional-nums;
+  font-feature-settings: "pnum" 1, "tnum" 0;
+  -webkit-font-feature-settings: "pnum" 1, "tnum" 0;
+}
+
+/* enforce tabular numerals */
+.text-tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "pnum" 0;
+  -webkit-font-feature-settings: "tnum" 1, "pnum" 0;
+}

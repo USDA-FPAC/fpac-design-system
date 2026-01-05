@@ -12,30 +12,33 @@
       <!-- Set the viewport width to device width for mobile -->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <!-- Base URL
-      ================================================== -->
-      <!-- Set the base URL for all relative URLs within the document
-      <base href="https://example.com/page.html"> -->
+    <!-- Base URL
+    ================================================== -->
+    <!-- Set the base URL for all relative URLs within the document
+    <base href="/fpac-website/"> -->
 
       <!-- Page Title
       ================================================== -->
       <title>Guidelines | FPAC DS</title>
 
-      <!-- Favicon
-      ================================================== -->
-      <!-- Light and dark mode favicons -->
-      <link rel="icon" href="/fpac/images/usda-logo/USDA favicon/usda-favicon-color.png" type="image/x-icon" media="(prefers-color-scheme: light)">
-      <link rel="icon" href="/fpac/images/usda-logo/USDA favicon/usda-favicon-white.png" type="image/x-icon" media="(prefers-color-scheme: dark)">
+    <!-- Favicon
+    ================================================== -->
+    <!-- Light and dark mode favicons -->
+    <link rel="icon" href="/fpac-website/images/usda-logo/usda-favicon/usda-favicon-color.png" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/fpac-website/images/usda-logo/usda-favicon/usda-favicon-white.png" type="image/x-icon" media="(prefers-color-scheme: dark)">
 
-      <!-- CSS Links
-      ================================================== -->
-      <link rel="stylesheet" href="/dist/fpac-style/styles/fpac-design-system.css">
-      <link rel="stylesheet" href="/dist/fpac-website/styles/fpac-documentation-website.css">
+    <!-- CSS Links
+    ================================================== -->
+    <link rel="stylesheet" href="/dist/fpac-design-system.css">
+    <link rel="stylesheet" href="/fpac-website/styles/fpac-documentation-website.css">
 
-      <!-- USWDS INIT
-      ================================================== -->
-      <script src="/dist/uswds/js/uswds-init.min.js" type="module"></script>
-      <link rel="preload" href="/dist/uswds/js/uswds.min.js" as="script">
+
+    <!-- USWDS INIT
+    ================================================== -->
+    <script src="/dist/uswds/js/uswds-init.min.js" type="module"></script>
+    <link rel="preload" href="/dist/uswds/js/uswds.min.js" as="script">
+    
+  </head>
       
     </head>
   <!-- Head End -->
@@ -100,19 +103,16 @@
           <div class="usa-nav-container">
             
             <div class="usa-navbar">
-              <!-- USDA Logo -->
-              <div class="usa-logo">
+
+            <!-- USDA Logo -->
+            <div class="usa-logo">
               <div class="grid-container">
                 <div style="display: inline-flex; align-items: center;">
-                <a href="/fpac-website/pages/home.html" title="USDA Logo">
-                  <img src="/dist/fpac-style/images/usda-logo/usda-logo/color/usda-logo-color.svg" style="width: 50px; min-width: 50px; margin-right: 8px;" alt="USDA Logo"/>
-                </a>
-                <a href="/fpac-website/pages/home.html" title="Website title" style="white-space: nowrap;">
-                  <strong>FPAC Design System</strong>
-                </a>
+                  <a href="/fpac-website/pages/home.html" title="USDA Logo"><img src="/fpac-website/images/usda-logo/usda-logo/color/usda-logo-color.svg" style="width: 50px; min-width: 50px; margin-right: 8px;" alt="USDA Logo"/></a>
+                  <a href="/fpac-website/pages/home.html" title="Website title" style="white-space: nowrap;"><strong>FPAC Design System</strong></a>
                 </div>
               </div>
-              </div>
+            </div>
 
               <!-- Mobile menu button -->
               <button type="button" class="usa-menu-btn">Menu</button>
@@ -150,23 +150,18 @@
                       </button>
                       <ul id="basic-nav-section-two" class="usa-nav__submenu font-sans-xs">
                         <li class="usa-nav__submenu-item">
-                          <a href="/fpac-website/pages/3-component-library/component-library.html">
-                            <span>All</span>
+                          <a href="/fpac-website/pages/3-component-library/components/component-library.html">
+                            <span>Components</span>
                           </a>
                         </li>
                         <li class="usa-nav__submenu-item">
-                          <a href="/fpac-website/pages/3-component-library/component-library.html#components-2">
-                            <span class="margin-left-2">Components</span>
+                          <a href="/fpac-website/pages/3-component-library/patterns/pattern-library.html">
+                            <span>Patterns</span>
                           </a>
                         </li>
                         <li class="usa-nav__submenu-item">
-                          <a href="/fpac-website/pages/3-component-library/component-library.html#patterns-2">
-                            <span class="margin-left-2">Patterns</span>
-                          </a>
-                        </li>
-                        <li class="usa-nav__submenu-item">
-                          <a href="/fpac-website/pages/3-component-library/component-library.html#templates-2">
-                            <span class="margin-left-2">Templates</span>
+                          <a href="/fpac-website/pages/3-component-library/templates/template-library.html">
+                            <span>Templates</span>
                           </a>
                         </li>
                       </ul>
@@ -208,27 +203,44 @@
                   <nav aria-label="Secondary navigation">
                     <ul class="usa-sidenav">
 
-                      <!-- Guidelines -->                  
-                      <li class="usa-sidenav__item"><a href="/fpac-website/pages/4-guidelines/guidelines.html" class="usa-current"><strong>Guidelines</strong></a></li>
-                      <ul class="usa-sidenav__sublist">
-                        <a href="/fpac-website/pages/4-guidelines/about-fpac-design.html">About FPAC design</a>
-                        <a href="/fpac-website/pages/4-guidelines/accessibility.html">Accessibility</a>
-                        <a href="/fpac-website/pages/4-guidelines/data-visualizations/">Data visualizations</a>
-                        <a href="/fpac-website/pages/4-guidelines/design-principles.html">Design principles</a>
-                        <a href="/fpac-website/pages/4-guidelines/development-guidance.html">Development guidance</a>
-                        <a href="https://designsystem.digital.gov/components/form/">Forms</a>
-                        <a href="/fpac-website/pages/4-guidelines/getting-started.html">Getting started</a>
-                        <a href="/fpac-website/pages/4-guidelines/process-maturity.html">Process maturity</a>
-                      </ul>
+                      <!-- Guidelines -->
+                      <li class="usa-sidenav__item"><a href="/fpac-website/pages/4-guidelines/guidelines.html" class="usa-current"><strong>Guidelines</strong></a>
 
-                      <!-- Custom Configuration -->
-                      <li class="usa-sidenav__item"><a href="/fpac-website/pages/4-guidelines/custom-configuration.html">Custom configuration</a></li>
-                    
-                    </ul>
+                        <!-- General -->
+                        <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Welcome</strong></a>
+                          <ul class="usa-sidenav__sublist">
+                            <li><a href="/fpac-website/pages/4-guidelines/welcome/about-fpac-design.html">About FPAC Design</a></li>
+                            <li><a href="/fpac-website/pages/4-guidelines/welcome/getting-started.html">Getting Started</a></li>
+                          </ul>
+                        </li>
+
+                        <!-- Design & Accessibility -->
+                        <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Design & Accessibility</strong></a>
+                          <ul class="usa-sidenav__sublist">
+                            <li><a href="/fpac-website/pages/4-guidelines/design-accessibility/accessibility.html">Accessibility</a></li>
+                            <li><a href="/fpac-website/pages/4-guidelines/design-accessibility/design-principles.html">Design Principles</a></li>
+                            <li><a href="https://designsystem.digital.gov/components/data-visualizations/">Data Visualizations</a></li>
+                            <li><a href="https://designsystem.digital.gov/design-accessibility/components/form/">Forms</a></li>
+                          </ul>
+                        </li>
+
+                        <!-- Development & Process -->
+                        <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Development & Process</strong></a>
+                          <ul class="usa-sidenav__sublist">
+                            <li><a href="/fpac-website/pages/4-guidelines/development-process/development-guidance.html">Development Guidance</a></li>
+                            <li><a href="/fpac-website/pages/4-guidelines/development-process/process-maturity.html">Process Maturity</a></li>
+                          </ul>
+                        </li>
+                      </li>
+
+                      <!-- DS Configuration -->
+
+                        <li class="usa-sidenav__item"><a href="/fpac-website/pages/4-guidelines/ds-configuration/ds-configuration.html"><em>DS Configuration</em></a></li>
+                    </ul>              
                   </nav>
                 </div>
               <!-- Side Navigation Menu End -->
-
+               
               <!-- In-page Navigation Start -->
                 <aside
                   class="usa-in-page-nav"
@@ -264,64 +276,165 @@
               <!-- In-page Navigation End -->
 
               <!-- Main Content Start -->
-                <main class="grid-col-fill grid-offset-1" id="main-content">
+                <main id="main-content" class="usa-prose grid-col-fill grid-container margin-x-4">
 
                   <!-- Intro -->
-                  <h1>Style Guide</h1>
-                  <p class="usa-intro">
-                    The FPAC Style Guide provides a set of visual standards for the
-                    design and development of FPAC websites.
-                  </p>
-                  <p class="usa-intro">
-                    Adherence to these standards will ensure a consistent look and feel
-                    across the FPAC portfolio, which will improve the user experience by making
-                    it easier for users to navigate and locate the information they need to do their job.
-                  </p>
+                    <section id="intro" class="usa-prose">
+                      <h1>Guidelines</h1>
+                      <p class="usa-intro">
+                        The FPAC Guidelines provide practical advice and standards for designing, developing, and maintaining FPAC websites and applications.
+                      </p>
+                      <p class="usa-intro">
+                        These guidelines cover topics such as accessibility, design principles, data visualizations, development practices, forms, and process maturity. Following them helps ensure FPAC digital products are usable, consistent, and effective for all users.
+                      </p>
+                    </section>
+                  <!-- Intro End -->
 
-                  <!-- Topic -->
-                  <h2 id="section-heading-h2">Heading Level 2</h2>
-                  <h3 id="section-heading-h3">Heading Level 3</h3>
-                  <h4 id="section-heading-h4">Heading Level 4</h4>
-                  <p>Paragraph</p>
-                  <p><a href="./color/color.html">Hyperlink</a></p>
+                  <br>
+                  <hr>
+                  <br>
+
+                  <!-- Custom Focus Outline Style for Cards -->
+                  <style>
+                    a:focus .usa-card__container {
+                      outline: 4px solid #4D8157;
+                      outline-offset: 4px;
+                    }
+                  </style>
 
 
-                  <!-- Cards -->
-                  <ul class="usa-card-group grid-row grid-gap">
-                        <!-- Data visualizations -->
-                        <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                          <a style="text-decoration: none;" href="/fpac/pages/3-component-library/components/data-visualizations/data-visualizations.html">
-                            <div class="usa-card__container hover:border-primary">
-                              <div class="usa-card__header">
-                                <h4 class="usa-card__heading">Data visualizations</h4>
-                              </div>
-                              <div class="usa-card__body">
-                                <p>
-                                  Data visualizations present information graphically to help users understand data.
-                                </p>
-                              </div>
-                            </div>
-                          </a>
-                        </li>
+                  <!-- Alert: USWDS Icon -->
+                  <div class="usa-alert usa-alert--info usa-alert--slim">
+                    <div class="usa-alert__body">
+                      <p class="usa-alert__text">
+                        While we continue to build out this site, cards with the 
+                        <img src="/fpac-website/images/4c-lg-white.svg" alt="USWDS icon" style="width: 18px; height: auto;" />
+                        icon link to the official USWDS documentation.
+                      </p>
+                    </div>
+                  </div>     
 
-                        
-                        <!-- Forms -->
-                        <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                          <a style="text-decoration: none;" href="/fpac/pages/3-component-library/components/form/form.html">
-                            <div class="usa-card__container hover:border-primary">
-                              <div class="usa-card__header">
-                                <h4 class="usa-card__heading">Forms</h4>
-                              </div>
-                              <div class="usa-card__body">
-                                <p>
-                                  Forms collect user input for processing or submission.
-                                </p>
-                              </div>
-                            </div>
-                          </a>
-                        </li>
-                      </ul>
+                  <!-- Guidelines Card Groups -->
+                  <section id="card-group" class="usa-prose">
+                    <h2>Guides</h2>
 
+                  <!-- Welcome -->
+                  <h3 class="padding-bottom-2">Welcome</h3>
+                  <ul class="usa-card-group">
+                    <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                      <a style="text-decoration: none;" href="/fpac-website/pages/4-guidelines/about-fpac-design.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">About FPAC Design</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Background and purpose of FPAC design system.</p>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                      <a style="text-decoration: none;" href="/fpac-website/pages/4-guidelines/getting-started.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Getting Started</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>How to begin using the FPAC design system.</p>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <!-- Design & Accessibility -->
+                  <h3 class="padding-bottom-2">Design & Accessibility</h3>
+                  <ul class="usa-card-group">
+                    <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                      <a style="text-decoration: none;" href="/fpac-website/pages/4-guidelines/design-accessibility/accessibility.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Accessibility</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Guidance for making digital products accessible to all users.</p>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                      <a style="text-decoration: none;" href="/fpac-website/pages/4-guidelines/design-accessibility/design-principles.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Design Principles</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Core principles for effective and consistent design.</p>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                      <a style="text-decoration: none;" href="https://designsystem.digital.gov/components/data-visualizations/">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header" style="display: flex; align-items: center; justify-content: space-between;">
+                            <h4 class="usa-card__heading">Data visualizations</h4>
+                            <img src="/fpac-website/images/4c-lg-white.svg" alt="USWDS icon" style="width: 18px; height: auto;" />
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Best practices for presenting data visually.</p>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                      <a style="text-decoration: none;" href="https://designsystem.digital.gov/components/form/">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header" style="display: flex; align-items: center; justify-content: space-between;">
+                            <h4 class="usa-card__heading">Forms</h4>
+                            <img src="/fpac-website/images/4c-lg-white.svg" alt="USWDS icon" style="width: 18px; height: auto;" />
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Guidance for building accessible and effective forms.</p>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+
+                  </ul>
+
+                  <!-- Development & Process -->
+                  <h3 class="padding-bottom-2">Development & Process</h3>
+                  <ul class="usa-card-group">
+                    <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                      <a style="text-decoration: none;" href="/fpac-website/pages/4-guidelines/development-guidance.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Development Guidance</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Technical standards and coding practices for FPAC projects.</p>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                      <a style="text-decoration: none;" href="/fpac-website/pages/4-guidelines/process-maturity.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Process Maturity</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Improving and assessing design and development processes.</p>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+                  </section>
                 </main>
 
               <!-- Main Content End -->
@@ -336,7 +449,7 @@
 
         <!-- Return To Top link -->
           <div class="grid-container usa-footer__return-to-top">
-            <a href="" style="color: #4D8157;" onclick="window.scrollTo({top: 0, left: 0, behavior: 'smooth'}); return false;">Return to top</a>
+            <a class="usa-link" href="" onclick="window.scrollTo({top: 0, left: 0, behavior: 'smooth'}); return false;">Return to top</a>
           </div>
 
         <!-- Footer Start -->
@@ -370,20 +483,20 @@
       <!-- Identifier Start -->
         <div class="usa-identifier">
           
-          <!-- USDA Logo -->
-            <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
-              <div class="usa-identifier__container">
-                <div class="usa-identifier__logos">
-                  <a href="https://www.usda.gov/" class="usa-identifier__logo"
-                    ><img
-                      class="usa-identifier__logo-img"
-                      src="\dist\fpac-style\images\usda-logo\usda-v2-lockup\white\usda-v2-white-lockup.svg"
-                      alt="USDA logo"
-                      role="img">
-                  </a>
-                </div>
-              </div>
-            </section>
+        <!-- USDA Logo -->
+        <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
+          <div class="usa-identifier__container">
+            <div class="usa-identifier__logos">
+              <a href="https://www.usda.gov/" class="usa-identifier__logo"
+                ><img
+                  class="usa-identifier__logo-img"
+                  src="/fpac-website/images/usda-logo/usda-v2-lockup/white/usda-v2-white-lockup.svg"
+                  alt="USDA logo"
+                  role="img">
+              </a>
+            </div>
+          </div>
+        </section>
 
           <!-- Identifier Links -->
             <nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links">

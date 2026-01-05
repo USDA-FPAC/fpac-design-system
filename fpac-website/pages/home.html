@@ -14,7 +14,7 @@
     <!-- Base URL
     ================================================== -->
     <!-- Set the base URL for all relative URLs within the document
-    <base href="https://example.com/page.html"> -->
+    <base href="/fpac-website/"> -->
 
     <!-- Page Title
     ================================================== -->
@@ -23,13 +23,13 @@
     <!-- Favicon
     ================================================== -->
     <!-- Light and dark mode favicons -->
-    <link rel="icon" href="/fpac/images/usda-logo/USDA favicon/usda-favicon-color.png" type="image/x-icon" media="(prefers-color-scheme: light)">
-    <link rel="icon" href="/fpac/images/usda-logo/USDA favicon/usda-favicon-white.png" type="image/x-icon" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="/fpac-website/images/usda-logo/usda-favicon/usda-favicon-color.png" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/fpac-website/images/usda-logo/usda-favicon/usda-favicon-white.png" type="image/x-icon" media="(prefers-color-scheme: dark)">
 
     <!-- CSS Links
     ================================================== -->
-    <link rel="stylesheet" href="/dist/fpac-style/styles/fpac-design-system.css">
-    <link rel="stylesheet" href="/dist/fpac-website/styles/fpac-documentation-website.css">
+    <link rel="stylesheet" href="/dist/fpac-design-system.css">
+    <link rel="stylesheet" href="/fpac-website/styles/fpac-documentation-website.css">
 
     <!-- USWDS INIT
     ================================================== -->
@@ -95,7 +95,7 @@
             <div class="usa-logo">
               <div class="grid-container">
                 <div style="display: inline-flex; align-items: center;">
-                  <a href="/fpac-website/pages/home.html" title="USDA Logo"><img src="/dist/fpac-style/images/usda-logo/usda-logo/color/usda-logo-color.svg" style="width: 50px; min-width: 50px; margin-right: 8px;" alt="USDA Logo"/></a>
+                  <a href="/fpac-website/pages/home.html" title="USDA Logo"><img src="/fpac-website/images/usda-logo/usda-logo/color/usda-logo-color.svg" style="width: 50px; min-width: 50px; margin-right: 8px;" alt="USDA Logo"/></a>
                   <a href="/fpac-website/pages/home.html" title="Website title" style="white-space: nowrap;"><strong>FPAC Design System</strong></a>
                 </div>
               </div>
@@ -110,7 +110,7 @@
 
             <!-- Mobile close button -->
             <button type="button" class="usa-nav__close">
-                <img src="/dist/uswds/images/usa-icons\close.svg" role="img" alt="Close"/>
+                <img src="/dist/uswds/images/usa-icons/close.svg" role="img" alt="Close"/>
             </button>
 
             <!-- Primary Menu -->
@@ -125,26 +125,29 @@
                 <a href="/fpac-website/pages/2-style-guide/style-guide.html" class="font-sans-xs usa-nav-link"><span style="white-space: nowrap;">Style Guide</span></a>
               </li>
               
-              <!-- Component Library -->
-              <li class="usa-nav__primary-item">
-                <button type="button" class="usa-accordion__button usa-nav__link font-sans-xs" aria-expanded="false" aria-controls="basic-nav-section-two"
-                  ><span class="font-sans-xs" style="white-space: nowrap;">Component Library</span>
-                </button>
-                <ul id="basic-nav-section-two" class="usa-nav__submenu font-sans-xs">
-                  <li class="usa-nav__submenu-item">
-                    <a href="/fpac-website/pages/3-component-library/component-library.html"><span>All sections</span></a>
-                  </li>
-                  <li class="usa-nav__submenu-item">
-                    <a href="/fpac-website/pages/3-component-library/component-library.html#components-2"><span class="margin-left-2">Components</span></a>
-                  </li>
-                  <li class="usa-nav__submenu-item">
-                    <a href="/fpac-website/pages/3-component-library/component-library.html#patterns-2"><span class="margin-left-2">Patterns</span></a>
-                  </li>
-                  <li class="usa-nav__submenu-item">
-                    <a href="/fpac-website/pages/3-component-library/component-library.html#templates-2"><span class="margin-left-2">Templates</span></a>
-                  </li>
-                </ul>
-              </li>
+                <!-- Component Library -->
+                <li class="usa-nav__primary-item">
+                  <button type="button" class="usa-accordion__button usa-nav__link font-sans-xs" aria-expanded="false" aria-controls="basic-nav-section-two">
+                    <span class="font-sans-xs" style="white-space: nowrap;">Component Library</span>
+                  </button>
+                  <ul id="basic-nav-section-two" class="usa-nav__submenu font-sans-xs">
+                    <li class="usa-nav__submenu-item">
+                      <a href="/fpac-website/pages/3-component-library/components/component-library.html">
+                        <span>Components</span>
+                      </a>
+                    </li>
+                    <li class="usa-nav__submenu-item">
+                      <a href="/fpac-website/pages/3-component-library/patterns/pattern-library.html">
+                        <span>Patterns</span>
+                      </a>
+                    </li>
+                    <li class="usa-nav__submenu-item">
+                      <a href="/fpac-website/pages/3-component-library/templates/template-library.html">
+                        <span>Templates</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
               
               <!-- Guidelines -->
               <li class="usa-nav__primary-item usa-nav__link">
@@ -184,7 +187,7 @@
               </p>
               <a class="usa-button" href="https://github.com/USDA-FPAC/fpac-design-system">View FPAC on GitHub
                 <img
-                  src="\fpac-website/images/home/Octicons-mark-github.svg"
+                  src="/fpac-website/images/home/Octicons-mark-github.svg"
                   alt="Github logo"
                   width="25"
                   color="white"
@@ -208,7 +211,7 @@
 
               <!-- Style Guide Card -->
               <li class="usa-card usa-card--header-first tablet:grid-col-4">
-                <a style="text-decoration: none;" href="\fpac-website/pages/2-style-guide/style-guide.html">
+                <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/style-guide.html">
                   <div class="usa-card__container hover:border-primary">
                     <div class="usa-card__header"><h4 class="usa-card__heading">Style Guide</h4></div>
                     <div class="usa-card__media"><div class="usa-card__img"><img src="/fpac-website/images/home/cauliflower.png" alt="multicolored cauliflower"/></div></div>
@@ -219,10 +222,10 @@
 
               <!-- Component Library Card -->
               <li class="usa-card usa-card--header-first tablet:grid-col-4">
-                <a style="text-decoration: none;" href="\fpac-website/pages/3-component-library/component-library.html">
+                <a style="text-decoration: none;" href="/fpac-website/pages/3-component-library/components/component-library.html"> 
                   <div class="usa-card__container hover:border-primary">
                     <div class="usa-card__header"><h4 class="usa-card__heading">Component Library</h4></div>
-                    <div class="usa-card__media"><div class="usa-card__img"><img src="\fpac-website\images\home\produce.png" alt="A placeholder image"/></div></div>                
+                    <div class="usa-card__media"><div class="usa-card__img"><img src="/fpac-website/images/home/produce.png" alt="A placeholder image"/></div></div>                
                     <div class="usa-card__body"><p>The FPAC Component Library provides standard components for the design and development of FPAC websites.</p></div>
                   </div>
                 </a>
@@ -230,7 +233,7 @@
 
               <!-- Guidelines Card -->
               <li class="usa-card usa-card--header-first tablet:grid-col-4">
-                <a style="text-decoration: none;" href="\fpac-website/pages/4-guidelines/guidelines.html">
+                <a style="text-decoration: none;" href="/fpac-website/pages/4-guidelines/guidelines.html">
                   <div class="usa-card__container hover:border-primary">
                     <div class="usa-card__header"><h4 class="usa-card__heading">Guidelines</h4></div>
                     <div class="usa-card__media"><div class="usa-card__img"><img src="/fpac-website/images/home/riparian.png" alt="A placeholder image"/></div></div>                
@@ -290,7 +293,7 @@
               <a href="https://www.usda.gov/" class="usa-identifier__logo"
                 ><img
                   class="usa-identifier__logo-img"
-                  src="\dist\fpac-style\images\usda-logo\usda-v2-lockup\white\usda-v2-white-lockup.svg"
+                  src="/fpac-website/images/usda-logo/usda-v2-lockup/white/usda-v2-white-lockup.svg"
                   alt="USDA logo"
                   role="img">
               </a>

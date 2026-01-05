@@ -1,0 +1,981 @@
+<html lang="en">
+  <!-- Head Start -->
+    <head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <!-- Set character encoding so that all characters within the UTF-8 space (such as emoji) render correctly. -->
+    <meta charset="utf-8">
+    
+    <!-- Force IE 8/9/10 to use its latest rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Base URL
+    ================================================== -->
+    <!-- Set the base URL for all relative URLs within the document
+    <base href="/fpac-website/"> -->
+
+    <!-- Page Title
+    ================================================== -->
+    <title>Position | FPAC DS</title>
+
+    <!-- Favicon
+    ================================================== -->
+    <!-- Light and dark mode favicons -->
+    <link rel="icon" href="/fpac-website/images/usda-logo/usda-favicon/usda-favicon-color.png" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/fpac-website/images/usda-logo/usda-favicon/usda-favicon-white.png" type="image/x-icon" media="(prefers-color-scheme: dark)">
+
+    <!-- CSS Links
+    ================================================== -->
+    <link rel="stylesheet" href="/dist/fpac-design-system.css">
+    <link rel="stylesheet" href="/fpac-website/styles/fpac-documentation-website.css">
+
+    <!-- USWDS INIT
+    ================================================== -->
+    <script src="/dist/uswds/js/uswds-init.min.js" type="module"></script>
+    <link rel="preload" href="/dist/uswds/js/uswds.min.js" as="script">
+    
+    </head>
+  <!-- Head End -->
+
+  <!-- Body Start
+  ================================================== -->
+    <body>
+
+      <!-- Skipnav -->
+        <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+      <!-- Banner Start -->
+        <section class="usa-banner" aria-label="Official website of the United States government">
+          <div class="usa-accordion">
+            <header class="usa-banner__header">
+              <div class="usa-banner__inner">
+                <div class="grid-col-auto">
+                  <img aria-hidden="true" class="usa-banner__header-flag" src="/dist/uswds/images/us_flag_small.png" alt=""/>
+                </div>
+                <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+                  <p class="usa-banner__header-text">An official website of the United States government.</p>
+                  <p class="usa-banner__header-action">Here's how you know</p>
+                </div>
+                <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-default">
+                  <span class="usa-banner__button-text">Here's how you know</span>
+                </button>
+              </div>
+            </header>
+            <div class="usa-banner__content usa-accordion__content" id="gov-banner-default">
+              <div class="grid-row grid-gap-lg">
+                <div class="usa-banner__guidance tablet:grid-col-6">
+                  <img class="usa-banner__icon usa-media-block__img" src="/dist/uswds/images/icon-dot-gov.svg" role="img" alt="" aria-hidden="true" />
+                  <div class="usa-media-block__body">
+                    <p><strong>Official websites use .gov</strong> A <strong>.gov</strong> website belongs to an official government organization in the United States.</p>
+                  </div>
+                </div>
+                <div class="usa-banner__guidance tablet:grid-col-6">
+                  <img class="usa-banner__icon usa-media-block__img" src="/dist/uswds/images/icon-https.svg" role="img" alt="" aria-hidden="true" />
+                  <div class="usa-media-block__body">
+                    <p>
+                      <strong>Secure .gov websites use HTTPS</strong><br />A <strong>lock</strong> (
+                        <span class="icon-lock">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 64" class="usa-banner__lock-image"
+                            role="img" aria-labelledby="banner-lock-description" focusable="false">
+                            <title id="banner-lock-title">Lock</title>
+                            <desc id="banner-lock-description">Locked padlock icon</desc>
+                            <path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z" />
+                          </svg>
+                        </span>
+                      ) or <strong>https://</strong> means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      <!-- Banner End -->
+
+      <!-- Header Start -->
+        <header class="usa-header usa-header--basic">
+          <div class="usa-nav-container">
+            
+            <div class="usa-navbar">
+
+            <!-- USDA Logo -->
+            <div class="usa-logo">
+              <div class="grid-container">
+                <div style="display: inline-flex; align-items: center;">
+                  <a href="/fpac-website/pages/home.html" title="USDA Logo"><img src="/fpac-website/images/usda-logo/usda-logo/color/usda-logo-color.svg" style="width: 50px; min-width: 50px; margin-right: 8px;" alt="USDA Logo"/></a>
+                  <a href="/fpac-website/pages/home.html" title="Website title" style="white-space: nowrap;"><strong>FPAC Design System</strong></a>
+                </div>
+              </div>
+            </div>
+
+              <!-- Mobile menu button -->
+              <button type="button" class="usa-menu-btn">Menu</button>
+            </div>
+
+            <!-- Primary Navigation Start -->
+              <nav aria-label="Primary navigation" class="usa-nav">
+
+                <!-- Mobile close button -->
+                  <button type="button" class="usa-nav__close">
+                    <img src="/dist/uswds/images/usa-icons/close.svg" role="img" alt="Close"/>
+                  </button>
+
+                <!-- Primary Menu Start -->
+                  <ul class="usa-nav__primary usa-accordion margin-right-4">
+                    
+                    <!-- Home -->
+                    <li class="usa-nav__primary-item usa-nav__link">
+                      <a href="/fpac-website/pages/home.html" class="font-sans-xs usa-nav-link">
+                      <span style="white-space: nowrap;">Home</span>
+                      </a>
+                    </li>
+
+                    <!-- Style Guide -->
+                    <li class="usa-nav__primary-item usa-nav__link">
+                      <a href="/fpac-website/pages/2-style-guide/style-guide.html" class="font-sans-xs usa-nav-link usa-current">
+                        <span style="white-space: nowrap;">Style Guide</span>
+                      </a>
+                    </li>
+
+                    <!-- Component Library -->
+                    <li class="usa-nav__primary-item">
+                      <button type="button" class="usa-accordion__button usa-nav__link font-sans-xs" aria-expanded="false" aria-controls="basic-nav-section-two">
+                        <span class="font-sans-xs" style="white-space: nowrap;">Component Library</span>
+                      </button>
+                      <ul id="basic-nav-section-two" class="usa-nav__submenu font-sans-xs">
+                        <li class="usa-nav__submenu-item">
+                          <a href="/fpac-website/pages/3-component-library/components/component-library.html">
+                            <span>Components</span>
+                          </a>
+                        </li>
+                        <li class="usa-nav__submenu-item">
+                          <a href="/fpac-website/pages/3-component-library/patterns/pattern-library.html">
+                            <span>Patterns</span>
+                          </a>
+                        </li>
+                        <li class="usa-nav__submenu-item">
+                          <a href="/fpac-website/pages/3-component-library/templates/template-library.html">
+                            <span>Templates</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <!-- Guidelines -->
+                    <li class="usa-nav__primary-item usa-nav__link">
+                      <a href="/fpac-website/pages/4-guidelines/guidelines.html" class="font-sans-xs usa-nav-link">
+                        <span style="white-space: nowrap;">Guidelines</span>
+                      </a>
+                    </li>
+                  </ul>
+                <!-- Primary Menu End -->
+
+                <!-- Search bar -->
+                <section aria-label="Search component">
+                  <form class="usa-search usa-search--small" role="search">
+                    <label class="usa-sr-only" for="search-field">Search</label>
+                    <input class="usa-input" id="search-field" type="search" name="search" />
+                    <button class="usa-button" type="submit">
+                      <img src="/dist/uswds/images/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="Search" />
+                    </button>
+                  </form>
+                </section>
+              </nav>
+            <!-- Primary Navigation End -->
+
+          </div>
+        </header>
+      <!-- Header End -->
+
+      <!-- Body Content Start -->
+        <div class="usa-section usa-prose grid-container">
+          <div class="grid-row grid-gap">
+            <div class="usa-in-page-nav-container">
+              
+              <!-- Side Navigation Menu Start -->            
+                <div class="usa-sidenav-container grid-col-2 display-none desktop:display-block">
+                  <nav aria-label="Secondary navigation">
+                    <ul class="usa-sidenav">
+
+                      <!-- Style Guide -->
+                      <li class="usa-sidenav__item"><a href="/fpac-website/pages/2-style-guide/style-guide.html"><strong>Style Guide</strong></a>
+                      
+                        <!-- Visual Style -->                   
+                        <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Visual style</strong></a>
+                          <ul class="usa-sidenav__sublist">
+                            <a href="/fpac-website/pages/2-style-guide/visual-style/color/background-color.html">Background color</a>
+                            <a href="/fpac-website/pages/2-style-guide/visual-style/border.html">Border</a>
+                            <a href="/fpac-website/pages/2-style-guide/visual-style/outline.html">Outline</a>
+                            <a href="/fpac-website/pages/2-style-guide/visual-style/opacity.html">Opacity</a>
+                            <a href="/fpac-website/pages/2-style-guide/visual-style/shadow.html">Shadow</a>
+                          </ul>
+                        </li>
+
+                        <!-- Layout -->
+                         
+                          <!-- Layout -->
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Layout</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/layout/layout-grid.html">Layout grid</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/layout/flexbox.html">Flexbox</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/layout/display.html">Display</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/layout/order.html">Order</a>
+                            </ul>
+                          </li>
+
+                          <!-- Box sizing subgroup -->
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Box sizing</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/box-sizing/shape.html">Shape</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/box-sizing/height-width.html">Height + width</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/box-sizing/margin-padding.html">Margin + padding</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/box-sizing/overflow.html">Overflow</a>
+                            </ul>
+                          </li>
+
+                          <!-- Positioning subgroup -->
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Positioning</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/positioning/position.html" class="usa-current">Position</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/positioning/pin.html">Pin</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/positioning/float.html">Float</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/positioning/z-index.html">Z-index</a>
+                            </ul>
+                          </li>
+
+                        <!-- Typography -->
+
+                          <!-- Font -->                         
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Font</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/typography/font/family.html">Family</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/font/size.html">Size</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/font/weight.html">Weight</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/font/italic.html">Italic</a>
+                            </ul>
+                          </li>
+
+                          <!-- Text -->
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Text</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/underline.html">Underline</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/strikethrough.html">Strikethrough</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/text-color.html">Text color</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/case.html">Text case</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/letterspacing.html">Letterspacing</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/vertical-alignment.html">Vertical alignment</a>
+                            </ul>
+                          </li>
+
+                          <!-- Paragraph -->  
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Paragraph</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/typography/paragraph/line-height.html">Line height</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/paragraph/line-length.html">Line length</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/paragraph/indentation.html">Indentation</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/paragraph/alignment.html">Alignment</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/paragraph/whitespace.html">Whitespace</a>
+                            </ul>
+                          </li>
+
+                          <!-- Advanced -->
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Advanced</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/typography/advanced/spacing-units.html">Spacing units</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/advanced/tabular-numerals.html">Tabular numerals</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/advanced/list-reset.html">List reset</a>
+                            </ul>
+                          </li>
+
+                        <!-- Images -->
+                        <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Images</strong></a>
+                          <ul class="usa-sidenav__sublist">
+                            <a href="/fpac-website/pages/2-style-guide/images/logos.html">Logos</a>
+                            <a href="/fpac-website/pages/2-style-guide/images/icons.html">Icons</a>
+                          </ul>
+                        </li>
+
+                        <!-- Utility Variants -->
+                        <li class="usa-sidenav__item">
+                          <a href="/fpac-website/pages/2-style-guide/utility-variants/utility-variants.html"><em>Utility variants</em></a>
+                        </li>
+                      
+                      </li>
+
+                    </ul>
+                  </nav>
+                </div>
+              <!-- Side Navigation Menu End -->
+
+              <!-- In-page Navigation Start -->
+                <aside
+                  class="usa-in-page-nav"
+                  data-heading-elements="h2 h3"
+                  data-title-text="On this page"
+                  data-title-heading-level="h4"
+                  data-scroll-offset="48"
+                  data-root-margin="48px 0px -70% 0px"
+                  data-threshold="1"
+                ></aside>
+
+                <script>
+                  // Add "Return to Top" button into the in-page nav aside after DOM loads
+                  window.addEventListener('DOMContentLoaded', function() {
+                    var btn = document.createElement('a');
+                      btn.href = "#";
+                      btn.style.display = "block";
+                      btn.style.color = "#236430";
+                      btn.style.margin = "-1rem 1rem 0 1.25rem";
+                      btn.style.padding = "0.5rem 0 0.5rem 0.75rem";
+                      btn.style.textDecoration = "none";
+                      btn.style.fontWeight = "00";
+                      btn.style.fontSize = "0.8rem";
+                      btn.style.transition = "background 0.2s";
+                      btn.textContent = "Return to top";
+                      btn.onmouseover = function() { this.style.background = "#f0f0f0"; };
+                      btn.onmouseout = function() { this.style.background = ""; };
+                      btn.onclick = function(e) { e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); };
+                    var aside = document.querySelector('aside');
+                    if (aside) aside.appendChild(btn);
+                  });
+                </script>
+              <!-- In-page Navigation End -->
+
+              <!-- Main Content Start -->
+                <main id="main-content" class="usa-prose grid-col-fill grid-container margin-x-4">
+                  <h1>Position</h1>
+                  <p class="usa-intro">Control how an element is positioned relative to it's container or viewport</p>
+                  <br>
+                  <hr>
+                
+                  <!-- Topic -->
+
+                  <h2 id="">Properties</h2>
+
+
+                  
+                  <table class="usa-table" style="width:100%;">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="width:30%">Utility class</th>
+                        <th scope="col">Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="">.position-static</th>
+                        <td>The default state. The element follows the normal document flow, and properties like top, bottom, left, and
+                          right have no effect.</td>
+                      </tr>
+                    
+                      <tr>
+                        <th scope="row" class="">.position-relative</th>
+                        <td>The element remains in the normal document flow, but you can offset it relative to its original position without
+                          affecting surrounding elements. It also establishes a reference point for any absolutely positioned child
+                          elements.</td>
+                      </tr>
+                    
+                      <tr>
+                        <th scope="row" class="">.position-absolute</th>
+                        <td>The element is removed from the normal document flow and creates no space for itself. It is positioned relative
+                          to its nearest "positioned" ancestor (one that is not static); if none exists, it is relative to the initial
+                          containing block (usually the body).</td>
+                      </tr>
+                    
+                      <tr>
+                        <th scope="row" class="">.position-fixed</th>
+                        <td>The element is removed from the normal flow and pinned relative to the browser viewport. It stays in the same
+                          place even when the page is scrolled, which is common for navigation bars or "back to top" buttons.</td>
+                      </tr>
+                    
+                      <tr>
+                        <th scope="row" class="">.position-sticky</th>
+                        <td>A hybrid that toggles between relative and fixed based on the user's scroll position. It behaves like a relative
+                          element until it reaches a specified threshold (e.g., top: 0), at which point it "sticks" to that position within
+                          its parent container while scrolling.</td>
+                      </tr>
+                    </tbody>
+                    </table>
+
+                  <br>
+
+                  <h2>Static position</h2>
+                  <p>The default state. The element follows the normal document flow, and properties like top, bottom, left, and right have no effect.</p>
+
+                  <h4>Example</h4>
+                  <div style="margin-top:1rem; display:flex; gap:1rem; flex-wrap:wrap; align-items:flex-start;">
+                    <div style="flex:1 1 240px; min-width:200px;">
+                      <div aria-hidden="true" style="display:flex; align-items:center; gap:0.5rem;">
+                        <div style="display:inline-block; width:56px; height:40px; background:#e6fbf5; border:1px solid #0d6b60; text-align:center; line-height:40px;">A</div>
+                        <div class="position-static" style="display:inline-block; width:56px; height:40px; background:#d1f3ea; border:1px solid #0a5a4f; text-align:center; line-height:40px;">B</div>
+                      </div>
+                      <div class="font-mono-2xs" style="margin-top:0.5rem;">Normal flow: both boxes are static (default) and follow the document flow.</div>
+                    </div>
+
+                    <div style="flex:1 1 240px; min-width:200px;">
+                      <div aria-hidden="true" style="display:flex; align-items:center; gap:0.5rem;">
+                        <div style="display:inline-block; width:56px; height:40px; background:#e6fbf5; border:1px solid #0d6b60; text-align:center; line-height:40px;">A</div>
+                        <div class="position-static top-1" style="display:inline-block; width:56px; height:40px; background:#d1f3ea; border:1px solid #0a5a4f; text-align:center; line-height:40px;">B</div>
+                      </div>
+                      <div class="font-mono-2xs" style="margin-top:0.5rem;">Attempted offset: adding <code>top-1</code> to a static element does nothing — offset utilities only affect positioned elements (relative/absolute/fixed/sticky).</div>
+                    </div>
+                  </div>
+
+                  <br>
+
+                  <h2>Relative position</h2>
+                  <p>The element remains in the normal document flow, but you can offset it relative to its original position without
+                    affecting surrounding elements. It also establishes a reference point for any absolutely positioned child elements.</p>
+
+                  <h3>Top</h3>
+                  <table class="usa-table" style="width:100%;">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="width:30%">Utility class</th>
+                        <th scope="col">Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><th scope="row" class="">.top-auto</th><td>auto</td></tr>
+                      <tr><th scope="row" class="">.top-neg-3</th><td>-24px</td></tr>
+                      <tr><th scope="row" class="">.top-neg-205</th><td>-20px</td></tr>
+                      <tr><th scope="row" class="">.top-neg-2</th><td>-16px</td></tr>
+                      <tr><th scope="row" class="">.top-neg-105</th><td>-12px</td></tr>
+                      <tr><th scope="row" class="">.top-neg-1</th><td>-8px</td></tr>
+                      <tr><th scope="row" class="">.top-neg-05</th><td>-4px</td></tr>
+                      <tr><th scope="row" class="">.top-neg-2px</th><td>-2px</td></tr>
+                      <tr><th scope="row" class="">.top-neg-1px</th><td>-1px</td></tr>
+                      <tr><th scope="row" class="">.top-0</th><td>0</td></tr>
+                      <tr><th scope="row" class="">.top-1px</th><td>1px</td></tr>
+                      <tr><th scope="row" class="">.top-2px</th><td>2px</td></tr>
+                      <tr><th scope="row" class="">.top-05</th><td>4px</td></tr>
+                      <tr><th scope="row" class="">.top-1</th><td>8px</td></tr>
+                      <tr><th scope="row" class="">.top-105</th><td>12px</td></tr>
+                      <tr><th scope="row" class="">.top-2</th><td>16px</td></tr>
+                      <tr><th scope="row" class="">.top-205</th><td>20px</td></tr>
+                      <tr><th scope="row" class="">.top-3</th><td>24px</td></tr>
+                      <tr><th scope="row" class="">.top-full</th><td>100%</td></tr>
+                    </tbody>
+                  </table>
+
+                  <h4>Top - Example</h4>
+                  <div style="margin-top:1rem; display:flex; gap:1rem; flex-wrap:wrap; align-items:flex-start;">
+                    <div style="flex:1 1 240px; min-width:200px;">
+                      <div aria-hidden="true" style="display:flex; align-items:center; gap:0.5rem;">
+                        <div style="display:inline-block; width:56px; height:40px; background:#e6f3ea; border:1px solid #236430; text-align:center; line-height:40px;">A</div>
+                        <div class="position-relative" style="display:inline-block; width:56px; height:40px; background:#cfe8d0; border:1px solid #1b5e3b; text-align:center; line-height:40px;">B</div>
+                      </div>
+                      <div class="font-mono-2xs" style="margin-top:0.5rem;">Second box has no relative positioning</div>
+                    </div>
+
+                    <div style="flex:1 1 240px; min-width:200px;">
+                      <div aria-hidden="true" style="display:flex; align-items:center; gap:0.5rem;">
+                        <div style="display:inline-block; width:56px; height:40px; background:#e6f3ea; border:1px solid #236430; text-align:center; line-height:40px;">A</div>
+                        <div class="position-relative top-1" style="display:inline-block; width:56px; height:40px; background:#cfe8d0; border:1px solid #1b5e3b; text-align:center; line-height:40px;">B</div>
+                      </div>
+                      <div class="font-mono-2xs" style="margin-top:0.5rem;">Second box uses <code>.position-relative .top-1</code></div>
+                    </div>
+                  </div>
+
+                  <h3>Right</h3>
+                  <table class="usa-table" style="width:100%;">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="width:30%">Utility class</th>
+                        <th scope="col">Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><th scope="row" class="">.right-auto</th><td>auto</td></tr>
+                      <tr><th scope="row" class="">.right-neg-3</th><td>-24px</td></tr>
+                      <tr><th scope="row" class="">.right-neg-205</th><td>-20px</td></tr>
+                      <tr><th scope="row" class="">.right-neg-2</th><td>-16px</td></tr>
+                      <tr><th scope="row" class="">.right-neg-105</th><td>-12px</td></tr>
+                      <tr><th scope="row" class="">.right-neg-1</th><td>-8px</td></tr>
+                      <tr><th scope="row" class="">.right-neg-05</th><td>-4px</td></tr>
+                      <tr><th scope="row" class="">.right-neg-2px</th><td>-2px</td></tr>
+                      <tr><th scope="row" class="">.right-neg-1px</th><td>-1px</td></tr>
+                      <tr><th scope="row" class="">.right-0</th><td>0</td></tr>
+                      <tr><th scope="row" class="">.right-1px</th><td>1px</td></tr>
+                      <tr><th scope="row" class="">.right-2px</th><td>2px</td></tr>
+                      <tr><th scope="row" class="">.right-05</th><td>4px</td></tr>
+                      <tr><th scope="row" class="">.right-1</th><td>8px</td></tr>
+                      <tr><th scope="row" class="">.right-105</th><td>12px</td></tr>
+                      <tr><th scope="row" class="">.right-2</th><td>16px</td></tr>
+                      <tr><th scope="row" class="">.right-205</th><td>20px</td></tr>
+                      <tr><th scope="row" class="">.right-3</th><td>24px</td></tr>
+                      <tr><th scope="row" class="">.right-full</th><td>100%</td></tr>
+                    </tbody>
+                  </table>
+
+                  <h4>Right - Example</h4>
+                  <div style="margin-top:1rem; display:flex; gap:1rem; flex-wrap:wrap; align-items:flex-start;">
+                    <div style="flex:1 1 240px; min-width:200px;">
+                      <div aria-hidden="true" style="display:flex; align-items:center; gap:0.5rem;">
+                        <div style="display:inline-block; width:56px; height:40px; background:#e9f5ff; border:1px solid #1b3f80; text-align:center; line-height:40px;">A</div>
+                        <div style="display:inline-block; width:56px; height:40px; background:#d0e7ff; border:1px solid #11325f; text-align:center; line-height:40px;">B</div>
+                      </div>
+                      <div class="font-mono-2xs" style="margin-top:0.5rem;">Second box has no relative positioning</div>
+                    </div>
+
+                    <div style="flex:1 1 240px; min-width:200px;">
+                      <div aria-hidden="true" style="display:flex; align-items:center; gap:0.5rem;">
+                        <div style="display:inline-block; width:56px; height:40px; background:#e9f5ff; border:1px solid #1b3f80; text-align:center; line-height:40px;">A</div>
+                        <div class="position-relative right-1" style="display:inline-block; width:56px; height:40px; background:#d0e7ff; border:1px solid #11325f; text-align:center; line-height:40px;">B</div>
+                      </div>
+                      <div class="font-mono-2xs" style="margin-top:0.5rem;">Second box uses <code>.position-relative .right-1</code></div>
+                    </div>
+                  </div>
+
+                  <h3>Bottom</h3>
+                  <table class="usa-table" style="width:100%;">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="width:30%">Utility class</th>
+                        <th scope="col">Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><th scope="row" class="">.bottom-auto</th><td>auto</td></tr>
+                      <tr><th scope="row" class="">.bottom-neg-3</th><td>-24px</td></tr>
+                      <tr><th scope="row" class="">.bottom-neg-205</th><td>-20px</td></tr>
+                      <tr><th scope="row" class="">.bottom-neg-2</th><td>-16px</td></tr>
+                      <tr><th scope="row" class="">.bottom-neg-105</th><td>-12px</td></tr>
+                      <tr><th scope="row" class="">.bottom-neg-1</th><td>-8px</td></tr>
+                      <tr><th scope="row" class="">.bottom-neg-05</th><td>-4px</td></tr>
+                      <tr><th scope="row" class="">.bottom-neg-2px</th><td>-2px</td></tr>
+                      <tr><th scope="row" class="">.bottom-neg-1px</th><td>-1px</td></tr>
+                      <tr><th scope="row" class="">.bottom-0</th><td>0</td></tr>
+                      <tr><th scope="row" class="">.bottom-1px</th><td>1px</td></tr>
+                      <tr><th scope="row" class="">.bottom-2px</th><td>2px</td></tr>
+                      <tr><th scope="row" class="">.bottom-05</th><td>4px</td></tr>
+                      <tr><th scope="row" class="">.bottom-1</th><td>8px</td></tr>
+                      <tr><th scope="row" class="">.bottom-105</th><td>12px</td></tr>
+                      <tr><th scope="row" class="">.bottom-2</th><td>16px</td></tr>
+                      <tr><th scope="row" class="">.bottom-205</th><td>20px</td></tr>
+                      <tr><th scope="row" class="">.bottom-3</th><td>24px</td></tr>
+                      <tr><th scope="row" class="">.bottom-full</th><td>100%</td></tr>
+                    </tbody>
+                  </table>
+
+                  <h4>Bottom - Example</h4>
+                  <div style="margin-top:1rem; display:flex; gap:1rem; flex-wrap:wrap; align-items:flex-start;">
+                    <div style="flex:1 1 240px; min-width:200px;">
+                      <div aria-hidden="true" style="display:flex; align-items:center; gap:0.5rem;">
+                        <div style="display:inline-block; width:56px; height:40px; background:#fff4e6; border:1px solid #b76a00; text-align:center; line-height:40px;">A</div>
+                        <div style="display:inline-block; width:56px; height:40px; background:#ffe7c8; border:1px solid #8b4e00; text-align:center; line-height:40px;">B</div>
+                      </div>
+                      <div class="font-mono-2xs" style="margin-top:0.5rem;">Second box has no relative positioning</div>
+                    </div>
+
+                    <div style="flex:1 1 240px; min-width:200px;">
+                      <div aria-hidden="true" style="display:flex; align-items:center; gap:0.5rem;">
+                        <div style="display:inline-block; width:56px; height:40px; background:#fff4e6; border:1px solid #b76a00; text-align:center; line-height:40px;">A</div>
+                        <div class="position-relative bottom-1" style="display:inline-block; width:56px; height:40px; background:#ffe7c8; border:1px solid #8b4e00; text-align:center; line-height:40px;">B</div>
+                      </div>
+                      <div class="font-mono-2xs" style="margin-top:0.5rem;">Second box uses <code>.position-relative .bottom-1</code></div>
+                    </div>
+                  </div>
+
+                  <h3>Left</h3>
+                  <table class="usa-table" style="width:100%;">
+                    <thead>
+                      <tr>
+                        <th scope="col" style="width:30%">Utility class</th>
+                        <th scope="col">Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><th scope="row" class="">.left-auto</th><td>auto</td></tr>
+                      <tr><th scope="row" class="">.left-neg-3</th><td>-24px</td></tr>
+                      <tr><th scope="row" class="">.left-neg-205</th><td>-20px</td></tr>
+                      <tr><th scope="row" class="">.left-neg-2</th><td>-16px</td></tr>
+                      <tr><th scope="row" class="">.left-neg-105</th><td>-12px</td></tr>
+                      <tr><th scope="row" class="">.left-neg-1</th><td>-8px</td></tr>
+                      <tr><th scope="row" class="">.left-neg-05</th><td>-4px</td></tr>
+                      <tr><th scope="row" class="">.left-neg-2px</th><td>-2px</td></tr>
+                      <tr><th scope="row" class="">.left-neg-1px</th><td>-1px</td></tr>
+                      <tr><th scope="row" class="">.left-0</th><td>0</td></tr>
+                      <tr><th scope="row" class="">.left-1px</th><td>1px</td></tr>
+                      <tr><th scope="row" class="">.left-2px</th><td>2px</td></tr>
+                      <tr><th scope="row" class="">.left-05</th><td>4px</td></tr>
+                      <tr><th scope="row" class="">.left-1</th><td>8px</td></tr>
+                      <tr><th scope="row" class="">.left-105</th><td>12px</td></tr>
+                      <tr><th scope="row" class="">.left-2</th><td>16px</td></tr>
+                      <tr><th scope="row" class="">.left-205</th><td>20px</td></tr>
+                      <tr><th scope="row" class="">.left-3</th><td>24px</td></tr>
+                      <tr><th scope="row" class="">.left-full</th><td>100%</td></tr>
+                    </tbody>
+                  </table>
+
+                  <h4>Left - Example</h4>
+                  <div style="margin-top:1rem; display:flex; gap:1rem; flex-wrap:wrap; align-items:flex-start;">
+                    <div style="flex:1 1 240px; min-width:200px;">
+                      <div aria-hidden="true" style="display:flex; align-items:center; gap:0.5rem;">
+                        <div style="display:inline-block; width:56px; height:40px; background:#f7e6ff; border:1px solid #6a1f66; text-align:center; line-height:40px;">A</div>
+                        <div style="display:inline-block; width:56px; height:40px; background:#ecd7ff; border:1px solid #4f1650; text-align:center; line-height:40px;">B</div>
+                      </div>
+                      <div class="font-mono-2xs" style="margin-top:0.5rem;">Second box has no relative positioning</div>
+                    </div>
+
+                    <div style="flex:1 1 240px; min-width:200px;">
+                      <div aria-hidden="true" style="display:flex; align-items:center; gap:0.5rem;">
+                        <div style="display:inline-block; width:56px; height:40px; background:#f7e6ff; border:1px solid #6a1f66; text-align:center; line-height:40px;">A</div>
+                        <div class="position-relative left-1" style="display:inline-block; width:56px; height:40px; background:#ecd7ff; border:1px solid #4f1650; text-align:center; line-height:40px;">B</div>
+                      </div>
+                      <div class="font-mono-2xs" style="margin-top:0.5rem;">Second box uses <code>.position-relative .left-1</code></div>
+                    </div>
+                  </div>
+
+                  <br>
+
+                  <h2>Absolute position</h2>
+                  <p>The element is removed from the normal document flow and creates no space for itself. It is positioned relative to
+                    its nearest "positioned" ancestor (one that is not static); if none exists, it is relative to the initial containing
+                    block (usually the body).</p>
+
+                  <h4>Example</h4>
+                  <div style="margin-top:1rem; display:flex; gap:1rem; flex-wrap:wrap; align-items:flex-start;">
+                    <div style="flex:1 1 240px; min-width:200px;">
+                      <div aria-hidden="true" class="position-relative" style="display:block; padding:0.5rem; border:1px dashed #ddd;">
+                        <div style="display:inline-block; width:56px; height:40px; background:#e6fffb; border:1px solid #0a8b8b; text-align:center; line-height:40px;">A</div>
+                        <div style="display:inline-block; width:56px; height:40px; background:#d1fff6; border:1px solid #067472; text-align:center; line-height:40px; margin-left:0.5rem;">B</div>
+                      </div>
+                      <div class="font-mono-2xs" style="margin-top:0.5rem;">Normal flow inside a positioned parent: the child remains in document flow and takes up space.</div>
+                    </div>
+
+                    <div style="flex:1 1 240px; min-width:200px;">
+                      <div aria-hidden="true" class="position-relative" style="display:block; padding:0.5rem; border:1px dashed #ddd; min-height:64px;">
+                        <div style="display:inline-block; width:56px; height:40px; background:#e6fffb; border:1px solid #0a8b8b; text-align:center; line-height:40px;">A</div>
+                        <div class="position-absolute top-1 right-1" style="display:inline-block; width:56px; height:40px; background:#d1fff6; border:1px solid #067472; text-align:center; line-height:40px;">B</div>
+                      </div>
+                      <div class="font-mono-2xs" style="margin-top:0.5rem;">Absolute child: <code>.position-absolute .top-1 .right-1</code> is removed from flow and positioned relative to the parent (which has <code>.position-relative</code>).</div>
+                    </div>
+                  </div>
+
+                  <br>
+
+                  <h2 id="fixed-position">Fixed position</h2>
+                  <p>The element is removed from the normal flow and pinned relative to the browser viewport. It stays in the same place
+                    even when the page is scrolled, which is common for navigation bars or "back to top" buttons.</p>
+
+                  <h4>Example</h4>
+                  <div style="margin-top:1rem; display:flex; gap:1rem; flex-wrap:wrap; align-items:flex-start;">
+                    <!-- Left: normal flow -->
+                    <div style="flex:1 1 320px; min-width:240px;">
+                      <div aria-hidden="true" style="display:flex; align-items:center; gap:0.5rem;">
+                        <div style="display:inline-block; width:56px; height:40px; background:#fffbe6; border:1px solid #b79a00; text-align:center; line-height:40px;">A</div>
+                        <div class="position-static" style="display:inline-block; width:56px; height:40px; background:#fff3c8; border:1px solid #8b6a00; text-align:center; line-height:40px;">B</div>
+                      </div>
+                      <div class="font-mono-2xs" style="margin-top:0.5rem;">Normal flow: both boxes are in the document flow and scroll with the page.</div>
+                    </div>
+
+                    <!-- Right: fixed element pinned to viewport -->
+                    <div style="flex:1 1 320px; min-width:240px; position:relative;">
+                      <div aria-hidden="true" style="display:block; padding:0.25rem; border:1px dashed #ddd; min-height:64px;">
+                        <div style="display:inline-block; width:56px; height:40px; background:#fffbe6; border:1px solid #b79a00; text-align:center; line-height:40px;">A</div>
+                        <!-- fixed element will be pinned to the viewport (top/right) -->
+                        <div class="position-fixed top-1 right-1" style="display:inline-block; width:56px; height:40px; background:#fff3c8; border:1px solid #8b6a00; text-align:center; line-height:40px; cursor: pointer;" onclick="document.getElementById('fixed-position').scrollIntoView({behavior:'smooth', block:'start'});">B</div>
+                      </div>
+                      <div class="font-mono-2xs" style="margin-top:0.5rem;">Fixed element: <code>.position-fixed .top-1 .right-1</code> is removed from flow and pinned to the viewport — it will remain visible while scrolling.</div>
+                    </div>
+                  </div>
+
+                  <br>
+
+                  <h2>Sticky position</h2>
+                  <p>A hybrid that toggles between relative and fixed based on the user's scroll position. It behaves like a relative
+                    element until it reaches a specified threshold (e.g., top: 0), at which point it "sticks" to that position within its
+                    parent container while scrolling.</p>
+
+                  <h4>Example</h4>
+                  <div style="margin-top:1rem; display:flex; gap:1rem; flex-wrap:wrap; align-items:flex-start;">
+                    <!-- Left: not-sticky in a scroll container -->
+                    <div style="flex:1 1 320px; min-width:240px;">
+                      <div aria-hidden="true" style="border:1px dashed #ddd; padding:0.5rem; height:160px; overflow:auto;">
+                        <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem;">
+                          <div style="display:inline-block; width:56px; height:40px; background:#fff3f3; border:1px solid #ae2b2b; text-align:center; line-height:40px;">A</div>
+                          <div style="display:inline-block; width:56px; height:40px; background:#ffecec; border:1px solid #9e2626; text-align:center; line-height:40px;">B</div>
+                        </div>
+                        <!-- filler to enable scrolling -->
+                        <div style="height:480px; background:repeating-linear-gradient(180deg, #ffffff 0 31px, rgba(0,0,0,0.1) 32px 33px);"></div>
+                      </div>
+                      <div class="font-mono-2xs" style="margin-top:0.5rem;">Not sticky: the small header scrolls out of view with the container's content.</div>
+                    </div>
+
+                    <!-- Right: sticky header inside the same-sized scroll container -->
+                    <div style="flex:1 1 320px; min-width:240px;">
+                      <div aria-hidden="true" style="border:1px dashed #ddd; padding:0.5rem; height:160px; overflow:auto;">
+                        <div class="position-sticky top-0" style="background:#fff3f3; padding:4px 6px; z-index:10;">
+                          <div style="display:flex; align-items:center; gap:0.5rem;">
+                            <div style="display:inline-block; width:56px; height:40px; background:#fff3f3; border:1px solid #ae2b2b; text-align:center; line-height:40px;">A</div>
+                            <div style="display:inline-block; width:56px; height:40px; background:#ffecec; border:1px solid #9e2626; text-align:center; line-height:40px;">B</div>
+                          </div>
+                        </div>
+                        <!-- filler to enable scrolling -->
+                        <div style="height:480px; background:repeating-linear-gradient(180deg, #ffffff 0 31px, rgba(0,0,0,0.1) 32px 33px);"></div>
+                      </div>
+                      <div class="font-mono-2xs" style="margin-top:0.5rem;">Sticky: <code>.position-sticky .top-0</code> will stick to the container's top edge as you scroll inside the container. When used in the page flow it will stick to the viewport when its container reaches the threshold.</div>
+                    </div>
+                  </div>
+
+                  <br>
+
+                  <h2>Utility classes</h2>
+              
+                  <table class="usa-table usa-table--borderless" style="width:100%;">
+                    <p>Utility classes may be included in your HTML or applied using Utility classes in your Sass.</p>
+                    <thead>
+                      <tr>
+                        <th scope="col">Utility</th>
+                        <th scope="col">Example</th>
+                        <th scope="col">Code</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>.position-<span class="usa-tag bg-secondary-lighter text-ink">value</span></td>
+                        <td>.position-absolute</td>
+                        <td>class=("position-absolute")</td>
+                      </tr>
+                      <tr>
+                        <td>.top-<span class="usa-tag bg-secondary-lighter text-ink">units</span></td>
+                        <td>.top-1</td>
+                        <td>class=("top-1")</td>
+                      </tr>
+                      <tr>
+                        <td>.right-<span class="usa-tag bg-secondary-lighter text-ink">units</span></td>
+                        <td>.right-1</td>
+                        <td>class=("right-1")</td>
+                      </tr>
+                      <tr>
+                        <td>.bottom-<span class="usa-tag bg-secondary-lighter text-ink">units</span></td>
+                        <td>.bottom-1</td>
+                        <td>class=("bottom-1")</td>
+                      </tr>
+                      <tr>
+                        <td>.left-<span class="usa-tag bg-secondary-lighter text-ink">units</span></td>
+                        <td>.left-1</td>
+                        <td>class=("left-1")</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                  <br>
+              
+                  <!-- Utility Classes Guidance -->
+                  <div class="usa-accordion">
+                    <h4 class="usa-accordion__heading">
+                      <button type="button" class="usa-accordion__button" aria-expanded="false" aria-controls="a1">Utility classes
+                        guidance
+                      </button>
+                    </h4>
+                    <div id="a1" class="usa-accordion__content usa-prose"></div>
+                      <ul style="line-height: 1.5;">
+                        <li>Use single-quoted strings in Utility classes.</li>
+                        <li>Do not quote numbers or px values. With the exception of half (<code>05</code>), values like
+                          <code>'105'</code>, and <code>'205'</code> should be treated as strings.</li>
+                        <li>String tokens for half values (like <code>05</code>) and negative values (like <code>neg-1</code>) may
+                          also be written with their unquoted number token equivalent: <code>0.5</code>, <code>1.5</code>,
+                          <code>2.5</code>, <code>-1</code>, <code>-1.5</code>, etc.</li>
+                        <li>If multiple utilities share the same prefix (ex: <code>.text-</code> or <code>.flex-</code>) or a single
+                          utility accepts multiple kinds of values (ex: <code>.border</code> accepts both border weight and border
+                          color), their shared mixin can accept multiple comma-separated values:
+                          <ul>
+                            <li><code>u-text('primary-darkest', 'no-underline', 'bold')</code></li>
+                            <li><code>u-border-top(2px, 'accent-warm')</code></li>
+                        <li>Output any utility mixin as <code>!important</code> by appending <code>!important</code> to the mixin’s
+                          argument list:</li>
+                        <ul>
+                          <li><code>u-bg('red-warm-50v', !important)</code></li>
+                        </ul>
+                      </ul>
+                    </div>
+                  </div>
+              
+                  <br>
+                  <hr>
+              
+                  <!-- Utility Variants -->
+                  <h2>Utility variants</h2>
+                  <p>
+                    More information about utility variants can be viewed on the <a class="usa-link" href="/fpac-website/pages/2-style-guide/utility-variants/utility-variants.html">utility variants</a> page.
+                    Responsive and state variants are listed as <span class="usa-tag bg-primary">true</span> when they are available for use.
+                  </p>
+
+                  <!-- Responsive variants -->
+                  <h3>Responsive variants</h3>
+                  <p>
+                    You can apply different styles at differentresponsive breakpoints using <a class="usa-link" href="/fpac-website/pages/2-style-guide/utility-variants/utility-variants.html#responsive-utilities">responsive utilities</a>.
+                    Use a breakpoint prefix separated with a <strong>:</strong> to target a utility at a responsive breakpoint and higher (eg. <code>.desktop:border-05</code>).
+                  </p>
+
+                    <table class="usa-table usa-table--borderless" style="width:100%;">
+                      <thead>
+                        <tr>
+                          <th style="width:60%;" scope="col">Utility variable</th>
+                          <th class="text-center" style="text-align: center;">Responsive</th>
+                        </tr>
+                      </thead>
+                      <tbody class="font-mono-2xs">
+                        <tr>
+                          <td scope="row">$font-style-settings</td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-disabled">false</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                
+                    <br>
+              
+                    <!-- State variants -->
+                    <h3>State variants</h3>
+                    <p>
+                      You can apply different styles for different state variants using <a class="usa-link" href="/fpac-website/pages/2-style-guide/utility-variants/utility-variants.html#state-utilities">state utilities</a>.
+                      Use a state prefix separated with a <strong>:</strong> to target a utility for a specific state. (eg. <code>.hover:shadow-2</code>).
+                    </p>
+                    
+                    <table class="usa-table usa-table--borderless" style="width:100%;">
+                      <thead>
+                        <tr>
+                          <th style="width:40%;" scope="col">Utility variable</th>
+                          <th class="text-center" style="text-align: center;">Active</th>
+                          <th class="text-center" style="text-align: center;">Focus</th>
+                          <th class="text-center" style="text-align: center;">Hover</th>
+                          <th class="text-center" style="text-align: center;">Visited</th>
+                        </tr>
+                      </thead>
+                      <tbody class="font-mono-2xs">
+                        <tr>
+                          <td scope="row">$font-style-settings</td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-disabled">false</span></td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-disabled">false</span></td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-disabled">false</span></td>
+                          <td class="text-center" style="text-align: center;"><span class="usa-tag bg-disabled">false</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                </main>
+              <!-- Main Content End -->
+
+            </div>
+          </div>
+        </div>
+      <!-- Body Content End -->
+      
+      <!-- Footer + Identifier Start -->
+        <footer class="usa-footer">
+
+        <!-- Return To Top link -->
+          <div class="grid-container usa-footer__return-to-top">
+            <a class="usa-link" href="" onclick="window.scrollTo({top: 0, left: 0, behavior: 'smooth'}); return false;">Return to top</a>
+          </div>
+
+        <!-- Footer Start -->
+          <div class="usa-footer__primary-section">
+            <nav class="usa-footer__nav" aria-label="Footer navigation">
+              <ul class="grid-row grid-gap-2">
+                <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link usa-link--external" href="https://www.usda.gov/about-usda/general-information/mission-areas" target="_blank" rel="noopener">USDA Mission Areas</a>
+                </li>
+                <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link usa-link--external" href="https://www.fpacbc.usda.gov/" target="_blank" rel="noopener">FPAC BC</a>
+                </li>
+                <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link usa-link--external" href="https://www.fsa.usda.gov/" target="_blank" rel="noopener">FSA</a>
+                </li>
+                <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link usa-link--external" href="https://www.nrcs.usda.gov/" target="_blank" rel="noopener">NRCS</a>
+                </li>
+                <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link usa-link--external" href="https://www.rma.usda.gov/" target="_blank" rel="noopener">RMA</a>
+                </li>
+                <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link usa-link--external" href="https://www.farmers.gov/" target="_blank" rel="noopener">Farmers.gov</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
+      <!-- Footer End-->
+
+      <!-- Identifier Start -->
+        <div class="usa-identifier">
+          
+        <!-- USDA Logo -->
+        <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
+          <div class="usa-identifier__container">
+            <div class="usa-identifier__logos">
+              <a href="https://www.usda.gov/" class="usa-identifier__logo"
+                ><img
+                  class="usa-identifier__logo-img"
+                  src="/fpac-website/images/usda-logo/usda-v2-lockup/white/usda-v2-white-lockup.svg"
+                  alt="USDA logo"
+                  role="img">
+              </a>
+            </div>
+          </div>
+        </section>
+
+          <!-- Identifier Links -->
+            <nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links">
+              <div class="usa-identifier__container"></div>
+                <ul class="usa-identifier__required-links-list">
+                  <li class="usa-identifier__required-links-item">
+                    <a href="https://www.usda.gov/about-usda/general-information/our-agency"
+                    class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">About USDA</a>
+                  </li>
+                  <li class="usa-identifier__required-links-item">
+                    <a href="https://www.usda.gov/accessibility-statement"
+                    class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">Accessibility Statement</a>
+                  </li>
+                  <li class="usa-identifier__required-links-item">
+                    <a href="https://www.usda.gov/ogc/office-information-affairs/foia-division"
+                    class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">FOIA requests</a>
+                  </li>
+                  <li class="usa-identifier__required-links-item"></li>
+                    <a href="https://www.usda.gov/nofear"
+                    class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">No FEAR Act data</a>
+                  </li>
+                  <li class="usa-identifier__required-links-item"></li>
+                    <a href="https://usdaoig.oversight.gov/"
+                    class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">Office of the Inspector General</a>
+                  </li>
+                  <li class="usa-identifier__required-links-item">
+                    <a href="https://www.usda.gov/about-usda/general-information/our-performance"
+                    class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">Performance reports</a>
+                  </li>
+                  <li class="usa-identifier__required-links-item">
+                    <a href="https://www.usda.gov/privacy-policy"
+                    class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">Privacy policy</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+          <!-- Visit USA.gov -->
+            <section
+              class="usa-identifier__section usa-identifier__section--usagov"
+              aria-label="U.S. government information and services">
+              <div class="usa-identifier__container">
+                <div class="usa-identifier__usagov-description">
+                  Looking for U.S. government information and services?
+                </div>
+                <a href="https://www.usa.gov/" class="usa-link--external" target="_blank" rel="noopener">Visit USA.gov</a>
+              </div>
+            </section>
+        </div>
+      <!-- Identifier End -->
+
+    </body>
+  <!-- Body End -->
+
+
+  <!-- Scripts
+  ================================================== -->
+  <script src="/dist/uswds/js/uswds.min.js"></script>
+
+</html>

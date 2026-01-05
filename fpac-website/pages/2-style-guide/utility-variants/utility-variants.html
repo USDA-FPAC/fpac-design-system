@@ -1,41 +1,43 @@
 <html lang="en">
   <!-- Head Start -->
     <head>
-      <!-- Basic Page Needs
-      ================================================== -->
-      <!-- Set character encoding so that all characters within the UTF-8 space (such as emoji) render correctly. -->
-      <meta charset="utf-8">
-      
-      <!-- Force IE 8/9/10 to use its latest rendering engine -->
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      
-      <!-- Set the viewport width to device width for mobile -->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Basic Page Needs
+    ================================================== -->
+    <!-- Set character encoding so that all characters within the UTF-8 space (such as emoji) render correctly. -->
+    <meta charset="utf-8">
+    
+    <!-- Force IE 8/9/10 to use its latest rendering engine -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <!-- Base URL
-      ================================================== -->
-      <!-- Set the base URL for all relative URLs within the document
-      <base href="https://example.com/page.html"> -->
+    <!-- Base URL
+    ================================================== -->
+    <!-- Set the base URL for all relative URLs within the document
+    <base href="/fpac-website/"> -->
 
-      <!-- Page Title
-      ================================================== -->
-      <title>Utility Variants | FPAC DS</title>
+    <!-- Page Title
+    ================================================== -->
+    <title>Utility variants | FPAC DS</title>
 
-      <!-- Favicon
-      ================================================== -->
-      <!-- Light and dark mode favicons -->
-      <link rel="icon" href="/fpac/images/usda-logo/USDA favicon/usda-favicon-color.png" type="image/x-icon" media="(prefers-color-scheme: light)">
-      <link rel="icon" href="/fpac/images/usda-logo/USDA favicon/usda-favicon-white.png" type="image/x-icon" media="(prefers-color-scheme: dark)">
+    <!-- Favicon
+    ================================================== -->
+    <!-- Light and dark mode favicons -->
+    <link rel="icon" href="/fpac-website/images/usda-logo/usda-favicon/usda-favicon-color.png" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/fpac-website/images/usda-logo/usda-favicon/usda-favicon-white.png" type="image/x-icon" media="(prefers-color-scheme: dark)">
 
-      <!-- CSS Links
-      ================================================== -->
-      <link rel="stylesheet" href="/dist/fpac-style/styles/fpac-design-system.css">
-      <link rel="stylesheet" href="/dist/fpac-website/styles/fpac-documentation-website.css">
+    <!-- CSS Links
+    ================================================== -->
+    <link rel="stylesheet" href="/dist/fpac-design-system.css">
+    <link rel="stylesheet" href="/fpac-website/styles/fpac-documentation-website.css">
 
-      <!-- USWDS INIT
-      ================================================== -->
-      <script src="/dist/uswds/js/uswds-init.min.js" type="module"></script>
-      <link rel="preload" href="/dist/uswds/js/uswds.min.js" as="script">
+    <!-- USWDS INIT
+    ================================================== -->
+    <script src="/dist/uswds/js/uswds-init.min.js" type="module"></script>
+    <link rel="preload" href="/dist/uswds/js/uswds.min.js" as="script">
+    
+  </head>
       
     </head>
   <!-- Head End -->
@@ -100,19 +102,16 @@
           <div class="usa-nav-container">
             
             <div class="usa-navbar">
-              <!-- USDA Logo -->
-              <div class="usa-logo">
+
+            <!-- USDA Logo -->
+            <div class="usa-logo">
               <div class="grid-container">
                 <div style="display: inline-flex; align-items: center;">
-                <a href="/fpac-website/pages/home.html" title="USDA Logo">
-                  <img src="/dist/fpac-style/images/usda-logo/usda-logo/color/usda-logo-color.svg" style="width: 50px; min-width: 50px; margin-right: 8px;" alt="USDA Logo"/>
-                </a>
-                <a href="/fpac-website/pages/home.html" title="Website title" style="white-space: nowrap;">
-                  <strong>FPAC Design System</strong>
-                </a>
+                  <a href="/fpac-website/pages/home.html" title="USDA Logo"><img src="/fpac-website/images/usda-logo/usda-logo/color/usda-logo-color.svg" style="width: 50px; min-width: 50px; margin-right: 8px;" alt="USDA Logo"/></a>
+                  <a href="/fpac-website/pages/home.html" title="Website title" style="white-space: nowrap;"><strong>FPAC Design System</strong></a>
                 </div>
               </div>
-              </div>
+            </div>
 
               <!-- Mobile menu button -->
               <button type="button" class="usa-menu-btn">Menu</button>
@@ -145,28 +144,23 @@
 
                     <!-- Component Library -->
                     <li class="usa-nav__primary-item">
-                      <button type="button" class="usa-accordion__button usa-nav__link font-sans-xs" aria-expanded="false" aria-controls="basic-nav-section-two">
+                      <button type="button" class="usa-accordion__button usa-nav__link font-sans-xs " aria-expanded="false" aria-controls="basic-nav-section-two">
                         <span class="font-sans-xs" style="white-space: nowrap;">Component Library</span>
                       </button>
                       <ul id="basic-nav-section-two" class="usa-nav__submenu font-sans-xs">
                         <li class="usa-nav__submenu-item">
-                          <a href="/fpac-website/pages/3-component-library/component-library.html">
-                            <span>All sections</span>
+                          <a href="/fpac-website/pages/3-component-library/components/component-library.html">
+                            <span>Components</span>
                           </a>
                         </li>
                         <li class="usa-nav__submenu-item">
-                          <a href="/fpac-website/pages/3-component-library/component-library.html#components-2">
-                            <span class="margin-left-2">Components</span>
+                          <a href="/fpac-website/pages/3-component-library/patterns/pattern-library.html">
+                            <span>Patterns</span>
                           </a>
                         </li>
                         <li class="usa-nav__submenu-item">
-                          <a href="/fpac-website/pages/3-component-library/component-library.html#patterns-2">
-                            <span class="margin-left-2">Patterns</span>
-                          </a>
-                        </li>
-                        <li class="usa-nav__submenu-item">
-                          <a href="/fpac-website/pages/3-component-library/component-library.html#templates-2">
-                            <span class="margin-left-2">Templates</span>
+                          <a href="/fpac-website/pages/3-component-library/templates/template-library.html">
+                            <span>Templates</span>
                           </a>
                         </li>
                       </ul>
@@ -214,44 +208,95 @@
                         <!-- Visual Style -->                   
                         <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Visual style</strong></a>
                           <ul class="usa-sidenav__sublist">
+                            <a href="/fpac-website/pages/2-style-guide/visual-style/color/background-color.html">Background color</a>
                             <a href="/fpac-website/pages/2-style-guide/visual-style/border.html">Border</a>
                             <a href="/fpac-website/pages/2-style-guide/visual-style/outline.html">Outline</a>
-                            <a href="/fpac-website/pages/2-style-guide/visual-style/color.html">Color</a>
                             <a href="/fpac-website/pages/2-style-guide/visual-style/opacity.html">Opacity</a>
                             <a href="/fpac-website/pages/2-style-guide/visual-style/shadow.html">Shadow</a>
                           </ul>
                         </li>
 
                         <!-- Layout -->
-                        <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Layout</strong></a>
-                          <ul class="usa-sidenav__sublist">
-                            <a href="/fpac-website/pages/2-style-guide/layout/layout-grid.html">Layout grid</a>
-                            <a href="/fpac-website/pages/2-style-guide/layout/flexbox.html">Flexbox</a>
-                            <a href="/fpac-website/pages/2-style-guide/layout/shape.html">Shape</a>
-                            <a href="/fpac-website/pages/2-style-guide/layout/spacing.html">Spacing</a>                      
-                            <a href="/fpac-website/pages/2-style-guide/layout/position.html">Position</a>
-                            <a href="/fpac-website/pages/2-style-guide/layout/float.html">Float</a>                      
-                            <a href="/fpac-website/pages/2-style-guide/layout/order.html">Order</a>
-                            <a href="/fpac-website/pages/2-style-guide/layout/z-index.html">Z-index</a>
-                          </ul>
-                        </li>
+                         
+                          <!-- Layout -->
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Layout</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/layout/layout-grid.html">Layout grid</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/layout/flexbox.html">Flexbox</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/layout/display.html">Display</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/layout/order.html">Order</a>
+                            </ul>
+                          </li>
+
+                          <!-- Box sizing subgroup -->
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Box sizing</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/box-sizing/shape.html">Shape</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/box-sizing/height-width.html">Height + width</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/box-sizing/margin-padding.html">Margin + padding</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/box-sizing/overflow.html">Overflow</a>
+                            </ul>
+                          </li>
+
+                          <!-- Positioning subgroup -->
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Positioning</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/positioning/position.html">Position</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/positioning/pin.html">Pin</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/positioning/float.html">Float</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/positioning/z-index.html">Z-index</a>
+                            </ul>
+                          </li>
 
                         <!-- Typography -->
-                        <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Typography</strong></a>
-                          <ul class="usa-sidenav__sublist">
-                            <a href="/fpac/pages/2-style-guide/typography/typesetting.html">Typesetting</a>
-                            <a href="/fpac/pages/2-style-guide/typography/font-styles.html">Font Styles</a>
-                            <a href="/fpac/pages/2-style-guide/typography/text-styles.html">Text Styles</a>
-                            <a href="/fpac/pages/2-style-guide/typography/paragraph-styles.html">Paragraph Styles</a>
-                            <a href="/fpac/pages/2-style-guide/typography/list-reset.html">List reset</a>
-                          </ul>
-                        </li>
+
+                          <!-- Font -->                         
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Font</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/typography/font/family.html">Family</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/font/size.html">Size</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/font/weight.html">Weight</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/font/italic.html">Italic</a>
+                            </ul>
+                          </li>
+
+                          <!-- Text -->
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Text</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/underline.html">Underline</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/strikethrough.html">Strikethrough</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/text-color.html">Text color</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/case.html">Text case</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/letterspacing.html">Letterspacing</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/vertical-alignment.html">Vertical alignment</a>
+                            </ul>
+                          </li>
+
+                          <!-- Paragraph -->  
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Paragraph</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/typography/paragraph/line-height.html">Line height</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/paragraph/line-length.html">Line length</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/paragraph/indentation.html">Indentation</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/paragraph/alignment.html">Alignment</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/paragraph/whitespace.html">Whitespace</a>
+                            </ul>
+                          </li>
+
+                          <!-- Advanced -->
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Advanced</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/typography/advanced/spacing-units.html">Spacing units</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/advanced/tabular-numerals.html">Tabular numerals</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/advanced/list-reset.html">List reset</a>
+                            </ul>
+                          </li>
 
                         <!-- Images -->
                         <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Images</strong></a>
                           <ul class="usa-sidenav__sublist">
-                            <a href="/fpac/pages/2-style-guide/images/logos.html">Logos</a>
-                            <a href="/fpac/pages/2-style-guide/images/icons.html">Icons</a>
+                            <a href="/fpac-website/pages/2-style-guide/images/logos.html">Logos</a>
+                            <a href="/fpac-website/pages/2-style-guide/images/icons.html">Icons</a>
                           </ul>
                         </li>
 
@@ -266,6 +311,7 @@
                   </nav>
                 </div>
               <!-- Side Navigation Menu End -->
+
 
               <!-- In-page Navigation Start -->
                 <aside
@@ -307,7 +353,7 @@
                 <!-- Intro -->
               
                 <h1 class="usa-page-title grid-col-fill">Utility variants</h1>
-                <p class="usa-intro">Utility variants allow you to modify how utility classes behave based on different screen sizes (responsive utilities) or user interactions (state utilities).</p>
+                <p class="usa-intro">Modify how utility classes behave based on different screen sizes (responsive utilities) or user interactions (state utilities)</p>
                 <br>
                 <hr>
               
@@ -418,23 +464,23 @@
                   </thead>
                   <tbody class="font-mono-2xs">
                     <tr>
-                      <td scope="row">$border-settings.responsive</td>
+                      <td scope="row">$border-settings</td>
                       <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
                     </tr>
                     <tr>
-                      <td scope="row">$border-style-settings.responsive</td>
+                      <td scope="row">$border-style-settings</td>
                       <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
                     </tr>
                     <tr>
-                      <td scope="row">$border-width-settings.responsive</td>
+                      <td scope="row">$border-width-settings</td>
                       <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
                     </tr>
                     <tr>
-                      <td scope="row">$border-color-settings.responsive</td>
+                      <td scope="row">$border-color-settings</td>
                       <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
                     </tr>
                     <tr>
-                      <td scope="row">$border-radius-settings.responsive</td>
+                      <td scope="row">$border-radius-settings</td>
                       <td class="text-center" style="text-align: center;"><span class="usa-tag bg-primary">true</span></td>
                     </tr>
                   </tbody>
@@ -540,7 +586,7 @@
 
         <!-- Return To Top link -->
           <div class="grid-container usa-footer__return-to-top">
-            <a href="" style="color: #4D8157;" onclick="window.scrollTo({top: 0, left: 0, behavior: 'smooth'}); return false;">Return to top</a>
+            <a class="usa-link" href="" onclick="window.scrollTo({top: 0, left: 0, behavior: 'smooth'}); return false;">Return to top</a>
           </div>
 
         <!-- Footer Start -->
@@ -574,20 +620,20 @@
       <!-- Identifier Start -->
         <div class="usa-identifier">
           
-          <!-- USDA Logo -->
-            <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
-              <div class="usa-identifier__container">
-                <div class="usa-identifier__logos">
-                  <a href="https://www.usda.gov/" class="usa-identifier__logo"
-                    ><img
-                      class="usa-identifier__logo-img"
-                      src="\dist\fpac-style\images\usda-logo\usda-v2-lockup\white\usda-v2-white-lockup.svg"
-                      alt="USDA logo"
-                      role="img">
-                  </a>
-                </div>
-              </div>
-            </section>
+        <!-- USDA Logo -->
+        <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
+          <div class="usa-identifier__container">
+            <div class="usa-identifier__logos">
+              <a href="https://www.usda.gov/" class="usa-identifier__logo"
+                ><img
+                  class="usa-identifier__logo-img"
+                  src="/fpac-website/images/usda-logo/usda-v2-lockup/white/usda-v2-white-lockup.svg"
+                  alt="USDA logo"
+                  role="img">
+              </a>
+            </div>
+          </div>
+        </section>
 
           <!-- Identifier Links -->
             <nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links">

@@ -4,5 +4,5 @@
 
  /* Override the hero image styles */
 .usa-hero {
-  background-image: url("/dist/fpac-style/images/hero/farmersgov-1440x540-finlitmo-hero.jpg") !important;
+  background-image: url("../images/hero/farmersgov-1440x540-finlitmo-hero.jpg") !important;
 }

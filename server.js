@@ -7,9 +7,14 @@ const port = 3000;
 // Serve static files from the 'fpac' directory
 app.use(express.static(path.join(__dirname, './')));
 
+// Redirect root URL to the documentation homepage
+app.get('/', (req, res) => {
+    res.redirect('/fpac-website/pages/home.html');
+});
+
 // Start the server
 app.listen(port, () => {
-    console.log(`Server is running at http://localhost:${port}/fpac-website/pages/home.html`);
+    console.log(`Server is running at http://localhost:${port}`);
 });
 
 // Handle 404 errors

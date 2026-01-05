@@ -12,30 +12,32 @@
       <!-- Set the viewport width to device width for mobile -->
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <!-- Base URL
-      ================================================== -->
-      <!-- Set the base URL for all relative URLs within the document
-      <base href="https://example.com/page.html"> -->
+    <!-- Base URL
+    ================================================== -->
+    <!-- Set the base URL for all relative URLs within the document
+    <base href="/fpac-website/"> -->
 
-      <!-- Page Title
-      ================================================== -->
-      <title>Style Guide | FPAC DS</title>
+    <!-- Page Title
+    ================================================== -->
+    <title>Style Guide | FPAC DS</title>
 
-      <!-- Favicon
-      ================================================== -->
-      <!-- Light and dark mode favicons -->
-      <link rel="icon" href="/fpac/images/usda-logo/USDA favicon/usda-favicon-color.png" type="image/x-icon" media="(prefers-color-scheme: light)">
-      <link rel="icon" href="/fpac/images/usda-logo/USDA favicon/usda-favicon-white.png" type="image/x-icon" media="(prefers-color-scheme: dark)">
+    <!-- Favicon
+    ================================================== -->
+    <!-- Light and dark mode favicons -->
+    <link rel="icon" href="/fpac-website/images/usda-logo/usda-favicon/usda-favicon-color.png" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/fpac-website/images/usda-logo/usda-favicon/usda-favicon-white.png" type="image/x-icon" media="(prefers-color-scheme: dark)">
 
-      <!-- CSS Links
-      ================================================== -->
-      <link rel="stylesheet" href="/dist/fpac-style/styles/fpac-design-system.css">
-      <link rel="stylesheet" href="/dist/fpac-website/styles/fpac-documentation-website.css">
+    <!-- CSS Links
+    ================================================== -->
+    <link rel="stylesheet" href="/dist/fpac-design-system.css">
+    <link rel="stylesheet" href="/fpac-website/styles/fpac-documentation-website.css">
 
-      <!-- USWDS INIT
-      ================================================== -->
-      <script src="/dist/uswds/js/uswds-init.min.js" type="module"></script>
-      <link rel="preload" href="/dist/uswds/js/uswds.min.js" as="script">
+    <!-- USWDS INIT
+    ================================================== -->
+    <script src="/dist/uswds/js/uswds-init.min.js" type="module"></script>
+    <link rel="preload" href="/dist/uswds/js/uswds.min.js" as="script">
+    
+  </head>
       
     </head>
   <!-- Head End -->
@@ -100,19 +102,16 @@
           <div class="usa-nav-container">
             
             <div class="usa-navbar">
-              <!-- USDA Logo -->
-              <div class="usa-logo">
+
+            <!-- USDA Logo -->
+            <div class="usa-logo">
               <div class="grid-container">
                 <div style="display: inline-flex; align-items: center;">
-                <a href="/fpac-website/pages/home.html" title="USDA Logo">
-                  <img src="/dist/fpac-style/images/usda-logo/usda-logo/color/usda-logo-color.svg" style="width: 50px; min-width: 50px; margin-right: 8px;" alt="USDA Logo"/>
-                </a>
-                <a href="/fpac-website/pages/home.html" title="Website title" style="white-space: nowrap;">
-                  <strong>FPAC Design System</strong>
-                </a>
+                  <a href="/fpac-website/pages/home.html" title="USDA Logo"><img src="/fpac-website/images/usda-logo/usda-logo/color/usda-logo-color.svg" style="width: 50px; min-width: 50px; margin-right: 8px;" alt="USDA Logo"/></a>
+                  <a href="/fpac-website/pages/home.html" title="Website title" style="white-space: nowrap;"><strong>FPAC Design System</strong></a>
                 </div>
               </div>
-              </div>
+            </div>
 
               <!-- Mobile menu button -->
               <button type="button" class="usa-menu-btn">Menu</button>
@@ -150,23 +149,18 @@
                       </button>
                       <ul id="basic-nav-section-two" class="usa-nav__submenu font-sans-xs">
                         <li class="usa-nav__submenu-item">
-                          <a href="/fpac-website/pages/3-component-library/component-library.html">
-                            <span>All sections</span>
+                          <a href="/fpac-website/pages/3-component-library/components/component-library.html">
+                            <span>Components</span>
                           </a>
                         </li>
                         <li class="usa-nav__submenu-item">
-                          <a href="/fpac-website/pages/3-component-library/component-library.html#components-2">
-                            <span class="margin-left-2">Components</span>
+                          <a href="/fpac-website/pages/3-component-library/patterns/pattern-library.html">
+                            <span>Patterns</span>
                           </a>
                         </li>
                         <li class="usa-nav__submenu-item">
-                          <a href="/fpac-website/pages/3-component-library/component-library.html#patterns-2">
-                            <span class="margin-left-2">Patterns</span>
-                          </a>
-                        </li>
-                        <li class="usa-nav__submenu-item">
-                          <a href="/fpac-website/pages/3-component-library/component-library.html#templates-2">
-                            <span class="margin-left-2">Templates</span>
+                          <a href="/fpac-website/pages/3-component-library/templates/template-library.html">
+                            <span>Templates</span>
                           </a>
                         </li>
                       </ul>
@@ -214,49 +208,101 @@
                         <!-- Visual Style -->                   
                         <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Visual style</strong></a>
                           <ul class="usa-sidenav__sublist">
+                            <a href="/fpac-website/pages/2-style-guide/visual-style/color/background-color.html">Background color</a>
                             <a href="/fpac-website/pages/2-style-guide/visual-style/border.html">Border</a>
                             <a href="/fpac-website/pages/2-style-guide/visual-style/outline.html">Outline</a>
-                            <a href="/fpac-website/pages/2-style-guide/visual-style/color.html">Color</a>
                             <a href="/fpac-website/pages/2-style-guide/visual-style/opacity.html">Opacity</a>
                             <a href="/fpac-website/pages/2-style-guide/visual-style/shadow.html">Shadow</a>
                           </ul>
                         </li>
 
                         <!-- Layout -->
-                        <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Layout</strong></a>
-                          <ul class="usa-sidenav__sublist">
-                            <a href="/fpac-website/pages/2-style-guide/layout/layout-grid.html">Layout grid</a>
-                            <a href="/fpac-website/pages/2-style-guide/layout/flexbox.html">Flexbox</a>
-                            <a href="/fpac-website/pages/2-style-guide/layout/shape.html">Shape</a>
-                            <a href="/fpac-website/pages/2-style-guide/layout/spacing.html">Spacing</a>                      
-                            <a href="/fpac-website/pages/2-style-guide/layout/position.html">Position</a>
-                            <a href="/fpac-website/pages/2-style-guide/layout/float.html">Float</a>                      
-                            <a href="/fpac-website/pages/2-style-guide/layout/order.html">Order</a>
-                            <a href="/fpac-website/pages/2-style-guide/layout/z-index.html">Z-index</a>
-                          </ul>
-                        </li>
+                         
+                          <!-- Layout -->
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Layout</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/layout/layout-grid.html">Layout grid</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/layout/flexbox.html">Flexbox</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/layout/display.html">Display</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/layout/order.html">Order</a>
+                            </ul>
+                          </li>
 
+                          <!-- Box sizing subgroup -->
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Box sizing</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/box-sizing/shape.html">Shape</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/box-sizing/height-width.html">Height + width</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/box-sizing/margin-padding.html">Margin + padding</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/box-sizing/overflow.html">Overflow</a>
+                            </ul>
+                          </li>
+
+                          <!-- Positioning subgroup -->
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Positioning</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/positioning/position.html">Position</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/positioning/pin.html">Pin</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/positioning/float.html">Float</a>
+                              <a href="/fpac-website/pages/2-style-guide/layout-system/positioning/z-index.html">Z-index</a>
+                            </ul>
+                          </li>
                         <!-- Typography -->
-                        <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Typography</strong></a>
-                          <ul class="usa-sidenav__sublist">
-                            <a href="/fpac/pages/2-style-guide/typography/typesetting.html">Typesetting</a>
-                            <a href="/fpac/pages/2-style-guide/typography/font-styles.html">Font Styles</a>
-                            <a href="/fpac/pages/2-style-guide/typography/text-styles.html">Text Styles</a>
-                            <a href="/fpac/pages/2-style-guide/typography/paragraph-styles.html">Paragraph Styles</a>
-                            <a href="/fpac/pages/2-style-guide/typography/list-reset.html">List reset</a>
-                          </ul>
-                        </li>
+
+                          <!-- Font -->                         
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Font</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/typography/font/family.html">Family</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/font/size.html">Size</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/font/weight.html">Weight</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/font/italic.html">Italic</a>
+                            </ul>
+                          </li>
+
+                          <!-- Text -->
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Text</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/underline.html">Underline</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/strikethrough.html">Strikethrough</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/text-color.html">Text color</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/case.html">Text case</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/letterspacing.html">Letterspacing</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/text/vertical-alignment.html">Vertical alignment</a>
+                            </ul>
+                          </li>
+
+                          <!-- Paragraph -->  
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Paragraph</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/typography/paragraph/line-height.html">Line height</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/paragraph/line-length.html">Line length</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/paragraph/indentation.html">Indentation</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/paragraph/alignment.html">Alignment</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/paragraph/whitespace.html">Whitespace</a>
+                            </ul>
+                          </li>
+
+                          <!-- Advanced -->
+                          <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Advanced</strong></a>
+                            <ul class="usa-sidenav__sublist">
+                              <a href="/fpac-website/pages/2-style-guide/typography/advanced/spacing-units.html">Spacing units</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/advanced/tabular-numerals.html">Tabular numerals</a>
+                              <a href="/fpac-website/pages/2-style-guide/typography/advanced/list-reset.html">List reset</a>
+                            </ul>
+                          </li>
 
                         <!-- Images -->
                         <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Images</strong></a>
                           <ul class="usa-sidenav__sublist">
-                            <a href="/fpac/pages/2-style-guide/images/logos.html">Logos</a>
-                            <a href="/fpac/pages/2-style-guide/images/icons.html">Icons</a>
+                            <a href="/fpac-website/pages/2-style-guide/images/logos.html">Logos</a>
+                            <a href="/fpac-website/pages/2-style-guide/images/icons.html">Icons</a>
                           </ul>
                         </li>
 
                         <!-- Utility Variants -->
-                        <li class="usa-sidenav__item"><a href="/fpac-website/pages/2-style-guide/utility-variants/utility-variants.html"><em>Utility variants</em></a></li>
+                        <li class="usa-sidenav__item">
+                          <a href="/fpac-website/pages/2-style-guide/utility-variants/utility-variants.html"><em>Utility variants</em></a>
+                        </li>
                       
                       </li>
 
@@ -264,6 +310,7 @@
                   </nav>
                 </div>
               <!-- Side Navigation Menu End -->
+
 
               <!-- In-page Navigation Start -->
                 <aside
@@ -311,34 +358,78 @@
                     </p>
                     <p class="usa-intro">
                       Adherence to these standards will ensure a consistent look and feel
-                      across the FPAC portfolio. This will improve the user experience by making
+                      across the FPAC portfolio that will improve the user experience by making
                       it easier for users to navigate and locate the information they need to do their job.
                     </p>
 
                     <h2>Style Areas</h2>
+                      <p class="text-bold">Visual styles</p>
                       <ul>
                         <li>
-                          <a onclick="document.getElementById('visual-style').scrollIntoView({ behavior: 'smooth' }); return false;" href="#visual-style" class="usa-link">
-                          <strong>Visual style</strong></a> covers the visual appearance and effects of elements.
-                        </li>
-                        <li>
-                          <a onclick="document.getElementById('layout').scrollIntoView({ behavior: 'smooth' }); return false;" href="#layout" class="usa-link">
-                          <strong>Layout</strong></a> focuses on the structure and arrangement of content.
-                        </li>
-                        <li>
-                          <a onclick="document.getElementById('typography').scrollIntoView({ behavior: 'smooth' }); return false;" href="#typography" class="usa-link">
-                          <strong>Typography</strong></a> defines text presentation and hierarchy.
-                        </li>
-                        <li>
-                          <a onclick="document.getElementById('images').scrollIntoView({ behavior: 'smooth' }); return false;" href="#images" class="usa-link">
-                          <strong>Images</strong></a> provides guidance for using graphical assets.
-                        </li>
-                        <li>
-                          <a onclick="document.getElementById('utility-variants').scrollIntoView({ behavior: 'smooth' }); return false;" href="#utility-variants" class="usa-link">
-                          <strong>Utility variants</strong></a> explains utility classes for customization and responsiveness.
+                          <a onclick="document.getElementById('visual-style').scrollIntoView({ behavior: 'smooth' }); return false;"
+                            href="#visual-style" class="usa-link">
+                            <strong>Visual styles</strong></a> includes background color, border, outline, opacity, and shadow.
                         </li>
                       </ul>
-                  </section>
+                      <p class="text-bold">Layout</p>
+                      <ul>
+                        <li>
+                          <a onclick="document.getElementById('layout').scrollIntoView({ behavior: 'smooth' }); return false;"
+                            href="#layout" class="usa-link">
+                            <strong>Layout styles</strong></a> includes layout grid, flexbox, display, and order.
+                        </li>
+                        <li>
+                          <a onclick="document.getElementById('box-sizing').scrollIntoView({ behavior: 'smooth' }); return false;"
+                            href="#box-sizing" class="usa-link">
+                            <strong>Box sizing</strong></a> includes shape, height + width, margin + padding, and overflow.
+                        </li>
+                        <li>
+                          <a onclick="document.getElementById('positioning').scrollIntoView({ behavior: 'smooth' }); return false;"
+                            href="#positioning" class="usa-link">
+                            <strong>Positioning</strong></a> includes position, pin, float, and z-index.
+                        </li>
+                      </ul>
+                      <p class="text-bold">Typography</p>
+                      <ul>
+                        <li>
+                          <a onclick="document.getElementById('font-styles').scrollIntoView({ behavior: 'smooth' }); return false;"
+                            href="#font-styles" class="usa-link">
+                            <strong>Font styles</strong></a> includes font family, size, weight, and italic.
+                        </li>
+                        <li>
+                          <a onclick="document.getElementById('text-styles').scrollIntoView({ behavior: 'smooth' }); return false;"
+                            href="#text-styles" class="usa-link">
+                            <strong>Text styles</strong></a> includes underline, strikethrough, color, case, letter spacing, and vertical alignment.
+                        </li>
+                        <li>
+                          <a onclick="document.getElementById('paragraph-styles').scrollIntoView({ behavior: 'smooth' }); return false;"
+                            href="#paragraph-styles" class="usa-link">
+                            <strong>Paragraph styles</strong></a> includes line height, line length, indentation, and paragraph alignment.
+                        </li>
+                        <li>
+                          <a onclick="document.getElementById('advanced-styles').scrollIntoView({ behavior: 'smooth' }); return false;"
+                            href="#advanced-styles" class="usa-link">
+                            <strong>Advanced styles</strong></a> includes spacing units, tabular numerals, and list reset.
+                        </li>
+                      </ul>
+                      <p class="text-bold">Images</p>
+                      <ul>
+                        <li>
+                          <a onclick="document.getElementById('images').scrollIntoView({ behavior: 'smooth' }); return false;"
+                            href="#images" class="usa-link">
+                            <strong>Images</strong></a> includes guidance for using graphical assets, logos, and icons.
+                        </li>
+                      </ul>
+                      <p class="text-bold">Utility variants</p>
+                      <ul>
+                        <li>
+                          <a onclick="document.getElementById('utility-variants').scrollIntoView({ behavior: 'smooth' }); return false;"
+                            href="#utility-variants" class="usa-link">
+                            <strong>Utility variants</strong></a> explains utility classes for customization and responsiveness.
+                        </li>
+                      </ul>
+                    </section>
+                  
                   <!-- Intro End -->
 
                   <br>
@@ -358,304 +449,565 @@
                     <h2>Style Elements</h2>
 
                     <!-- Visual Style Card Group-->
-                    <h3 class="padding-bottom-2">Visual style</h3>
+                    <h3 id="visual-style" class="padding-bottom-2">Visual style</h3>
                     <p class="font-mono-sm" style="margin-bottom:1.5rem;">Covers the visual appearance and effects of elements</p>
                     <ul class="usa-card-group">
 
+                      <!-- Background Color -->
+                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/visual-style/color/background-color.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Background Color</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Set the background color of an element</p>
+                          </div>
+                        </div></a>
+                      </li>
+
                       <!-- Border -->
                       <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                        <a style="text-decoration: none;" href="/fpac/pages/2-style-guide/visual-style/border.html">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/visual-style/border.html">
                         <div class="usa-card__container hover:border-primary">
                           <div class="usa-card__header">
                             <h4 class="usa-card__heading">Border</h4>
                           </div>
                           <div class="usa-card__body">
-                            <p>Adjust border location, thickness, style, width, color, and radius.</p>
+                            <p>Adjust border location, thickness, style, width, color, and radius</p>
                           </div>
                         </div></a>
                       </li>
                     
                       <!-- Outline -->
                       <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                        <a style="text-decoration: none;" href="/fpac/pages/2-style-guide/visual-style/outline.html">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/visual-style/outline.html">
                         <div class="usa-card__container hover:border-primary">
                           <div class="usa-card__header">
                             <h4 class="usa-card__heading">Outline</h4>
                           </div>
                           <div class="usa-card__body">
-                            <p>Adjust the width and color of an item's outline.</p>
-                          </div>
-                        </div></a>
-                      </li>
-
-                      <!-- Color -->
-                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                        <a style="text-decoration: none;" href="/fpac/pages/2-style-guide/visual-style/color.html">
-                        <div class="usa-card__container hover:border-primary">
-                          <div class="usa-card__header">
-                            <h4 class="usa-card__heading">Color</h4>
-                          </div>
-                          <div class="usa-card__body">
-                            <p>Adjust the color of text and backgrounds.</p>
+                            <p>Adjust the width and color of an item's outline</p>
                           </div>
                         </div></a>
                       </li>
 
                       <!-- Opacity -->
                       <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                        <a style="text-decoration: none;" href="/fpac/pages/2-style-guide/visual-style/opacity.html">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/visual-style/opacity.html">
                         <div class="usa-card__container hover:border-primary">
                           <div class="usa-card__header">
                             <h4 class="usa-card__heading">Opacity</h4>
                           </div>
                           <div class="usa-card__body">
-                            <p>Adjust the opacity / transparency of an element.</p>
+                            <p>Adjust the opacity / transparency of an element</p>
                           </div>
                         </div></a>
                       </li>
 
                       <!-- Shadow -->
                       <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                        <a style="text-decoration: none;" href="/fpac/pages/2-style-guide/visual-style/shadow.html">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/visual-style/shadow.html">
                         <div class="usa-card__container hover:border-primary">
                           <div class="usa-card__header">
                             <h4 class="usa-card__heading">Shadow</h4>
                           </div>
                           <div class="usa-card__body">
-                            <p>Adjust the size and location of an element's drop shadow.</p>
+                            <p>Adjust the size and location of an element's drop shadow</p>
                           </div>
                         </div></a>
                       </li>
                     </ul>
 
                     <!-- Layout Card Group-->
-                    <h3 class="padding-bottom-2">Layout</h3>
+                    <h3 id="layout" class="padding-bottom-2">Layout</h3>
                     <p class="font-mono-sm" style="margin-bottom:1.5rem;">Focuses on the structure and arrangement of content</p>
+
                     <ul class="usa-card-group">
-                      
+
                       <!-- Layout Grid -->
                       <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                        <a style="text-decoration: none;" href="/fpac/pages/2-style-guide/layout/layout-grid.html">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/layout-system/layout/layout-grid.html">
                         <div class="usa-card__container hover:border-primary">
                           <div class="usa-card__header">
                             <h4 class="usa-card__heading">Layout grid</h4>
                           </div>
                           <div class="usa-card__body">
-                            <p>Create layout grids.</p>
+                            <p>Create layout grids based on a 12-column system</p>
                           </div>
                         </div></a>
                       </li>
 
-                      
                       <!-- Flexbox -->
                       <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                        <a style="text-decoration: none;" href="/fpac\pages\2-style-guide\layout\flexbox.html">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/layout-system/layout/flexbox.html">
                         <div class="usa-card__container hover:border-primary">
                           <div class="usa-card__header">
                             <h4 class="usa-card__heading">Flexbox</h4>
                           </div>
                           <div class="usa-card__body">
-                            <p>Create flex containers.</p>
+                            <p>Create flex containers</p>
                           </div>
                         </div></a>
                       </li>
-                      
+
+                      <!-- Display -->
+                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/layout-system/layout/display.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Display</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Set how an element is displayed and participates in the layout</p>
+                          </div>
+                        </div></a>
+                      </li>
+
+                      <!-- Order -->
+                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/layout-system/layout/order.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Order</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Set the order of an element in a flex container</p>
+                          </div>
+                        </div></a>
+                      </li>
+
+                    </ul>
+
+                    <!-- Box sizing -->
+                    <h3 class="padding-top-1">Box sizing</h3>
+                    <p class="font-mono-sm" style="margin-bottom:1.5rem;">
+                      Sizes, spaces, and contains elements for visual rhythm and alignment
+                    </p>
+
+                    <ul class="usa-card-group">
+
                       <!-- Shape -->
                       <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                        <a style="text-decoration: none;" href="/fpac/pages/2-style-guide/layout/shape.html">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/layout-system/box-sizing/shape.html">
                         <div class="usa-card__container hover:border-primary">
                           <div class="usa-card__header">
                             <h4 class="usa-card__heading">Shape</h4>
                           </div>
                           <div class="usa-card__body">
-                            <p>Adjust an elements height, width, aspect ratio, and shape.</p>
-                          </div>
-                        </div></a>
-                      </li>
-                                        
-                      <!-- Spacing -->
-                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                        <a style="text-decoration: none;" href="/fpac/pages/2-style-guide/layout/spacing.html">
-                        <div class="usa-card__container hover:border-primary">
-                          <div class="usa-card__header">
-                            <h4 class="usa-card__heading">Spacing</h4>
-                          </div>
-                          <div class="usa-card__body">
-                            <p>Adjust the margin and padding and view spacing units.</p>
+                            <p>Set an element's shape</p>
                           </div>
                         </div></a>
                       </li>
 
+                      <!-- Height + Width -->
+                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/layout-system/box-sizing/height-width.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Height + Width</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Set the height, width, and aspect ratio of an element</p>
+                          </div>
+                        </div></a>
+                      </li>
+
+                      <!-- Margin + Padding -->
+                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/layout-system/box-sizing/margin-padding.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Margin + Padding</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Adjust the margin and padding of an element</p>
+                          </div>
+                        </div></a>
+                      </li>
+
+                      <!-- Overflow -->
+                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/layout-system/box-sizing/overflow.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Overflow</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Control content overflow and scrolling behavior</p>
+                          </div>
+                        </div></a>
+                      </li>
+
+                    </ul>
+
+                    <!-- Positioning -->
+                    <h3 class="padding-top-1">Positioning</h3>
+                    <p class="font-mono-sm" style="margin-bottom:1.5rem;">
+                      Ensures proper alignment and layering in complex layouts
+                    </p>
+
+                    <ul class="usa-card-group">
+
                       <!-- Position -->
                       <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                        <a style="text-decoration: none;" href="/fpac\pages\2-style-guide\layout\position.html">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/layout-system/positioning/position.html">
                         <div class="usa-card__container hover:border-primary">
                           <div class="usa-card__header">
                             <h4 class="usa-card__heading">Position</h4>
                           </div>
                           <div class="usa-card__body">
-                            <p>Adjust the margin and padding and view spacing units.</p>
+                            <p>Control how an element is positioned relative to its container or viewport</p>
+                          </div>
+                        </div></a>
+                      </li>
+
+                      <!-- Pin -->
+                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/layout-system/positioning/pin.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Pin</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Pin elements to an edge of their container or the viewport</p>
                           </div>
                         </div></a>
                       </li>
 
                       <!-- Float -->
                       <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                        <a style="text-decoration: none;" href="/fpac/pages/2-style-guide/layout/float.html">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/layout-system/positioning/float.html">
                         <div class="usa-card__container hover:border-primary">
                           <div class="usa-card__header">
                             <h4 class="usa-card__heading hover:float-right">Float</h4>
                           </div>
                           <div class="usa-card__body">
-                            <p>Float an element to the left or right so other elements can flow around it.</p>
+                            <p>Position an element to the left or right within its container</p>
                           </div>
                         </div></a>
                       </li>
-                      
-                      <!-- Order -->
-                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                        <a style="text-decoration: none;" href="/fpac\pages\2-style-guide\layout\order.html">
-                        <div class="usa-card__container hover:border-primary">
-                          <div class="usa-card__header">
-                            <h4 class="usa-card__heading hover:float-right">Order</h4>
-                          </div>
-                          <div class="usa-card__body">
-                            <p>Float an element to the left or right so other elements can flow around it.</p>
-                          </div>
-                        </div></a>
-                      </li>
-                      
+
                       <!-- Z-index -->
                       <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                        <a style="text-decoration: none;" href="/fpac\pages\2-style-guide\layout\z-index.html">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/layout-system/positioning/z-index.html">
                         <div class="usa-card__container hover:border-primary">
                           <div class="usa-card__header">
                             <h4 class="usa-card__heading hover:float-right">Z-index</h4>
                           </div>
                           <div class="usa-card__body">
-                            <p>Float an element to the left or right so other elements can flow around it.</p>
+                            <p>Determine an item's position in the stacking order</p>
+                          </div>
+                        </div></a>
+                      </li>
+
+                    </ul>
+
+                    <!-- Font Typography Card Group-->
+                    <h3 id="font-styles" class="padding-bottom-2">Font styles</h3>
+                    <p class="font-mono-sm" style="margin-bottom:1.5rem;">Focuses on font-level styling</p>
+                    <ul class="usa-card-group">
+
+                      <!-- Family -->
+                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/typography/font/family.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Family</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Font family choices and fallbacks</p>
+                          </div>
+                        </div></a>
+                      </li>
+
+                      <!-- Size -->
+                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/typography/font/size.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Size</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Font sizing scale and usage</p>
+                          </div>
+                        </div></a>
+                      </li>
+
+                      <!-- Weight -->
+                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/typography/font/weight.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Weight</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Font weight styles</p>
+                          </div>
+                        </div></a>
+                      </li>
+
+                      <!-- Style -->
+                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/typography/font/italic.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Italic</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Italic font styles</p>
                           </div>
                         </div></a>
                       </li>
                     </ul>
-                    
-                    <!-- Typography Card Group-->
-                    <h3 class="padding-bottom-2">Typography</h3>
-                    <p class="font-mono-sm" style="margin-bottom:1.5rem;">Defines text presentation and hierarchy</p>
+
+                    <!-- Text Typography Card Group-->
+                    <h3 id="text-styles" class="padding-bottom-2">Text styles</h3>
+                    <p class="font-mono-sm" style="margin-bottom:1.5rem;">Focuses on text-level styling</p>
                     <ul class="usa-card-group">
 
-                      <!-- Typesetting -->
+                      <!-- Underline -->
                       <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                        <a style="text-decoration: none;" href="/fpac/pages/2-style-guide/typography/typesetting.html">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/typography/text/underline.html">
                         <div class="usa-card__container hover:border-primary">
                           <div class="usa-card__header">
-                            <h4 class="usa-card__heading">Typesetting</h4>
+                            <h4 class="usa-card__heading">Underline</h4>
                           </div>
                           <div class="usa-card__body">
-                            <p>Font families, size, and spacing as well as text and paragraph styles.</p>
+                            <p>Guidance for underlining text and links</p>
                           </div>
                         </div></a>
                       </li>
 
-                      <!-- Font Styles -->
+                      <!-- Strikethrough -->
                       <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                        <a style="text-decoration: none;" href="/fpac/pages/2-style-guide/typography/font-styles.html">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/typography/text/strikethrough.html">
                         <div class="usa-card__container hover:border-primary">
                           <div class="usa-card__header">
-                            <h4 class="usa-card__heading">Font styles</h4>
+                            <h4 class="usa-card__heading">Strikethrough</h4>
                           </div>
                           <div class="usa-card__body">
-                            <p>Font families, size, and spacing.</p>
+                            <p>Use cases for strikethrough text</p>
                           </div>
                         </div></a>
                       </li>
 
-                      <!-- Text Styles -->
+                      <!-- Text Color -->
                       <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                        <a style="text-decoration: none;" href="/fpac/pages/2-style-guide/typography/text-styles.html">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/typography/text/text-color.html">
                         <div class="usa-card__container hover:border-primary">
                           <div class="usa-card__header">
-                            <h4 class="usa-card__heading">Text styles</h4>
+                            <h4 class="usa-card__heading">Text Color</h4>
                           </div>
                           <div class="usa-card__body">
-                            <p>Text styles for headings, links, and other text elements.</p>
+                            <p>Set colors for text</p>
                           </div>
                         </div></a>
                       </li>
 
-                      <!-- Paragraph Styles -->
+                      <!-- Text Case -->
                       <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                        <a style="text-decoration: none;" href="/fpac/pages/2-style-guide/typography/paragraph-styles.html">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/typography/text/case.html">
                         <div class="usa-card__container hover:border-primary">
                           <div class="usa-card__header">
-                            <h4 class="usa-card__heading">Paragraph styles</h4>
+                            <h4 class="usa-card__heading">Text case</h4>
                           </div>
                           <div class="usa-card__body">
-                            <p>Paragraph styles for body text, lists, and other text elements.</p>
+                            <p>Text transform and capitalization rules</p>
                           </div>
                         </div></a>
                       </li>
-                      
+
+                      <!-- Letterspacing -->
+                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/typography/text/letterspacing.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Letterspacing</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Letterspacing and tracking</p>
+                          </div>
+                        </div></a>
+                      </li>
+
+                      <!-- Vertical alignment -->
+                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/typography/text/vertical-alignment.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Vertical alignment</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Align text relative to the line box, baseline, or as superscript/subscript</p>
+                          </div>
+                        </div></a>
+                      </li>
+                    </ul>
+
+                    <!-- Paragraph Typography Card Group-->
+                    <h3 id="paragraph-styles" class="padding-bottom-2">Paragraph styles</h3>
+                    <p class="font-mono-sm" style="margin-bottom:1.5rem;">Focuses on paragraph formatting</p>
+                    <ul class="usa-card-group">
+
+                      <!-- Line height -->
+                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/typography/paragraph/line-height.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Line height</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Adjust the space between lines in a paragraph</p>
+                          </div>
+                        </div></a>
+                      </li>
+
+                      <!-- Line length -->
+                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/typography/paragraph/line-length.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Line length</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Set the optimal length for readable text lines</p>
+                          </div>
+                        </div></a>
+                      </li>
+
+                      <!-- Indentation -->
+                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/typography/paragraph/indentation.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Indentation</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Paragraph and list indentation guidance</p>
+                          </div>
+                        </div></a>
+                      </li>
+
+                      <!-- Alignment -->
+                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/typography/paragraph/alignment.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Paragraph alignment</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Paragraph alignment rules for readability</p>
+                          </div>
+                        </div></a>
+                      </li>
+
+                      <!-- Whitespace -->
+                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/typography/advanced/whitespace.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Whitespace</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Control text wrapping and whitespace behavior</p>
+                          </div>
+                        </div></a>
+                      </li>                    
+                    </ul>
+
+                    <!-- Advanced Typography Card Group-->
+                    <h3 id="advanced-styles" class="padding-bottom-2">Advanced styles</h3>
+                    <p class="font-mono-sm" style="margin-bottom:1.5rem;">Focuses on advanced typographic controls</p>
+                    <ul class="usa-card-group">
+
+                      <!-- Spacing Units -->
+                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/typography/advanced/spacing-units.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Spacing Units</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Spacing unit tokens, based on multiples of 8px</p>
+                          </div>
+                        </div></a>
+                      </li>
+
+                      <!-- Tabular numerals -->
+                      <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/typography/advanced/tabular-numerals.html">
+                        <div class="usa-card__container hover:border-primary">
+                          <div class="usa-card__header">
+                            <h4 class="usa-card__heading">Tabular numerals</h4>
+                          </div>
+                          <div class="usa-card__body">
+                            <p>Format numerals into columns for tables and data</p>
+                          </div>
+                        </div></a>
+                      </li>
+
                       <!-- List Reset -->
                       <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                        <a style="text-decoration: none;" href="/fpac/pages/2-style-guide/typography/list-reset.html">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/typography/advanced/list-reset.html">
                         <div class="usa-card__container hover:border-primary">
                           <div class="usa-card__header">
                             <h4 class="usa-card__heading">List reset</h4>
                           </div>
                           <div class="usa-card__body">
-                            <p>Reset default list styling.</p>
+                            <p>Reset default list styling when building custom components</p>
                           </div>
                         </div></a>
                       </li>
+
                     </ul>
 
                     <!-- Images Card Group-->
-                    <h3 class="padding-bottom-2">Images</h3>
-                    <p class="font-mono-sm" style="margin-bottom:1.5rem;">Provides guidance for using graphical assets.</p>
+                    <h3 id="images" class="padding-bottom-2">Images</h3>
+                    <p class="font-mono-sm" style="margin-bottom:1.5rem;">Provides guidance for using graphical assets, logos, and icons</p>
                     <ul class="usa-card-group">
 
                       <!-- Logos  -->
                       <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                        <a style="text-decoration: none;" href="/fpac/pages/2-style-guide/images/logos.html">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/images/logos.html">
                         <div class="usa-card__container hover:border-primary">
                           <div class="usa-card__header">
                             <h4 class="usa-card__heading">Logos</h4>
                           </div>
                           <div class="usa-card__body">
-                            <p>Files for Logos.</p>
+                            <p>Files for logos</p>
                           </div>
                         </div></a>
                       </li>
                       
                       <!-- Icons -->
                       <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                        <a style="text-decoration: none;" href="/fpac/pages/2-style-guide/images/icons.html">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/images/icons.html">
                         <div class="usa-card__container hover:border-primary">
                           <div class="usa-card__header">
                             <h4 class="usa-card__heading">Icons</h4>
                           </div>
                           <div class="usa-card__body">
-                            <p>Material Design Icons.</p>
+                            <p>Font Awesome icons</p>
                           </div>
                         </div></a>
                       </li>
                     </ul>
 
-                    <!-- Layout Card Group-->
-                    <h3 class="padding-bottom-2">Utility variants</h3>
+                    <!-- Utility Variants Card Group-->
+                    <h3 id="utility-variants" class="padding-bottom-2">Utility variants</h3>
                     <p class="font-mono-sm" style="margin-bottom:1.5rem;">Explains utility classes for customization and responsiveness</p>
                     <ul class="usa-card-group">
 
                       <!-- Utility Variants -->
                       <li class="usa-card tablet:grid-col-6 desktop-lg:grid-col-4">
-                        <a style="text-decoration: none;" href="/fpac/pages/2-style-guide/utility-variants/utility-variants.html">
+                        <a style="text-decoration: none;" href="/fpac-website/pages/2-style-guide/utility-variants/utility-variants.html">
                         <div class="usa-card__container hover:border-primary">
                           <div class="usa-card__header">
                             <h4 class="usa-card__heading"><em>Utility variants</em></h4>
                           </div>
                           <div class="usa-card__body">
-                            <p>Modify how responsive and state utility classes behave.</p>
+                            <p>Modify how responsive and state utility classes behave</p>
                           </div>
                         </div></a>
                       </li>
@@ -681,14 +1033,13 @@
                       <ul>
                         <li><strong>Identity and Trust:</strong> Consistent application of visual and verbal elements builds a recognizable identity. This
                           fosters familiarity and a unified user experience, which is crucial for building trust and recognition among users.</li>
-                        <li><strong>Efficient Design and Development:</strong> It provides clear guidelines and pre-defined components. This simplifies the
-                          design and development processes so teams can work efficiently and avoid redundant efforts.</li>
-                        <li><strong>Collaboration:</strong> It establishes a shared language and understanding of design principles. This enables effective
+                        <li><strong>Efficient Design and Development:</strong> Clear guidelines and pre-defined components simplify design and development 
+                          processes so teams can work efficiently and avoid redundant efforts.</li>
+                        <li><strong>Collaboration:</strong> A shared language and understanding of design principles enables effective
                           collaboration between designers, developers, and other stakeholders.</li>
                         <li><strong>Maintainability:</strong> Changes can be implemented systematically, ensuring continued consistency and relevance over
                           time.</li>
-                        <li><strong>Scalability:</strong> A style guide provides the framework to scale design efforts without sacrificing consistency or
-                          quality as teams and products grow.</li>
+                        <li><strong>Scalability:</strong> A framework to scale design efforts without sacrificing consistency or quality as teams and products grow.</li>
                       </ul>
                       
                     <h3>The role of design tokens</h3>
@@ -731,7 +1082,7 @@
 
         <!-- Return To Top link -->
           <div class="grid-container usa-footer__return-to-top">
-            <a href="" style="color: #4D8157;" onclick="window.scrollTo({top: 0, left: 0, behavior: 'smooth'}); return false;">Return to top</a>
+            <a class="usa-link" href="" onclick="window.scrollTo({top: 0, left: 0, behavior: 'smooth'}); return false;">Return to top</a>
           </div>
 
         <!-- Footer Start -->
@@ -765,20 +1116,20 @@
       <!-- Identifier Start -->
         <div class="usa-identifier">
           
-          <!-- USDA Logo -->
-            <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
-              <div class="usa-identifier__container">
-                <div class="usa-identifier__logos">
-                  <a href="https://www.usda.gov/" class="usa-identifier__logo"
-                    ><img
-                      class="usa-identifier__logo-img"
-                      src="\dist\fpac-style\images\usda-logo\usda-v2-lockup\white\usda-v2-white-lockup.svg"
-                      alt="USDA logo"
-                      role="img">
-                  </a>
-                </div>
-              </div>
-            </section>
+        <!-- USDA Logo -->
+        <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
+          <div class="usa-identifier__container">
+            <div class="usa-identifier__logos">
+              <a href="https://www.usda.gov/" class="usa-identifier__logo"
+                ><img
+                  class="usa-identifier__logo-img"
+                  src="/fpac-website/images/usda-logo/usda-v2-lockup/white/usda-v2-white-lockup.svg"
+                  alt="USDA logo"
+                  role="img">
+              </a>
+            </div>
+          </div>
+        </section>
 
           <!-- Identifier Links -->
             <nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links">

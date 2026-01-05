@@ -1,0 +1,622 @@
+<html lang="en">
+  <!-- Head Start -->
+    <head>
+      <!-- Basic Page Needs
+      ================================================== -->
+      <!-- Set character encoding so that all characters within the UTF-8 space (such as emoji) render correctly. -->
+      <meta charset="utf-8">
+      
+      <!-- Force IE 8/9/10 to use its latest rendering engine -->
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      
+      <!-- Set the viewport width to device width for mobile -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Base URL
+    ================================================== -->
+    <!-- Set the base URL for all relative URLs within the document
+    <base href="/fpac-website/"> -->
+
+    <!-- Page Title
+    ================================================== -->
+    <title>Accessibility | FPAC DS</title>
+
+    <!-- Favicon
+    ================================================== -->
+    <!-- Light and dark mode favicons -->
+    <link rel="icon" href="/fpac-website/images/usda-logo/usda-favicon/usda-favicon-color.png" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/fpac-website/images/usda-logo/usda-favicon/usda-favicon-white.png" type="image/x-icon" media="(prefers-color-scheme: dark)">
+
+    <!-- CSS Links
+    ================================================== -->
+    <link rel="stylesheet" href="/dist/fpac-design-system.css">
+    <link rel="stylesheet" href="/fpac-website/styles/fpac-documentation-website.css">
+
+
+    <!-- USWDS INIT
+    ================================================== -->
+    <script src="/dist/uswds/js/uswds-init.min.js" type="module"></script>
+    <link rel="preload" href="/dist/uswds/js/uswds.min.js" as="script">
+    
+    </head>
+  <!-- Head End -->
+
+  <!-- Body Start
+  ================================================== -->
+    <body>
+
+      <!-- Skipnav -->
+        <a class="usa-skipnav" href="#main-content">Skip to main content</a>
+
+      <!-- Banner Start -->
+        <section class="usa-banner" aria-label="Official website of the United States government">
+          <div class="usa-accordion">
+            <header class="usa-banner__header">
+              <div class="usa-banner__inner">
+                <div class="grid-col-auto">
+                  <img aria-hidden="true" class="usa-banner__header-flag" src="/dist/uswds/images/us_flag_small.png" alt=""/>
+                </div>
+                <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
+                  <p class="usa-banner__header-text">An official website of the United States government.</p>
+                  <p class="usa-banner__header-action">Here's how you know</p>
+                </div>
+                <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner-default">
+                  <span class="usa-banner__button-text">Here's how you know</span>
+                </button>
+              </div>
+            </header>
+            <div class="usa-banner__content usa-accordion__content" id="gov-banner-default">
+              <div class="grid-row grid-gap-lg">
+                <div class="usa-banner__guidance tablet:grid-col-6">
+                  <img class="usa-banner__icon usa-media-block__img" src="/dist/uswds/images/icon-dot-gov.svg" role="img" alt="" aria-hidden="true" />
+                  <div class="usa-media-block__body">
+                    <p><strong>Official websites use .gov</strong> A <strong>.gov</strong> website belongs to an official government organization in the United States.</p>
+                  </div>
+                </div>
+                <div class="usa-banner__guidance tablet:grid-col-6">
+                  <img class="usa-banner__icon usa-media-block__img" src="/dist/uswds/images/icon-https.svg" role="img" alt="" aria-hidden="true" />
+                  <div class="usa-media-block__body">
+                    <p>
+                      <strong>Secure .gov websites use HTTPS</strong><br />A <strong>lock</strong> (
+                        <span class="icon-lock">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 64" class="usa-banner__lock-image"
+                            role="img" aria-labelledby="banner-lock-description" focusable="false">
+                            <title id="banner-lock-title">Lock</title>
+                            <desc id="banner-lock-description">Locked padlock icon</desc>
+                            <path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z" />
+                          </svg>
+                        </span>
+                      ) or <strong>https://</strong> means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      <!-- Banner End -->
+
+      <!-- Header Start -->
+        <header class="usa-header usa-header--basic">
+          <div class="usa-nav-container">
+            
+            <div class="usa-navbar">
+
+            <!-- USDA Logo -->
+            <div class="usa-logo">
+              <div class="grid-container">
+                <div style="display: inline-flex; align-items: center;">
+                  <a href="/fpac-website/pages/home.html" title="USDA Logo"><img src="/fpac-website/images/usda-logo/usda-logo/color/usda-logo-color.svg" style="width: 50px; min-width: 50px; margin-right: 8px;" alt="USDA Logo"/></a>
+                  <a href="/fpac-website/pages/home.html" title="Website title" style="white-space: nowrap;"><strong>FPAC Design System</strong></a>
+                </div>
+              </div>
+            </div>
+
+              <!-- Mobile menu button -->
+              <button type="button" class="usa-menu-btn">Menu</button>
+            </div>
+
+            <!-- Primary Navigation Start -->
+              <nav aria-label="Primary navigation" class="usa-nav">
+
+                <!-- Mobile close button -->
+                  <button type="button" class="usa-nav__close">
+                    <img src="/dist/uswds/images/usa-icons/close.svg" role="img" alt="Close"/>
+                  </button>
+
+                <!-- Primary Menu Start -->
+                  <ul class="usa-nav__primary usa-accordion margin-right-4">
+                    
+                    <!-- Home -->
+                    <li class="usa-nav__primary-item usa-nav__link">
+                      <a href="/fpac-website/pages/home.html" class="font-sans-xs usa-nav-link">
+                      <span style="white-space: nowrap;">Home</span>
+                      </a>
+                    </li>
+
+                    <!-- Style Guide -->
+                    <li class="usa-nav__primary-item usa-nav__link">
+                      <a href="/fpac-website/pages/2-style-guide/style-guide.html" class="font-sans-xs usa-nav-link">
+                        <span style="white-space: nowrap;">Style Guide</span>
+                      </a>
+                    </li>
+
+                    <!-- Component Library -->
+                    <li class="usa-nav__primary-item">
+                      <button type="button" class="usa-accordion__button usa-nav__link font-sans-xs" aria-expanded="false" aria-controls="basic-nav-section-two">
+                        <span class="font-sans-xs" style="white-space: nowrap;">Component Library</span>
+                      </button>
+                      <ul id="basic-nav-section-two" class="usa-nav__submenu font-sans-xs">
+                        <li class="usa-nav__submenu-item">
+                          <a href="/fpac-website/pages/3-component-library/component-library.html">
+                            <span>All</span>
+                          </a>
+                        </li>
+                        <li class="usa-nav__submenu-item">
+                          <a href="/fpac-website/pages/3-component-library/component-library.html#components-2">
+                            <span class="margin-left-2">Components</span>
+                          </a>
+                        </li>
+                        <li class="usa-nav__submenu-item">
+                          <a href="/fpac-website/pages/3-component-library/component-library.html#patterns-2">
+                            <span class="margin-left-2">Patterns</span>
+                          </a>
+                        </li>
+                        <li class="usa-nav__submenu-item">
+                          <a href="/fpac-website/pages/3-component-library/component-library.html#templates-2">
+                            <span class="margin-left-2">Templates</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <!-- Guidelines -->
+                    <li class="usa-nav__primary-item usa-nav__link">
+                      <a href="/fpac-website/pages/4-guidelines/guidelines.html" class="font-sans-xs usa-nav-link usa-current">
+                        <span style="white-space: nowrap;">Guidelines</span>
+                      </a>
+                    </li>
+                  </ul>
+                <!-- Primary Menu End -->
+
+                <!-- Search bar -->
+                <section aria-label="Search component">
+                  <form class="usa-search usa-search--small" role="search">
+                    <label class="usa-sr-only" for="search-field">Search</label>
+                    <input class="usa-input" id="search-field" type="search" name="search" />
+                    <button class="usa-button" type="submit">
+                      <img src="/dist/uswds/images/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="Search" />
+                    </button>
+                  </form>
+                </section>
+              </nav>
+            <!-- Primary Navigation End -->
+
+          </div>
+        </header>
+      <!-- Header End -->
+
+      <!-- Body Content Start -->
+        <div class="usa-section usa-prose grid-container">
+          <div class="grid-row grid-gap">
+            <div class="usa-in-page-nav-container">
+              
+              <!-- Side Navigation Menu Start -->            
+                <div class="usa-sidenav-container grid-col-2 display-none desktop:display-block">
+                  <nav aria-label="Secondary navigation">
+                    <ul class="usa-sidenav">
+
+                      <!-- Guidelines -->
+                      <li class="usa-sidenav__item"><a href="/fpac-website/pages/4-guidelines/guidelines.html" class="usa-current"><strong>Guidelines</strong></a>
+
+                        <!-- General -->
+                        <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Welcome</strong></a>
+                          <ul class="usa-sidenav__sublist">
+                            <li><a href="/fpac-website/pages/4-guidelines/welcome/about-fpac-design.html">About FPAC Design</a></li>
+                            <li><a href="/fpac-website/pages/4-guidelines/welcome/getting-started.html">Getting Started</a></li>
+                          </ul>
+                        </li>
+
+                        <!-- Design & Accessibility -->
+                        <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Design & Accessibility</strong></a>
+                          <ul class="usa-sidenav__sublist">
+                            <li><a href="/fpac-website/pages/4-guidelines/design-accessibility/accessibility.html">Accessibility</a></li>
+                            <li><a href="/fpac-website/pages/4-guidelines/design-accessibility/design-principles.html">Design Principles</a></li>
+                            <li><a href="https://designsystem.digital.gov/components/data-visualizations/">Data Visualizations</a></li>
+                            <li><a href="https://designsystem.digital.gov/design-accessibility/components/form/">Forms</a></li>
+                          </ul>
+                        </li>
+
+                        <!-- Development & Process -->
+                        <li class="usa-sidenav__item"><a href="javascript:void(0);" style="pointer-events: none"><strong>Development & Process</strong></a>
+                          <ul class="usa-sidenav__sublist">
+                            <li><a href="/fpac-website/pages/4-guidelines/development-process/development-guidance.html">Development Guidance</a></li>
+                            <li><a href="/fpac-website/pages/4-guidelines/development-process/process-maturity.html">Process Maturity</a></li>
+                          </ul>
+                        </li>
+                      </li>
+
+                      <!-- DS Configuration -->
+                      <li class="usa-sidenav__item"><a href="/fpac-website/pages/4-guidelines/ds-configuration/ds-configuration.html"><em>DS Configuration</em></a></li>
+                      </ul>              </nav>
+                </div>
+              <!-- Side Navigation Menu End -->
+
+              <!-- In-page Navigation Start -->
+                <aside
+                  class="usa-in-page-nav"
+                  data-heading-elements="h2 h3"
+                  data-title-text="On this page"
+                  data-title-heading-level="h4"
+                  data-scroll-offset="48"
+                  data-root-margin="48px 0px -70% 0px"
+                  data-threshold="1"
+                ></aside>
+
+                <script>
+                  // Add "Return to Top" button into the in-page nav aside after DOM loads
+                  window.addEventListener('DOMContentLoaded', function() {
+                    var btn = document.createElement('a');
+                      btn.href = "#";
+                      btn.style.display = "block";
+                      btn.style.color = "#236430";
+                      btn.style.margin = "-1rem 1rem 0 1.25rem";
+                      btn.style.padding = "0.5rem 0 0.5rem 0.75rem";
+                      btn.style.textDecoration = "none";
+                      btn.style.fontWeight = "00";
+                      btn.style.fontSize = "0.8rem";
+                      btn.style.transition = "background 0.2s";
+                      btn.textContent = "Return to top";
+                      btn.onmouseover = function() { this.style.background = "#f0f0f0"; };
+                      btn.onmouseout = function() { this.style.background = ""; };
+                      btn.onclick = function(e) { e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); };
+                    var aside = document.querySelector('aside');
+                    if (aside) aside.appendChild(btn);
+                  });
+                </script>
+              <!-- In-page Navigation End -->
+
+              <!-- Main Content Start -->
+                <main id="main-content" class="usa-prose grid-col-fill grid-container">
+                  <h1>Accessibility</h1>
+
+                  <h2>Color accessibility</h2>
+                  <p>Color accessibility is a key aspect of designing inclusive user experiences. Ensuring sufficient contrast between text (or important graphical elements) and their background is essential for readability, especially for users with visual impairments such as color blindness or low vision.</p>
+
+                  <h3>Calculating luminance</h3>
+
+                  <p>The relative luminance is a measure of perceived brightness, normalized so 0 represents darkest black and 1 represents brightest white.</p>
+
+                  <p>For the sRGB colorspace the luminance L is defined as:</p>
+
+                  <math xmlns="http://www.w3.org/1998/Math/MathML" role="img" aria-label="L equals 0.2126 R plus 0.7152 G plus 0.0722 B">
+                    <mrow>
+                      <mi>L</mi>
+                      <mo>=</mo>
+                      <mrow>
+                        <mn>0.2126</mn>
+                        <mo>&#x00D7;</mo>
+                        <mi>R</mi>
+                        <mo>+</mo>
+                        <mn>0.7152</mn>
+                        <mo>&#x00D7;</mo>
+                        <mi>G</mi>
+                        <mo>+</mo>
+                        <mn>0.0722</mn>
+                        <mo>&#x00D7;</mo>
+                        <mi>B</mi>
+                      </mrow>
+                    </mrow>
+                  </math>
+
+                  <p>In this formula, <strong>R</strong>, <strong>G</strong> and <strong>B</strong> are the linearized sRGB components (not the original 8‑bit channel values). To compute L from an 8‑bit RGB triplet (<code>R8</code>, <code>G8</code>, <code>B8</code>):</p>
+
+                  <ol>
+                    <li>
+                      <p>Normalize each channel to the 0–1 range:</p>
+                      <math xmlns="http://www.w3.org/1998/Math/MathML" role="img" aria-label="Rs equals R8 over 255">
+                        <mrow>
+                          <msub><mi>R</mi><mi>s</mi></msub><mo>=</mo>
+                          <mfrac>
+                            <mi>R8</mi>
+                            <mn>255</mn>
+                          </mfrac>
+                        </mrow>
+                      </math>
+                      <math xmlns="http://www.w3.org/1998/Math/MathML" role="img" aria-label="Gs equals G8 over 255">
+                        <mrow>
+                          <msub><mi>G</mi><mi>s</mi></msub><mo>=</mo>
+                          <mfrac>
+                            <mi>G8</mi>
+                            <mn>255</mn>
+                          </mfrac>
+                        </mrow>
+                      </math>
+                      <math xmlns="http://www.w3.org/1998/Math/MathML" role="img" aria-label="Bs equals B8 over 255">
+                        <mrow>
+                          <msub><mi>B</mi><mi>s</mi></msub><mo>=</mo>
+                          <mfrac>
+                            <mi>B8</mi>
+                            <mn>255</mn>
+                          </mfrac>
+                        </mrow>
+                      </math>
+                    </li>
+
+                    <li>
+                      <p>Linearize each normalized component <var>Cs</var> (where <var>Cs</var> is <var>Rs</var>, <var>Gs</var> or <var>Bs</var>):</p>
+
+                      <math xmlns="http://www.w3.org/1998/Math/MathML" role="img" aria-label="If Cs less than or equal to 0.04045 then C lin equals Cs over 12.92 else C lin equals left parenthesis left parenthesis Cs plus 0.055 right parenthesis over 1.055 right parenthesis to the power 2.4">
+                        <mrow>
+                          <mrow>
+                            <msub><mi>C</mi><mi>lin</mi></msub>
+                            <mo>=</mo>
+                            <mrow>
+                              <mstyle display="inline">
+                                <mrow>
+                                  <mtext>if</mtext>
+                                  <mspace/>
+                                  <msup>
+                                    <mi>C</mi>
+                                    <mrow>
+                                      <mi>s</mi>
+                                    </mrow>
+                                  </msup>
+                                  <mo>&#x2264;</mo>
+                                  <mn>0.04045</mn>
+                                  <mo>,</mo>
+                                  <mspace/>
+                                  <mfrac>
+                                    <msup>
+                                      <mi>C</mi>
+                                      <mrow>
+                                        <mi>s</mi>
+                                      </mrow>
+                                    </msup>
+                                    <mn>12.92</mn>
+                                  </mfrac>
+                                  <mtext>otherwise</mtext>
+                                  <mrow>
+                                    <mo>(</mo>
+                                    <mfrac>
+                                      <mrow>
+                                        <msup>
+                                          <mi>C</mi>
+                                          <mrow>
+                                            <mi>s</mi>
+                                          </mrow>
+                                        </msup>
+                                        <mo>+</mo>
+                                        <mn>0.055</mn>
+                                      </mrow>
+                                      <mn>1.055</mn>
+                                    </mfrac>
+                                    <mo>)</mo>
+                                    <msup>
+                                      <mo></mo>
+                                      <mn>2.4</mn>
+                                    </msup>
+                                  </mrow>
+                                </mrow>
+                              </mstyle>
+                            </mrow>
+                          </mrow>
+                        </mrow>
+                      </math>
+
+                      <p>In plain terms:</p>
+                      <ul>
+                        <li>If Cs ≤ 0.04045 then C_lin = Cs / 12.92</li>
+                        <li>Otherwise C_lin = ((Cs + 0.055) / 1.055) ^ 2.4</li>
+                      </ul>
+                    </li>
+
+                    <li>Plug the linearized values <code>R_lin</code>, <code>G_lin</code>, <code>B_lin</code> into the luminance formula above to get <code>L</code> (a number between 0 and 1). Multiply by 100 to express as a percentage.</li>
+                  </ol>
+
+                  <p>Example (manual calculation): for RGB <code>77, 129, 87</code> convert to normalized values (≈0.302, 0.506, 0.341), linearize each, apply the weighted sum, and multiply by 100% to get the percentage luminance.</p>
+
+                  <p>References:</p>
+                  <ul>
+                    <li><a class="usa-link--external" href="https://www.w3.org/TR/WCAG21/#dfn-relative-luminance">WCAG definition of relative luminance</a></li>
+                  </ul>
+
+                  <h3>Calculating contrast ratio</h3>
+
+                  <p>The contrast ratio compares the relative luminance of two colors to quantify how distinguishable they are to the human eye. WCAG defines the contrast ratio using the luminance values L<sub>light</sub> (the lighter color) and L<sub>dark</sub> (the darker color):</p>
+
+                  <math xmlns="http://www.w3.org/1998/Math/MathML" role="img" aria-label="contrast ratio equals left parenthesis L light plus 0.05 right parenthesis divided by left parenthesis L dark plus 0.05 right parenthesis">
+                    <mrow>
+                      <mi>Contrast</mi>
+                      <mo>=</mo>
+                      <mfrac>
+                        <mrow>
+                          <msub>
+                            <mi>L</mi>
+                            <mrow>
+                              <mi>light</mi>
+                            </mrow>
+                          </msub>
+                          <mo>+</mo>
+                          <mn>0.05</mn>
+                        </mrow>
+                        <mrow>
+                          <msub>
+                            <mi>L</mi>
+                            <mrow>
+                              <mi>dark</mi>
+                            </mrow>
+                          </msub>
+                          <mo>+</mo>
+                          <mn>0.05</mn>
+                        </mrow>
+                      </mfrac>
+                    </mrow>
+                  </math>
+
+                  <ol>
+                    <li>Use WCAG relative luminance values for each color (L between 0 and 1). If you have percentages, divide by 100.</li>
+                    <li>Identify the lighter (L<sub>light</sub>) and darker (L<sub>dark</sub>) luminance.</li>
+                    <li>Compute (L<sub>light</sub> + 0.05) / (L<sub>dark</sub> + 0.05). The result is reported as a ratio (for example 4.57:1).</li>
+                  </ol>
+
+                  <p>Why the <code>+0.05</code>? WCAG includes the 0.05 offset to avoid division by zero for colors with zero luminance and to scale the metric so the maximum contrast (white vs black) is 21:1. It is part of the WCAG definition rather than an arbitrary algebraic trick.</p>
+
+                  <p>Example calculations (using the luminance for RGB <code>77, 129, 87</code> from earlier):</p>
+                  <ul>
+                    <li>Contrast vs white (L = 1): (1 + 0.05) / (0.1796 + 0.05) ≈ 1.05 / 0.2296 ≈ <strong>4.57:1</strong></li>
+                    <li>Contrast vs ink (RGB 27,27,27; L ≈ 0.011): (0.1796 + 0.05) / (0.011 + 0.05) ≈ 0.2296 / 0.061 ≈ <strong>3.76:1</strong></li>
+                  </ul>
+
+                  <p>WCAG thresholds (key requirements):</p>
+                  <ul>
+                    <li>Level AA (normal text): <strong>at least 4.5:1</strong></li>
+                    <li>Level AA (large text): <strong>at least 3:1</strong></li>
+                    <li>Level AAA (normal text): <strong>at least 7:1</strong></li>
+                    <li>Level AAA (large text): <strong>at least 4.5:1</strong></li>
+                    <li>Non-text contrast (UI components, graphical objects): <strong>at least 3:1</strong></li>
+                  </ul>
+
+                  <p>Notes:</p>
+                  <ul>
+                    <li>Report contrast as <code>X:1</code> and round appropriately for presentation. WCAG examples typically show two decimal places.</li>
+                    <li>Contrast depends only on luminance values, so once you have those (0–1) you can compute any pairwise contrast quickly.</li>
+                  </ul>
+
+                  <p>References:</p>
+                  <ul>
+                    <li><a class="usa-link--external" href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum" target="_blank" rel="noopener">Contrast (Minimum) (Level AA)</a></li>
+                    <li><a class="usa-link--external" href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced" target="_blank" rel="noopener">Contrast (Enhanced) (Level AAA)</a></li>
+                    <li><a class="usa-link--external" href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast" target="_blank" rel="noopener">Non-text Contrast (Level AA)</a></li>
+                  </ul>
+
+                  <h3>More about color in FPAC</h3>
+                  <ul>
+                    <li><a href="/fpac-website/pages/2-style-guide/visual-style/color/theme-color.html">FPAC Theme colors theme</a></li>
+                    <li><a href="/fpac-website/pages/2-style-guide/visual-style/color/state-color.html">FPAC State colors</a></li>
+                    <li><a href="/fpac-website/pages/2-style-guide/visual-style/color/background-color.html">FPAC color utilities</a></li>
+                    <li><a href="/fpac-website/pages/2-style-guide/visual-style/color/system-color.html">USWDS System colors</a></li>
+                  </ul>
+
+
+                </main>
+              <!-- Main Content End -->
+
+            </div>
+          </div>
+        </div>
+      <!-- Body Content End -->
+      
+      <!-- Footer + Identifier Start -->
+        <footer class="usa-footer">
+
+        <!-- Return To Top link -->
+          <div class="grid-container usa-footer__return-to-top">
+            <a class="usa-link" href="" onclick="window.scrollTo({top: 0, left: 0, behavior: 'smooth'}); return false;">Return to top</a>
+          </div>
+
+        <!-- Footer Start -->
+          <div class="usa-footer__primary-section">
+            <nav class="usa-footer__nav" aria-label="Footer navigation">
+              <ul class="grid-row grid-gap-2">
+                <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link usa-link--external" href="https://www.usda.gov/about-usda/general-information/mission-areas" target="_blank" rel="noopener">USDA Mission Areas</a>
+                </li>
+                <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link usa-link--external" href="https://www.fpacbc.usda.gov/" target="_blank" rel="noopener">FPAC BC</a>
+                </li>
+                <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link usa-link--external" href="https://www.fsa.usda.gov/" target="_blank" rel="noopener">FSA</a>
+                </li>
+                <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link usa-link--external" href="https://www.nrcs.usda.gov/" target="_blank" rel="noopener">NRCS</a>
+                </li>
+                <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link usa-link--external" href="https://www.rma.usda.gov/" target="_blank" rel="noopener">RMA</a>
+                </li>
+                <li class="mobile: grid-col-6 tablet:grid-col-4 desktop:grid-col-auto usa-footer__primary-content">
+                  <a class="usa-footer__primary-link usa-link--external" href="https://www.farmers.gov/" target="_blank" rel="noopener">Farmers.gov</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
+      <!-- Footer End-->
+
+      <!-- Identifier Start -->
+        <div class="usa-identifier">
+          
+        <!-- USDA Logo -->
+        <section class="usa-identifier__section usa-identifier__section--masthead" aria-label="Agency identifier">
+          <div class="usa-identifier__container">
+            <div class="usa-identifier__logos">
+              <a href="https://www.usda.gov/" class="usa-identifier__logo"
+                ><img
+                  class="usa-identifier__logo-img"
+                  src="/fpac-website/images/usda-logo/usda-v2-lockup/white/usda-v2-white-lockup.svg"
+                  alt="USDA logo"
+                  role="img">
+              </a>
+            </div>
+          </div>
+        </section>
+
+          <!-- Identifier Links -->
+            <nav class="usa-identifier__section usa-identifier__section--required-links" aria-label="Important links">
+              <div class="usa-identifier__container">
+                <ul class="usa-identifier__required-links-list">
+                  <li class="usa-identifier__required-links-item">
+                    <a href="https://www.usda.gov/about-usda/general-information/our-agency"
+                    class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">About USDA</a>
+                  </li>
+                  <li class="usa-identifier__required-links-item">
+                    <a href="https://www.usda.gov/accessibility-statement"
+                    class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">Accessibility Statement</a>
+                  </li>
+                  <li class="usa-identifier__required-links-item">
+                    <a href="https://www.usda.gov/ogc/office-information-affairs/foia-division"
+                    class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">FOIA requests</a>
+                  </li>
+                  <li class="usa-identifier__required-links-item">
+                    <a href="https://www.usda.gov/nofear"
+                    class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">No FEAR Act data</a>
+                  </li>
+                  <li class="usa-identifier__required-links-item">
+                    <a href="https://usdaoig.oversight.gov/"
+                    class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">Office of the Inspector General</a>
+                  </li>
+                  <li class="usa-identifier__required-links-item">
+                    <a href="https://www.usda.gov/about-usda/general-information/our-performance"
+                    class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">Performance reports</a>
+                  </li>
+                  <li class="usa-identifier__required-links-item">
+                    <a href="https://www.usda.gov/privacy-policy"
+                    class="usa-identifier__required-link usa-link--external" target="_blank" rel="noopener">Privacy policy</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+
+          <!-- Visit USA.gov -->
+            <section
+              class="usa-identifier__section usa-identifier__section--usagov"
+              aria-label="U.S. government information and services">
+              <div class="usa-identifier__container">
+                <div class="usa-identifier__usagov-description">
+                  Looking for U.S. government information and services?
+                </div>
+                <a href="https://www.usa.gov/" class="usa-link--external" target="_blank" rel="noopener">Visit USA.gov</a>
+              </div>
+            </section>
+        </div>
+      <!-- Identifier End -->
+
+    </body>
+  <!-- Body End -->
+
+
+  <!-- Scripts
+  ================================================== -->
+  <script src="/dist/uswds/js/uswds.min.js"></script>
+
+</html>
